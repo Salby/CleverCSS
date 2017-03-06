@@ -6,7 +6,7 @@
 * Responsive Grid
 * Navigation Bar
 
-###hero
+###Hero
 
 If you want a header or image that fills the entire viewport, you can do that with the .hero class.
 
