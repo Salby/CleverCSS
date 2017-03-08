@@ -16,6 +16,15 @@ body {
 
 /*FANCY THINGIES*/
 
+  .wrapper {
+    width: 1200px;
+    margin: auto;
+  }
+  @media only screen and (max-width: 1200px) {
+    .wrapper {
+      width: 100%;
+    }
+  }
   .hero {
     height: 100vh;
     display: flex;
