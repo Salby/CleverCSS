@@ -1,5 +1,17 @@
 #CleverCSS
 
+##Dependencies
+
+CleverCSS requires JQUERY for certain elements to function properly
+
+###JQUERY
+
+JQuery can be installed from [jquery.com](jquery.com)
+
+You can also use a link from Google APIs
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 ####CleverCSS includes:
 * Headers
 * Buttons
@@ -8,7 +20,7 @@
 
 ###Hero
 
-If you want a header or image that fills the entire viewport, you can do that with the .hero class.
+If you want a header or image that fills the entire viewport, you can do that with the .hero class
 
     <header class="hero">
       <h1>This is a header</h1>
