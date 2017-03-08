@@ -105,9 +105,9 @@ h6 {
 
 .buttonFlat {
   cursor: pointer;
-  font-size: 150%;
+  font-size: 125%;
   background-color: rgba(0,0,0,0);
-  padding: 0.5em 1em;
+  padding: 0.25em 0.5em;
   border: 0;
   font-weight: 500;
   color: #5294e2;
@@ -117,9 +117,9 @@ h6 {
 }
 .buttonRaised {
   cursor: pointer;
-  font-size: 150%;
+  font-size: 125%;
   background-color: #5294e2;
-  padding: 0.5em 1em;
+  padding: 0.25em 0.5em;
   border: 0;
   font-weight: 500;
   color: #ffffff;
@@ -146,6 +146,7 @@ h6 {
 .buttonAction i {
   height: 24px;
   width: 24px;
+  transform: translateY(10%);
 }
 
 /*ARTICLES, SECTIONS AND OTHER BLOCKS*/
@@ -168,6 +169,9 @@ article:hover {
 .floatRight {
   float: right;
 }
+.fixedTop {
+  position: fixed;
+}
 
 /*NAVBAR*/
 nav {
@@ -175,11 +179,12 @@ nav {
   height: 75px;
   box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
   background-color: #5294e2;
+  z-index: 1;
 }
 nav ul {
   margin: 0;
   padding: 0;
-  width: 1200px;
+  width: 100%;
   margin: auto;
   height: 75px;
   list-style: none;
@@ -219,16 +224,11 @@ nav ul li #drawerButton {
   color: #ffffff;
   display: none;
 }
-nav ul li #drawerButton:active {
+nav ul li #drawerButton:hover {
   background-color: rgba(255,255,255,0.1);
 }
 nav ul li #drawerButton i {
   transform: scale(2);
-}
-@media only screen and (max-width: 1200px) {
-  nav ul {
-    width: 100%;
-  }
 }
 @media only screen and (max-width: 786px) {
   nav {
