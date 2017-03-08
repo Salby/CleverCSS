@@ -83,31 +83,53 @@ h1 {
   font-weight: 300;
   font-size: 250%;
   margin: 0;
+  padding: 0.5em;
 }
 h2 {
   font-weight: 300;
   font-size: 200%;
   margin: 0;
+  padding: 0.5em;
 }
 h3 {
   font-weight: 300;
   font-size: 150%;
   margin: 0;
+  padding: 0.5em;
 }
 h4 {
   font-weight: 300;
   font-size: 125%;
   margin: 0;
+  padding: 0.5em;
 }
 h5{
   font-weight: 300;
   font-size: 100%;
   margin: 0;
+  padding: 0.5em;
 }
 h6 {
   font-weight: 300;
   font-size: 75%;
   margin: 0;
+  padding: 0.5em;
+}
+article p {
+  padding: 1em;
+}
+.code {
+  display: inline;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 2px;
+  padding: 0.2em;
+  font-family: monospace;
+}
+footer {
+  background-color: #4278b7;
+  box-shadow: 0 2px 8px 4px rgba(0,0,0,0.2);
+  padding: 1em;
+  margin: 5em 0 0 0;
 }
 
 /*BUTTONS*/
@@ -162,12 +184,16 @@ h6 {
 
 article {
   background-color: #ffffff;
-  padding: 1em;
   margin: 1em 0em 0em 0em;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  border-radius: 2px;
 }
 article:hover {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+article header {
+  background-color: #5294e2;
+  color: #ffffff;
 }
 
 /*MISC THINGIES*/
@@ -269,7 +295,7 @@ nav ul li #drawerButton i {
   }
   [class*="col-"] {
       float: left;
-      padding: 0em 0.5em;
+      padding: 0.5em;
   }
 
   /*RESPONSIVE GRID*/
