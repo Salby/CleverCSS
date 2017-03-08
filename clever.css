@@ -161,6 +161,8 @@ footer {
   background-color: #5a9ded;
 }
 .buttonAction {
+  width: 44px;
+  height: 44px;
   cursor: pointer;
   font-size: 150%;
   background-color: #5294e2;
