@@ -14,7 +14,7 @@ You can also use a link from Google APIs
 
 ##Icons
 
-Any icons can be used with CleverCSS, though Google's [material design icons](https://github.com/google/material-design-icons) and (Font Awesome)[fontawesome.io] are recommended
+Any icons can be used with CleverCSS, though Google's [material design icons](https://github.com/google/material-design-icons) and [Font Awesome](fontawesome.io) are recommended
 
 ####CleverCSS includes:
 * Headers
