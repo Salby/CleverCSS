@@ -79,6 +79,13 @@ body {
 
 /*FONTMODS*/
 
+a {
+  color: #5294e2;
+}
+a:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
 h1 {
   font-weight: 300;
   font-size: 250%;
@@ -116,14 +123,8 @@ h6 {
   padding: 0.5em;
 }
 article p {
+  margin: 0px;
   padding: 1em;
-}
-.code {
-  display: inline;
-  background-color: rgba(0,0,0,0.05);
-  border-radius: 2px;
-  padding: 0.2em;
-  font-family: monospace;
 }
 footer {
   background-color: #4278b7;
