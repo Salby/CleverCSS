@@ -35,7 +35,11 @@ If you want a header or image that fills the entire viewport, you can do that wi
     <nav>
       <ul>
         <li><a>Home</a></li>
+<<<<<<< HEAD
         <li id="drawerButtonItem"><button id="drawerButton"></button></li>
+=======
+        <li id="drawerButtonItem"><button id="drawerButton"></button>
+>>>>>>> pages
       </ul>
     </nav>
 
