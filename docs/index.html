@@ -5,53 +5,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>CleverCSS</title>
+    <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="clever.js"></script>
+    <!--FONTS-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <!--LOCAL CSS-->
     <link rel="stylesheet" href="clever.css">
+    <link rel="stylesheet" href="misc.css">
   </head>
   <body>
 
-    <nav class="fixedTop">
+    <nav class="navBar fixedTop">
       <ul>
-        <li class="ripple"><a href="index.html">CleverCSS</a></li>
-        <li class="ripple" id="drawerButtonItem"><button id="drawerButton"><i class="material-icons">menu</i></button></li>
-        </ul>
-      </nav>
+        <li><a href="index.html">CleverCSS</a></li>
+        <li id="drawerButtonItem"><button id="drawerButton"><i class="material-icons">menu</i></button></li>
+      </ul>
+    </nav>
 
       <header style="height: 80vh; display: flex; flex-direction: column; justify-content: center">
         <section style="width: 280px; margin: auto; text-align: center">
           <h1 style="text-align: center; font-size: 350%; padding: 0;">CleverCSS</h1>
           <h2 style="text-align: center; padding: 0; padding-bottom: 1em;">CSS for humans</h2>
-          <a href="https://github.com/SanderSalamander/CleverCSS" target="_blank"><button class="buttonAction"><i class="material-icons">file_download</i></button><button class="buttonFlat ripple" style="margin: 1em 0;">GitHub</button></a>
+          <a href="https://github.com/SanderSalamander/CleverCSS" target="_blank"><button class="buttonAction"><i class="material-icons">file_download</i></button><button class="buttonFlat" style="margin: 1em 0;">GitHub</button></a>
         </section>
       </header>
 
       <section class="wrapper">
           <div class="row">
-            <section class="col-l-4">
-              <article>
-                <header>
-                  <h3>Navigation Bar</h3>
-                </header>
-                <p>
-                  CleverCSS includes a responsive navigation bar.
-                </p>
-              </article>
+            <section class="col-m-3">
+              <ul class="elementList">
+                <li><a><button id="navBar" onclick="selectNavBar()">Navigation Bar</button></a></li>
+                <li><a><button id="buttons" onclick="selectButtons()">Buttons</button></a></li>
+                <li><a><button id="typo" onclick="selectTypo()">Typography</button></a></li>
+                <li><a><button id="responsiveGrid" onclick="selectGrid()">Responsive Grid</button></a></li>
+              </ul>
             </section>
-            <section class="col-l-4">
-              <article>
-                <header>
-                  <h3>Buttons</h3>
-                </header>
-              </article>
-            </section>
-            <section class="col-l-4">
-              <article>
-                <header>
-                  <h3>Responsive Grid</h3>
-                </header>
-              </article>
+            <section class="col-m-9">
+              <section class="elementDisplay">
+                <article id="navBarArticle">
+                  <header>
+                    <h3>Navigation Bar</h3>
+                  </header>
+                  <p>
+                    CleverCSS provides a navigation bar that is both easy to use and versatile
+                  </p>
+                  <h4>Basic navigation bar</h4>
+                  <div class="code">
+                    &lt;nav class="navBar"&gt;<br>
+                    &nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/nav&gt;<br>
+                  </div>
+                  <h4>Navigation bar with "burger menu" for mobile devices</h4>
+                  <p>The mobile menu button will hide itself when the navigation bar isn't collapsed</p>
+                  <div class="code">
+                    &lt;nav class="navBar"&gt;<br>
+                    &nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li id="drawerButtonItem"&gt;&lt;button id="drawerButton"&gt;...&lt;/button&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/nav&gt;<br>
+                  </div>
+                </article>
+                <article id="buttonArticle">
+                  <header>
+                    <h3>Buttons</h3>
+                  </header>
+                  <p>
+                    There are three types of buttons in CleverCSS
+                  </p>
+                  <h4>Flat Button</h4>
+                  <p>
+                    A button that sits flat on it's parent. Good for dialogs and small actions, like cancelling an action
+                  </p>
+                  <div class="code">
+                    &lt;button class="buttonFlat"&gt;BUTTON&lt;/button&gt;
+                  </div>
+                  <div class="demoArea">
+                    <button class="buttonFlat">BUTTON</button>
+                  </div>
+                  <h4>Raised Button</h4>
+                  <p>
+                    A button that is raised from it's parent. Good if you have a few options that need to be more visible than the flat button
+                  </p>
+                  <div class="code">
+                    &lt;button class="buttonRaised"&gt;BUTTON&lt;/button&gt;
+                  </div>
+                  <div class="demoArea">
+                    <button class="buttonRaised">BUTTON</button>
+                  </div>
+                  <h4>Action Button</h4>
+                  <p>
+                    This button is also raised from it's parent. It's good for highlighting important actions. It's a good idea not to use this button too often, as it would start to seem insignificant compared to the other buttons. The action button needs an icon that represents the action.
+                  </p>
+                  <div class="code">
+                    &lt;button class="buttonAction"&gt;BUTTON&lt;/button&gt;
+                  </div>
+                  <div class="demoArea">
+                    <button class="buttonAction"><i class="material-icons">add</i></button>
+                  </div>
+                </article>
+                <article id="gridArticle">
+                  <header>
+                    <h3>Responsive Grid</h3>
+                  </header>
+                  <p>
+                    CleverCSS includes a 12-collumn responsive grid for easy layouting
+                  </p>
+                  <div class="demoArea">
+                    <div class="row">
+                      <section class="col-s-6">
+                        <div class="gridDemo">
+                          col-s-6
+                        </div>
+                      </section>
+                      <section class="col-s-6">
+                        <div class="gridDemo">
+                          col-s-6
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-s-4">
+                        <div class="gridDemo">
+                          col-s-4
+                        </div>
+                      </section>
+                      <section class="col-s-4">
+                        <div class="gridDemo">
+                          col-s-4
+                        </div>
+                      </section>
+                      <section class="col-s-4">
+                        <div class="gridDemo">
+                          col-s-4
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col-s-3">
+                        <div class="gridDemo">
+                          col-s-3
+                        </div>
+                      </section>
+                      <section class="col-s-3">
+                        <div class="gridDemo">
+                          col-s-3
+                        </div>
+                      </section>
+                      <section class="col-s-3">
+                        <div class="gridDemo">
+                          col-s-3
+                        </div>
+                      </section>
+                      <section class="col-s-3">
+                        <div class="gridDemo">
+                          col-s-3
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <h4>Using the grid</h4>
+                  <div class="code">
+                    &lt;div class="row"&gt;<br>
+                    &nbsp;&nbsp;&lt;section class="col-l-4"&gt;<br>
+                    &nbsp;&nbsp;&lt;/section&gt;<br>
+                    &nbsp;&nbsp;&lt;section class="col-l-8"&gt;<br>
+                    &nbsp;&nbsp;&lt;/section&gt;<br>
+                    &lt;/div&gt;
+                  </div>
+                  <div class="demoArea">
+                    <div class="row">
+                      <section class="col-l-4">
+                        <div class="gridDemo">
+                          col-l-4
+                        </div>
+                      </section>
+                      <section class="col-l-8">
+                        <div class="gridDemo">
+                          col-l-8
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </article>
+              </section>
             </section>
           </div>
         <div class="row">
@@ -78,5 +222,81 @@
       <footer>
       </footer>
 
+      <script>
+
+      function selectNavBar() {
+        document.getElementById('navBarArticle').style.display = 'block';
+        document.getElementById('buttonArticle').style.display = 'none';
+        document.getElementById('gridArticle').style.display = 'none';
+      }
+      function selectButtons() {
+        document.getElementById('navBarArticle').style.display = 'none';
+        document.getElementById('buttonArticle').style.display = 'block';
+        document.getElementById('gridArticle').style.display = 'none';
+      }
+      function selectGrid() {
+        document.getElementById('navBarArticle').style.display = 'none';
+        document.getElementById('buttonArticle').style.display = 'none';
+        document.getElementById('gridArticle').style.display = 'block';
+      }
+
+      //RIPPLE EFFECT LIGHT
+      var parent, ink, d, x, y;
+      $("ul li a").click(function(e){
+        parent = $(this).parent();
+        //create .ink element if it doesn't exist
+        if(parent.find(".ink").length == 0)
+          parent.prepend("<span class='ink'></span>");
+
+        ink = parent.find(".ink");
+        //incase of quick double clicks stop the previous animation
+        ink.removeClass("animate");
+
+        //set size of .ink
+        if(!ink.height() && !ink.width())
+        {
+          //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
+          d = Math.max(parent.outerWidth(), parent.outerHeight());
+          ink.css({height: d, width: d});
+        }
+
+        //get click coordinates
+        //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
+        x = e.pageX - parent.offset().left - ink.width()/2;
+        y = e.pageY - parent.offset().top - ink.height()/2;
+
+        //set the position and add class .animate
+        ink.css({top: y+'px', left: x+'px'}).addClass("animate");
+      })
+      //RIPPLE EFFECT LIGHT
+      var parent, ink, d, x, y;
+      $(".buttonAction").click(function(e){
+        parent = $(this).parent();
+        //create .ink element if it doesn't exist
+        if(parent.find(".ink").length == 0)
+          parent.prepend("<span class='ink'></span>");
+
+        ink = parent.find(".ink");
+        //incase of quick double clicks stop the previous animation
+        ink.removeClass("animate");
+
+        //set size of .ink
+        if(!ink.height() && !ink.width())
+        {
+          //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
+          d = Math.max(parent.outerWidth(), parent.outerHeight());
+          ink.css({height: d, width: d});
+        }
+
+        //get click coordinates
+        //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
+        x = e.pageX - parent.offset().left - ink.width()/2;
+        y = e.pageY - parent.offset().top - ink.height()/2;
+
+        //set the position and add class .animate
+        ink.css({top: y+'px', left: x+'px'}).addClass("animate");
+      })
+
+      </script>
   </body>
 </html>
