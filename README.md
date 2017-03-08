@@ -28,3 +28,13 @@ If you want a header or image that fills the entire viewport, you can do that wi
     <button class="buttonFlat">button</button>
     <button class="buttonRaised">button</button>
     <button class="buttonAction">button</button>
+
+##Animations
+
+CleverCSS includes some animations that can be utilized
+
+###Ripple Effect
+
+CleverCSS includes a material-design inspired ripple effect that reacts to user input
+
+    <button class="buttonRaised ripple">ripple</button>
