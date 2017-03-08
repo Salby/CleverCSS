@@ -21,7 +21,7 @@ $(document).on('click', '.ripple', function(e) {
       width: '500%',
       height: '800%',
       opacity: 0
-    }, 700, function() {
+    }, 800, function() {
       $(this).remove();
     });
 });

@@ -143,6 +143,10 @@ h6 {
   background-color: #5a9ded;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
 }
+.buttonAction i {
+  height: 24px;
+  width: 24px;
+}
 
 /*ARTICLES, SECTIONS AND OTHER BLOCKS*/
 
