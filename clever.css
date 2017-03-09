@@ -7,11 +7,28 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   background-color: #e8e8e8;
-  color: #2f343f;
+  color: #000000;
 }
 
 * {
   transition: all 0.2s;
+}
+
+/*ANIMATIONS*/
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    transform: translateY(-10px) translateX(10px);;
+  }
+  100% {
+    opacity: 1;
+    width: 160px;
+    height: 172px;
+    transform: translateY(0px);
+  }
 }
 
 /*FANCY THINGIES*/
@@ -163,6 +180,7 @@ footer {
 }
 
 .buttonDropdown {
+  border: 0;
    background-color: rgba(0,0,0,0);
    color: #ffffff;
    padding: 16px;
@@ -183,8 +201,6 @@ footer {
    display: inline-block;
 }
 .dropdownContent {
-  margin: 0;
-  padding: 0;
   list-style: none;
   display: none;
   position: absolute;
@@ -192,13 +208,20 @@ footer {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  right: 0;
+  right: 10px;
+  top: 10px;
+  animation: dropDown 0.3s;
 }
-.dropdownContent li {
+.dropdownMenu {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.dropdownContent .dropdownMenu li {
   position: relative;
   overflow: hidden;
 }
-.dropdownContent li a {
+.dropdownContent .dropdownMenu li a {
   cursor: pointer;
   color: #000000;
   padding: 12px 16px;
@@ -373,7 +396,7 @@ article header {
       }
     }
 
-    /*SMALL 420PX*/
+    /*SMALL 480PX*/
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
     .col-s-3 {width: 25%;}
@@ -386,7 +409,7 @@ article header {
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
-    @media only screen and (max-width: 420px) {
+    @media only screen and (max-width: 480px) {
       [class*="col-s-"] {
         width: 100%;
       }

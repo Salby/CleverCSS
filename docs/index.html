@@ -46,12 +46,14 @@
                 <header>
                   <div class="dropdown floatRight">
                     <button class="buttonDropdown"><i class="material-icons">more_vert</i></button>
-                    <ul class="dropdownContent">
-                      <li><a onclick="selectNavBar()">Navigation Bar</a></li>
-                      <li><a onclick="selectButtons()">Buttons</a></li>
-                      <li><a onclick="SelectTypo()">Typography</a></li>
-                      <li><a onclick="selectGrid()">Responsive Grid</a></li>
-                    </ul>
+                    <div class="dropdownContent">
+                      <ul class="dropdownMenu">
+                        <li><a onclick="selectNavBar()">Navigation Bar</a></li>
+                        <li><a onclick="selectButtons()">Buttons</a></li>
+                        <li><a onclick="SelectTypo()">Typography</a></li>
+                        <li><a onclick="selectGrid()">Responsive Grid</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </header>
                 <article id="navBarArticle">
@@ -323,7 +325,7 @@
       })
       //RIPPLE EFFECT DARK
       var parent, ink, d, x, y;
-      $(".dropdownContent li a").click(function(e){
+      $(".dropdownContent .dropdownMenu li a").click(function(e){
         parent = $(this).parent();
         //create .ink element if it doesn't exist
         if(parent.find(".inkDark").length == 0)
