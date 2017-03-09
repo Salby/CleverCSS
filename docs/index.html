@@ -35,14 +35,25 @@
           <div class="row">
             <section class="col-m-3">
               <ul class="elementList">
-                <li><a><button id="navBar" onclick="selectNavBar()">Navigation Bar</button></a></li>
-                <li><a><button id="buttons" onclick="selectButtons()">Buttons</button></a></li>
-                <li><a><button id="typo" onclick="selectTypo()">Typography</button></a></li>
-                <li><a><button id="responsiveGrid" onclick="selectGrid()">Responsive Grid</button></a></li>
+                <li><a><button onclick="selectNavBar()">Navigation Bar</button></a></li>
+                <li><a><button onclick="selectButtons()">Buttons</button></a></li>
+                <li><a><button onclick="selectTypo()">Typography</button></a></li>
+                <li><a><button onclick="selectGrid()">Responsive Grid</button></a></li>
               </ul>
             </section>
             <section class="col-m-9">
               <section class="elementDisplay">
+                <header>
+                  <div class="dropdown floatRight">
+                    <button class="buttonDropdown"><i class="material-icons">more_vert</i></button>
+                    <ul class="dropdownContent">
+                      <li><a onclick="selectNavBar()">Navigation Bar</a></li>
+                      <li><a onclick="selectButtons()">Buttons</a></li>
+                      <li><a onclick="SelectTypo()">Typography</a></li>
+                      <li><a onclick="selectGrid()">Responsive Grid</a></li>
+                    </ul>
+                  </div>
+                </header>
                 <article id="navBarArticle">
                   <header>
                     <h3>Navigation Bar</h3>
@@ -110,6 +121,11 @@
                   <div class="demoArea">
                     <button class="buttonAction"><i class="material-icons">add</i></button>
                   </div>
+                </article>
+                <article id="typoArticle">
+                  <header>
+                    <h3>Typography</h3>
+                  </header>
                 </article>
                 <article id="gridArticle">
                   <header>
@@ -227,22 +243,31 @@
       function selectNavBar() {
         document.getElementById('navBarArticle').style.display = 'block';
         document.getElementById('buttonArticle').style.display = 'none';
+        document.getElementById('typoArticle').style.display = 'none';
         document.getElementById('gridArticle').style.display = 'none';
       }
       function selectButtons() {
         document.getElementById('navBarArticle').style.display = 'none';
         document.getElementById('buttonArticle').style.display = 'block';
+        document.getElementById('typoArticle').style.display = 'none';
+        document.getElementById('gridArticle').style.display = 'none';
+      }
+      function selectTypo() {
+        document.getElementById('navBarArticle').style.display = 'none';
+        document.getElementById('buttonArticle').style.display = 'none';
+        document.getElementById('typoArticle').style.display = 'block';
         document.getElementById('gridArticle').style.display = 'none';
       }
       function selectGrid() {
         document.getElementById('navBarArticle').style.display = 'none';
         document.getElementById('buttonArticle').style.display = 'none';
+        document.getElementById('typoArticle').style.display = 'none';
         document.getElementById('gridArticle').style.display = 'block';
       }
 
       //RIPPLE EFFECT LIGHT
       var parent, ink, d, x, y;
-      $("ul li a").click(function(e){
+      $(".navBar ul li a").click(function(e){
         parent = $(this).parent();
         //create .ink element if it doesn't exist
         if(parent.find(".ink").length == 0)
@@ -270,13 +295,41 @@
       })
       //RIPPLE EFFECT LIGHT
       var parent, ink, d, x, y;
-      $(".buttonAction").click(function(e){
+      $(".elementList li a").click(function(e){
         parent = $(this).parent();
         //create .ink element if it doesn't exist
         if(parent.find(".ink").length == 0)
           parent.prepend("<span class='ink'></span>");
 
         ink = parent.find(".ink");
+        //incase of quick double clicks stop the previous animation
+        ink.removeClass("animate");
+
+        //set size of .ink
+        if(!ink.height() && !ink.width())
+        {
+          //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
+          d = Math.max(parent.outerWidth(), parent.outerHeight());
+          ink.css({height: d, width: d});
+        }
+
+        //get click coordinates
+        //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
+        x = e.pageX - parent.offset().left - ink.width()/2;
+        y = e.pageY - parent.offset().top - ink.height()/2;
+
+        //set the position and add class .animate
+        ink.css({top: y+'px', left: x+'px'}).addClass("animate");
+      })
+      //RIPPLE EFFECT DARK
+      var parent, ink, d, x, y;
+      $(".dropdownContent li a").click(function(e){
+        parent = $(this).parent();
+        //create .ink element if it doesn't exist
+        if(parent.find(".inkDark").length == 0)
+          parent.prepend("<span class='inkDark'></span>");
+
+        ink = parent.find(".inkDark");
         //incase of quick double clicks stop the previous animation
         ink.removeClass("animate");
 

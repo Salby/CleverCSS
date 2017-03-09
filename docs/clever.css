@@ -162,6 +162,57 @@ footer {
   transform: translateY(10%);
 }
 
+.buttonDropdown {
+   background-color: rgba(0,0,0,0);
+   color: #ffffff;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+   cursor: pointer;
+   height: 52px;
+   width: 52px;
+   border-radius: 100%;
+}
+.buttonDropdown i {
+  transform: translateY(-30%);
+  transform: translateX(-10%);
+  transform: scale(1.2);
+}
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+.dropdownContent {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+}
+.dropdownContent li {
+  position: relative;
+  overflow: hidden;
+}
+.dropdownContent li a {
+  cursor: pointer;
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdownContent a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdownContent {
+   display: block;
+}
+.dropdown:active .buttonDropdown {
+   background-color: rgba(255,255,255,0.2);
+}
+
 /*ARTICLES, SECTIONS AND OTHER BLOCKS*/
 
 article {
@@ -176,22 +227,6 @@ article:hover {
 article header {
   background-color: #5294e2;
   color: #ffffff;
-}
-
-.ink {
-	display: block; position: absolute;
-	background: rgba(255,255,255,0.2);
-	border-radius: 100%;
-	transform: scale(0);
-  transition: all 0s;
-}
-/*animation effect*/
-.ink.animate {animation: ripple 0.65s linear;}
-@keyframes ripple {
-  100% {
-    opacity: 0;
-    transform: scale(1.5);
-  }
 }
 
 /*MISC THINGIES*/
