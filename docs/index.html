@@ -44,8 +44,8 @@
             <section class="col-m-9">
               <section class="elementDisplay">
                 <header>
-                  <div class="dropdown floatRight">
-                    <button class="buttonDropdown"><i class="material-icons">more_vert</i></button>
+                  <div class="dropdown">
+                    <button class="buttonDropdown" id="mobileDrop"><i class="material-icons">more_vert</i></button>
                     <div class="dropdownContent">
                       <ul class="dropdownMenu">
                         <li><a onclick="selectNavBar()">Navigation Bar</a></li>
@@ -90,12 +90,9 @@
                   <header>
                     <h3>Buttons</h3>
                   </header>
-                  <p>
-                    There are three types of buttons in CleverCSS
-                  </p>
                   <h4>Flat Button</h4>
                   <p>
-                    A button that sits flat on it's parent. Good for dialogs and small actions, like cancelling an action
+                    A button that sits flat on it's parent. Good for dialogs and small actions, like cancelling an action.
                   </p>
                   <div class="code">
                     &lt;button class="buttonFlat"&gt;BUTTON&lt;/button&gt;
@@ -105,7 +102,7 @@
                   </div>
                   <h4>Raised Button</h4>
                   <p>
-                    A button that is raised from it's parent. Good if you have a few options that need to be more visible than the flat button
+                    A button that is raised from it's parent. Good if you have a few options that need to be more visible than the flat button.
                   </p>
                   <div class="code">
                     &lt;button class="buttonRaised"&gt;BUTTON&lt;/button&gt;
@@ -123,6 +120,33 @@
                   <div class="demoArea">
                     <button class="buttonAction"><i class="material-icons">add</i></button>
                   </div>
+                  <h4>Dropdown</h4>
+                  <p>The dropdown can be used to place a bunch of actions in a small space. It's good if you want to save space for something like a mobile device</p>
+                  <div class="code">
+                    &lt;div class="dropdown"&gt;<br>
+                    &nbsp;&lt;button class="buttonDropdown"&gt;&lt;/button&gt;<br>
+                    &nbsp;&lt;div class="dropdownContent"&gt;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="dropdownMenu"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Option 1&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Option 2&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&gt;Option 3&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &nbsp;&lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                  </div>
+                  <p>Hover over the button to trigger the dropdown.</p>
+                  <section class="demoArea">
+                    <div class="dropdown" style="float: none;">
+                      <button class="buttonDropdown buttonAction" style="background-color: #5294e2"></button>
+                      <div class="dropdownContent">
+                        <ul class="dropdownMenu">
+                          <li><a>Option 1</a></li>
+                          <li><a>Option 2</a></li>
+                          <li><a>Option 3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
                 </article>
                 <article id="typoArticle">
                   <header>

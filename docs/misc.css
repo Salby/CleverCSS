@@ -15,14 +15,14 @@
   margin: 0;
   z-index: 0.5
 }
-.dropdown {
+#mobileDrop {
   display: none;
 }
 @media only screen and (max-width: 786px) {
   .elementList {
     display: none;
   }
-  .dropdown {
+  #mobileDrop {
     display: block;
   }
 }
