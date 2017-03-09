@@ -169,6 +169,8 @@ footer {
   background-color: #5294e2;
   padding: 0.5em 0.5em;
   border: 0;
+  height: 30px;
+  width: 30px;
   border-radius: 100%;
   color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
