@@ -311,8 +311,8 @@ article header {
   border-bottom: none;
 }
 .navBar ul li #drawerButton {
-  height: 55px;
-  width: 55px;
+  height: 60px;
+  width: 60px;
   padding: 0;
   margin: 0;
   border: 0;
@@ -329,10 +329,10 @@ article header {
 }
 @media only screen and (max-width: 786px) {
   .navBar {
-    height: 55px;
+    height: 60px;
   }
   .navBar ul {
-    height: 55px;
+    height: 60px;
   }
   .navBar ul li {
     display: none;
