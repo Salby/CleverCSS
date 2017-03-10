@@ -28,9 +28,26 @@
         <section style="margin: auto; text-align: center">
           <h1 style="text-align: center; font-size: 350%; padding: 0;">Clever<span class="headerDecorator">CSS</span></h1>
           <h2 style="text-align: center; padding: 0; padding-bottom: 1em;">A CSS framework for humans</h2>
-          <a href="https://github.com/SanderSalamander/CleverCSS" target="_blank"><button class="buttonAction"><i class="material-icons">file_download</i></button><button class="buttonFlat" style="margin: 1em 0;">GitHub</button></a>
+          <button class="buttonAction" id="buttonModal"><i class="material-icons">file_download</i></button>
         </section>
       </header>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <article>
+            <header>
+              <h3> </h3>
+            </header>
+            <h3>Download CleverCSS from github</h3>
+            <p><a href="https://github.com/SanderSalamander/CleverCSS">github.com/SanderSalamander/CleverCSS</a></p>
+            <h3>Or use the CleverCSS CDN</h3>
+            <div class="code">
+              NOT AVAILABLE YET
+            </div>
+          </article>
+          <button class="buttonAction floatRight close" style="margin-right: 1em;"><i class="material-icons">close</i></button>
+        </div>
+      </div>
 
       <section class="wrapper">
           <div class="row">
@@ -307,6 +324,32 @@
         document.getElementById('buttonArticle').style.display = 'none';
         document.getElementById('typoArticle').style.display = 'none';
         document.getElementById('gridArticle').style.display = 'block';
+      }
+
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("buttonModal");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on the button, open the modal
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
       }
 
       //RIPPLE EFFECT LIGHT
