@@ -152,6 +152,7 @@
 .inkDark.animate {animation: ripple 0.5s linear;}
 
 article .row section {
+  height: 100%;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -177,4 +178,15 @@ footer {
 }
 footer a {
   color: #5294e2;
+}
+
+@media only screen and (min-width: 787px) {
+  #iconArticle {
+    height: 300px;
+  }
+}
+
+.headerDecorator {
+  color: #5294e2;
+  font-weight: 500;
 }
