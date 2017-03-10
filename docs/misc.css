@@ -240,4 +240,5 @@ footer a {
 .modal-content article p a {
   color: #5294e2;
   font-size: 110%;
+  white-space: normal;
 }
