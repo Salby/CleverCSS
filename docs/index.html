@@ -10,6 +10,7 @@
     <!--FONTS-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <script src="https://use.fontawesome.com/b61c712120.js"></script>
     <!--LOCAL CSS-->
     <link rel="stylesheet" href="clever.css">
     <link rel="stylesheet" href="misc.css">
@@ -50,7 +51,7 @@
                       <ul class="dropdownMenu">
                         <li><a onclick="selectNavBar()">Navigation Bar</a></li>
                         <li><a onclick="selectButtons()">Buttons</a></li>
-                        <li><a onclick="SelectTypo()">Typography</a></li>
+                        <li><a onclick="selectTypo()">Typography</a></li>
                         <li><a onclick="selectGrid()">Responsive Grid</a></li>
                       </ul>
                     </div>
@@ -244,6 +245,21 @@
           <section class="col-m-6">
             <article>
               <h2>Icons</h2>
+              <p>You can use any icon pack you like with CleverCSS, although Google's material icons and Font Awesome are recommended</p>
+              <div class="row">
+                <section class="col-s-6">
+                  <a href="https://github.com/google/material-design-icons">
+                    <span class="fa fa-google"></span>
+                    <button class="buttonFlat">Material Icons</button>
+                  </a>
+                </section>
+                <section class="col-s-6">
+                  <a href="http://fontawesome.io">
+                    <span class="fa fa-font-awesome"></span>
+                    <button class="buttonFlat">Font Awesome</button>
+                  </a>
+                </section>
+              </div>
             </article>
           </section>
           <section class="col-m-6">
@@ -262,6 +278,7 @@
         </div>
       </section>
       <footer>
+        Powered by Github Pages <i><a href="https://pages.github.com/">pages.github.com</a></i>
       </footer>
 
       <script>

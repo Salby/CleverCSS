@@ -150,3 +150,31 @@
 }
 /*animation effect*/
 .inkDark.animate {animation: ripple 0.5s linear;}
+
+article .row section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+article .row section a {
+  text-align: center;
+  font-size: 125%;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+}
+article .row section span {
+  color: #5294e2;
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+footer {
+  color: #4b8cdf;
+}
+footer a {
+  color: #5294e2;
+}
