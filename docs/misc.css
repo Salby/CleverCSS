@@ -223,7 +223,7 @@ footer a {
    width: 786px;
    animation: fadeIn 0.6s;
    height: 400px;
-   padding: 0 0 2.75em 0;
+   padding: 0 0 1.75em 0;
    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
 }
 @media only screen and (max-width: 786px) {
@@ -235,6 +235,9 @@ footer a {
 .modal-content article {
   height: 100%;
   box-shadow: none;
+}
+.modal-content article header {
+  background-color: #4278b7;
 }
 .modal-content article p a {
   color: #5294e2;
