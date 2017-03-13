@@ -9,7 +9,7 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(20%);
+    transform: translateY(10%);
   }
   100% {
     opacity: 1;
@@ -221,9 +221,9 @@ footer a {
    background-color: #fefefe;
    margin: 10% auto;
    width: 786px;
-   animation: fadeIn 1s;
+   animation: fadeIn 0.6s;
    height: 400px;
-   padding: 0.5em 0 2.75em 0;
+   padding: 0 0 1.75em 0;
    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
 }
 @media only screen and (max-width: 786px) {
@@ -235,6 +235,9 @@ footer a {
 .modal-content article {
   height: 100%;
   box-shadow: none;
+}
+.modal-content article header {
+  background-color: #4278b7;
 }
 .modal-content article p a {
   color: #5294e2;
