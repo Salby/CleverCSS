@@ -311,12 +311,12 @@ article header {
   border-bottom: none;
 }
 .navBar ul li #drawerButton {
-  height: 57.2px;
-  width: 57.2px;
+  height: 56px;
+  width: 56px;
   padding: 0;
   margin: 0;
   border: 0;
-  border-radius: 65px;
+  border-radius: 56px;
   background-color: #4278b7;
   color: #ffffff;
   display: none;
@@ -329,10 +329,10 @@ article header {
 }
 @media only screen and (max-width: 786px) {
   .navBar {
-    height: 57.2px;
+    height: 56px;
   }
   .navBar ul {
-    height: 57.2px;
+    height: 56px;
   }
   .navBar ul li {
     display: none;
