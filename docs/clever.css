@@ -192,8 +192,6 @@ footer {
    cursor: pointer;
    height: 52px;
    width: 52px;
-   -moz-height: auto;
-   -moz-width: auto;
    border-radius: 100%;
 }
 .buttonDropdown i {
