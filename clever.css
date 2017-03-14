@@ -790,7 +790,7 @@ article header {
 .navBar ul li #drawerButton i {
   transform: scale(2);
 }
-@media only screen and (max-width: 786px) {
+@media only screen and (max-width: 768px) {
   .navBar {
     height: 56px;
   }
@@ -857,7 +857,7 @@ article header {
     .col-m-10 {width: 83.33%;}
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
-    @media only screen and (max-width: 786px) {
+    @media only screen and (max-width: 768px) {
       [class*="col-m-"] {
         width: 100%;
       }
