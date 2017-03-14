@@ -780,7 +780,7 @@ article header {
   margin: 0;
   border: 0;
   border-radius: 56px;
-  background-color: #4278b7;
+  background-color: rgba(0,0,0,0);
   color: #ffffff;
   display: none;
 }
