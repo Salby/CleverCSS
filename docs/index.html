@@ -25,6 +25,13 @@
         <li id="drawerButtonItem"><button id="drawerButton"><i class="material-icons">menu</i></button></li>
       </ul>
     </nav>
+    <div id="mobileDrawer" class="drawer">
+      <div class="drawerContent">
+        <header>
+          <button id="drawerClose"><i class="material-icons">arrow_back</i></button>
+        </header>
+      </div>
+    </div>
 
       <header style="height: 80vh; display: flex; flex-direction: column; justify-content: center">
         <section style="margin: auto; text-align: center">
@@ -328,6 +335,30 @@
         document.getElementById('typoArticle').style.display = 'none';
         document.getElementById('gridArticle').style.display = 'block';
       }
+
+
+      //DRAWER SCRIPT
+        //DRAWER
+        var drawer = document.getElementById('mobileDrawer')
+        //DRAWER OPEN BUTTON
+        var buttonOpen = document.getElementById('drawerButton')
+        //DRAWER CLOSE BUTTON
+        var buttonClose = document.getElementById('drawerClose')
+      //OPEN DRAWER WHEN USER CLICKS ON BUTTON
+      buttonOpen.onclick = function() {
+        drawer.className = "drawer animateOut";
+      }
+      //CLOSE DRAWER WHEN USER CLICKS THE CLOSE BUTTON
+      buttonClose.onclick = function() {
+        drawer.className = "drawer animateIn";
+      }
+      //CLOSE DRAWER WHEN USER CLICKS ANYWHERE OUTSIDE THE DRAWER
+      window.onclick = function(event) {
+        if (event.target == drawer) {
+            drawer.style.display = "none";
+        }
+      }
+
 
       // Get the modal
       var modal = document.getElementById('myModal');
