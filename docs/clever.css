@@ -639,10 +639,10 @@ article {
         transform: scale(1.5); }
 
 .animateIn {
-  animation: drawerIn 0.2s forwards; }
+  animation: drawerIn 0.3s forwards; }
 
 .animateOut {
-  animation: drawerOut 0.2s forwards; }
+  animation: drawerOut 0.3s forwards; }
 
 /*GRID */
 * {
