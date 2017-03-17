@@ -22,6 +22,7 @@
     <nav class="navBar fixedTop">
       <ul>
         <li><a href="index.html">CleverCSS</a></li>
+        <li><a href="#iconsAndDepends">Icons & Dependencies</a></li>
         <li id="drawerButtonItem"><button id="drawerButton"><i class="material-icons">menu</i></button></li>
       </ul>
     </nav>
@@ -30,13 +31,17 @@
         <header>
           <button id="drawerClose"><i class="material-icons">arrow_back</i></button>
         </header>
+        <ul>
+          <li class="drawerItem"><a href="index.html"><i class="material-icons">home</i> Home</a></li>
+          <li class="drawerItem"><a href="#iconsAndDepends"><i class="material-icons">view_list</i> Icons & Dependencies</a></li>
+        </ul>
       </div>
     </div>
 
       <header style="height: 80vh; display: flex; flex-direction: column; justify-content: center">
         <section style="margin: auto; text-align: center">
           <h1 style="text-align: center; font-size: 350%; padding: 0;">Clever<span class="headerDecorator">CSS</span></h1>
-          <h2 style="text-align: center; padding: 0; padding-bottom: 1em;">A CSS framework for humans</h2>
+          <h2 style="text-align: center; padding: 0; padding-bottom: 1em;">A framework for humans</h2>
           <button class="buttonAction" id="buttonModal"><i class="material-icons">file_download</i></button>
         </section>
       </header>
@@ -128,6 +133,9 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button id="drawerClose"&gt;...&lt;/button&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="drawerItem"&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
                     &nbsp;&nbsp;&lt;/div&gt;<br>
                     &lt;/div&gt;<br>
                   </div>
@@ -290,7 +298,7 @@
               </section>
             </section>
           </div>
-        <div class="row">
+        <div class="row" id="iconsAndDepends">
           <section class="col-m-6">
             <article id="iconArticle">
               <h2>Icons</h2>
@@ -444,6 +452,34 @@
       //RIPPLE EFFECT DARK
       var parent, ink, d, x, y;
       $(".dropdownContent .dropdownMenu li a").click(function(e){
+        parent = $(this).parent();
+        //create .ink element if it doesn't exist
+        if(parent.find(".inkDark").length == 0)
+          parent.prepend("<span class='inkDark'></span>");
+
+        ink = parent.find(".inkDark");
+        //incase of quick double clicks stop the previous animation
+        ink.removeClass("animate");
+
+        //set size of .ink
+        if(!ink.height() && !ink.width())
+        {
+          //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
+          d = Math.max(parent.outerWidth(), parent.outerHeight());
+          ink.css({height: d, width: d});
+        }
+
+        //get click coordinates
+        //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
+        x = e.pageX - parent.offset().left - ink.width()/2;
+        y = e.pageY - parent.offset().top - ink.height()/2;
+
+        //set the position and add class .animate
+        ink.css({top: y+'px', left: x+'px'}).addClass("animate");
+      })
+      //RIPPLE EFFECT DARK
+      var parent, ink, d, x, y;
+      $(".drawerContent ul li a").click(function(e){
         parent = $(this).parent();
         //create .ink element if it doesn't exist
         if(parent.find(".inkDark").length == 0)
