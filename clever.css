@@ -408,7 +408,7 @@ article {
     list-style: none; }
     .navBar ul li {
       float: left;
-      height: 75px;
+      height: 75px
       color: #ffffff;
       font-size: 25px;
       cursor: pointer;
@@ -448,7 +448,8 @@ article {
     .navBar ul {
       height: 56px; }
       .navBar ul li {
-        display: none; }
+        display: none;
+        height: 56px; }
       .navBar ul #drawerButtonItem, .navBar ul li #drawerButton {
         display: inline; } }
 /*drawer */
