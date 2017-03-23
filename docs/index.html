@@ -22,7 +22,6 @@
     <nav class="navBar fixedTop">
       <ul>
         <li><a href="index.html">CleverCSS</a></li>
-        <li><a href="#iconsAndDepends">Icons & Dependencies</a></li>
         <li id="drawerButtonItem"><button id="drawerButton"><i class="material-icons">menu</i></button></li>
       </ul>
     </nav>
@@ -31,10 +30,6 @@
         <header>
           <button id="drawerClose"><i class="material-icons">arrow_back</i></button>
         </header>
-        <ul>
-          <li class="drawerItem"><a href="index.html"><i class="material-icons">home</i> Home</a></li>
-          <li class="drawerItem"><a href="#iconsAndDepends"><i class="material-icons">view_list</i> Icons & Dependencies</a></li>
-        </ul>
       </div>
     </div>
 
@@ -56,8 +51,10 @@
             <p><a href="https://github.com/SanderSalamander/CleverCSS" target="_blank">github.com/SanderSalamander/CleverCSS</a></p>
             <h3>Or use the CleverCSS CDN</h3>
             <div class="code">
-              NOT AVAILABLE YET
+              &lt;link rel="stylesheet" href="https://cdn.rawgit.com/SanderSalamander/CleverCSS/5c1f4742/clever.css"&gt;<br>
+	      &lt;script src="https://cdn.rawgit.com/SanderSalamander/CleverCSS/f47a8fe8/clever.js"&gt;&lt;/script&gt;<br>
             </div>
+            <p>It is possible that the CDN isn't always online. For optimal experience, save the framework locally on your drive
           </article>
           <button class="buttonAction floatRight close" style="margin-right: 1em;"><i class="material-icons">close</i></button>
         </div>
@@ -67,7 +64,7 @@
           <div class="row">
             <section class="col-m-3">
               <ul class="elementList">
-                <li><a><button onclick="selectNavBar()">Navigation Bar</button></a></li>
+                <li><a><button onclick="selectNavBar()">Navigation</button></a></li>
                 <li><a><button onclick="selectButtons()">Buttons</button></a></li>
                 <li><a><button onclick="selectTypo()">Typography</button></a></li>
                 <li><a><button onclick="selectGrid()">Responsive Grid</button></a></li>
@@ -92,7 +89,7 @@
                 </header>
                 <article id="navBarArticle">
                   <header>
-                    <h3>Navigation Bar</h3>
+                    <h3>Navigation</h3>
                   </header>
                   <p>
                     CleverCSS provides a navigation bar that is both easy to use and versatile
@@ -135,9 +132,6 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button id="drawerClose"&gt;...&lt;/button&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="drawerItem"&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
                     &nbsp;&nbsp;&lt;/div&gt;<br>
                     &lt;/div&gt;<br>
                   </div>
@@ -209,7 +203,9 @@
                   <header>
                     <h3>Typography</h3>
                   </header>
-                  <h4>Not done yet... :/</h4>
+                  <h4>Still a work in progress</h4>
+		  						<p>Don't think too hard about what this article says</p>
+									<p>It actually doesn't say anything, so it's not like there's anything to really think about. This article is actually just a waste of time, and honestly you should just hop over to one of the other articles. Now I'm just trying to fill as much space with this text as possible, so this really isn't very essential to your understanding of the elements included in CleverCSS, which isn't even just CSS, now that I've added javascript to the framework. You can find that in the file clever.js.
                 </article>
                 <article id="gridArticle">
                   <header>
@@ -314,7 +310,7 @@
               </section>
             </section>
           </div>
-        <div class="row" id="iconsAndDepends">
+        <div class="row">
           <section class="col-m-6">
             <article id="iconArticle">
               <h2>Icons</h2>
@@ -479,34 +475,6 @@
       //RIPPLE EFFECT DARK
       var parent, ink, d, x, y;
       $(".dropdownContent .dropdownMenu li a").click(function(e){
-        parent = $(this).parent();
-        //create .ink element if it doesn't exist
-        if(parent.find(".inkDark").length == 0)
-          parent.prepend("<span class='inkDark'></span>");
-
-        ink = parent.find(".inkDark");
-        //incase of quick double clicks stop the previous animation
-        ink.removeClass("animate");
-
-        //set size of .ink
-        if(!ink.height() && !ink.width())
-        {
-          //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
-          d = Math.max(parent.outerWidth(), parent.outerHeight());
-          ink.css({height: d, width: d});
-        }
-
-        //get click coordinates
-        //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
-        x = e.pageX - parent.offset().left - ink.width()/2;
-        y = e.pageY - parent.offset().top - ink.height()/2;
-
-        //set the position and add class .animate
-        ink.css({top: y+'px', left: x+'px'}).addClass("animate");
-      })
-      //RIPPLE EFFECT DARK
-      var parent, ink, d, x, y;
-      $(".drawerContent ul li a").click(function(e){
         parent = $(this).parent();
         //create .ink element if it doesn't exist
         if(parent.find(".inkDark").length == 0)

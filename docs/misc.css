@@ -204,17 +204,6 @@ footer {
   .modal-content {
     margin: 20% auto;
     width: 95vw; } }
-/*ANIMATE DRAWER */
-@keyframes drawerOut {
-  0% {
-    transform: translateX(-100%); }
-  100% {
-    transform: translateX(0%); } }
-@keyframes drawerIn {
-  0% {
-    transform: translateX(0%); }
-  100% {
-    transform: translateX(-100%); } }
 /*# sourceMappingURL=misc.css.map */
 
 /*# sourceMappingURL=misc.css.map */
