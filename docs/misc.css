@@ -80,8 +80,9 @@
 #navBarArticle {
   display: block; }
 
-#buttonArticle, #typoArticle, #gridArticle {
-  display: none; }
+#buttonArticle, #typoArticle, #gridArticle, #formsArticle {
+  display: none;
+  padding-bottom: 1em; }
 
 .code {
   background-color: rgba(0, 0, 0, 0.05);
@@ -214,5 +215,6 @@ footer {
     transform: translateX(0%); }
   100% {
     transform: translateX(-100%); } }
+/*# sourceMappingURL=misc.css.map */
 
 /*# sourceMappingURL=misc.css.map */

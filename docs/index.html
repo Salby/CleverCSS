@@ -71,6 +71,7 @@
                 <li><a><button onclick="selectButtons()">Buttons</button></a></li>
                 <li><a><button onclick="selectTypo()">Typography</button></a></li>
                 <li><a><button onclick="selectGrid()">Responsive Grid</button></a></li>
+                <li><a><button onclick="selectForms()">Forms</button></a></li>
               </ul>
             </section>
             <section class="col-m-9">
@@ -84,6 +85,7 @@
                         <li><a onclick="selectButtons()">Buttons</a></li>
                         <li><a onclick="selectTypo()">Typography</a></li>
                         <li><a onclick="selectGrid()">Responsive Grid</a></li>
+                        <li><a onclick="selectForms()">Forms</a></li>
                       </ul>
                     </div>
                   </div>
@@ -293,6 +295,22 @@
                     </div>
                   </div>
                 </article>
+                <article id="formsArticle">
+                  <header>
+                    <h3>Forms</h3>
+                  </header>
+                  <form class="formLoose">
+                    <input type="text" class="inputText" placeholder="First name"><br>
+                    <input type="text" class="inputText" placeholder="Last name"><br>
+                    <input type="submit" class="inputSubmit" value="Submit">
+                  </form>
+                  <div class="demo">
+                  <form class="formTight">
+                    <input type="text" class="inputText" placeholder="First name"><br>
+                    <input type="text" class="inputText" placeholder="Last name"><br>
+                    <input type="submit" class="inputSubmit" value="Submit">
+                  </form>
+                </article>
               </section>
             </section>
           </div>
@@ -345,24 +363,35 @@
         document.getElementById('buttonArticle').style.display = 'none';
         document.getElementById('typoArticle').style.display = 'none';
         document.getElementById('gridArticle').style.display = 'none';
+        document.getElementById('formsArticle').style.display = 'none';
       }
       function selectButtons() {
         document.getElementById('navBarArticle').style.display = 'none';
         document.getElementById('buttonArticle').style.display = 'block';
         document.getElementById('typoArticle').style.display = 'none';
         document.getElementById('gridArticle').style.display = 'none';
+        document.getElementById('formsArticle').style.display = 'none';
       }
       function selectTypo() {
         document.getElementById('navBarArticle').style.display = 'none';
         document.getElementById('buttonArticle').style.display = 'none';
         document.getElementById('typoArticle').style.display = 'block';
         document.getElementById('gridArticle').style.display = 'none';
+        document.getElementById('formsArticle').style.display = 'none';
       }
       function selectGrid() {
         document.getElementById('navBarArticle').style.display = 'none';
         document.getElementById('buttonArticle').style.display = 'none';
         document.getElementById('typoArticle').style.display = 'none';
         document.getElementById('gridArticle').style.display = 'block';
+        document.getElementById('formsArticle').style.display = 'none';
+      }
+      function selectForms() {
+        document.getElementById('navBarArticle').style.display = 'none';
+        document.getElementById('buttonArticle').style.display = 'none';
+        document.getElementById('typoArticle').style.display = 'none';
+        document.getElementById('gridArticle').style.display = 'none';
+        document.getElementById('formsArticle').style.display = 'block';
       }
 
       // Get the modal
