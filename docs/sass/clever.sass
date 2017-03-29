@@ -1,0 +1,789 @@
+html
+  font-family: sans-serif
+
+  line-height: 1.15
+
+  -ms-text-size-adjust: 100%
+
+  -webkit-text-size-adjust: 100%
+
+
+body
+  margin: 0
+
+article, aside, footer, header, nav, section
+  display: block
+
+h1
+  font-size: 2em
+  margin: 0.67em 0
+
+figcaption, figure, main
+  /* 1
+  display: block
+
+figure
+  margin: 1em 40px
+
+hr
+  box-sizing: content-box
+
+  height: 0
+
+  overflow: visible
+
+
+pre
+  font-family: monospace, monospace
+
+  /* 1
+  font-size: 1em
+
+  /* 2
+
+a
+  background-color: transparent
+
+  /* 1
+  -webkit-text-decoration-skip: objects
+
+  /* 2
+
+  &:active, &:hover
+    outline-width: 0
+
+abbr[title]
+  border-bottom: none
+
+  text-decoration: underline
+
+  text-decoration: underline dotted
+
+
+b, strong
+  font-weight: inherit
+
+b, strong
+  font-weight: bolder
+
+code, kbd, samp
+  font-family: monospace, monospace
+
+  font-size: 1em
+
+
+dfn
+  font-style: italic
+
+mark
+  background-color: #ff0
+  color: #000
+
+small
+  font-size: 80%
+
+sub, sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sub
+  bottom: -0.25em
+
+sup
+  top: -0.5em
+
+audio, video
+  display: inline-block
+
+audio:not([controls])
+  display: none
+  height: 0
+
+img
+  border-style: none
+
+svg:not(:root)
+  overflow: hidden
+
+button, input, optgroup, select, textarea
+  font-family: sans-serif
+
+  font-size: 100%
+
+  line-height: 1.15
+
+  margin: 0
+
+
+button, input
+  overflow: visible
+
+button, select
+  text-transform: none
+
+button, html [type="button"], [type="reset"], [type="submit"]
+  -webkit-appearance: button
+
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner
+  border-style: none
+  padding: 0
+
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring
+  outline: 1px dotted ButtonText
+
+fieldset
+  border: 1px solid #c0c0c0
+  margin: 0 2px
+  padding: 0.35em 0.625em 0.75em
+
+legend
+  box-sizing: border-box
+
+  color: inherit
+
+  display: table
+
+  max-width: 100%
+
+  padding: 0
+
+  white-space: normal
+
+
+progress
+  display: inline-block
+
+  vertical-align: baseline
+
+
+textarea
+  overflow: auto
+
+[type="checkbox"], [type="radio"]
+  box-sizing: border-box
+
+  padding: 0
+
+
+[type="number"]
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+    height: auto
+
+[type="search"]
+  -webkit-appearance: textfield
+
+  outline-offset: -2px
+
+
+  &::-webkit-search-cancel-button, &::-webkit-search-decoration
+    -webkit-appearance: none
+
+\::-webkit-file-upload-button
+  -webkit-appearance: button
+
+  font: inherit
+
+
+details, menu
+  display: block
+
+summary
+  display: list-item
+
+canvas
+  display: inline-block
+
+template, [hidden]
+  display: none
+
+
+/*WELCOME TO CLEVERCSS
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500)
+
+$colorDark: #4278b7
+$colorLight: #5294e2
+$colorLighter: #5a9ded
+
+body
+  margin: 0
+  padding: 0
+  font-family: 'Roboto', sans-serif
+  background-color: #e8e8e8
+  color: #000000
+
+*
+  transition: all 0.2s
+
+  /*FIX FOR CHROME STYLING
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  outline: none
+
+/*ANIMATIONS
+
+@keyframes dropDown
+  0%
+    opacity: 0
+    width: 0px
+    height: 0px
+    transform: translateY(-10px) translateX(10px)
+
+  100%
+    opacity: 1
+    width: 160px
+    height: 172px
+    transform: translateY(0px)
+
+/*FANCY THINGIES
+
+.wrapper
+  width: 1200px
+  margin: auto
+
+@media only screen and (max-width: 1200px)
+  .wrapper
+    width: 100%
+
+.hero
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  h1
+    font-size: 400%
+    font-weight: 300
+    color: #2f343f
+
+@media only screen and (max-width: 1200px)
+  .hero h1
+    font-size: 350%
+
+@media only screen and (max-width: 786px)
+  .hero h1
+    font-size: 300%
+
+@media only screen and (max-width: 480px)
+  .hero h1
+    font-size: 250%
+
+@media only screen and (max-width: 320px)
+  .hero h1
+    font-size: 200%
+
+/*FONTMODS*/
+
+h1
+  font-weight: 300
+  font-size: 250%
+  margin: 0
+  padding: 0.5em
+
+h2
+  font-weight: 300
+  font-size: 200%
+  margin: 0
+  padding: 0.5em
+
+h3
+  font-weight: 300
+  font-size: 150%
+  margin: 0
+  padding: 0.5em
+
+h4
+  font-weight: 300
+  font-size: 125%
+  margin: 0
+  padding: 0.5em
+
+h5
+  font-weight: 300
+  font-size: 100%
+  margin: 0
+  padding: 0.5em
+
+h6
+  font-weight: 300
+  font-size: 75%
+  margin: 0
+  padding: 0.5em
+
+article p
+  padding: 1em
+  margin: 0 0
+
+.code
+  display: inline
+  background-color: rgba(0, 0, 0, 0.05)
+  border-radius: 2px
+  padding: 0.2em
+  font-family: monospace
+
+footer
+  background-color: #4278b7
+  box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.2)
+  padding: 1em
+  margin: 5em 0 0 0
+
+/*BUTTONS*/
+
+.buttonFlat
+  cursor: pointer
+  font-size: 125%
+  background-color: rgba(0, 0, 0, 0)
+  padding: 0.25em 0.5em
+  border: 0
+  font-weight: 500
+  color: #5294e2
+
+  &:hover
+    background-color: rgba(0, 0, 0, 0.05)
+
+.buttonRaised
+  cursor: pointer
+  font-size: 125%
+  background-color: #5294e2
+  padding: 0.25em 0.5em
+  border: 0
+  font-weight: 500
+  color: #ffffff
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+
+  &:hover
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2)
+    background-color: #5a9ded
+
+.buttonAction
+  cursor: pointer
+  font-size: 150%
+  background-color: #5294e2
+  padding: 0.5em 0.5em
+  border: 0
+  border-radius: 100%
+  color: #ffffff
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+
+  &:hover
+    background-color: #5a9ded
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2)
+
+  i
+    height: 30px
+    width: 30px
+    transform: translateY(10%)
+
+.buttonDropdown
+  border: 0
+  background-color: rgba(0, 0, 0, 0)
+  color: #ffffff
+  padding: 16px
+  font-size: 16px
+  border: none
+  cursor: pointer
+  height: 52px
+  width: 52px
+  border-radius: 100%
+
+  i
+    transform: translateY(-30%)
+    transform: translateX(-10%)
+    transform: scale(1.2)
+
+.dropdown
+  position: relative
+  display: inline-block
+  float: right
+
+.dropdownContent
+  list-style: none
+  display: none
+  position: absolute
+  background-color: #f9f9f9
+  min-width: 160px
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)
+  z-index: 1
+  right: 10px
+  top: 55px
+  animation: dropDown 0.3s
+
+.dropdownMenu
+  margin: 0px
+  padding: 0px
+  list-style: none
+
+.dropdownContent
+  .dropdownMenu li
+    position: relative
+    overflow: hidden
+
+    a
+      cursor: pointer
+      color: #000000
+      padding: 12px 16px
+      text-decoration: none
+      display: block
+
+  a:hover
+    background-color: #f1f1f1
+
+.dropdown
+  &:hover .dropdownContent
+    display: block
+
+  &:active .buttonDropdown
+    background-color: rgba(255, 255, 255, 0.2)
+
+/*ARTICLES, SECTIONS AND OTHER BLOCKS*/
+
+article
+  background-color: #ffffff
+  margin: 1em 0em 0em 0em
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+  border-radius: 2px
+
+  &:hover
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+
+  header
+    background-color: #5294e2
+    color: #ffffff
+
+/*MISC THINGIES*/
+
+.floatLeft
+  float: left
+
+.floatRight
+  float: right
+
+.fixedTop
+  position: fixed
+
+/*NAVBAR*/
+
+.navBar
+  width: 100%
+  height: 75px
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2)
+  background-color: #4278b7
+  z-index: 5
+
+  ul
+    margin: 0
+    padding: 0
+    width: 100%
+    margin: auto
+    height: 75px
+    list-style: none
+
+    li
+      float: left
+      height: 75px
+      color: #ffffff
+      font-size: 25px
+      cursor: pointer
+      padding: 1em
+      position: relative
+      overflow: hidden
+      border-bottom: solid 0.1em rgba(0, 0, 0, 0)
+
+      &:hover
+        border-bottom: solid 0.1em #ffffff
+
+      a
+        text-decoration: none
+        color: #ffffff
+
+    #drawerButtonItem
+      display: none
+      padding: 0
+      border-radius: 100%
+
+      &:hover
+        border-bottom: none
+
+    li #drawerButton
+      height: 56px
+      width: 56px
+      padding: 0
+      margin: 0
+      border: 0
+      border-radius: 56px
+      background-color: rgba(0, 0, 0, 0)
+      color: #ffffff
+      display: none
+
+      &:hover
+        background-color: rgba(255, 255, 255, 0.1)
+
+      i
+        transform: scale(2)
+
+@media only screen and (max-width: 768px)
+  .navBar
+    height: 56px
+
+    ul
+      height: 56px
+
+      li
+        display: none
+
+      #drawerButtonItem, li #drawerButton
+        display: inline
+
+/*drawer*/
+.drawer
+  display: block
+  position: fixed
+  z-index: 9
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgb(0, 0, 0)
+  background-color: rgba(0, 0, 0, 0.2)
+  transform: translateX(-100%)
+
+.drawerContent
+  height: 100vh
+  width: 80vw
+  background-color: white
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2)
+  header
+    height: 56px
+    background-color: $colorDark
+    #drawerClose
+      width: 56px
+      height: 56px
+      background-color: rgba(0,0,0,0)
+      color: white
+      border-radius: 56px
+      border: 0
+      &:active
+        background-color: rgba(255,255,255,0.1)
+      i
+        transform: scale(1.5) translateY(5%)
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+    li
+      position: relative
+      overflow: hidden
+      padding: .8em .5em .8em .5em
+      &:hover
+        background-color: rgba(0,0,0,0.075)
+      a
+        text-decoration: none
+        color: rgba(0,0,0,0.8)
+        i
+          transform: translateY(20%)
+          padding-right: .5em
+      /*ANIMATE DRAWER*/
+      @keyframes drawerOut
+        0%
+          transform: translateX(-100%)
+        100%
+          transform: translateX(0%)
+      @keyframes drawerIn
+        0%
+          transform: translateX(0%)
+        100%
+          transform: translateX(-100%)
+
+.animateIn
+  animation: drawerIn 0.3s forwards
+.animateOut
+  animation: drawerOut 0.3s forwards
+
+
+/*GRID*/
+
+*
+  box-sizing: border-box
+
+.row::after
+  content: ""
+  clear: both
+  display: table
+
+[class*="col-"]
+  float: left
+  padding: 0.5em
+
+/*RESPONSIVE GRID
+
+/*LARGE 1200PX*/
+
+.col-l-1
+  width: 8.33%
+
+.col-l-2
+  width: 16.66%
+
+.col-l-3
+  width: 25%
+
+.col-l-4
+  width: 33.33%
+
+.col-l-5
+  width: 41.66%
+
+.col-l-6
+  width: 50%
+
+.col-l-7
+  width: 58.33%
+
+.col-l-8
+  width: 66.66%
+
+.col-l-9
+  width: 75%
+
+.col-l-10
+  width: 83.33%
+
+.col-l-11
+  width: 91.66%
+
+.col-l-12
+  width: 100%
+
+@media only screen and (max-width: 1200px)
+  [class*="col-l-"]
+    width: 100%
+
+/*MEDIUM 786PX*/
+
+.col-m-1
+  width: 8.33%
+
+.col-m-2
+  width: 16.66%
+
+.col-m-3
+  width: 25%
+
+.col-m-4
+  width: 33.33%
+
+.col-m-5
+  width: 41.66%
+
+.col-m-6
+  width: 50%
+
+.col-m-7
+  width: 58.33%
+
+.col-m-8
+  width: 66.66%
+
+.col-m-9
+  width: 75%
+
+.col-m-10
+  width: 83.33%
+
+.col-m-11
+  width: 91.66%
+
+.col-m-12
+  width: 100%
+
+@media only screen and (max-width: 768px)
+  [class*="col-m-"]
+    width: 100%
+
+/*SMALL 480PX*/
+
+.col-s-1
+  width: 8.33%
+
+.col-s-2
+  width: 16.66%
+
+.col-s-3
+  width: 25%
+
+.col-s-4
+  width: 33.33%
+
+.col-s-5
+  width: 41.66%
+
+.col-s-6
+  width: 50%
+
+.col-s-7
+  width: 58.33%
+
+.col-s-8
+  width: 66.66%
+
+.col-s-9
+  width: 75%
+
+.col-s-10
+  width: 83.33%
+
+.col-s-11
+  width: 91.66%
+
+.col-s-12
+  width: 100%
+
+@media only screen and (max-width: 480px)
+  [class*="col-s-"]
+    width: 100%
+
+/*EXTRA SMALL 320PX
+
+.col-xs-1
+  width: 8.33%
+
+.col-xs-2
+  width: 16.66%
+
+.col-xs-3
+  width: 25%
+
+.col-xs-4
+  width: 33.33%
+
+.col-xs-5
+  width: 41.66%
+
+.col-xs-6
+  width: 50%
+
+.col-xs-7
+  width: 58.33%
+
+.col-xs-8
+  width: 66.66%
+
+.col-xs-9
+  width: 75%
+
+.col-xs-10
+  width: 83.33%
+
+.col-xs-11
+  width: 91.66%
+
+.col-xs-12
+  width: 100%
+
+@media only screen and (max-width: 320px)
+  [class*="col-xs-"]
+    width: 100%
