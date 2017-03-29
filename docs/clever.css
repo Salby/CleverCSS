@@ -671,12 +671,6 @@ article {
       height: 56px; }
       .navBar ul li {
         display: none; }
-      .navBar ul .brandItem {
-        display: block;
-        float: right;
-        font-size: 19px; }
-        .navBar ul .brandItem:hover {
-          border-bottom: none; }
       .navBar ul #drawerButtonItem, .navBar ul li #drawerButton {
         display: inline; } }
 /*drawer */
