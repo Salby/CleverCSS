@@ -68,7 +68,7 @@
     margin: 0;
     box-shadow: none; }
     .elementDisplay article header {
-      background-color: #4278b7;
+      background-color: #2f343f;
       color: #ffffff; }
       .elementDisplay article header h3 {
         font-weight: 400; }
@@ -151,15 +151,15 @@ article .row section {
     text-align: center; }
 
 footer {
-  color: #4b8cdf; }
+  color: rgba(255, 255, 255, 0.1); }
   footer a {
-    color: #5294e2; }
+    color: rgba(255, 255, 255, 0.1); }
 
 @media only screen and (min-width: 787px) {
   #iconArticle, #dependArticle {
     min-height: 300px; } }
 .headerDecorator {
-  color: #5294e2;
+  color: #2f343f;
   font-weight: 500; }
 
 .modal {
@@ -194,7 +194,7 @@ footer {
     height: 100%;
     box-shadow: none; }
     .modal-content article header {
-      background-color: #4278b7; }
+      background-color: #2f343f; }
     .modal-content article p a {
       color: #5294e2;
       font-size: 110%;

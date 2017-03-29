@@ -484,10 +484,11 @@ article p {
   font-family: monospace; }
 
 footer {
-  background-color: #4278b7;
+  background-color: #2f343f;
   box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.2);
   padding: 1em;
-  margin: 5em 0 0 0; }
+  margin: 5em 0 0 0;
+  color: rgba(255, 255, 255, 0.1); }
 
 /*BUTTONS */
 .buttonFlat {
@@ -526,6 +527,8 @@ footer {
   .buttonAction:hover {
     background-color: #5a9ded;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2); }
+  .buttonAction:active {
+    transform: scale(1.05); }
   .buttonAction i {
     height: 30px;
     width: 30px;
@@ -543,8 +546,6 @@ footer {
   width: 52px;
   border-radius: 100%; }
   .buttonDropdown i {
-    transform: translateY(-30%);
-    transform: translateX(-10%);
     transform: scale(1.2); }
 
 .dropdown {
@@ -595,8 +596,13 @@ article {
   article:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
   article header {
-    background-color: #5294e2;
-    color: #ffffff; }
+    background-color: #2f343f; }
+    article header h1, article header h2, article header h3, article header h4, article header h5, article header h6 {
+      padding: 12px;
+      color: #ffffff; }
+    article header p {
+      padding: 12px;
+      color: #3e424d; }
 
 /*MISC THINGIES */
 .floatLeft {
@@ -613,7 +619,7 @@ article {
   width: 100%;
   height: 75px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
-  background-color: #4278b7;
+  background-color: #2f343f;
   z-index: 5; }
   .navBar ul {
     margin: 0;
@@ -688,7 +694,7 @@ article {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
   .drawerContent header {
     height: 56px;
-    background-color: #4278b7; }
+    background-color: #2f343f; }
     .drawerContent header #drawerClose {
       width: 56px;
       height: 56px;
