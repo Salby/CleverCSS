@@ -1,77 +1,37 @@
-/* Document
- * ==========================================================================
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500)
-
 html
   font-family: sans-serif
 
-  /* 1
   line-height: 1.15
 
-  /* 2
   -ms-text-size-adjust: 100%
 
-  /* 3
   -webkit-text-size-adjust: 100%
 
-  /* 3
-
-/* Sections
- * ==========================================================================
-/**
- * Remove the margin in all browsers (opinionated).
 
 body
   margin: 0
 
-/**
- * Add the correct display in IE 9-.
-
 article, aside, footer, header, nav, section
   display: block
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
 
 h1
   font-size: 2em
   margin: 0.67em 0
 
-/* Grouping content
- * ==========================================================================
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
-
 figcaption, figure, main
   /* 1
   display: block
 
-/**
- * Add the correct margin in IE 8.
-
 figure
   margin: 1em 40px
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
 
 hr
   box-sizing: content-box
 
-  /* 1
   height: 0
 
-  /* 1
   overflow: visible
 
-  /* 2
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
 
 pre
   font-family: monospace, monospace
@@ -80,12 +40,6 @@ pre
   font-size: 1em
 
   /* 2
-
-/* Text-level semantics
- * ==========================================================================
-/**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
 
 a
   background-color: transparent
@@ -98,70 +52,35 @@ a
   &:active, &:hover
     outline-width: 0
 
-/**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers (opinionated).
-/**
- * 1. Remove the bottom border in Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-
 abbr[title]
   border-bottom: none
 
-  /* 1
   text-decoration: underline
 
-  /* 2
   text-decoration: underline dotted
 
-  /* 2
-
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
 
 b, strong
   font-weight: inherit
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
-
 b, strong
   font-weight: bolder
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
 
 code, kbd, samp
   font-family: monospace, monospace
 
-  /* 1
   font-size: 1em
 
-  /* 2
-
-/**
- * Add the correct font style in Android 4.3-.
 
 dfn
   font-style: italic
-
-/**
- * Add the correct background and color in IE 9-.
 
 mark
   background-color: #ff0
   color: #000
 
-/**
- * Add the correct font size in all browsers.
-
 small
   font-size: 80%
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
 
 sub, sup
   font-size: 75%
@@ -175,229 +94,124 @@ sub
 sup
   top: -0.5em
 
-/* Embedded content
- * ==========================================================================
-/**
- * Add the correct display in IE 9-.
-
 audio, video
   display: inline-block
-
-/**
- * Add the correct display in iOS 4-7.
 
 audio:not([controls])
   display: none
   height: 0
 
-/**
- * Remove the border on images inside links in IE 10-.
-
 img
   border-style: none
-
-/**
- * Hide the overflow in IE.
 
 svg:not(:root)
   overflow: hidden
 
-/* Forms
- * ==========================================================================
-/**
- * 1. Change the font styles in all browsers (opinionated).
- * 2. Remove the margin in Firefox and Safari.
-
 button, input, optgroup, select, textarea
   font-family: sans-serif
 
-  /* 1
   font-size: 100%
 
-  /* 1
   line-height: 1.15
 
-  /* 1
   margin: 0
 
-  /* 2
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
 
 button, input
-  /* 1
   overflow: visible
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
-
 button, select
-  /* 1
   text-transform: none
-
-/**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
 
 button, html [type="button"], [type="reset"], [type="submit"]
   -webkit-appearance: button
 
-  /* 2
-
-/**
- * Remove the inner border and padding in Firefox.
 
 button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner
   border-style: none
   padding: 0
 
-/**
- * Restore the focus styles unset by the previous rule.
-
 button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring
   outline: 1px dotted ButtonText
-
-/**
- * Change the border, margin, and padding in all browsers (opinionated).
 
 fieldset
   border: 1px solid #c0c0c0
   margin: 0 2px
   padding: 0.35em 0.625em 0.75em
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
-
 legend
   box-sizing: border-box
 
-  /* 1
   color: inherit
 
-  /* 2
   display: table
 
-  /* 1
   max-width: 100%
 
-  /* 1
   padding: 0
 
-  /* 3
   white-space: normal
 
-  /* 1
-
-/**
- * 1. Add the correct display in IE 9-.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
 
 progress
   display: inline-block
 
-  /* 1
   vertical-align: baseline
 
-  /* 2
-
-/**
- * Remove the default vertical scrollbar in IE.
 
 textarea
   overflow: auto
 
-/**
- * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
-
 [type="checkbox"], [type="radio"]
   box-sizing: border-box
 
-  /* 1
   padding: 0
 
-  /* 2
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
 
 [type="number"]
   &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
     height: auto
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
-
 [type="search"]
   -webkit-appearance: textfield
 
-  /* 1
   outline-offset: -2px
 
-  /* 2
 
   &::-webkit-search-cancel-button, &::-webkit-search-decoration
     -webkit-appearance: none
 
-/**
- * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
-
 \::-webkit-file-upload-button
   -webkit-appearance: button
 
-  /* 1
   font: inherit
 
-  /* 2
-
-/* Interactive
- * ==========================================================================
-/* Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
 
 details, menu
   display: block
 
-/* Add the correct display in all browsers.
-
 summary
   display: list-item
-
-/* Scripting
- * ==========================================================================
-/**
- * Add the correct display in IE 9-.
 
 canvas
   display: inline-block
 
-/**
- * Add the correct display in IE.
-
 template, [hidden]
   display: none
 
-/* Hidden
- * ==========================================================================
-/**
- * Add the correct display in IE 10-.
+
 /*WELCOME TO CLEVERCSS
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500)
+
+$colorDark: #4278b7
+$colorLight: #5294e2
+$colorLighter: #5a9ded
 
 body
   margin: 0
   padding: 0
-  font-family: "Roboto", sans-serif
+  font-family: 'Roboto', sans-serif
   background-color: #e8e8e8
   color: #000000
 
@@ -405,10 +219,11 @@ body
   transition: all 0.2s
 
   /*FIX FOR CHROME STYLING
-  -webkit-tap-highlight-color: transparent
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
   outline: none
 
 /*ANIMATIONS
+
 @keyframes dropDown
   0%
     opacity: 0
@@ -418,74 +233,15 @@ body
 
   100%
     opacity: 1
-    width: 100%
-    height: auto
+    width: 160px
+    height: 172px
     transform: translateY(0px)
 
-/*FANCY THINGIES*/
+/*FANCY THINGIES
 
 .wrapper
   width: 1200px
   margin: auto
-
-/*FORMS*/
-
-.formLoose
-  width: 600px
-  font-family: 'Roboto', sans-serif
-  padding: 1.5em
-  margin: 1.5em
-  padding-bottom: 3.5em
-  .inputText
-    background-color: #ffffff
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)
-    color: #222222
-    border: 0
-    padding: 0.75em 1em 0.75em 1em
-    margin: 0.5em
-    border-bottom: solid 3px white
-    width: 95%
-    &:hover
-      box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2)
-    &:focus
-      border-bottom: solid 3px #5294e2
-  .inputSubmit
-    border: 0
-    background-color: #5294e2
-    color: white
-    font-weight: 600
-    padding: 0.5em
-    float: right
-    cursor: pointer
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)
-
-.formTight
-  width: 600px
-  font-family: 'Roboto', sans-serif
-  padding: 1.5em
-  margin: 1.5em
-  padding-bottom: 3.5em
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2)
-  .inputText
-    border: 0
-    border-bottom: solid 2px rgba(0,0,0,0.2)
-    color: #222222
-    padding: 0.75em 1em
-    margin: 0.5em
-    width: 95%
-    &:focus
-      border-bottom: solid 2px #5294e2
-  .inputSubmit
-    border: 0
-    background-color: rgba(0,0,0,0)
-    color: #5294e2
-    font-weight: 600
-    padding: 0.5em
-    float: right
-    cursor: pointer
-    &:hover
-      background-color: rgba(0,0,0,0.05)
-
 
 @media only screen and (max-width: 1200px)
   .wrapper
@@ -510,10 +266,6 @@ body
 @media only screen and (max-width: 786px)
   .hero h1
     font-size: 300%
-  .formLoose
-    width: 100%
-  .formTight
-    width: 100%
 
 @media only screen and (max-width: 480px)
   .hero h1
@@ -573,18 +325,17 @@ article p
   font-family: monospace
 
 footer
-  background-color: #2f343f
+  background-color: #4278b7
   box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.2)
   padding: 1em
   margin: 5em 0 0 0
-  color: rgba(255,255,255,0.1)
 
 /*BUTTONS*/
 
 .buttonFlat
   cursor: pointer
   font-size: 125%
-  background-color: transparent
+  background-color: rgba(0, 0, 0, 0)
   padding: 0.25em 0.5em
   border: 0
   font-weight: 500
@@ -620,8 +371,6 @@ footer
   &:hover
     background-color: #5a9ded
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2)
-  &:active
-    transform: scale(1.05)
 
   i
     height: 30px
@@ -630,7 +379,7 @@ footer
 
 .buttonDropdown
   border: 0
-  background-color: transparent
+  background-color: rgba(0, 0, 0, 0)
   color: #ffffff
   padding: 16px
   font-size: 16px
@@ -641,6 +390,8 @@ footer
   border-radius: 100%
 
   i
+    transform: translateY(-30%)
+    transform: translateX(-10%)
     transform: scale(1.2)
 
 .dropdown
@@ -699,13 +450,8 @@ article
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
 
   header
-    background-color: #2f343f
-    h1, h2, h3, h4, h5, h6
-      padding: 12px
-      color: #ffffff
-    p
-      padding: 12px
-      color: #3e424d
+    background-color: #5294e2
+    color: #ffffff
 
 /*MISC THINGIES*/
 
@@ -724,7 +470,7 @@ article
   width: 100%
   height: 75px
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2)
-  background-color: #2f343f
+  background-color: #4278b7
   z-index: 5
 
   ul
@@ -744,7 +490,7 @@ article
       padding: 1em
       position: relative
       overflow: hidden
-      border-bottom: solid 0.1em transparent
+      border-bottom: solid 0.1em rgba(0, 0, 0, 0)
 
       &:hover
         border-bottom: solid 0.1em #ffffff
@@ -768,15 +514,15 @@ article
       margin: 0
       border: 0
       border-radius: 56px
-      background-color: transparent
+      background-color: rgba(0, 0, 0, 0)
       color: #ffffff
       display: none
 
-      &:active
+      &:hover
         background-color: rgba(255, 255, 255, 0.1)
 
       i
-        transform: scale(1.2) translateY(10%)
+        transform: scale(2)
 
 @media only screen and (max-width: 768px)
   .navBar
@@ -787,18 +533,11 @@ article
 
       li
         display: none
-      .brandItem
-        display: block
-        float: right
-        font-size: 19px
-        &:hover
-          border-bottom: none
 
       #drawerButtonItem, li #drawerButton
         display: inline
 
 /*drawer*/
-
 .drawer
   display: block
   position: fixed
@@ -808,7 +547,7 @@ article
   width: 100%
   height: 100%
   overflow: auto
-  background-color: black
+  background-color: rgb(0, 0, 0)
   background-color: rgba(0, 0, 0, 0.2)
   transform: translateX(-100%)
 
@@ -816,66 +555,54 @@ article
   height: 100vh
   width: 80vw
   background-color: white
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2)
-
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2)
   header
     height: 56px
-    background-color: #2f343f
-
+    background-color: $colorDark
     #drawerClose
       width: 56px
       height: 56px
-      background-color: transparent
+      background-color: rgba(0,0,0,0)
       color: white
       border-radius: 56px
       border: 0
-
       &:active
-        background-color: rgba(255, 255, 255, 0.1)
-
+        background-color: rgba(255,255,255,0.1)
       i
         transform: scale(1.5) translateY(5%)
-
   ul
     padding: 0
     margin: 0
     list-style: none
-    border-bottom: solid 1px rgba(0, 0, 0, 0.05)
-
     li
-      font-size: 100%
-      padding: 0.5em 0.5em 0.8em 0.5em
       position: relative
       overflow: hidden
-
+      padding: .8em .5em .8em .5em
       &:hover
-        background-color: rgba(0, 0, 0, 0.05)
-
+        background-color: rgba(0,0,0,0.075)
       a
         text-decoration: none
-        padding: 0.5em 0.5em 0.8em 0.5em
-        color: #333333
-
+        color: rgba(0,0,0,0.8)
         i
-          transform: translateY(25%)
+          transform: translateY(20%)
+          padding-right: .5em
+      /*ANIMATE DRAWER*/
+      @keyframes drawerOut
+        0%
+          transform: translateX(-100%)
+        100%
+          transform: translateX(0%)
+      @keyframes drawerIn
+        0%
+          transform: translateX(0%)
+        100%
+          transform: translateX(-100%)
 
 .animateIn
   animation: drawerIn 0.3s forwards
-
 .animateOut
   animation: drawerOut 0.3s forwards
 
-@keyframes drawerIn
-  0%
-    transform: translateX(0%)
-  100%
-    transform: translateX(-100%)
-
-@keyframes drawerOut
-  0%
-    transform: translateX(-100%)
-  100%
-    transform: translateX(0%)
 
 /*GRID*/
 
@@ -891,7 +618,8 @@ article
   float: left
   padding: 0.5em
 
-/*RESPONSIVE GRID*/
+/*RESPONSIVE GRID
+
 /*LARGE 1200PX*/
 
 .col-l-1
@@ -1018,7 +746,7 @@ article
   [class*="col-s-"]
     width: 100%
 
-/*EXTRA SMALL 320PX*/
+/*EXTRA SMALL 320PX
 
 .col-xs-1
   width: 8.33%
@@ -1059,5 +787,3 @@ article
 @media only screen and (max-width: 320px)
   [class*="col-xs-"]
     width: 100%
-
-/*# sourceMappingURL=clever.css.map
