@@ -573,11 +573,10 @@ article p
   font-family: monospace
 
 footer
-  background-color: #2f343f
+  background-color: #4278b7
   box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.2)
   padding: 1em
   margin: 5em 0 0 0
-  color: rgba(255,255,255,0.1)
 
 /*BUTTONS*/
 
@@ -620,8 +619,6 @@ footer
   &:hover
     background-color: #5a9ded
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2)
-  &:active
-    transform: scale(1.05)
 
   i
     height: 30px
@@ -641,6 +638,8 @@ footer
   border-radius: 100%
 
   i
+    transform: translateY(-30%)
+    transform: translateX(-10%)
     transform: scale(1.2)
 
 .dropdown
@@ -699,13 +698,8 @@ article
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
 
   header
-    background-color: #2f343f
-    h1, h2, h3, h4, h5, h6
-      padding: 12px
-      color: #ffffff
-    p
-      padding: 12px
-      color: #3e424d
+    background-color: #5294e2
+    color: #ffffff
 
 /*MISC THINGIES*/
 
@@ -787,6 +781,12 @@ article
 
       li
         display: none
+      .brandItem
+        display: block
+        float: right
+        font-size: 19px
+        &:hover
+          border-bottom: none
 
       #drawerButtonItem, li #drawerButton
         display: inline
@@ -814,7 +814,7 @@ article
 
   header
     height: 56px
-    background-color: #2f343f
+    background-color: #4278b7
 
     #drawerClose
       width: 56px
