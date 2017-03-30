@@ -424,8 +424,17 @@ body
 
 /*FANCY THINGIES*/
 
-.wrapper
+.wrapperL
   width: 1200px
+  margin: auto
+.wrapperM
+  width: 768px
+  margin: auto
+.wrapperS
+  width: 480px
+  margin: auto
+.wrapperXS
+  width: 320px
   margin: auto
 
 /*FORMS*/
@@ -488,7 +497,7 @@ body
 
 
 @media only screen and (max-width: 1200px)
-  .wrapper
+  .wrapperL
     width: 100%
 
 .hero
@@ -503,7 +512,6 @@ body
     font-weight: 300
     color: #2f343f
 
-@media only screen and (max-width: 1200px)
   .hero h1
     font-size: 350%
 
@@ -514,14 +522,20 @@ body
     width: 100%
   .formTight
     width: 100%
+  .wrapperM
+    width: 100%
 
 @media only screen and (max-width: 480px)
   .hero h1
     font-size: 250%
+  .wrapperS
+    width: 100%
 
 @media only screen and (max-width: 320px)
   .hero h1
     font-size: 200%
+  .wrapperXS
+    width: 100%
 
 /*FONTMODS*/
 

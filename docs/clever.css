@@ -342,8 +342,20 @@ body {
     height: auto;
     transform: translateY(0px); } }
 /*FANCY THINGIES */
-.wrapper {
+.wrapperL {
   width: 1200px;
+  margin: auto; }
+
+.wrapperM {
+  width: 768px;
+  margin: auto; }
+
+.wrapperS {
+  width: 480px;
+  margin: auto; }
+
+.wrapperXS {
+  width: 320px;
   margin: auto; }
 
 /*FORMS */
@@ -404,7 +416,7 @@ body {
       background-color: rgba(0, 0, 0, 0.05); }
 
 @media only screen and (max-width: 1200px) {
-  .wrapper {
+  .wrapperL {
     width: 100%; } }
 .hero {
   height: 100vh;
@@ -416,10 +428,9 @@ body {
     font-size: 400%;
     font-weight: 300;
     color: #2f343f; }
+  .hero .hero h1 {
+    font-size: 350%; }
 
-@media only screen and (max-width: 1200px) {
-  .hero h1 {
-    font-size: 350%; } }
 @media only screen and (max-width: 786px) {
   .hero h1 {
     font-size: 300%; }
@@ -428,13 +439,22 @@ body {
     width: 100%; }
 
   .formTight {
+    width: 100%; }
+
+  .wrapperM {
     width: 100%; } }
 @media only screen and (max-width: 480px) {
   .hero h1 {
-    font-size: 250%; } }
+    font-size: 250%; }
+
+  .wrapperS {
+    width: 100%; } }
 @media only screen and (max-width: 320px) {
   .hero h1 {
-    font-size: 200%; } }
+    font-size: 200%; }
+
+  .wrapperXS {
+    width: 100%; } }
 /*FONTMODS */
 h1 {
   font-weight: 300;
