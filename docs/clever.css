@@ -484,10 +484,11 @@ article p {
   font-family: monospace; }
 
 footer {
-  background-color: #4278b7;
+  background-color: #2f343f;
   box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.2);
   padding: 1em;
-  margin: 5em 0 0 0; }
+  margin: 5em 0 0 0;
+  color: rgba(255, 255, 255, 0.1); }
 
 /*BUTTONS */
 .buttonFlat {
@@ -526,6 +527,8 @@ footer {
   .buttonAction:hover {
     background-color: #5a9ded;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2); }
+  .buttonAction:active {
+    transform: scale(1.05); }
   .buttonAction i {
     height: 30px;
     width: 30px;
@@ -595,7 +598,7 @@ article {
   article:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
   article header {
-    background-color: #5294e2;
+    background-color: #2f343f;
     color: #ffffff; }
 
 /*MISC THINGIES */
