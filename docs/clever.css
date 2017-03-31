@@ -617,8 +617,14 @@ article {
   article:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
   article header {
-    background-color: #2f343f;
-    color: #ffffff; }
+    background-color: #2f343f; }
+    article header h1, article header h2, article header h3, article header h4, article header h5, article header h6 {
+      font-weight: 400;
+      color: white; }
+    article header p {
+      font-weight: 400;
+      color: #b0b9c6;
+      margin: 0; }
 
 /*MISC THINGIES */
 .floatLeft {
