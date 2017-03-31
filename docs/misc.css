@@ -106,12 +106,12 @@
 .ink {
   display: block;
   position: absolute;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 100%;
   transform: scale(0);
   transition: all 0s; }
   .ink.animate {
-    animation: ripple 0.65s linear; }
+    animation: ripple 0.3s linear; }
 
 /*animation effect */
 @keyframes ripple {
