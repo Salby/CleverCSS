@@ -162,7 +162,7 @@ footer {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 9;
   left: 0;
   top: 0;
   width: 100%;
@@ -176,7 +176,7 @@ footer {
   margin: 10% auto;
   width: 768px;
   animation: openModal 0.3s;
-  height: 520px;
+  height: auto;
   padding: 0 0 1.75em 0;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2); }
   .modal-content article {
@@ -193,6 +193,25 @@ footer {
   .modal-content {
     margin: 20% auto;
     width: 95vw; } }
+@media only screen and (max-width: 480px) {
+  .modal-content {
+    margin: 5% auto; } }
+@media only screen and (max-width: 320px) {
+  .modal-content {
+    margin: 0 0;
+    height: 100vh;
+    width: 100vw; }
+    .modal-content article {
+      margin: 0 0; }
+    .modal-content .buttonAction {
+      transform: translateY(-900%); } }
+@keyframes buttonPopIn {
+  0% {
+    transform: scale(0); }
+  80% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
 /*# sourceMappingURL=misc.css.map */
 
 /*# sourceMappingURL=misc.css.map */
