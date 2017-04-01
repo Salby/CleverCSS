@@ -510,6 +510,7 @@ footer {
   color: rgba(255, 255, 255, 0.1); }
 
 /*BUTTONS */
+/*FIREFOX BUTTON FIX */
 .buttonFlat {
   cursor: pointer;
   font-size: 125%;
@@ -547,7 +548,10 @@ footer {
     background-color: #5a9ded;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2); }
   .buttonAction:active {
-    transform: scale(1.05); }
+    transform: scale(1.05);
+    outline: none; }
+  .buttonAction:focus {
+    outline: none; }
   .buttonAction i {
     height: 30px;
     width: 30px;
@@ -609,6 +613,10 @@ footer {
   background-color: rgba(255, 255, 255, 0.2); }
 
 /*ARTICLES, SECTIONS AND OTHER BLOCKS */
+header {
+  position: relative;
+  overflow: hidden; }
+
 article {
   background-color: #ffffff;
   margin: 1em 0em 0em 0em;
@@ -1032,4 +1040,6 @@ article {
 @media only screen and (max-width: 320px) {
   [class*="col-xs-"] {
     width: 100%; } }
+/*# sourceMappingURL=clever.css.map */
+
 /*# sourceMappingURL=clever.css.map */
