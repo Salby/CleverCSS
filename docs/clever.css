@@ -2,12 +2,21 @@
 /*RESET */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:300,400,500");
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: #e8e8e8; }
 
 * {
   transition: all 0.3s;
   -webkit-tap-highlight-color: transparent;
   outline: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #2f343f; }
+
+p {
+  color: #212121; }
 
 /*COLORS */
 /*COMPONENTS */
@@ -59,7 +68,7 @@ body {
         .navBar ul #drawerButtonItem #drawerButton:active {
           background-color: rgba(255, 255, 255, 0.1); }
         .navBar ul #drawerButtonItem #drawerButton i {
-          transform: scale(1.2) translateY(10%);
+          transform: scale(1.2) translateY(5%) translateX(-1%);
           color: white; }
 
 @media only screen and (max-width: 768px) {
@@ -67,6 +76,8 @@ body {
     height: 56px; }
     .navBar ul {
       height: 56px; }
+      .navBar ul li {
+        height: 56px; }
       .navBar ul .brandItem {
         float: right;
         border-bottom: 0; }
@@ -101,8 +112,8 @@ body {
         .drawer .drawerContent .drawerHeader #drawerClose:active {
           background-color: rgba(255, 255, 255, 0.1); }
         .drawer .drawerContent .drawerHeader #drawerClose i {
-          transform: scale(1.2) translateY(10%);
-          color: white; }
+          color: white;
+          transform: scale(1.2) translateY(10%); }
 
 .drawerAnimate {
   transform: translateX(0%); }
@@ -149,6 +160,8 @@ body {
 .articleCard {
   background-color: white;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+  .articleCard p {
+    padding: 0 0 0 12px; }
   .articleCard .headerDark {
     background-color: #2F343F; }
     .articleCard .headerDark h1, .articleCard .headerDark h2, .articleCard .headerDark h3, .articleCard .headerDark h4, .articleCard .headerDark h5, .articleCard .headerDark h6 {
@@ -216,6 +229,51 @@ button::-moz-focus-inner {
 .buttonFloatRight {
   float: right; }
 
+/*DROPDOWN */
+.dropdown {
+  position: relative;
+  display: block; }
+  .dropdown .buttonDropdownSmall {
+    width: 56px;
+    height: 56px;
+    border: 0;
+    border-radius: 56px;
+    background-color: transparent; }
+    .dropdown .buttonDropdownSmall:active {
+      background-color: rgba(255, 255, 255, 0.1); }
+    .dropdown .buttonDropdownSmall i {
+      color: white;
+      transform: scale(1.2) translateY(10%); }
+  .dropdown .dropdownContent {
+    position: absolute;
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+    display: none;
+    top: 56px;
+    left: 0;
+    width: 160px;
+    white-space: nowrap;
+    background-color: #FEFEFE;
+    list-style: none;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2); }
+    .dropdown .dropdownContent li {
+      font-family: "Open Sans", sans-serif;
+      padding: 0.5em;
+      color: #212121; }
+      .dropdown .dropdownContent li:active {
+        background-color: rgba(0, 0, 0, 0.1); }
+  .dropdown .dropdownContentShow {
+    display: block;
+    animation: dropdownSmallAnimate 0.3s; }
+
+@keyframes dropdownSmallAnimate {
+  0% {
+    transform: translateY(-5%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0%);
+    opacity: 1; } }
 * {
   box-sizing: border-box; }
 

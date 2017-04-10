@@ -33,10 +33,10 @@
       </div>
     </div>
 
-      <header style="height: 80vh; padding-top: 10vh; display: flex; flex-direction: column; justify-content: center">
+      <header style="animation: fadeIn 1s ;height: 80vh; padding-top: 10vh; display: flex; flex-direction: column; justify-content: center">
         <section style="margin: auto; text-align: center">
           <h1 style="text-align: center; font-size: 350%; padding: 0;">Clever<span class="headerDecorator">CSS</span></h1>
-          <h2 style="text-align: center; padding: 0; padding-bottom: 1em;">A framework for humans</h2>
+          <h2 style="text-align: center; padding: 0; padding-bottom: 1em;">A front-end framework for humans</h2>
         </section>
       </header>
 
@@ -86,17 +86,15 @@
             <section class="col-m-9">
               <section class="elementDisplay">
                 <header>
-                  <div class="dropdown">
-                    <button class="buttonDropdown" id="mobileDrop"><i class="material-icons">more_vert</i></button>
-                    <div class="dropdownContent">
-                      <ul class="dropdownMenu">
-                        <li><a onclick="selectNavBar()">Navigation Bar</a></li>
-                        <li><a onclick="selectButtons()">Buttons</a></li>
-                        <li><a onclick="selectTypo()">Typography</a></li>
-                        <li><a onclick="selectGrid()">Responsive Grid</a></li>
-                        <li><a onclick="selectForms()">Forms</a></li>
-                      </ul>
-                    </div>
+                  <div class="dropdown" style="float: right">
+                    <button class="buttonDropdownSmall" id="mobileDrop"><i class="material-icons">more_vert</i></button>
+                    <ul class="dropdownContent" id="mobileDropdownContent">
+                      <li onclick="selectNavBar()"><a>Navigation Bar</a></li>
+                      <li onclick="selectButtons()"><a>Buttons</a></li>
+                      <li onclick="selectTypo()"><a>Typography</a></li>
+                      <li onclick="selectGrid()"><a>Responsive Grid</a></li>
+                      <li onclick="selectForms()"><a>Forms</a></li>
+                    </ul>
                   </div>
                 </header>
                 <article id="navBarArticle">
@@ -322,8 +320,10 @@
           </div>
         <div class="row">
           <section class="col-m-6">
-            <article id="iconArticle">
-              <h2>Icons</h2>
+            <div class="articleCard" id="iconArticle">
+              <div class="headerDark">
+                <h2>Icons</h2>
+              </div>
               <p>You can use any icon pack you like with CleverCSS, although Google's material icons and Font Awesome are recommended</p>
               <div class="row">
                 <section class="col-s-6">
@@ -339,11 +339,13 @@
                   </a>
                 </section>
               </div>
-            </article>
+            </div>
           </section>
           <section class="col-m-6">
-            <article id="dependArticle">
-              <h2>Dependencies</h2>
+            <div class="articleCard" id="dependArticle">
+              <div class="headerDark">
+                <h2>Dependencies</h2>
+              </div>
               <p>
                 JQuery is needed for certain elements to work correctly.<br>
                 Jquery can be installed from the <a href="http://jquery.com" target="_blank">official JQuery website</a>
@@ -353,7 +355,7 @@
                 <div class="code">&lt;script src=&#039;https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js&#039;&gt;&lt;/script&gt;
                 </div>
               </p>
-            </article>
+            </div>
           </section>
         </div>
       </section>

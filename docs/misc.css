@@ -25,7 +25,12 @@
     display: none; }
 
   #mobileDrop {
-    display: block; } }
+    display: block;
+    float: right; }
+
+  #mobileDropdownContent {
+    right: 0;
+    left: auto; } }
 .elementList li {
   cursor: pointer;
   background-color: #5294e2;
@@ -49,7 +54,7 @@
       padding: 0;
       font-size: 16px;
       border: 0;
-      font-weight: 600;
+      font-weight: 500;
       width: 100%;
       text-align: left;
       padding: 0.6em; }
@@ -73,12 +78,17 @@
       .elementDisplay article header h3 {
         font-weight: 400; }
     .elementDisplay article h4 {
-      font-weight: 400;
-      color: #000000;
-      margin: 16px 6px 0 6px; }
+      font-weight: 500;
+      color: #212121;
+      padding: 24px 0 3px 12px;
+      margin: 0; }
 
 #navBarArticle {
   display: block; }
+  #navBarArticle header {
+    height: 56px; }
+    #navBarArticle header h3 {
+      color: white; }
 
 #buttonArticle, #typoArticle, #gridArticle, #formsArticle {
   display: none;
@@ -159,7 +169,7 @@ footer {
   #iconArticle, #dependArticle {
     min-height: 300px; } }
 .headerDecorator {
-  color: #2f343f;
+  color: #5294e2;
   font-weight: 500; }
 
 .modal {
@@ -211,6 +221,17 @@ footer {
   background: -o-linear-gradient(bottom right, #2f343f, #5294e2);
   background: -moz-linear-gradient(bottom right, #2f343f, #5294e2);
   background: linear-gradient(to bottom right, #2f343f, #5294e2); }
+
+article p {
+  padding: 6px 0 6px 12px;
+  margin: 0; }
+article header {
+  height: 56px; }
+  article header h3 {
+    font-size: 28px;
+    padding: 0.5em;
+    margin: 0;
+    color: white; }
 
 /*# sourceMappingURL=misc.css.map */
 
