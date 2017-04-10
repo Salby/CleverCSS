@@ -68,7 +68,7 @@
     margin: 0;
     box-shadow: none; }
     .elementDisplay article header {
-      background-color: #2f343f;
+      background-color: #4278b7;
       color: #ffffff; }
       .elementDisplay article header h3 {
         font-weight: 400; }
@@ -80,18 +80,17 @@
 #navBarArticle {
   display: block; }
 
-#buttonArticle, #typoArticle, #gridArticle, #formsArticle {
-  display: none;
-  padding-bottom: 1em; }
+#buttonArticle, #typoArticle, #gridArticle {
+  display: none; }
 
 .code {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 0.5em 0.5em;
-  font-family: monospace;
+  font-family: "Space Mono" monospace;
   font-size: 14px;
-  margin: 6 6px;
+  margin: 0 16px;
   display: block;
-  overflow-x: auto; }
+  overflow-x: scroll; }
 
 .demoArea {
   padding: 1em; }
@@ -130,7 +129,6 @@
   .inkDark.animate {
     animation: ripple 0.5s linear; }
 
-/*animation effect */
 article .row section {
   height: 100%;
   align-items: center;
@@ -151,15 +149,15 @@ article .row section {
     text-align: center; }
 
 footer {
-  color: rgba(255, 255, 255, 0.1); }
+  color: #4b8cdf; }
   footer a {
-    color: rgba(255, 255, 255, 0.1); }
+    color: #5294e2; }
 
 @media only screen and (min-width: 787px) {
   #iconArticle, #dependArticle {
     min-height: 300px; } }
 .headerDecorator {
-  color: #2f343f;
+  color: #5294e2;
   font-weight: 500; }
 
 .modal {
@@ -194,7 +192,7 @@ footer {
     height: 100%;
     box-shadow: none; }
     .modal-content article header {
-      background-color: #2f343f; }
+      background-color: #4278b7; }
     .modal-content article p a {
       color: #5294e2;
       font-size: 110%;
@@ -203,15 +201,8 @@ footer {
 @media only screen and (max-width: 786px) {
   .modal-content {
     margin: 20% auto;
-    width: 95vw; } }
-/*SOMETHING GRADIENT */
-.backgroundGradient {
-  background: #2f343f;
-  background: -webkit-linear-gradient(left top, #2f343f, #5294e2);
-  background: -o-linear-gradient(bottom right, #2f343f, #5294e2);
-  background: -moz-linear-gradient(bottom right, #2f343f, #5294e2);
-  background: linear-gradient(to bottom right, #2f343f, #5294e2); }
-
-/*# sourceMappingURL=misc.css.map */
+    width: 95vw;
+    background-color: white;
+    color: black; } }
 
 /*# sourceMappingURL=misc.css.map */
