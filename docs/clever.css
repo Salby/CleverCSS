@@ -16,7 +16,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #2f343f; }
 
 p {
-  color: #212121; }
+  color: #212121;
+  font-family: "Roboto", sans-serif; }
 
 /*COLORS */
 /*COMPONENTS */
