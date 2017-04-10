@@ -195,6 +195,21 @@ p {
     .articleCard .footerLight .buttonFlat {
       float: right; }
 
+/*FORMS */
+.formTight {
+  background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+  .formTight .formHeader h1, .formTight .formHeader h2, .formTight .formHeader h3, .formTight .formHeader h4, .formTight .formHeader h5, .formTight .formHeader h6 {
+    background-color: #2F343F;
+    color: white;
+    padding: 12px 0 6px 12px; }
+
+.formLoose {
+  background-color: transparent; }
+  .formLoose .formHeader h1, .formLoose .formHeader h2, .formLoose .formHeader h3, .formLoose .formHeader h4, .formLoose .formHeader h5, .formLoose .formHeader h6 {
+    color: #2F343F;
+    padding: 12px 0 6px 12px; }
+
 /*BUTTONS */
 button::-moz-focus-inner {
   border: 0; }
@@ -211,6 +226,20 @@ button::-moz-focus-inner {
   background-color: transparent; }
   .buttonFlat:hover {
     background-color: rgba(0, 0, 0, 0.05); }
+
+.buttonRaised {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
+  font-size: 1.1em;
+  font-family: "Roboto", sans-serif;
+  padding: 0.3em;
+  margin: 0.2em 0.2em;
+  color: white;
+  background-color: #5294E2;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+  .buttonRaised:hover {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2); }
 
 .buttonAction {
   cursor: pointer;
