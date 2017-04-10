@@ -2,14 +2,56 @@
 .formTight
   background-color: white
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2)
+  padding-bottom: 44px
+  font-family: 'Open Sans', sans-serif
   .formHeader
     h1,h2,h3,h4,h5,h6
       background-color: $primary
       color: white
       padding: 12px 0 6px 12px
+  .inputText
+    width: 94%
+    margin: 6px 0 6px 12px
+    padding: 12px 12px 6px 12px
+    border: 0
+    border-bottom: 2px solid $divider
+    &:focus
+      border-bottom: 2px solid $accent
+  .inputSubmit
+    cursor: pointer
+    float: right
+    font-size: 1.1em
+    padding: 0.3em
+    margin: 0.3em
+    border: 0
+    color: $accent
+    background-color: rgba(0,0,0,0)
+    &:hover
+      background-color: rgba(0,0,0,0.05)
 .formLoose
   background-color: rgba(0,0,0,0)
+  padding-bottom: 44px
+  font-family: 'Open Sans', sans-serif
   .formHeader
     h1,h2,h3,h4,h5,h6
       color: $primary
       padding: 12px 0 6px 12px
+  .inputText
+    width: 94%
+    margin: 6px 0 6px 12px
+    padding: 12px 12px 12px 12px
+    border: 0
+    background-color: white
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2)
+  .inputSubmit
+    cursor: pointer
+    float: right
+    font-size: 1.1em
+    padding: 0.3em
+    margin: 0.3em
+    border: 0
+    color: white
+    background-color: $accent
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2)
+    &:hover
+      box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2)

@@ -198,17 +198,59 @@ p {
 /*FORMS */
 .formTight {
   background-color: white;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  padding-bottom: 44px;
+  font-family: "Open Sans", sans-serif; }
   .formTight .formHeader h1, .formTight .formHeader h2, .formTight .formHeader h3, .formTight .formHeader h4, .formTight .formHeader h5, .formTight .formHeader h6 {
     background-color: #2F343F;
     color: white;
     padding: 12px 0 6px 12px; }
+  .formTight .inputText {
+    width: 94%;
+    margin: 6px 0 6px 12px;
+    padding: 12px 12px 6px 12px;
+    border: 0;
+    border-bottom: 2px solid #BDBDBD; }
+    .formTight .inputText:focus {
+      border-bottom: 2px solid #5294E2; }
+  .formTight .inputSubmit {
+    cursor: pointer;
+    float: right;
+    font-size: 1.1em;
+    padding: 0.3em;
+    margin: 0.3em;
+    border: 0;
+    color: #5294E2;
+    background-color: transparent; }
+    .formTight .inputSubmit:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
 
 .formLoose {
-  background-color: transparent; }
+  background-color: transparent;
+  padding-bottom: 44px;
+  font-family: "Open Sans", sans-serif; }
   .formLoose .formHeader h1, .formLoose .formHeader h2, .formLoose .formHeader h3, .formLoose .formHeader h4, .formLoose .formHeader h5, .formLoose .formHeader h6 {
     color: #2F343F;
     padding: 12px 0 6px 12px; }
+  .formLoose .inputText {
+    width: 94%;
+    margin: 6px 0 6px 12px;
+    padding: 12px 12px 12px 12px;
+    border: 0;
+    background-color: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+  .formLoose .inputSubmit {
+    cursor: pointer;
+    float: right;
+    font-size: 1.1em;
+    padding: 0.3em;
+    margin: 0.3em;
+    border: 0;
+    color: white;
+    background-color: #5294E2;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+    .formLoose .inputSubmit:hover {
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2); }
 
 /*BUTTONS */
 button::-moz-focus-inner {
