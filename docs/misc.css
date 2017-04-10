@@ -99,7 +99,8 @@
   font-size: 14px;
   margin: 6 6px;
   display: block;
-  overflow-x: auto; }
+  overflow-x: auto;
+  white-space: nowrap; }
 
 .demoArea {
   padding: 1em; }
