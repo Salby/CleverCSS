@@ -113,6 +113,7 @@
   display: block
   overflow-x: auto
   white-space: nowrap
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2) inset
 
 .demoArea
   padding: 1em
@@ -186,6 +187,21 @@ footer
 @media only screen and (min-width: 787px)
   #iconArticle, #dependArticle
     min-height: 300px
+    .row
+      .col-s-6
+        height: 15vh
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        a
+          span
+            display: block
+            font-size: 50px
+            text-decoration: none
+            color: #5294e2
+            width: 50px
+            margin: auto
 
 .headerDecorator
   color: #5294e2
