@@ -125,16 +125,17 @@ p {
       padding: 0;
       margin: 0;
       list-style: none;
-      border-top: 1px solid rgba(0, 0, 0, 0.5);
       border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
       .drawer .drawerContent .drawerNav li {
+        user-select: none;
         cursor: pointer;
         padding: 12px 12px;
         color: #757575; }
         .drawer .drawerContent .drawerNav li:hover {
           background-color: rgba(0, 0, 0, 0.05); }
         .drawer .drawerContent .drawerNav li a {
-          font-size: 18px; }
+          font-size: 18px;
+          display: block; }
           .drawer .drawerContent .drawerNav li a i {
             transform: translateY(25%); }
 
@@ -293,12 +294,14 @@ button::-moz-focus-inner {
   border-radius: 0;
   font-size: 1.1em;
   font-family: "Roboto", sans-serif;
-  padding: 0.3em;
+  padding: 0.5em;
   margin: 0.2em 0.2em;
   color: #5294E2;
   background-color: transparent; }
   .buttonFlat:hover {
     background-color: rgba(0, 0, 0, 0.05); }
+  .buttonFlat:active {
+    background-color: rgba(0, 0, 0, 0.1); }
 
 .buttonRaised {
   cursor: pointer;
@@ -306,13 +309,15 @@ button::-moz-focus-inner {
   border-radius: 0;
   font-size: 1.1em;
   font-family: "Roboto", sans-serif;
-  padding: 0.3em;
+  padding: 0.5em;
   margin: 0.2em 0.2em;
   color: white;
   background-color: #5294E2;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
   .buttonRaised:hover {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2); }
+  .buttonRaised:active {
+    background-color: #669FE5; }
 
 .buttonAction {
   cursor: pointer;
@@ -322,9 +327,11 @@ button::-moz-focus-inner {
   border: 0;
   background-color: #5294E2;
   color: white;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); }
+  .buttonAction:hover {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2); }
   .buttonAction:active {
-    transform: scale(1.05); }
+    background-color: #669FE5; }
   .buttonAction i {
     transform: scale(1) translateY(5%); }
 
@@ -379,6 +386,9 @@ button::-moz-focus-inner {
   100% {
     transform: translateY(0%) scale(1);
     opacity: 1; } }
+@media only screen and (max-width: 768px) {
+  .buttonAction:active {
+    transform: scale(1.025); } }
 * {
   box-sizing: border-box; }
 
