@@ -31,6 +31,12 @@
   #mobileDrop
     display: block
     float: right
+    background-color: rgba(0,0,0,0)
+    color: white
+    &:active
+      background-color: rgba(255,255,255,0.1)
+    i
+      color: white
   #mobileDropdownContent
     right: 0
     left: auto
@@ -90,7 +96,7 @@
     h4
       font-weight: 500
       color: #212121
-      padding: 24px 0 3px 12px
+      padding: 56px 0 3px 12px
       margin: 0
 
 #navBarArticle
@@ -107,7 +113,7 @@
 .code
   background-color: rgba(0, 0, 0, 0.05)
   padding: 0.5em 0.5em
-  font-family: monospace
+  font-family: 'Space Mono', monospace
   font-size: 14px
   margin: 6 6px
   display: block
@@ -116,7 +122,7 @@
   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2) inset
 
 .demoArea
-  padding: 1em
+  padding: 0 12px 0 12px
 
 .gridDemo
   background-color: rgba(0, 0, 0, 0.1)

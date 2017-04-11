@@ -9,8 +9,8 @@ $(document).ready(function() {
   $(".buttonDropdownSmall").click(function() {
     if ($(this).next().hasClass("dropdownContentShow")) {
         $(this).next().removeClass("dropdownContentShow");
-      } else {
+    } else {
         $(this).next().addClass("dropdownContentShow");
-      }
+    }
   });
 });
