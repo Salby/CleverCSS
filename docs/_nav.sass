@@ -12,6 +12,9 @@
     height: 60px
     width: 100%
     li
+      position: relative
+      overflow: hidden
+      float: left
       cursor: pointer
       display: block
       color: white
@@ -55,8 +58,10 @@
     ul
       height: 56px
       li
+        display: none
         height: 56px
       .brandItem
+        display: block
         float: right
         border-bottom: 0
         &:hover
@@ -94,6 +99,22 @@
         i
           color: white
           transform: scale(1.2) translateY(10%)
+    .drawerNav
+      padding: 0
+      margin: 0
+      list-style: none
+      border-top: 1px solid rgba(0,0,0,0.5)
+      border-bottom: 1px solid rgba(0,0,0,0.05)
+      li
+        cursor: pointer
+        padding: 12px 12px
+        color: $textSecondary
+        &:hover
+          background-color: rgba(0,0,0,0.05)
+        a
+          font-size: 18px
+          i
+            transform: translateY(25%)
 
 .drawerAnimate
   transform: translateX(0%)

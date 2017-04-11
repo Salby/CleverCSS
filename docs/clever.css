@@ -35,6 +35,9 @@ p {
     height: 60px;
     width: 100%; }
     .navBar ul li {
+      position: relative;
+      overflow: hidden;
+      float: left;
       cursor: pointer;
       display: block;
       color: white;
@@ -78,8 +81,10 @@ p {
     .navBar ul {
       height: 56px; }
       .navBar ul li {
+        display: none;
         height: 56px; }
       .navBar ul .brandItem {
+        display: block;
         float: right;
         border-bottom: 0; }
         .navBar ul .brandItem:hover {
@@ -115,6 +120,22 @@ p {
         .drawer .drawerContent .drawerHeader #drawerClose i {
           color: white;
           transform: scale(1.2) translateY(10%); }
+    .drawer .drawerContent .drawerNav {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.5);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+      .drawer .drawerContent .drawerNav li {
+        cursor: pointer;
+        padding: 12px 12px;
+        color: #757575; }
+        .drawer .drawerContent .drawerNav li:hover {
+          background-color: rgba(0, 0, 0, 0.05); }
+        .drawer .drawerContent .drawerNav li a {
+          font-size: 18px; }
+          .drawer .drawerContent .drawerNav li a i {
+            transform: translateY(25%); }
 
 .drawerAnimate {
   transform: translateX(0%); }

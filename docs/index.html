@@ -21,7 +21,9 @@
 
     <nav class="navBar fixedTop">
       <ul>
-        <li class="brandItem"><a href="index.html">CleverCSS</a></li>
+        <li class="brandItem"><a class="toHome">CleverCSS</a></li>
+        <li><a class="toComponents">Components</a></li>
+        <li><a class="toDependencies">Dependencies</a></li>
         <li id="drawerButtonItem"><button id="drawerButton"><i class="material-icons">menu</i></button></li>
       </ul>
     </nav>
@@ -30,10 +32,14 @@
         <div class="drawerHeader">
           <button id="drawerClose"><i class="material-icons">arrow_back</i></button>
         </div>
+        <ul class="drawerNav">
+          <li><a class="toComponents"><i class="material-icons">view_quilt</i> Components</a></li>
+          <li><a class="toDependencies"><i class="material-icons">short_text</i> Dependencies</a></li>
+        </ul>
       </div>
     </div>
 
-      <header style="animation: fadeIn 1s ;height: 80vh; padding-top: 10vh; display: flex; flex-direction: column; justify-content: center">
+      <header id="home" style="animation: fadeIn 1s ;height: 80vh; padding-top: 10vh; display: flex; flex-direction: column; justify-content: center">
         <section style="margin: auto; text-align: center">
           <h1 style="text-align: center; font-size: 350%; padding: 0;">Clever<span class="headerDecorator">CSS</span></h1>
           <h2 style="text-align: center; padding: 0; padding-bottom: 1em;">A front-end framework for humans</h2>
@@ -44,7 +50,7 @@
         <div class="articleCard" style="animation: fadeIn 1s">
           <div class="headerLight">
             <h2>Get started</h2>
-            <p>Version 1.0</p>
+            <p>Version 1.1</p>
           </div>
           <div class="code">
             &lt;!DOCTYPE html&gt;<br>
@@ -66,7 +72,7 @@
             &nbsp;&nbsp;&lt;/body&gt;<br>
             &lt;/html&gt;<br>
           </div>
-          <div class="footerLight">
+          <div class="footerLight" id="elements">
             <a href="https://github.com/SanderSalamander/CleverCSS/" target="_blank"><button class="buttonFlat">Follow on Github</button></a>
           </div>
         </div>
@@ -127,9 +133,12 @@
                     &lt;/nav&gt;<br>
                     &lt;div id="mobileDrawer" class="drawer"&gt;<br>
                     &nbsp;&nbsp;&lt;div class="drawerContent"&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="drawerHeader"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button id="drawerClose"&gt;...&lt;/button&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="drawerNav"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
                     &nbsp;&nbsp;&lt;/div&gt;<br>
                     &lt;/div&gt;<br>
                   </div>
@@ -363,7 +372,7 @@
                     <button class="buttonFlat">Material Icons</button>
                   </a>
                 </section>
-                <section class="col-s-6">
+                <section class="col-s-6" id="dependencies">
                   <a href="http://fontawesome.io" target="_blank">
                     <span class="fa fa-font-awesome"></span>
                     <button class="buttonFlat">Font Awesome</button>
@@ -395,6 +404,7 @@
       </footer>
 
       <script src="clever.js"></script>
+      <script src="misc.js"></script>
       <script>
 
       function selectNavBar() {
@@ -489,35 +499,6 @@
         //set the position and add class .animate
         ink.css({top: y+'px', left: x+'px'}).addClass("animate");
       })
-      //RIPPLE EFFECT DARK
-      var parent, ink, d, x, y;
-      $(".dropdownContent .dropdownMenu li a").click(function(e){
-        parent = $(this).parent();
-        //create .ink element if it doesn't exist
-        if(parent.find(".inkDark").length == 0)
-          parent.prepend("<span class='inkDark'></span>");
-
-        ink = parent.find(".inkDark");
-        //incase of quick double clicks stop the previous animation
-        ink.removeClass("animate");
-
-        //set size of .ink
-        if(!ink.height() && !ink.width())
-        {
-          //use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
-          d = Math.max(parent.outerWidth(), parent.outerHeight());
-          ink.css({height: d, width: d});
-        }
-
-        //get click coordinates
-        //logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
-        x = e.pageX - parent.offset().left - ink.width()/2;
-        y = e.pageY - parent.offset().top - ink.height()/2;
-
-        //set the position and add class .animate
-        ink.css({top: y+'px', left: x+'px'}).addClass("animate");
-      })
-
-      </script>
+    </script>
   </body>
 </html>
