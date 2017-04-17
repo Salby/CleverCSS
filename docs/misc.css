@@ -1,3 +1,17 @@
+/*COMPONENTS SELECTION */
+.showComp {
+  display: block; }
+
+.hideComp {
+  display: none; }
+
+.wrapperL {
+  opacity: 1; }
+
+.animateWrapper {
+  animation: fadeIn 1.5s forwards;
+  opacity: 1; }
+
 /*ANIMATE */
 @keyframes selectionActive {
   100% {
@@ -86,17 +100,6 @@
       color: #212121;
       padding: 56px 0 3px 12px;
       margin: 0; }
-
-#navBarArticle {
-  display: block; }
-  #navBarArticle header {
-    height: 56px; }
-    #navBarArticle header h3 {
-      color: white; }
-
-#buttonArticle, #typoArticle, #gridArticle, #formsArticle {
-  display: none;
-  padding-bottom: 1em; }
 
 .code {
   background-color: rgba(0, 0, 0, 0.05);

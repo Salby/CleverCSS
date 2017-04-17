@@ -78,15 +78,15 @@
         </div>
       </div>
 
-      <section class="wrapperL">
+      <section class="wrapperL" id="componentsWrapper">
           <div class="row">
             <section class="col-m-3">
               <ul class="elementList">
-                <li><a><button onclick="selectNavBar()">Navigation</button></a></li>
-                <li><a><button onclick="selectButtons()">Buttons</button></a></li>
-                <li><a><button onclick="selectTypo()">Typography</button></a></li>
-                <li><a><button onclick="selectGrid()">Responsive Grid</button></a></li>
-                <li><a><button onclick="selectForms()">Forms</button></a></li>
+                <li><a><button class="selectNavBar">Navigation</button></a></li>
+                <li><a><button class="selectButtons">Buttons</button></a></li>
+                <li><a><button class="selectTypo">Typography</button></a></li>
+                <li><a><button class="selectGrid">Responsive Grid</button></a></li>
+                <li><a><button class="selectForms">Forms</button></a></li>
               </ul>
             </section>
             <section class="col-m-9">
@@ -95,15 +95,15 @@
                   <div class="dropdown" style="float: right">
                     <button class="buttonDropdownSmall" id="mobileDrop"><i class="material-icons">more_vert</i></button>
                     <ul class="dropdownContent" id="mobileDropdownContent">
-                      <li onclick="selectNavBar()"><a>Navigation Bar</a></li>
-                      <li onclick="selectButtons()"><a>Buttons</a></li>
-                      <li onclick="selectTypo()"><a>Typography</a></li>
-                      <li onclick="selectGrid()"><a>Responsive Grid</a></li>
-                      <li onclick="selectForms()"><a>Forms</a></li>
+                      <li class="selectNavBar"><a>Navigation Bar</a></li>
+                      <li class="selectButtons"><a>Buttons</a></li>
+                      <li class="selectTypo"><a>Typography</a></li>
+                      <li class="selectGrid"><a>Responsive Grid</a></li>
+                      <li class="selectForms"><a>Forms</a></li>
                     </ul>
                   </div>
                 </header>
-                <article id="navBarArticle">
+                <article id="navBarArticle" class="showComp">
                   <header>
                     <h3>Navigation</h3>
                   </header>
@@ -154,7 +154,7 @@
                   </div>
                   <p>Resize this window to see the effect</p>
                 </article>
-                <article id="buttonArticle">
+                <article id="buttonArticle" class="hideComp">
                   <header>
                     <h3>Buttons</h3>
                   </header>
@@ -214,7 +214,7 @@
                     </div>
                   </section>
                 </article>
-                <article id="typoArticle">
+                <article id="typoArticle" class="hideComp">
                   <header>
                     <h3>Typography</h3>
                   </header>
@@ -222,7 +222,7 @@
 		  						<p>Don't think too hard about what this article says</p>
 									<p>It actually doesn't say anything, so it's not like there's anything to really think about. This article is actually just a waste of time, and honestly you should just hop over to one of the other articles. Now I'm just trying to fill as much space with this text as possible, so this really isn't very essential to your understanding of the elements included in CleverCSS, which isn't even just CSS, now that I've added javascript to the framework. You can find that in the file clever.js.
                 </article>
-                <article id="gridArticle">
+                <article id="gridArticle" class="hideComp">
                   <header>
                     <h3>Responsive Grid</h3>
                   </header>
@@ -306,7 +306,7 @@
                     </div>
                   </div>
                 </article>
-                <article id="formsArticle">
+                <article id="formsArticle" class="hideComp">
                   <header>
                     <h3>Forms</h3>
                   </header>
@@ -410,42 +410,6 @@
       <script src="clever.js"></script>
       <script src="misc.js"></script>
       <script>
-
-      function selectNavBar() {
-        document.getElementById('navBarArticle').style.display = 'block';
-        document.getElementById('buttonArticle').style.display = 'none';
-        document.getElementById('typoArticle').style.display = 'none';
-        document.getElementById('gridArticle').style.display = 'none';
-        document.getElementById('formsArticle').style.display = 'none';
-      }
-      function selectButtons() {
-        document.getElementById('navBarArticle').style.display = 'none';
-        document.getElementById('buttonArticle').style.display = 'block';
-        document.getElementById('typoArticle').style.display = 'none';
-        document.getElementById('gridArticle').style.display = 'none';
-        document.getElementById('formsArticle').style.display = 'none';
-      }
-      function selectTypo() {
-        document.getElementById('navBarArticle').style.display = 'none';
-        document.getElementById('buttonArticle').style.display = 'none';
-        document.getElementById('typoArticle').style.display = 'block';
-        document.getElementById('gridArticle').style.display = 'none';
-        document.getElementById('formsArticle').style.display = 'none';
-      }
-      function selectGrid() {
-        document.getElementById('navBarArticle').style.display = 'none';
-        document.getElementById('buttonArticle').style.display = 'none';
-        document.getElementById('typoArticle').style.display = 'none';
-        document.getElementById('gridArticle').style.display = 'block';
-        document.getElementById('formsArticle').style.display = 'none';
-      }
-      function selectForms() {
-        document.getElementById('navBarArticle').style.display = 'none';
-        document.getElementById('buttonArticle').style.display = 'none';
-        document.getElementById('typoArticle').style.display = 'none';
-        document.getElementById('gridArticle').style.display = 'none';
-        document.getElementById('formsArticle').style.display = 'block';
-      }
 
       //RIPPLE EFFECT LIGHT
       var parent, ink, d, x, y;

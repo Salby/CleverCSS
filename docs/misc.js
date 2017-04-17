@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // SMOOTH SCROLLING START
   $(".toHome").click(function() {
     $("html, body").animate({
       scrollTop: $("#home").offset().top
@@ -14,4 +15,40 @@ $(document).ready(function() {
         scrollTop: $("#dependencies").offset().top
       }, 1000);
   });
+  // COMPONENTS SELECTION
+  $(".selectNavBar").click(function() {
+    $("#navBarArticle").siblings().removeClass("showComp");
+    $("#navBarArticle").siblings().addClass("hideComp");
+    $("#navBarArticle").removeClass("hideComp").addClass("showComp");
+  });
+  $(".selectButtons").click(function() {
+    $("#buttonArticle").siblings().removeClass("showComp");
+    $("#buttonArticle").siblings().addClass("hideComp");
+    $("#buttonArticle").removeClass("hideComp").addClass("showComp");
+  });
+  $(".selectTypo").click(function() {
+    $("#typoArticle").siblings().removeClass("showComp");
+    $("#typoArticle").siblings().addClass("hideComp");
+    $("#typoArticle").removeClass("hideComp").addClass("showComp");
+  });
+  $(".selectGrid").click(function() {
+    $("#gridArticle").siblings().removeClass("showComp");
+    $("#gridArticle").siblings().addClass("hideComp");
+    $("#gridArticle").removeClass("hideComp").addClass("showComp");
+  });
+  $(".selectForms").click(function() {
+    $("#formsArticle").siblings().removeClass("showComp");
+    $("#formsArticle").siblings().addClass("hideComp");
+    $("#formsArticle").removeClass("hideComp").addClass("showComp");
+  });
+  // SCROLL STUFF
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    var os = $("#home").offset().top;
+    var ht = $("#home").height();
+    if (scroll > os + ht) {
+      $("#componentsWrapper").addClass("animateWrapper");
+    }
+  });
+});
 });
