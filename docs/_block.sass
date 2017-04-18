@@ -28,8 +28,11 @@
 
 /*ARTICLES
 
-.articleCard
+.articleCardLight
   background-color: white
+.articleCardDark
+  background-color: $primary
+.articleCardLight, .articleCardDark
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2)
   p
     padding: 0 0 0 12px
@@ -37,38 +40,35 @@
     background-color: $primary
     h1,h2,h3,h4,h5,h6
       color: white
-      margin: 0
-      padding: 12px 0 6px 12px
-      font-weight: 400
     p
       color: $primaryLight
-      font-weight: 400
-      margin: 0
-      padding: 0 0 12px 12px
   .headerLight
     background-color: white
     h1,h2,h3,h4,h5,h6
       color: $primary
+    p
+      color: $primaryLight
+  .headerLight, .headerDark
+    h1,h2,h3,h4,h5,h6
       margin: 0
       padding: 12px 0 6px 12px
       font-weight: 400
     p
-      color: $primaryLight
       font-weight: 400
       margin: 0
       padding: 0 0 12px 12px
   .footerDark
     background-color: $primary
-    padding: 6px 6px 44px 6px
   .footerLight
     background-color: white
-    padding: 6px 6px 44px 6px
-    .buttonFlat
+  .footerLight, .footerDark
+    padding: 6px 6px 50px 6px
+    .buttonFlat, .buttonRaised
       float: right
 
 /*FOOTER
 
-.footerDark
+.footerMainDark
   margin-top: 10vh
   padding: 1em
   background-color: $primary
