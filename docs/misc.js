@@ -41,14 +41,4 @@ $(document).ready(function() {
     $("#formsArticle").siblings().addClass("hideComp");
     $("#formsArticle").removeClass("hideComp").addClass("showComp");
   });
-  // SCROLL STUFF
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    var os = $("#home").offset().top;
-    var ht = $("#home").height();
-    if (scroll > os + ht) {
-      $("#componentsWrapper").addClass("animateWrapper");
-    }
-  });
-});
 });
