@@ -31,11 +31,6 @@ $(document).ready(function() {
     $("#dropdownArticle").siblings("article").addClass("hideComp");
     $("#dropdownArticle").removeClass("hideComp").addClass("showComp");
   });
-  $(".selectTypo").click(function() {
-    $("#typoArticle").siblings("article").removeClass("showComp");
-    $("#typoArticle").siblings("article").addClass("hideComp");
-    $("#typoArticle").removeClass("hideComp").addClass("showComp");
-  });
   $(".selectGrid").click(function() {
     $("#gridArticle").siblings("article").removeClass("showComp");
     $("#gridArticle").siblings("article").addClass("hideComp");
