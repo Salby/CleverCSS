@@ -26,6 +26,11 @@ $(document).ready(function() {
     $("#buttonArticle").siblings("article").addClass("hideComp");
     $("#buttonArticle").removeClass("hideComp").addClass("showComp");
   });
+  $(".selectDropdown").click(function() {
+    $("#dropdownArticle").siblings("article").removeClass("showComp");
+    $("#dropdownArticle").siblings("article").addClass("hideComp");
+    $("#dropdownArticle").removeClass("hideComp").addClass("showComp");
+  });
   $(".selectTypo").click(function() {
     $("#typoArticle").siblings("article").removeClass("showComp");
     $("#typoArticle").siblings("article").addClass("hideComp");
