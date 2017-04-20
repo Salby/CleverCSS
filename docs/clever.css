@@ -246,9 +246,9 @@ p {
     font-weight: 400;
     margin: 0;
     padding: 0 0 12px 12px; }
-  .articleCardLight .headerLight .dropdown, .articleCardLight .headerDark .dropdown, .articleCardDark .headerLight .dropdown, .articleCardDark .headerDark .dropdown {
+  .articleCardLight .headerLight .dropdownDark, .articleCardLight .headerLight .dropdownLight, .articleCardLight .headerDark .dropdownDark, .articleCardLight .headerDark .dropdownLight, .articleCardDark .headerLight .dropdownDark, .articleCardDark .headerLight .dropdownLight, .articleCardDark .headerDark .dropdownDark, .articleCardDark .headerDark .dropdownLight {
     float: right; }
-    .articleCardLight .headerLight .dropdown .dropdownContent, .articleCardLight .headerDark .dropdown .dropdownContent, .articleCardDark .headerLight .dropdown .dropdownContent, .articleCardDark .headerDark .dropdown .dropdownContent {
+    .articleCardLight .headerLight .dropdownDark .dropdownContent, .articleCardLight .headerLight .dropdownLight .dropdownContent, .articleCardLight .headerDark .dropdownDark .dropdownContent, .articleCardLight .headerDark .dropdownLight .dropdownContent, .articleCardDark .headerLight .dropdownDark .dropdownContent, .articleCardDark .headerLight .dropdownLight .dropdownContent, .articleCardDark .headerDark .dropdownDark .dropdownContent, .articleCardDark .headerDark .dropdownLight .dropdownContent {
       right: 0;
       left: auto; }
   .articleCardLight .footerDark, .articleCardDark .footerDark {
@@ -394,22 +394,29 @@ button::-moz-focus-inner {
   float: right; }
 
 /*DROPDOWN */
-.dropdown {
+.dropdownDark .buttonDropdownSmall:active {
+  background-color: rgba(255, 255, 255, 0.1); }
+.dropdownDark .buttonDropdownSmall i {
+  color: white; }
+
+.dropdownLight .buttonDropdownSmall:active {
+  background-color: rgba(0, 0, 0, 0.05); }
+.dropdownLight .buttonDropdownSmall i {
+  color: #B0B9C6; }
+
+.dropdownDark, .dropdownLight {
   position: relative;
   display: block; }
-  .dropdown .buttonDropdownSmall {
+  .dropdownDark .buttonDropdownSmall, .dropdownLight .buttonDropdownSmall {
     cursor: pointer;
     width: 56px;
     height: 56px;
     border: 0;
     border-radius: 56px;
     background-color: transparent; }
-    .dropdown .buttonDropdownSmall:active {
-      background-color: rgba(0, 0, 0, 0.05); }
-    .dropdown .buttonDropdownSmall i {
-      color: #B0B9C6;
+    .dropdownDark .buttonDropdownSmall i, .dropdownLight .buttonDropdownSmall i {
       transform: scale(1.2) translateY(10%); }
-  .dropdown .dropdownContent {
+  .dropdownDark .dropdownContent, .dropdownLight .dropdownContent {
     position: absolute;
     z-index: 3;
     padding: 0;
@@ -420,19 +427,19 @@ button::-moz-focus-inner {
     width: 160px;
     height: auto;
     white-space: nowrap;
-    background-color: #EEEEEE;
+    background-color: #FEFEFE;
     list-style: none;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2); }
-    .dropdown .dropdownContent li {
+    .dropdownDark .dropdownContent li, .dropdownLight .dropdownContent li {
       cursor: pointer;
       font-family: "Open Sans", sans-serif;
       padding: 0.5em;
       color: #212121; }
-      .dropdown .dropdownContent li:hover {
+      .dropdownDark .dropdownContent li:hover, .dropdownLight .dropdownContent li:hover {
         background-color: rgba(0, 0, 0, 0.04); }
-      .dropdown .dropdownContent li:active {
+      .dropdownDark .dropdownContent li:active, .dropdownLight .dropdownContent li:active {
         background-color: rgba(0, 0, 0, 0.1); }
-  .dropdown .dropdownContentShow {
+  .dropdownDark .dropdownContentShow, .dropdownLight .dropdownContentShow {
     display: block;
     animation: dropdownSmallAnimate 0.3s forwards; }
 

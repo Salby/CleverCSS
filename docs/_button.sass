@@ -52,8 +52,19 @@ button::-moz-focus-inner
   float: right
 
 /*DROPDOWN
-
-.dropdown
+.dropdownDark
+  .buttonDropdownSmall
+    &:active
+      background-color: rgba(255,255,255,0.1)
+    i
+      color: white
+.dropdownLight
+  .buttonDropdownSmall
+    &:active
+      background-color: rgba(0,0,0,0.05)
+    i
+      color: $primaryLight
+.dropdownDark, .dropdownLight
   position: relative
   display: block
   .buttonDropdownSmall
@@ -63,10 +74,7 @@ button::-moz-focus-inner
     border: 0
     border-radius: 56px
     background-color: rgba(0,0,0,0)
-    &:active
-      background-color: rgba(0,0,0,0.05)
     i
-      color: $primaryLight
       transform: scale(1.2) translateY(10%)
   .dropdownContent
     position: absolute
@@ -79,7 +87,7 @@ button::-moz-focus-inner
     width: 160px
     height: auto
     white-space: nowrap
-    background-color: #EEEEEE
+    background-color: #FEFEFE
     list-style: none
     box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
     li
