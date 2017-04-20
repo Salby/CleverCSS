@@ -52,19 +52,19 @@ button::-moz-focus-inner
   float: right
 
 /*DROPDOWN
-.dropdownDark
+.dropdownSmallDark
   .buttonDropdownSmall
     &:active
       background-color: rgba(255,255,255,0.1)
     i
       color: white
-.dropdownLight
+.dropdownSmallLight
   .buttonDropdownSmall
     &:active
       background-color: rgba(0,0,0,0.05)
     i
       color: $primaryLight
-.dropdownDark, .dropdownLight
+.dropdownSmallDark, .dropdownSmallLight
   position: relative
   display: block
   .buttonDropdownSmall
@@ -100,8 +100,9 @@ button::-moz-focus-inner
       &:active
         background-color: rgba(0,0,0,0.1)
 
-  .dropdownContentShow
+  .dropdownSmallContentShow
     display: block
+    transform-origin: top
     animation: dropdownSmallAnimate 0.3s forwards
 @keyframes dropdownSmallAnimate
   0%
@@ -112,6 +113,66 @@ button::-moz-focus-inner
     transform: translateY(0%) translateX(-5%) scale(1)
     opacity: 1
     box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
+
+.dropdownLargeDark
+  .buttonDropdownLarge
+    color: white
+  .dropdownContent
+    background-color: $primary
+    li
+      color: white
+.dropdownLargeLight
+  .buttonDropdownLarge
+    color: $accent
+  .dropdownContent
+    background-color: white
+.dropdownLargeDark, .dropdownLargeLight
+  position: relative
+  display: block
+  .buttonDropdownLarge
+    cursor: pointer
+    background-color: rgba(0,0,0,0)
+    width: 100%
+    height: 56px
+    border: 0
+  .dropdownContent
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
+    padding: 0
+    margin: 0
+    list-style: none
+    width: 100%
+    position: absolute
+    z-index: 3
+    top: 56px
+    left: 0
+    display: none
+    li
+      font-size: 18px
+      padding: 8px
+      text-align: center
+      cursor: pointer
+  .dropdownLargeContentShow
+    display: block
+    transform-origin: top
+    animation: dropdownLargeShow 0.3s forwards
+  .dropdownLargeContentHide
+    display: block
+    transform-origin: top
+    animation: dropdownLargeHide 0.3s forwards
+@keyframes dropdownLargeShow
+  0%
+    transform: rotateX(90deg)
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.2)
+  100%
+    transform: rotateX(0deg)
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
+@keyframes dropdownLargeHide
+  0%
+    transform: rotateX(0deg)
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
+  100%
+    transform: rotateX(90deg)
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.2)
 
 @media only screen and (max-width: 768px)
   .buttonAction

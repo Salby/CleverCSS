@@ -246,13 +246,17 @@ p {
     font-weight: 400;
     margin: 0;
     padding: 0 0 12px 12px; }
-  .articleCardLight .headerLight .dropdownDark, .articleCardLight .headerLight .dropdownLight, .articleCardLight .headerDark .dropdownDark, .articleCardLight .headerDark .dropdownLight, .articleCardDark .headerLight .dropdownDark, .articleCardDark .headerLight .dropdownLight, .articleCardDark .headerDark .dropdownDark, .articleCardDark .headerDark .dropdownLight {
+  .articleCardLight .headerLight .dropdownSmallDark, .articleCardLight .headerLight .dropdownSmallLight, .articleCardLight .headerDark .dropdownSmallDark, .articleCardLight .headerDark .dropdownSmallLight, .articleCardDark .headerLight .dropdownSmallDark, .articleCardDark .headerLight .dropdownSmallLight, .articleCardDark .headerDark .dropdownSmallDark, .articleCardDark .headerDark .dropdownSmallLight {
     float: right; }
-    .articleCardLight .headerLight .dropdownDark .dropdownContent, .articleCardLight .headerLight .dropdownLight .dropdownContent, .articleCardLight .headerDark .dropdownDark .dropdownContent, .articleCardLight .headerDark .dropdownLight .dropdownContent, .articleCardDark .headerLight .dropdownDark .dropdownContent, .articleCardDark .headerLight .dropdownLight .dropdownContent, .articleCardDark .headerDark .dropdownDark .dropdownContent, .articleCardDark .headerDark .dropdownLight .dropdownContent {
+    .articleCardLight .headerLight .dropdownSmallDark .dropdownContent, .articleCardLight .headerLight .dropdownSmallLight .dropdownContent, .articleCardLight .headerDark .dropdownSmallDark .dropdownContent, .articleCardLight .headerDark .dropdownSmallLight .dropdownContent, .articleCardDark .headerLight .dropdownSmallDark .dropdownContent, .articleCardDark .headerLight .dropdownSmallLight .dropdownContent, .articleCardDark .headerDark .dropdownSmallDark .dropdownContent, .articleCardDark .headerDark .dropdownSmallLight .dropdownContent {
       right: 0;
       left: auto; }
   .articleCardLight .footerDark, .articleCardDark .footerDark {
     background-color: #2F343F; }
+    .articleCardLight .footerDark .buttonFlat:hover, .articleCardDark .footerDark .buttonFlat:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
+    .articleCardLight .footerDark .buttonFlat:active, .articleCardDark .footerDark .buttonFlat:active {
+      background-color: rgba(255, 255, 255, 0.2); }
   .articleCardLight .footerLight, .articleCardDark .footerLight {
     background-color: white; }
   .articleCardLight .footerLight, .articleCardLight .footerDark, .articleCardDark .footerLight, .articleCardDark .footerDark {
@@ -394,29 +398,29 @@ button::-moz-focus-inner {
   float: right; }
 
 /*DROPDOWN */
-.dropdownDark .buttonDropdownSmall:active {
+.dropdownSmallDark .buttonDropdownSmall:active {
   background-color: rgba(255, 255, 255, 0.1); }
-.dropdownDark .buttonDropdownSmall i {
+.dropdownSmallDark .buttonDropdownSmall i {
   color: white; }
 
-.dropdownLight .buttonDropdownSmall:active {
+.dropdownSmallLight .buttonDropdownSmall:active {
   background-color: rgba(0, 0, 0, 0.05); }
-.dropdownLight .buttonDropdownSmall i {
+.dropdownSmallLight .buttonDropdownSmall i {
   color: #B0B9C6; }
 
-.dropdownDark, .dropdownLight {
+.dropdownSmallDark, .dropdownSmallLight {
   position: relative;
   display: block; }
-  .dropdownDark .buttonDropdownSmall, .dropdownLight .buttonDropdownSmall {
+  .dropdownSmallDark .buttonDropdownSmall, .dropdownSmallLight .buttonDropdownSmall {
     cursor: pointer;
     width: 56px;
     height: 56px;
     border: 0;
     border-radius: 56px;
     background-color: transparent; }
-    .dropdownDark .buttonDropdownSmall i, .dropdownLight .buttonDropdownSmall i {
+    .dropdownSmallDark .buttonDropdownSmall i, .dropdownSmallLight .buttonDropdownSmall i {
       transform: scale(1.2) translateY(10%); }
-  .dropdownDark .dropdownContent, .dropdownLight .dropdownContent {
+  .dropdownSmallDark .dropdownContent, .dropdownSmallLight .dropdownContent {
     position: absolute;
     z-index: 3;
     padding: 0;
@@ -430,17 +434,18 @@ button::-moz-focus-inner {
     background-color: #FEFEFE;
     list-style: none;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2); }
-    .dropdownDark .dropdownContent li, .dropdownLight .dropdownContent li {
+    .dropdownSmallDark .dropdownContent li, .dropdownSmallLight .dropdownContent li {
       cursor: pointer;
       font-family: "Open Sans", sans-serif;
       padding: 0.5em;
       color: #212121; }
-      .dropdownDark .dropdownContent li:hover, .dropdownLight .dropdownContent li:hover {
+      .dropdownSmallDark .dropdownContent li:hover, .dropdownSmallLight .dropdownContent li:hover {
         background-color: rgba(0, 0, 0, 0.04); }
-      .dropdownDark .dropdownContent li:active, .dropdownLight .dropdownContent li:active {
+      .dropdownSmallDark .dropdownContent li:active, .dropdownSmallLight .dropdownContent li:active {
         background-color: rgba(0, 0, 0, 0.1); }
-  .dropdownDark .dropdownContentShow, .dropdownLight .dropdownContentShow {
+  .dropdownSmallDark .dropdownSmallContentShow, .dropdownSmallLight .dropdownSmallContentShow {
     display: block;
+    transform-origin: top;
     animation: dropdownSmallAnimate 0.3s forwards; }
 
 @keyframes dropdownSmallAnimate {
@@ -452,6 +457,66 @@ button::-moz-focus-inner {
     transform: translateY(0%) translateX(-5%) scale(1);
     opacity: 1;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2); } }
+.dropdownLargeDark .buttonDropdownLarge {
+  color: white; }
+.dropdownLargeDark .dropdownContent {
+  background-color: #2F343F; }
+  .dropdownLargeDark .dropdownContent li {
+    color: white; }
+
+.dropdownLargeLight .buttonDropdownLarge {
+  color: #5294E2; }
+.dropdownLargeLight .dropdownContent {
+  background-color: white; }
+
+.dropdownLargeDark, .dropdownLargeLight {
+  position: relative;
+  display: block; }
+  .dropdownLargeDark .buttonDropdownLarge, .dropdownLargeLight .buttonDropdownLarge {
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    height: 56px;
+    border: 0; }
+  .dropdownLargeDark .dropdownContent, .dropdownLargeLight .dropdownContent {
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    top: 56px;
+    left: 0;
+    display: none; }
+    .dropdownLargeDark .dropdownContent li, .dropdownLargeLight .dropdownContent li {
+      font-size: 18px;
+      padding: 8px;
+      text-align: center;
+      cursor: pointer; }
+  .dropdownLargeDark .dropdownLargeContentShow, .dropdownLargeLight .dropdownLargeContentShow {
+    display: block;
+    transform-origin: top;
+    animation: dropdownLargeShow 0.3s forwards; }
+  .dropdownLargeDark .dropdownLargeContentHide, .dropdownLargeLight .dropdownLargeContentHide {
+    display: block;
+    transform-origin: top;
+    animation: dropdownLargeHide 0.3s forwards; }
+
+@keyframes dropdownLargeShow {
+  0% {
+    transform: rotateX(90deg);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); }
+  100% {
+    transform: rotateX(0deg);
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2); } }
+@keyframes dropdownLargeHide {
+  0% {
+    transform: rotateX(0deg);
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2); }
+  100% {
+    transform: rotateX(90deg);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); } }
 @media only screen and (max-width: 768px) {
   .buttonAction:active {
     transform: scale(1.025); } }

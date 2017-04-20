@@ -10,10 +10,17 @@ $(document).ready(function() {
   });
   // DROPDOWN ANIMATION
   $(".buttonDropdownSmall").click(function() {
-    if ($(this).next().hasClass("dropdownContentShow")) {
-        $(this).next().removeClass("dropdownContentShow");
+    if ($(this).next().hasClass("dropdownSmallContentShow")) {
+        $(this).next().removeClass("dropdownSmallContentShow");
     } else {
-        $(this).next().addClass("dropdownContentShow");
+        $(this).next().addClass("dropdownSmallContentShow");
+    }
+  });
+  $(".buttonDropdownLarge").click(function() {
+    if ($(this).next().hasClass("dropdownLargeContentShow")) {
+        $(this).next().removeClass("dropdownLargeContentShow").addClass("dropdownLargeContentHide");
+    } else {
+        $(this).next().removeClass("dropdownLargeContentHide").addClass("dropdownLargeContentShow");
     }
   });
 });
