@@ -251,10 +251,24 @@ p {
   .articleCardLight .footerLight, .articleCardDark .footerLight {
     background-color: white; }
   .articleCardLight .footerLight, .articleCardLight .footerDark, .articleCardDark .footerLight, .articleCardDark .footerDark {
-    padding: 6px 6px 50px 6px; }
+    padding: 6px 6px 6px 6px;
+    min-height: 56px;
+    position: relative; }
+    .articleCardLight .footerLight .footerComment, .articleCardLight .footerDark .footerComment, .articleCardDark .footerLight .footerComment, .articleCardDark .footerDark .footerComment {
+      font-size: 18;
+      margin: 0;
+      position: relative;
+      width: 480px; }
     .articleCardLight .footerLight .buttonFlat, .articleCardLight .footerLight .buttonRaised, .articleCardLight .footerDark .buttonFlat, .articleCardLight .footerDark .buttonRaised, .articleCardDark .footerLight .buttonFlat, .articleCardDark .footerLight .buttonRaised, .articleCardDark .footerDark .buttonFlat, .articleCardDark .footerDark .buttonRaised {
-      float: right; }
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 44px;
+      margin: 6px 6px; }
 
+@media only screen and (max-width: 768px) {
+  .articleCardDark .footerDark .footerComment, .articleCardDark .footerLight .footerComment, .articleCardLight .footerDark .footerComment, .articleCardLight .footerLight .footerComment {
+    width: 320px; } }
 /*FOOTER */
 .footerMainDark {
   margin-top: 10vh;
