@@ -79,7 +79,7 @@ button::-moz-focus-inner
     width: 160px
     height: auto
     white-space: nowrap
-    background-color: #FEFEFE
+    background-color: #EEEEEE
     list-style: none
     box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
     li
@@ -88,18 +88,22 @@ button::-moz-focus-inner
       padding: 0.5em
       color: $textPrimary
       &:hover
-        background-color: rgba(0,0,0,0.06)
+        background-color: rgba(0,0,0,0.04)
+      &:active
+        background-color: rgba(0,0,0,0.1)
 
   .dropdownContentShow
     display: block
-    animation: dropdownSmallAnimate 0.3s
+    animation: dropdownSmallAnimate 0.3s forwards
 @keyframes dropdownSmallAnimate
   0%
     transform: translateY(-20%) scale(0.9)
     opacity: 0
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2)
   100%
-    transform: translateY(0%) scale(1)
+    transform: translateY(0%) translateX(-5%) scale(1)
     opacity: 1
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
 
 @media only screen and (max-width: 768px)
   .buttonAction
