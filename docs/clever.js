@@ -1,10 +1,12 @@
 $(document).ready(function() {
   // DRAWER ANIMATION
   $("#drawerButton").click(function() {
-    $("#mobileDrawer").addClass("drawerAnimate");
+    $("#mobileDrawer").removeClass("drawerAnimateClose").addClass("drawerAnimateOpen");
+    $(".drawerContent").removeClass("drawerContentAnimateClose").addClass("drawerContentAnimateOpen");
   });
   $("#drawerClose").click(function() {
-    $("#mobileDrawer").removeClass("drawerAnimate");
+    $("#mobileDrawer").removeClass("drawerAnimateOpen").addClass("drawerAnimateClose");
+    $(".drawerContent").removeClass("drawerContentAnimateOpen").addClass("drawerContentAnimateClose")
   });
   // DROPDOWN ANIMATION
   $(".buttonDropdownSmall").click(function() {

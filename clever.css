@@ -94,6 +94,7 @@ p {
         display: block; } }
 /*DRAWER */
 .drawer {
+  transition: all 0.3s;
   width: 100%;
   height: 100%;
   z-index: 10;
@@ -101,6 +102,7 @@ p {
   position: fixed;
   top: 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
   transform: translateX(-100%); }
   .drawer .drawerContent {
     width: 20vw;
@@ -139,12 +141,45 @@ p {
           .drawer .drawerContent .drawerNav li a i {
             transform: translateY(25%); }
 
-.drawerAnimate {
-  transform: translateX(0%); }
+.drawerContentAnimateOpen {
+  animation: drawerContentAnimationOpen 0.3s forwards; }
 
-.drawerDarken {
-  filter: brightness(0.5); }
+.drawerContentAnimateClose {
+  animation: drawerContentAnimationClose 0.3s forwards; }
 
+.drawerAnimateOpen {
+  animation: drawerAnimationOpen 0.3s forwards; }
+
+.drawerAnimateClose {
+  animation: drawerAnimationClose 0.3s forwards; }
+
+@keyframes drawerContentAnimationOpen {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0%); } }
+@keyframes drawerContentAnimationClose {
+  0% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(-100%); } }
+@keyframes drawerAnimationOpen {
+  0% {
+    transform: translateX(0%);
+    background-color: transparent; }
+  100% {
+    transform: translateX(0%);
+    background-color: rgba(0, 0, 0, 0.4); } }
+@keyframes drawerAnimationClose {
+  0% {
+    transform: translateX(0%);
+    background-color: rgba(0, 0, 0, 0.4); }
+  99% {
+    transform: translateX(0%);
+    background-color: transparent; }
+  100% {
+    transform: translateX(-100%);
+    background-color: transparent; } }
 @media only screen and (max-width: 768px) {
   .drawer .drawerContent {
     width: 40vw; } }
@@ -181,46 +216,47 @@ p {
   .wrapperXS {
     width: 100%; } }
 /*ARTICLES */
-.articleCard {
-  background-color: white;
+.articleCardLight {
+  background-color: white; }
+
+.articleCardDark {
+  background-color: #2F343F; }
+
+.articleCardLight, .articleCardDark {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
-  .articleCard p {
+  .articleCardLight p, .articleCardDark p {
     padding: 0 0 0 12px; }
-  .articleCard .headerDark {
+  .articleCardLight .headerDark, .articleCardDark .headerDark {
     background-color: #2F343F; }
-    .articleCard .headerDark h1, .articleCard .headerDark h2, .articleCard .headerDark h3, .articleCard .headerDark h4, .articleCard .headerDark h5, .articleCard .headerDark h6 {
-      color: white;
-      margin: 0;
-      padding: 12px 0 6px 12px;
-      font-weight: 400; }
-    .articleCard .headerDark p {
-      color: #B0B9C6;
-      font-weight: 400;
-      margin: 0;
-      padding: 0 0 12px 12px; }
-  .articleCard .headerLight {
+    .articleCardLight .headerDark h1, .articleCardLight .headerDark h2, .articleCardLight .headerDark h3, .articleCardLight .headerDark h4, .articleCardLight .headerDark h5, .articleCardLight .headerDark h6, .articleCardDark .headerDark h1, .articleCardDark .headerDark h2, .articleCardDark .headerDark h3, .articleCardDark .headerDark h4, .articleCardDark .headerDark h5, .articleCardDark .headerDark h6 {
+      color: white; }
+    .articleCardLight .headerDark p, .articleCardDark .headerDark p {
+      color: #B0B9C6; }
+  .articleCardLight .headerLight, .articleCardDark .headerLight {
     background-color: white; }
-    .articleCard .headerLight h1, .articleCard .headerLight h2, .articleCard .headerLight h3, .articleCard .headerLight h4, .articleCard .headerLight h5, .articleCard .headerLight h6 {
-      color: #2F343F;
-      margin: 0;
-      padding: 12px 0 6px 12px;
-      font-weight: 400; }
-    .articleCard .headerLight p {
-      color: #B0B9C6;
-      font-weight: 400;
-      margin: 0;
-      padding: 0 0 12px 12px; }
-  .articleCard .footerDark {
-    background-color: #2F343F;
-    padding: 6px 6px 44px 6px; }
-  .articleCard .footerLight {
-    background-color: white;
-    padding: 6px 6px 44px 6px; }
-    .articleCard .footerLight .buttonFlat {
+    .articleCardLight .headerLight h1, .articleCardLight .headerLight h2, .articleCardLight .headerLight h3, .articleCardLight .headerLight h4, .articleCardLight .headerLight h5, .articleCardLight .headerLight h6, .articleCardDark .headerLight h1, .articleCardDark .headerLight h2, .articleCardDark .headerLight h3, .articleCardDark .headerLight h4, .articleCardDark .headerLight h5, .articleCardDark .headerLight h6 {
+      color: #2F343F; }
+    .articleCardLight .headerLight p, .articleCardDark .headerLight p {
+      color: #B0B9C6; }
+  .articleCardLight .headerLight h1, .articleCardLight .headerLight h2, .articleCardLight .headerLight h3, .articleCardLight .headerLight h4, .articleCardLight .headerLight h5, .articleCardLight .headerLight h6, .articleCardLight .headerDark h1, .articleCardLight .headerDark h2, .articleCardLight .headerDark h3, .articleCardLight .headerDark h4, .articleCardLight .headerDark h5, .articleCardLight .headerDark h6, .articleCardDark .headerLight h1, .articleCardDark .headerLight h2, .articleCardDark .headerLight h3, .articleCardDark .headerLight h4, .articleCardDark .headerLight h5, .articleCardDark .headerLight h6, .articleCardDark .headerDark h1, .articleCardDark .headerDark h2, .articleCardDark .headerDark h3, .articleCardDark .headerDark h4, .articleCardDark .headerDark h5, .articleCardDark .headerDark h6 {
+    margin: 0;
+    padding: 12px 0 6px 12px;
+    font-weight: 400; }
+  .articleCardLight .headerLight p, .articleCardLight .headerDark p, .articleCardDark .headerLight p, .articleCardDark .headerDark p {
+    font-weight: 400;
+    margin: 0;
+    padding: 0 0 12px 12px; }
+  .articleCardLight .footerDark, .articleCardDark .footerDark {
+    background-color: #2F343F; }
+  .articleCardLight .footerLight, .articleCardDark .footerLight {
+    background-color: white; }
+  .articleCardLight .footerLight, .articleCardLight .footerDark, .articleCardDark .footerLight, .articleCardDark .footerDark {
+    padding: 6px 6px 50px 6px; }
+    .articleCardLight .footerLight .buttonFlat, .articleCardLight .footerLight .buttonRaised, .articleCardLight .footerDark .buttonFlat, .articleCardLight .footerDark .buttonRaised, .articleCardDark .footerLight .buttonFlat, .articleCardDark .footerLight .buttonRaised, .articleCardDark .footerDark .buttonFlat, .articleCardDark .footerDark .buttonRaised {
       float: right; }
 
 /*FOOTER */
-.footerDark {
+.footerMainDark {
   margin-top: 10vh;
   padding: 1em;
   background-color: #2F343F;
