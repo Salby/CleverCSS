@@ -46,7 +46,6 @@ $(document).ready(function() {
   var heightThreshold = $(".elementDisplay").offset().top;
   var heightThreshold_end = $(".elementDisplay").offset().top +$(".elementDisplay").height();
   var components = $("#componentsWrapper");
-  var scrollTrigger = $("#getStarted").offset().top;
   var scrollTrigger_end = $("#getStarted").offset().top +$("#getStarted").height();
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
