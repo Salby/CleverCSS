@@ -22,75 +22,91 @@ p {
 
 /*COLORS */
 /*COMPONENTS */
-.navBar {
+.navBarDark {
+  background-color: #2F343F; }
+  .navBarDark ul li {
+    color: white; }
+    .navBarDark ul li:hover {
+      border-bottom: 2px solid white; }
+    .navBarDark ul li a {
+      color: white; }
+  .navBarDark ul #drawerButtonItem #drawerButton:active {
+    background-color: rgba(255, 255, 255, 0.1); }
+  .navBarDark ul #drawerButtonItem #drawerButton i {
+    color: white; }
+
+.navBarLight {
+  background-color: white; }
+  .navBarLight ul li {
+    color: #2F343F; }
+    .navBarLight ul li:hover {
+      border-bottom: 2px solid #2F343F; }
+  .navBarLight ul #drawerButtonItem #drawerButton:active {
+    background-color: rgba(0, 0, 0, 0.05); }
+  .navBarLight ul #drawerButtonItem #drawerButton i {
+    color: #2F343F; }
+
+.navBarDark, .navBarLight {
   height: 60px;
   width: 100%;
-  background-color: #2F343F;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
   z-index: 5;
   position: fixed; }
-  .navBar ul {
+  .navBarDark ul, .navBarLight ul {
     margin: 0;
     padding: 0;
     list-style: none;
     height: 60px;
     width: 100%; }
-    .navBar ul li {
+    .navBarDark ul li, .navBarLight ul li {
       position: relative;
       overflow: hidden;
       float: left;
       cursor: pointer;
       display: block;
-      color: white;
       font-family: "Roboto", sans-serif;
       font-size: 20px;
       padding: 20px;
       height: 60px;
       transition: all 0.1s;
       border-bottom: 2px solid transparent; }
-      .navBar ul li:hover {
-        border-bottom: 2px solid white; }
-      .navBar ul li a {
-        color: white;
+      .navBarDark ul li a, .navBarLight ul li a {
         text-decoration: none; }
-    .navBar ul .brandItem {
+    .navBarDark ul .brandItem, .navBarLight ul .brandItem {
       display: block;
       float: left; }
-    .navBar ul #drawerButtonItem {
+    .navBarDark ul #drawerButtonItem, .navBarLight ul #drawerButtonItem {
       display: none;
       padding: 0;
       border-bottom: 0;
       width: 56px;
       height: 56px; }
-      .navBar ul #drawerButtonItem:hover {
+      .navBarDark ul #drawerButtonItem:hover, .navBarLight ul #drawerButtonItem:hover {
         border-bottom: 0; }
-      .navBar ul #drawerButtonItem #drawerButton {
+      .navBarDark ul #drawerButtonItem #drawerButton, .navBarLight ul #drawerButtonItem #drawerButton {
         width: 56px;
         height: 56px;
         border-radius: 56px;
         border: 0;
         background-color: transparent; }
-        .navBar ul #drawerButtonItem #drawerButton:active {
-          background-color: rgba(255, 255, 255, 0.1); }
-        .navBar ul #drawerButtonItem #drawerButton i {
-          transform: scale(1.2) translateY(5%) translateX(-1%);
-          color: white; }
+        .navBarDark ul #drawerButtonItem #drawerButton i, .navBarLight ul #drawerButtonItem #drawerButton i {
+          transform: scale(1.2) translateY(5%) translateX(-1%); }
 
 @media only screen and (max-width: 768px) {
-  .navBar {
+  .navBarDark, .navBarLight {
     height: 56px; }
-    .navBar ul {
+    .navBarDark ul, .navBarLight ul {
       height: 56px; }
-      .navBar ul li {
+      .navBarDark ul li, .navBarLight ul li {
         display: none;
         height: 56px; }
-      .navBar ul .brandItem {
+      .navBarDark ul .brandItem, .navBarLight ul .brandItem {
         display: block;
         float: right;
         border-bottom: 0; }
-        .navBar ul .brandItem:hover {
+        .navBarDark ul .brandItem:hover, .navBarLight ul .brandItem:hover {
           border-bottom: 0; }
-      .navBar ul #drawerButtonItem {
+      .navBarDark ul #drawerButtonItem, .navBarLight ul #drawerButtonItem {
         display: block; } }
 /*DRAWER */
 .drawer {
@@ -104,41 +120,52 @@ p {
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
   transform: translateX(-100%); }
-  .drawer .drawerContent {
+  .drawer .drawerContentDark {
+    background-color: #2F343F; }
+  .drawer .drawerContentLight {
+    background-color: white; }
+  .drawer .drawerContentDark, .drawer .drawerContentLight {
     width: 20vw;
     height: 100vh;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-    background-color: white; }
-    .drawer .drawerContent .drawerHeader {
-      height: 56px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+    .drawer .drawerContentDark .drawerHeaderDark, .drawer .drawerContentLight .drawerHeaderDark {
       background-color: #2F343F; }
-      .drawer .drawerContent .drawerHeader #drawerClose {
+      .drawer .drawerContentDark .drawerHeaderDark #drawerClose:active, .drawer .drawerContentLight .drawerHeaderDark #drawerClose:active {
+        background-color: rgba(255, 255, 255, 0.1); }
+      .drawer .drawerContentDark .drawerHeaderDark #drawerClose i, .drawer .drawerContentLight .drawerHeaderDark #drawerClose i {
+        color: white; }
+    .drawer .drawerContentDark .drawerHeaderLight, .drawer .drawerContentLight .drawerHeaderLight {
+      background-color: white; }
+      .drawer .drawerContentDark .drawerHeaderLight #drawerClose:active, .drawer .drawerContentLight .drawerHeaderLight #drawerClose:active {
+        background-color: rgba(0, 0, 0, 0.05); }
+      .drawer .drawerContentDark .drawerHeaderLight #drawerClose i, .drawer .drawerContentLight .drawerHeaderLight #drawerClose i {
+        color: #2F343F; }
+    .drawer .drawerContentDark .drawerHeaderDark, .drawer .drawerContentDark .drawerHeaderLight, .drawer .drawerContentLight .drawerHeaderDark, .drawer .drawerContentLight .drawerHeaderLight {
+      height: 56px; }
+      .drawer .drawerContentDark .drawerHeaderDark #drawerClose, .drawer .drawerContentDark .drawerHeaderLight #drawerClose, .drawer .drawerContentLight .drawerHeaderDark #drawerClose, .drawer .drawerContentLight .drawerHeaderLight #drawerClose {
         width: 56px;
         height: 56px;
         border-radius: 56px;
         border: 0;
         background-color: transparent; }
-        .drawer .drawerContent .drawerHeader #drawerClose:active {
-          background-color: rgba(255, 255, 255, 0.1); }
-        .drawer .drawerContent .drawerHeader #drawerClose i {
-          color: white;
+        .drawer .drawerContentDark .drawerHeaderDark #drawerClose i, .drawer .drawerContentDark .drawerHeaderLight #drawerClose i, .drawer .drawerContentLight .drawerHeaderDark #drawerClose i, .drawer .drawerContentLight .drawerHeaderLight #drawerClose i {
           transform: scale(1.2) translateY(10%); }
-    .drawer .drawerContent .drawerNav {
+    .drawer .drawerContentDark .drawerNav, .drawer .drawerContentLight .drawerNav {
       padding: 0;
       margin: 0;
       list-style: none;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-      .drawer .drawerContent .drawerNav li {
+      .drawer .drawerContentDark .drawerNav li, .drawer .drawerContentLight .drawerNav li {
         user-select: none;
         cursor: pointer;
         padding: 12px 12px;
         color: #757575; }
-        .drawer .drawerContent .drawerNav li:hover {
+        .drawer .drawerContentDark .drawerNav li:hover, .drawer .drawerContentLight .drawerNav li:hover {
           background-color: rgba(0, 0, 0, 0.05); }
-        .drawer .drawerContent .drawerNav li a {
+        .drawer .drawerContentDark .drawerNav li a, .drawer .drawerContentLight .drawerNav li a {
           font-size: 18px;
           display: block; }
-          .drawer .drawerContent .drawerNav li a i {
+          .drawer .drawerContentDark .drawerNav li a i, .drawer .drawerContentLight .drawerNav li a i {
             transform: translateY(25%); }
 
 .drawerContentAnimateOpen {
@@ -181,10 +208,10 @@ p {
     transform: translateX(-100%);
     background-color: transparent; } }
 @media only screen and (max-width: 768px) {
-  .drawer .drawerContent {
+  .drawer .drawerContentDark, .drawer .drawerContentLight {
     width: 40vw; } }
 @media only screen and (max-width: 480px) {
-  .drawer .drawerContent {
+  .drawer .drawerContentDark, .drawer .drawerContentLight {
     width: 80vw; } }
 /*WRAPPERS */
 .wrapperL {
