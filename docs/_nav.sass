@@ -10,7 +10,7 @@
     #drawerButtonItem
       #drawerButton
         &:active
-          /*background-color: rgba(255,255,255,0.1)
+          background-color: rgba(255,255,255,0.1)
         i
           color: white
 .navBarLight
@@ -102,24 +102,37 @@
   left: 0
   background-color: rgba(0,0,0,0.4)
   transform: translateX(-100%)
-  .drawerContent
+  .drawerContentDark
+    background-color: $primary
+  .drawerContentLight
+    background-color: white
+  .drawerContentDark, .drawerContentLight
     width: 20vw
     height: 100vh
     box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2)
-    background-color: white
-    .drawerHeader
-      height: 56px
+    .drawerHeaderDark
       background-color: $primary
+      #drawerClose
+        &:active
+          background-color: rgba(255,255,255,0.1)
+        i
+          color: white
+    .drawerHeaderLight
+      background-color: white
+      #drawerClose
+        &:active
+          background-color: rgba(0,0,0,0.05)
+        i
+          color: $primary
+    .drawerHeaderDark, .drawerHeaderLight
+      height: 56px
       #drawerClose
         width: 56px
         height: 56px
         border-radius: 56px
         border: 0
         background-color: rgba(0,0,0,0)
-        &:active
-          background-color: rgba(255,255,255,0.1)
         i
-          color: white
           transform: scale(1.2) translateY(10%)
     .drawerNav
       padding: 0
@@ -178,9 +191,9 @@
 
 @media only screen and (max-width: 768px)
   .drawer
-    .drawerContent
+    .drawerContentDark, .drawerContentLight
       width: 40vw
 @media only screen and (max-width: 480px)
   .drawer
-    .drawerContent
+    .drawerContentDark, .drawerContentLight
       width: 80vw

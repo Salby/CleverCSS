@@ -31,7 +31,7 @@ p {
     .navBarDark ul li a {
       color: white; }
   .navBarDark ul #drawerButtonItem #drawerButton:active {
-    /*background-color: rgba(255,255,255,0.1) */ }
+    background-color: rgba(255, 255, 255, 0.1); }
   .navBarDark ul #drawerButtonItem #drawerButton i {
     color: white; }
 
@@ -120,41 +120,52 @@ p {
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
   transform: translateX(-100%); }
-  .drawer .drawerContent {
+  .drawer .drawerContentDark {
+    background-color: #2F343F; }
+  .drawer .drawerContentLight {
+    background-color: white; }
+  .drawer .drawerContentDark, .drawer .drawerContentLight {
     width: 20vw;
     height: 100vh;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-    background-color: white; }
-    .drawer .drawerContent .drawerHeader {
-      height: 56px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+    .drawer .drawerContentDark .drawerHeaderDark, .drawer .drawerContentLight .drawerHeaderDark {
       background-color: #2F343F; }
-      .drawer .drawerContent .drawerHeader #drawerClose {
+      .drawer .drawerContentDark .drawerHeaderDark #drawerClose:active, .drawer .drawerContentLight .drawerHeaderDark #drawerClose:active {
+        background-color: rgba(255, 255, 255, 0.1); }
+      .drawer .drawerContentDark .drawerHeaderDark #drawerClose i, .drawer .drawerContentLight .drawerHeaderDark #drawerClose i {
+        color: white; }
+    .drawer .drawerContentDark .drawerHeaderLight, .drawer .drawerContentLight .drawerHeaderLight {
+      background-color: white; }
+      .drawer .drawerContentDark .drawerHeaderLight #drawerClose:active, .drawer .drawerContentLight .drawerHeaderLight #drawerClose:active {
+        background-color: rgba(0, 0, 0, 0.05); }
+      .drawer .drawerContentDark .drawerHeaderLight #drawerClose i, .drawer .drawerContentLight .drawerHeaderLight #drawerClose i {
+        color: #2F343F; }
+    .drawer .drawerContentDark .drawerHeaderDark, .drawer .drawerContentDark .drawerHeaderLight, .drawer .drawerContentLight .drawerHeaderDark, .drawer .drawerContentLight .drawerHeaderLight {
+      height: 56px; }
+      .drawer .drawerContentDark .drawerHeaderDark #drawerClose, .drawer .drawerContentDark .drawerHeaderLight #drawerClose, .drawer .drawerContentLight .drawerHeaderDark #drawerClose, .drawer .drawerContentLight .drawerHeaderLight #drawerClose {
         width: 56px;
         height: 56px;
         border-radius: 56px;
         border: 0;
         background-color: transparent; }
-        .drawer .drawerContent .drawerHeader #drawerClose:active {
-          background-color: rgba(255, 255, 255, 0.1); }
-        .drawer .drawerContent .drawerHeader #drawerClose i {
-          color: white;
+        .drawer .drawerContentDark .drawerHeaderDark #drawerClose i, .drawer .drawerContentDark .drawerHeaderLight #drawerClose i, .drawer .drawerContentLight .drawerHeaderDark #drawerClose i, .drawer .drawerContentLight .drawerHeaderLight #drawerClose i {
           transform: scale(1.2) translateY(10%); }
-    .drawer .drawerContent .drawerNav {
+    .drawer .drawerContentDark .drawerNav, .drawer .drawerContentLight .drawerNav {
       padding: 0;
       margin: 0;
       list-style: none;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-      .drawer .drawerContent .drawerNav li {
+      .drawer .drawerContentDark .drawerNav li, .drawer .drawerContentLight .drawerNav li {
         user-select: none;
         cursor: pointer;
         padding: 12px 12px;
         color: #757575; }
-        .drawer .drawerContent .drawerNav li:hover {
+        .drawer .drawerContentDark .drawerNav li:hover, .drawer .drawerContentLight .drawerNav li:hover {
           background-color: rgba(0, 0, 0, 0.05); }
-        .drawer .drawerContent .drawerNav li a {
+        .drawer .drawerContentDark .drawerNav li a, .drawer .drawerContentLight .drawerNav li a {
           font-size: 18px;
           display: block; }
-          .drawer .drawerContent .drawerNav li a i {
+          .drawer .drawerContentDark .drawerNav li a i, .drawer .drawerContentLight .drawerNav li a i {
             transform: translateY(25%); }
 
 .drawerContentAnimateOpen {
@@ -197,10 +208,10 @@ p {
     transform: translateX(-100%);
     background-color: transparent; } }
 @media only screen and (max-width: 768px) {
-  .drawer .drawerContent {
+  .drawer .drawerContentDark, .drawer .drawerContentLight {
     width: 40vw; } }
 @media only screen and (max-width: 480px) {
-  .drawer .drawerContent {
+  .drawer .drawerContentDark, .drawer .drawerContentLight {
     width: 80vw; } }
 /*WRAPPERS */
 .wrapperL {
