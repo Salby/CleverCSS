@@ -41,4 +41,17 @@ $(document).ready(function() {
     $("#formsArticle").siblings("article").addClass("hideComp");
     $("#formsArticle").removeClass("hideComp").addClass("showComp");
   });
+  // SCROLL STUFF
+  var menu = $(".elementList");
+  var heightThreshold = $(".elementDisplay").offset().top;
+  var heightThreshold_end = $(".elementDisplay").offset().top +$(".elementDisplay").height();
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= heightThreshold && scroll <= heightThreshold_end) {
+        menu.addClass("elementListPin");
+    } else {
+        menu.removeClass("elementListPin");
+    }
+  });
 });

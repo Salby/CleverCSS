@@ -116,16 +116,25 @@ button::-moz-focus-inner
 
 .dropdownLargeDark
   .buttonDropdownLarge
-    color: white
+    color: $accent
   .dropdownContent
     background-color: $primary
     li
       color: white
+      &:hover
+        background-color: rgba(255,255,255,0.1)
+      &:active
+        background-color: rgba(255,255,255,0.2)
 .dropdownLargeLight
   .buttonDropdownLarge
     color: $accent
   .dropdownContent
     background-color: white
+    li
+      &:hover
+        background-color: rgba(0,0,0,0.04)
+      &:active
+        background-color: rgba(0,0,0,0.1)
 .dropdownLargeDark, .dropdownLargeLight
   position: relative
   display: block
@@ -148,6 +157,7 @@ button::-moz-focus-inner
     left: 0
     display: none
     li
+      cursor: pointer
       font-size: 18px
       padding: 8px
       text-align: center
