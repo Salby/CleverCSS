@@ -17,7 +17,7 @@ $(document).ready(function() {
   });
   // COMPONENTS SELECTION
   $(".selectArticle").click(function() {
-    var target = $(this).val();
+    var target = $(this).data("target");
     $(target).siblings("article").removeClass("showComp").addClass("hideComp");
     $(target).removeClass("hideComp").addClass("showComp");
   });
