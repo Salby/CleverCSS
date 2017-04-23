@@ -298,11 +298,9 @@ p {
       position: relative;
       width: 480px; }
     .articleCardLight .footerLight .buttonFlat, .articleCardLight .footerLight .buttonRaised, .articleCardLight .footerDark .buttonFlat, .articleCardLight .footerDark .buttonRaised, .articleCardDark .footerLight .buttonFlat, .articleCardDark .footerLight .buttonRaised, .articleCardDark .footerDark .buttonFlat, .articleCardDark .footerDark .buttonRaised {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      height: 44px;
-      margin: 6px 6px; }
+      float: right;
+      height: 56px;
+      top: 0; }
 
 @media only screen and (max-width: 768px) {
   .articleCardDark .footerDark .footerComment, .articleCardDark .footerLight .footerComment, .articleCardLight .footerDark .footerComment, .articleCardLight .footerLight .footerComment {
@@ -380,6 +378,71 @@ p {
     .formLoose .inputSubmit:hover {
       box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2); }
 
+/*MODAL STYLES */
+.modal {
+  z-index: 12;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .modal .modalContentLight {
+    background-color: white;
+    color: #2F343F; }
+  .modal .modalContentDark {
+    background-color: #2F343F;
+    color: white; }
+  .modal .modalContentLight, .modal .modalContentDark {
+    width: 480px;
+    height: 480px;
+    display: block;
+    position: relative;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2); }
+    .modal .modalContentLight .modalHeaderLight, .modal .modalContentDark .modalHeaderLight {
+      background-color: white; }
+      .modal .modalContentLight .modalHeaderLight h1, .modal .modalContentLight .modalHeaderLight h2, .modal .modalContentLight .modalHeaderLight h3, .modal .modalContentLight .modalHeaderLight h4, .modal .modalContentLight .modalHeaderLight h5, .modal .modalContentLight .modalHeaderLight h6, .modal .modalContentDark .modalHeaderLight h1, .modal .modalContentDark .modalHeaderLight h2, .modal .modalContentDark .modalHeaderLight h3, .modal .modalContentDark .modalHeaderLight h4, .modal .modalContentDark .modalHeaderLight h5, .modal .modalContentDark .modalHeaderLight h6 {
+        color: #2F343F; }
+    .modal .modalContentLight .modalHeaderDark, .modal .modalContentDark .modalHeaderDark {
+      background-color: #2F343F; }
+      .modal .modalContentLight .modalHeaderDark h1, .modal .modalContentLight .modalHeaderDark h2, .modal .modalContentLight .modalHeaderDark h3, .modal .modalContentLight .modalHeaderDark h4, .modal .modalContentLight .modalHeaderDark h5, .modal .modalContentLight .modalHeaderDark h6, .modal .modalContentDark .modalHeaderDark h1, .modal .modalContentDark .modalHeaderDark h2, .modal .modalContentDark .modalHeaderDark h3, .modal .modalContentDark .modalHeaderDark h4, .modal .modalContentDark .modalHeaderDark h5, .modal .modalContentDark .modalHeaderDark h6 {
+        color: white; }
+    .modal .modalContentLight .modalHeaderLight, .modal .modalContentLight .modalHeaderDark, .modal .modalContentDark .modalHeaderLight, .modal .modalContentDark .modalHeaderDark {
+      position: relative;
+      min-height: 56px; }
+      .modal .modalContentLight .modalHeaderLight h1, .modal .modalContentLight .modalHeaderLight h2, .modal .modalContentLight .modalHeaderLight h3, .modal .modalContentLight .modalHeaderLight h4, .modal .modalContentLight .modalHeaderLight h5, .modal .modalContentLight .modalHeaderLight h6, .modal .modalContentLight .modalHeaderDark h1, .modal .modalContentLight .modalHeaderDark h2, .modal .modalContentLight .modalHeaderDark h3, .modal .modalContentLight .modalHeaderDark h4, .modal .modalContentLight .modalHeaderDark h5, .modal .modalContentLight .modalHeaderDark h6, .modal .modalContentDark .modalHeaderLight h1, .modal .modalContentDark .modalHeaderLight h2, .modal .modalContentDark .modalHeaderLight h3, .modal .modalContentDark .modalHeaderLight h4, .modal .modalContentDark .modalHeaderLight h5, .modal .modalContentDark .modalHeaderLight h6, .modal .modalContentDark .modalHeaderDark h1, .modal .modalContentDark .modalHeaderDark h2, .modal .modalContentDark .modalHeaderDark h3, .modal .modalContentDark .modalHeaderDark h4, .modal .modalContentDark .modalHeaderDark h5, .modal .modalContentDark .modalHeaderDark h6 {
+        margin: 0;
+        padding: 12px 0 6px 12px; }
+      .modal .modalContentLight .modalHeaderLight p, .modal .modalContentLight .modalHeaderDark p, .modal .modalContentDark .modalHeaderLight p, .modal .modalContentDark .modalHeaderDark p {
+        color: #B0B9C6;
+        margin: 0;
+        padding: 6px 0 12px 12px; }
+      .modal .modalContentLight .modalHeaderLight .dropdownSmallLight, .modal .modalContentLight .modalHeaderLight .dropdownSmallDark, .modal .modalContentLight .modalHeaderDark .dropdownSmallLight, .modal .modalContentLight .modalHeaderDark .dropdownSmallDark, .modal .modalContentDark .modalHeaderLight .dropdownSmallLight, .modal .modalContentDark .modalHeaderLight .dropdownSmallDark, .modal .modalContentDark .modalHeaderDark .dropdownSmallLight, .modal .modalContentDark .modalHeaderDark .dropdownSmallDark {
+        position: absolute;
+        right: 0;
+        top: 0; }
+        .modal .modalContentLight .modalHeaderLight .dropdownSmallLight .dropdownContent, .modal .modalContentLight .modalHeaderLight .dropdownSmallDark .dropdownContent, .modal .modalContentLight .modalHeaderDark .dropdownSmallLight .dropdownContent, .modal .modalContentLight .modalHeaderDark .dropdownSmallDark .dropdownContent, .modal .modalContentDark .modalHeaderLight .dropdownSmallLight .dropdownContent, .modal .modalContentDark .modalHeaderLight .dropdownSmallDark .dropdownContent, .modal .modalContentDark .modalHeaderDark .dropdownSmallLight .dropdownContent, .modal .modalContentDark .modalHeaderDark .dropdownSmallDark .dropdownContent {
+          right: 0;
+          left: auto; }
+    .modal .modalContentLight .modalFooterLight, .modal .modalContentDark .modalFooterLight {
+      background-color: white;
+      color: #2F343F; }
+    .modal .modalContentLight .modalFooterDark, .modal .modalContentDark .modalFooterDark {
+      background-color: #2F343F;
+      color: white; }
+    .modal .modalContentLight .modalFooterLight, .modal .modalContentLight .modalFooterDark, .modal .modalContentDark .modalFooterLight, .modal .modalContentDark .modalFooterDark {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      min-height: 56px; }
+
+@media only screen and (max-width: 480px) {
+  .modal .modalContentLight, .modal .modalContentDark {
+    width: 320px;
+    height: 320px; } }
 /*BUTTONS */
 button::-moz-focus-inner {
   border: 0; }

@@ -216,48 +216,6 @@ footer {
   color: #5294e2;
   font-weight: 500; }
 
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.2);
-  /* Black w/ opacity */ }
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  width: 786px;
-  animation: fadeIn 0.6s;
-  height: 400px;
-  padding: 0 0 1.75em 0;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2); }
-  .modal-content article {
-    height: 100%;
-    box-shadow: none; }
-    .modal-content article header {
-      background-color: #2f343f; }
-    .modal-content article p a {
-      color: #5294e2;
-      font-size: 110%;
-      white-space: normal; }
-
-@media only screen and (max-width: 786px) {
-  .modal-content {
-    margin: 20% auto;
-    width: 95vw; } }
 /*SOMETHING GRADIENT */
 .backgroundGradient {
   background: #2f343f;

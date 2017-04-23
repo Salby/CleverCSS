@@ -23,4 +23,8 @@ $(document).ready(function() {
         $(this).next().removeClass("dropdownLargeContentHide").addClass("dropdownLargeContentShow");
     }
   });
+  // MODAL THINGS
+  $(".buttonModal[data-target]").click(function() {
+    alert($(this).data("target"));
+  });
 });
