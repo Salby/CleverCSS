@@ -1,9 +1,7 @@
-$colorDark: #4278b7
-$colorLight: #5294e2
-$colorLighter: #5a9ded
+
+@import "_components.sass"
 
 /*ANIMATE
-
 @keyframes selectionActive
   100%
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2)
@@ -35,6 +33,16 @@ $colorLighter: #5a9ded
 
   #mobileDrop
     display: block
+    float: right
+    background-color: rgba(0,0,0,0)
+    color: white
+    &:active
+      background-color: rgba(255,255,255,0.1)
+    i
+      color: white
+  #mobileDropdownContent
+    right: 0
+    left: auto
 
 .elementList li
   cursor: pointer
@@ -57,12 +65,12 @@ $colorLighter: #5a9ded
 
     button
       cursor: pointer
-      background-color: rgba(0, 0, 0, 0)
+      background-color: transparent
       color: #ffffff
       padding: 0
       font-size: 16px
       border: 0
-      font-weight: 600
+      font-weight: 500
       width: 100%
       text-align: left
       padding: 0.6em
@@ -72,12 +80,9 @@ $colorLighter: #5a9ded
 
 .elementDisplay
   background-color: #ffffff
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2)
   min-height: 214px
   border-radius: 2px
-
-  &:hover
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
 
   article
     padding: 0
@@ -85,34 +90,31 @@ $colorLighter: #5a9ded
     box-shadow: none
 
     header
-      background-color: #4278b7
+      background-color: #2f343f
       color: #ffffff
 
       h3
         font-weight: 400
 
     h4
-      font-weight: 400
-      color: #000000
-      margin: 16px 6px 0 6px
-
-#navBarArticle
-  display: block
-
-#buttonArticle, #typoArticle, #gridArticle
-  display: none
+      font-weight: 500
+      color: #212121
+      padding: 56px 0 3px 12px
+      margin: 0
 
 .code
   background-color: rgba(0, 0, 0, 0.05)
   padding: 0.5em 0.5em
-  font-family: 'Space Mono' monospace
+  font-family: 'Space Mono', monospace
   font-size: 14px
-  margin: 0 16px
+  margin: 6 6px
   display: block
-  overflow-x: scroll
+  overflow-x: auto
+  white-space: nowrap
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2) inset
 
 .demoArea
-  padding: 1em
+  padding: 0 12px 0 12px
 
 .gridDemo
   background-color: rgba(0, 0, 0, 0.1)
@@ -134,8 +136,7 @@ $colorLighter: #5a9ded
   &.animate
     animation: ripple 0.65s linear
 
-/*animation effect*/
-
+/*animation effect
 @keyframes ripple
   100%
     opacity: 0
@@ -151,6 +152,8 @@ $colorLighter: #5a9ded
 
   &.animate
     animation: ripple 0.5s linear
+
+/*animation effect
 
 article .row section
   height: 100%
@@ -174,71 +177,52 @@ article .row section
     text-align: center
 
 footer
-  color: #4b8cdf
+  color: rgba(255,255,255,0.1)
 
   a
-    color: #5294e2
+    color: rgba(255,255,255,0.1)
 
 @media only screen and (min-width: 787px)
   #iconArticle, #dependArticle
     min-height: 300px
+    .row
+      .col-s-6
+        height: 15vh
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        a
+          span
+            display: block
+            font-size: 50px
+            text-decoration: none
+            color: #5294e2
+            width: 50px
+            margin: auto
 
 .headerDecorator
   color: #5294e2
   font-weight: 500
 
-.modal
-  display: none
+/*SOMETHING GRADIENT
+.backgroundGradient
+  background: #2f343f
+  background: -webkit-linear-gradient(left top, #2f343f, #5294e2)
+  background: -o-linear-gradient(bottom right, #2f343f, #5294e2)
+  background: -moz-linear-gradient(bottom right, #2f343f, #5294e2)
+  background: linear-gradient(to bottom right, #2f343f, #5294e2)
 
-  /* Hidden by default*/
-  position: fixed
+article
+  p
+    padding: 6px 0 6px 12px
+    margin: 0
+  header
+    height: 56px
+    h3
+      font-size: 28px
+      padding: 0.5em
+      margin: 0
+      color: white
 
-  /* Stay in place*/
-  z-index: 1
-
-  /* Sit on top*/
-  left: 0
-  top: 0
-  width: 100%
-
-  /* Full width*/
-  height: 100%
-
-  /* Full height*/
-  overflow: auto
-
-  /* Enable scroll if needed*/
-  background-color: rgb(0, 0, 0)
-
-  /* Fallback color*/
-  background-color: rgba(0, 0, 0, 0.2)
-
-  /* Black w/ opacity*/
-
-.modal-content
-  background-color: #fefefe
-  margin: 10% auto
-  width: 786px
-  animation: fadeIn 0.6s
-  height: 400px
-  padding: 0 0 1.75em 0
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2)
-
-  article
-    height: 100%
-    box-shadow: none
-
-    header
-      background-color: #4278b7
-
-    p a
-      color: #5294e2
-      font-size: 110%
-      white-space: normal
-
-@media only screen and (max-width: 786px)
-  .modal-content
-    margin: 20% auto
-    width: 95vw
-    background-color: white
-    color: black
+/*# sourceMappingURL=misc.css.map
