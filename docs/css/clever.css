@@ -213,6 +213,14 @@ p {
 @media only screen and (max-width: 480px) {
   .drawer .drawerContentDark, .drawer .drawerContentLight {
     width: 80vw; } }
+/*HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 /*WRAPPERS */
 .wrapperL {
   width: 1200px;
