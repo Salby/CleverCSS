@@ -21,20 +21,12 @@
 
     <div class="modal" id="modal1">
       <div class="modalContentLight">
-        <div class="modalHeaderDark">
+        <div class="modalHeaderLight">
           <h2>Header</h2>
           <p>Comment</p>
-          <div class="dropdownSmallDark">
-            <button class="buttonDropdownSmall"><i class="material-icons">more_vert</i></button>
-            <ul class="dropdownContent">
-              <li>Option 1</li>
-              <li>Option 2</li>
-              <li>Option 3</li>
-            </ul>
-          </div>
         </div>
-        <div class="modalFooterDark">
-          <button class="buttonFlat modalCLose">Close</button>
+        <div class="modalFooterLight">
+          <button class="buttonFlat buttonModalClose" data-target="#modal1">Close Modal</button>
         </div>
       </div>
     </div>
@@ -70,7 +62,7 @@
         <div class="articleCardLight" id="getStarted" style="animation: fadeIn 1s">
           <div class="headerLight">
             <h2>Get started</h2>
-            <p>Version 0.6</p>
+            <p>Version 0.7</p>
           </div>
           <div class="code">
             &lt;!DOCTYPE html&gt;<br>
@@ -93,7 +85,6 @@
             &lt;/html&gt;<br>
           </div>
           <div class="footerLight" id="elements">
-            <button class="buttonFlat buttonModal" data-target="#modal1">Open modal</button>
             <a href="https://github.com/SanderSalamander/CleverCSS/" target="_blank"><button class="buttonFlat">Follow on Github</button></a>
           </div>
         </div>
@@ -319,7 +310,30 @@
                   <header>
                     <h3>Modals</h3>
                   </header>
-                  <h4>Modals :)</h4>
+                  <h4> </h4>
+                  <p>Modals are small windows that can contain information not neccesary to be presented immedeately</p>
+                  <h4>The modal button</h4>
+                  <p>The first thing you'll need is a button that can activate the modal</p>
+                  <div class="code">
+                    &lt;button class="buttonFlat buttonModalOpen" data-target="#modal1"&gt;Open Modal&lt;/button&gt;<br>
+                  </div>
+                  <button class="buttonFlat buttonModalOpen" data-target="#modal1">Open Modal</button>
+                  <p>The data-target attribute is used to point to the modal that you want to open</p>
+                  <h4>The modal window</h4>
+                  <p>The modal itself needs an id attribute. This is how you are able to target different modals with different buttons</p>
+                  <div class="code">
+                    &lt;div class="modal" id="modal1"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="modalContentLight"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modalHeaderLight"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Header&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Comment&lt;/p&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modalFooterLight"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="buttonFlat buttonModalClose" data-target="#modal1"&gt;Close Modal&lt;/button&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                  </div>
                 </article>
                 <article id="gridArticle" class="hideComp">
                   <header>

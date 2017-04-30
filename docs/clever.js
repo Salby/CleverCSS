@@ -24,7 +24,13 @@ $(document).ready(function() {
     }
   });
   // MODAL THINGS
-  $(".buttonModal[data-target]").click(function() {
-    alert($(this).data("target"));
+  $(".buttonModalOpen[data-target]").click(function() {
+    //alert($(this).data("target"));
+    var modalTargetOpen = $(this).data("target");
+    $(modalTargetOpen).addClass("modalActive");
+  });
+  $(".buttonModalClose[data-target]").click(function() {
+    var modalTargetClose = $(this).data("target");
+    $(modalTargetClose).removeClass("modalActive");
   });
 });

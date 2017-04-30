@@ -387,64 +387,97 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  display: none;
+  display: none; }
+
+.modalActive {
+  width: 100%;
+  height: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
-  .modal .modalContentLight {
+  align-items: center;
+  animation: modalAnimateOpen 0.3s forwards; }
+  .modalActive .modalContentLight {
     background-color: white;
     color: #2F343F; }
-  .modal .modalContentDark {
+  .modalActive .modalContentDark {
     background-color: #2F343F;
     color: white; }
-  .modal .modalContentLight, .modal .modalContentDark {
+  .modalActive .modalContentLight, .modalActive .modalContentDark {
+    animation: modalContentAnimateOpen 0.3s forwards;
     width: 480px;
     height: 480px;
     display: block;
     position: relative;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2); }
-    .modal .modalContentLight .modalHeaderLight, .modal .modalContentDark .modalHeaderLight {
+    .modalActive .modalContentLight .modalHeaderLight, .modalActive .modalContentDark .modalHeaderLight {
       background-color: white; }
-      .modal .modalContentLight .modalHeaderLight h1, .modal .modalContentLight .modalHeaderLight h2, .modal .modalContentLight .modalHeaderLight h3, .modal .modalContentLight .modalHeaderLight h4, .modal .modalContentLight .modalHeaderLight h5, .modal .modalContentLight .modalHeaderLight h6, .modal .modalContentDark .modalHeaderLight h1, .modal .modalContentDark .modalHeaderLight h2, .modal .modalContentDark .modalHeaderLight h3, .modal .modalContentDark .modalHeaderLight h4, .modal .modalContentDark .modalHeaderLight h5, .modal .modalContentDark .modalHeaderLight h6 {
+      .modalActive .modalContentLight .modalHeaderLight h1, .modalActive .modalContentLight .modalHeaderLight h2, .modalActive .modalContentLight .modalHeaderLight h3, .modalActive .modalContentLight .modalHeaderLight h4, .modalActive .modalContentLight .modalHeaderLight h5, .modalActive .modalContentLight .modalHeaderLight h6, .modalActive .modalContentDark .modalHeaderLight h1, .modalActive .modalContentDark .modalHeaderLight h2, .modalActive .modalContentDark .modalHeaderLight h3, .modalActive .modalContentDark .modalHeaderLight h4, .modalActive .modalContentDark .modalHeaderLight h5, .modalActive .modalContentDark .modalHeaderLight h6 {
         color: #2F343F; }
-    .modal .modalContentLight .modalHeaderDark, .modal .modalContentDark .modalHeaderDark {
+    .modalActive .modalContentLight .modalHeaderDark, .modalActive .modalContentDark .modalHeaderDark {
       background-color: #2F343F; }
-      .modal .modalContentLight .modalHeaderDark h1, .modal .modalContentLight .modalHeaderDark h2, .modal .modalContentLight .modalHeaderDark h3, .modal .modalContentLight .modalHeaderDark h4, .modal .modalContentLight .modalHeaderDark h5, .modal .modalContentLight .modalHeaderDark h6, .modal .modalContentDark .modalHeaderDark h1, .modal .modalContentDark .modalHeaderDark h2, .modal .modalContentDark .modalHeaderDark h3, .modal .modalContentDark .modalHeaderDark h4, .modal .modalContentDark .modalHeaderDark h5, .modal .modalContentDark .modalHeaderDark h6 {
+      .modalActive .modalContentLight .modalHeaderDark h1, .modalActive .modalContentLight .modalHeaderDark h2, .modalActive .modalContentLight .modalHeaderDark h3, .modalActive .modalContentLight .modalHeaderDark h4, .modalActive .modalContentLight .modalHeaderDark h5, .modalActive .modalContentLight .modalHeaderDark h6, .modalActive .modalContentDark .modalHeaderDark h1, .modalActive .modalContentDark .modalHeaderDark h2, .modalActive .modalContentDark .modalHeaderDark h3, .modalActive .modalContentDark .modalHeaderDark h4, .modalActive .modalContentDark .modalHeaderDark h5, .modalActive .modalContentDark .modalHeaderDark h6 {
         color: white; }
-    .modal .modalContentLight .modalHeaderLight, .modal .modalContentLight .modalHeaderDark, .modal .modalContentDark .modalHeaderLight, .modal .modalContentDark .modalHeaderDark {
+    .modalActive .modalContentLight .modalHeaderLight, .modalActive .modalContentLight .modalHeaderDark, .modalActive .modalContentDark .modalHeaderLight, .modalActive .modalContentDark .modalHeaderDark {
       position: relative;
       min-height: 56px; }
-      .modal .modalContentLight .modalHeaderLight h1, .modal .modalContentLight .modalHeaderLight h2, .modal .modalContentLight .modalHeaderLight h3, .modal .modalContentLight .modalHeaderLight h4, .modal .modalContentLight .modalHeaderLight h5, .modal .modalContentLight .modalHeaderLight h6, .modal .modalContentLight .modalHeaderDark h1, .modal .modalContentLight .modalHeaderDark h2, .modal .modalContentLight .modalHeaderDark h3, .modal .modalContentLight .modalHeaderDark h4, .modal .modalContentLight .modalHeaderDark h5, .modal .modalContentLight .modalHeaderDark h6, .modal .modalContentDark .modalHeaderLight h1, .modal .modalContentDark .modalHeaderLight h2, .modal .modalContentDark .modalHeaderLight h3, .modal .modalContentDark .modalHeaderLight h4, .modal .modalContentDark .modalHeaderLight h5, .modal .modalContentDark .modalHeaderLight h6, .modal .modalContentDark .modalHeaderDark h1, .modal .modalContentDark .modalHeaderDark h2, .modal .modalContentDark .modalHeaderDark h3, .modal .modalContentDark .modalHeaderDark h4, .modal .modalContentDark .modalHeaderDark h5, .modal .modalContentDark .modalHeaderDark h6 {
+      .modalActive .modalContentLight .modalHeaderLight h1, .modalActive .modalContentLight .modalHeaderLight h2, .modalActive .modalContentLight .modalHeaderLight h3, .modalActive .modalContentLight .modalHeaderLight h4, .modalActive .modalContentLight .modalHeaderLight h5, .modalActive .modalContentLight .modalHeaderLight h6, .modalActive .modalContentLight .modalHeaderDark h1, .modalActive .modalContentLight .modalHeaderDark h2, .modalActive .modalContentLight .modalHeaderDark h3, .modalActive .modalContentLight .modalHeaderDark h4, .modalActive .modalContentLight .modalHeaderDark h5, .modalActive .modalContentLight .modalHeaderDark h6, .modalActive .modalContentDark .modalHeaderLight h1, .modalActive .modalContentDark .modalHeaderLight h2, .modalActive .modalContentDark .modalHeaderLight h3, .modalActive .modalContentDark .modalHeaderLight h4, .modalActive .modalContentDark .modalHeaderLight h5, .modalActive .modalContentDark .modalHeaderLight h6, .modalActive .modalContentDark .modalHeaderDark h1, .modalActive .modalContentDark .modalHeaderDark h2, .modalActive .modalContentDark .modalHeaderDark h3, .modalActive .modalContentDark .modalHeaderDark h4, .modalActive .modalContentDark .modalHeaderDark h5, .modalActive .modalContentDark .modalHeaderDark h6 {
         margin: 0;
         padding: 12px 0 6px 12px; }
-      .modal .modalContentLight .modalHeaderLight p, .modal .modalContentLight .modalHeaderDark p, .modal .modalContentDark .modalHeaderLight p, .modal .modalContentDark .modalHeaderDark p {
+      .modalActive .modalContentLight .modalHeaderLight p, .modalActive .modalContentLight .modalHeaderDark p, .modalActive .modalContentDark .modalHeaderLight p, .modalActive .modalContentDark .modalHeaderDark p {
         color: #B0B9C6;
         margin: 0;
         padding: 6px 0 12px 12px; }
-      .modal .modalContentLight .modalHeaderLight .dropdownSmallLight, .modal .modalContentLight .modalHeaderLight .dropdownSmallDark, .modal .modalContentLight .modalHeaderDark .dropdownSmallLight, .modal .modalContentLight .modalHeaderDark .dropdownSmallDark, .modal .modalContentDark .modalHeaderLight .dropdownSmallLight, .modal .modalContentDark .modalHeaderLight .dropdownSmallDark, .modal .modalContentDark .modalHeaderDark .dropdownSmallLight, .modal .modalContentDark .modalHeaderDark .dropdownSmallDark {
+      .modalActive .modalContentLight .modalHeaderLight .dropdownSmallLight, .modalActive .modalContentLight .modalHeaderLight .dropdownSmallDark, .modalActive .modalContentLight .modalHeaderDark .dropdownSmallLight, .modalActive .modalContentLight .modalHeaderDark .dropdownSmallDark, .modalActive .modalContentDark .modalHeaderLight .dropdownSmallLight, .modalActive .modalContentDark .modalHeaderLight .dropdownSmallDark, .modalActive .modalContentDark .modalHeaderDark .dropdownSmallLight, .modalActive .modalContentDark .modalHeaderDark .dropdownSmallDark {
         position: absolute;
         right: 0;
         top: 0; }
-        .modal .modalContentLight .modalHeaderLight .dropdownSmallLight .dropdownContent, .modal .modalContentLight .modalHeaderLight .dropdownSmallDark .dropdownContent, .modal .modalContentLight .modalHeaderDark .dropdownSmallLight .dropdownContent, .modal .modalContentLight .modalHeaderDark .dropdownSmallDark .dropdownContent, .modal .modalContentDark .modalHeaderLight .dropdownSmallLight .dropdownContent, .modal .modalContentDark .modalHeaderLight .dropdownSmallDark .dropdownContent, .modal .modalContentDark .modalHeaderDark .dropdownSmallLight .dropdownContent, .modal .modalContentDark .modalHeaderDark .dropdownSmallDark .dropdownContent {
+        .modalActive .modalContentLight .modalHeaderLight .dropdownSmallLight .dropdownContent, .modalActive .modalContentLight .modalHeaderLight .dropdownSmallDark .dropdownContent, .modalActive .modalContentLight .modalHeaderDark .dropdownSmallLight .dropdownContent, .modalActive .modalContentLight .modalHeaderDark .dropdownSmallDark .dropdownContent, .modalActive .modalContentDark .modalHeaderLight .dropdownSmallLight .dropdownContent, .modalActive .modalContentDark .modalHeaderLight .dropdownSmallDark .dropdownContent, .modalActive .modalContentDark .modalHeaderDark .dropdownSmallLight .dropdownContent, .modalActive .modalContentDark .modalHeaderDark .dropdownSmallDark .dropdownContent {
           right: 0;
           left: auto; }
-    .modal .modalContentLight .modalFooterLight, .modal .modalContentDark .modalFooterLight {
+    .modalActive .modalContentLight .modalFooterLight, .modalActive .modalContentDark .modalFooterLight {
       background-color: white;
       color: #2F343F; }
-    .modal .modalContentLight .modalFooterDark, .modal .modalContentDark .modalFooterDark {
+    .modalActive .modalContentLight .modalFooterDark, .modalActive .modalContentDark .modalFooterDark {
       background-color: #2F343F;
       color: white; }
-    .modal .modalContentLight .modalFooterLight, .modal .modalContentLight .modalFooterDark, .modal .modalContentDark .modalFooterLight, .modal .modalContentDark .modalFooterDark {
+      .modalActive .modalContentLight .modalFooterDark .buttonFlat:hover, .modalActive .modalContentDark .modalFooterDark .buttonFlat:hover {
+        background-color: rgba(255, 255, 255, 0.1); }
+      .modalActive .modalContentLight .modalFooterDark .buttonFlat:active, .modalActive .modalContentDark .modalFooterDark .buttonFlat:active {
+        background-color: rgba(255, 255, 255, 0.2); }
+    .modalActive .modalContentLight .modalFooterLight, .modalActive .modalContentLight .modalFooterDark, .modalActive .modalContentDark .modalFooterLight, .modalActive .modalContentDark .modalFooterDark {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      min-height: 56px; }
+      min-height: 56px;
+      padding: 6px; }
+      .modalActive .modalContentLight .modalFooterLight .buttonFlat, .modalActive .modalContentLight .modalFooterLight .buttonRaised, .modalActive .modalContentLight .modalFooterDark .buttonFlat, .modalActive .modalContentLight .modalFooterDark .buttonRaised, .modalActive .modalContentDark .modalFooterLight .buttonFlat, .modalActive .modalContentDark .modalFooterLight .buttonRaised, .modalActive .modalContentDark .modalFooterDark .buttonFlat, .modalActive .modalContentDark .modalFooterDark .buttonRaised {
+        float: right;
+        height: 44px;
+        padding: 0 6px;
+        margin: 0 6px; }
 
 @media only screen and (max-width: 480px) {
-  .modal .modalContentLight, .modal .modalContentDark {
+  .modalActive .modalContentLight, .modalActive .modalContentDark {
     width: 320px;
-    height: 320px; } }
+    min-height: 320px; } }
+@media only screen and (max-width: 320px) {
+  .modalActive .modalContentLight, .modalActive .modalContentDark {
+    width: 100%;
+    min-height: 50%; } }
+@keyframes modalAnimateOpen {
+  0% {
+    background-color: transparent; }
+  100% {
+    background-color: rgba(0, 0, 0, 0.4); } }
+@keyframes modalContentAnimateOpen {
+  0% {
+    transform: scale(0);
+    border-radius: 100%; }
+  100% {
+    transform: scale(1);
+    border-radius: 0; } }
 /*BUTTONS */
 button::-moz-focus-inner {
   border: 0; }
