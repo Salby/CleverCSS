@@ -30,7 +30,7 @@ $(document).ready(function() {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= heightThreshold && scroll <= heightThreshold_end) {
+    if (scroll >= heightThreshold - 66) {
         menu.addClass("elementListPin");
     } else {
         menu.removeClass("elementListPin");
