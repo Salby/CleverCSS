@@ -152,14 +152,14 @@
           i
             transform: translateY(25%)
 
-.drawerContentAnimateOpen
-  animation: drawerContentAnimationOpen 0.3s forwards
-.drawerContentAnimateClose
-  animation: drawerContentAnimationClose 0.3s forwards
-.drawerAnimateOpen
-  animation: drawerAnimationOpen 0.3s forwards
 .drawerAnimateClose
   animation: drawerAnimationClose 0.3s forwards
+  .drawerContentLight,.drawerContentDark
+    animation: drawerContentAnimationClose 0.3s forwards
+.drawerAnimateOpen
+  animation: drawerAnimationOpen 0.3s forwards
+  .drawerContentLight,.drawerContentDark
+    animation: drawerContentAnimationOpen 0.3s forwards
 
 @keyframes drawerContentAnimationOpen
   0%

@@ -165,17 +165,15 @@ p {
           .drawer .drawerContentDark .drawerNav li a i, .drawer .drawerContentLight .drawerNav li a i {
             transform: translateY(25%); }
 
-.drawerContentAnimateOpen {
-  animation: drawerContentAnimationOpen 0.3s forwards; }
-
-.drawerContentAnimateClose {
-  animation: drawerContentAnimationClose 0.3s forwards; }
+.drawerAnimateClose {
+  animation: drawerAnimationClose 0.3s forwards; }
+  .drawerAnimateClose .drawerContentLight, .drawerAnimateClose .drawerContentDark {
+    animation: drawerContentAnimationClose 0.3s forwards; }
 
 .drawerAnimateOpen {
   animation: drawerAnimationOpen 0.3s forwards; }
-
-.drawerAnimateClose {
-  animation: drawerAnimationClose 0.3s forwards; }
+  .drawerAnimateOpen .drawerContentLight, .drawerAnimateOpen .drawerContentDark {
+    animation: drawerContentAnimationOpen 0.3s forwards; }
 
 @keyframes drawerContentAnimationOpen {
   0% {
