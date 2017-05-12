@@ -253,7 +253,8 @@ p {
   background-color: #2F343F; }
 
 .articleCardLight, .articleCardDark {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2px; }
   .articleCardLight p, .articleCardDark p {
     padding: 0 0 0 12px; }
   .articleCardLight .headerDark, .articleCardDark .headerDark {
@@ -269,7 +270,8 @@ p {
     .articleCardLight .headerLight p, .articleCardDark .headerLight p {
       color: #B0B9C6; }
   .articleCardLight .headerLight, .articleCardLight .headerDark, .articleCardDark .headerLight, .articleCardDark .headerDark {
-    min-height: 56px; }
+    min-height: 56px;
+    border-radius: 2px 2px 0 0; }
     .articleCardLight .headerLight h1, .articleCardLight .headerLight h2, .articleCardLight .headerLight h3, .articleCardLight .headerLight h4, .articleCardLight .headerLight h5, .articleCardLight .headerLight h6, .articleCardLight .headerDark h1, .articleCardLight .headerDark h2, .articleCardLight .headerDark h3, .articleCardLight .headerDark h4, .articleCardLight .headerDark h5, .articleCardLight .headerDark h6, .articleCardDark .headerLight h1, .articleCardDark .headerLight h2, .articleCardDark .headerLight h3, .articleCardDark .headerLight h4, .articleCardDark .headerLight h5, .articleCardDark .headerLight h6, .articleCardDark .headerDark h1, .articleCardDark .headerDark h2, .articleCardDark .headerDark h3, .articleCardDark .headerDark h4, .articleCardDark .headerDark h5, .articleCardDark .headerDark h6 {
       margin: 0;
       padding: 12px 0 6px 12px;
@@ -293,6 +295,7 @@ p {
     background-color: white; }
   .articleCardLight .footerLight, .articleCardLight .footerDark, .articleCardDark .footerLight, .articleCardDark .footerDark {
     padding: 6px 6px 6px 6px;
+    border-radius: 0 0 2px 2px;
     min-height: 56px;
     position: relative; }
     .articleCardLight .footerLight .footerComment, .articleCardLight .footerDark .footerComment, .articleCardDark .footerLight .footerComment, .articleCardDark .footerDark .footerComment {
