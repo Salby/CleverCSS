@@ -489,6 +489,31 @@ button {
   user-select: none;
   -webkit-user-select: none; }
 
+.buttonActionFloating {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 56px;
+  border: 0;
+  background-color: #5294E2;
+  color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 12; }
+  .buttonActionFloating:hover {
+    background-color: #669FE5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.4); }
+
+@media only screen and (max-width: 768px) {
+  .buttonActionFloating:hover {
+    background-color: #5294E2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.4); }
+  .buttonActionFloating:active {
+    background-color: #669FE5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.4); } }
+/* FLAT BUTTON */
 .buttonFlat {
   cursor: pointer;
   border: 0;
@@ -504,6 +529,7 @@ button {
   .buttonFlat:active {
     background-color: rgba(0, 0, 0, 0.1); }
 
+/* RAISED BUTTON */
 .buttonRaised {
   cursor: pointer;
   border: 0;
@@ -514,12 +540,20 @@ button {
   margin: 0.2em 0.2em;
   color: white;
   background-color: #5294E2;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
   .buttonRaised:hover {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
   .buttonRaised:active {
     background-color: #669FE5; }
 
+@media only screen and (max-width: 768px) {
+  .buttonRaised:hover {
+    background-color: #5294E2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+  .buttonRaised:active {
+    background-color: #669FE5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2); } }
+/* ACTION BUTTON */
 .buttonAction {
   cursor: pointer;
   width: 56px;
@@ -528,14 +562,21 @@ button {
   border: 0;
   background-color: #5294E2;
   color: white;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
   .buttonAction:hover {
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
   .buttonAction:active {
     background-color: #669FE5; }
   .buttonAction i {
     transform: scale(1) translateY(5%); }
 
+@media only screen and (max-width: 768px) {
+  .buttonAction:hover {
+    background-color: #5294E2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+  .buttonAction:active {
+    background-color: #669FE5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2); } }
 .buttonFloatRight {
   float: right; }
 
