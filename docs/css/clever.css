@@ -46,7 +46,7 @@ p {
 .navBarDark, .navBarLight {
   height: 60px;
   width: 100%;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 5;
   position: fixed; }
   .navBarDark ul, .navBarLight ul {
@@ -124,7 +124,7 @@ p {
   .drawer .drawerContentDark, .drawer .drawerContentLight {
     width: 20vw;
     height: 100vh;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 32px 0 rgba(0, 0, 0, 0.4); }
     .drawer .drawerContentDark .drawerHeaderDark, .drawer .drawerContentLight .drawerHeaderDark {
       background-color: #2F343F; }
       .drawer .drawerContentDark .drawerHeaderDark #drawerClose:active, .drawer .drawerContentLight .drawerHeaderDark #drawerClose:active {
@@ -515,12 +515,12 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.4); } }
 /* FLAT BUTTON */
 .buttonFlat {
+  border-radius: 2px;
   cursor: pointer;
   border: 0;
-  border-radius: 0;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-family: "Roboto", sans-serif;
-  padding: 0.5em;
+  padding: 0.5em 0.7em;
   margin: 0.2em 0.2em;
   color: #5294E2;
   background-color: transparent; }
@@ -531,12 +531,12 @@ button {
 
 /* RAISED BUTTON */
 .buttonRaised {
+  border-radius: 2px;
   cursor: pointer;
   border: 0;
-  border-radius: 0;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-family: "Roboto", sans-serif;
-  padding: 0.5em;
+  padding: 0.5em 0.7em;
   margin: 0.2em 0.2em;
   color: white;
   background-color: #5294E2;
