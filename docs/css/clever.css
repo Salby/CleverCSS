@@ -485,6 +485,10 @@ p {
 button::-moz-focus-inner {
   border: 0; }
 
+button {
+  user-select: none;
+  -webkit-user-select: none; }
+
 .buttonFlat {
   cursor: pointer;
   border: 0;
