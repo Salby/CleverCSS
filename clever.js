@@ -2,11 +2,9 @@ $(document).ready(function() {
   // DRAWER ANIMATION
   $("#drawerButton").click(function() {
     $("#mobileDrawer").removeClass("drawerAnimateClose").addClass("drawerAnimateOpen");
-    $(".drawerContentLight, .drawerContentDark").removeClass("drawerContentAnimateClose").addClass("drawerContentAnimateOpen");
   });
   $("#drawerClose").click(function() {
     $("#mobileDrawer").removeClass("drawerAnimateOpen").addClass("drawerAnimateClose");
-    $(".drawerContentLight, .drawerContentDark").removeClass("drawerContentAnimateOpen").addClass("drawerContentAnimateClose")
   });
   // DROPDOWN ANIMATION
   $(".buttonDropdownSmall").click(function() {

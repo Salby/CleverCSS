@@ -1,5 +1,4 @@
 /*CLEVERCSS */
-/*RESET */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:300,400,500");
 body {
   margin: 0;
@@ -20,8 +19,6 @@ p {
   color: #212121;
   font-family: "Roboto", sans-serif; }
 
-/*COLORS */
-/*COMPONENTS */
 .navBarDark {
   background-color: #2F343F; }
   .navBarDark ul li {
@@ -49,7 +46,7 @@ p {
 .navBarDark, .navBarLight {
   height: 60px;
   width: 100%;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 5;
   position: fixed; }
   .navBarDark ul, .navBarLight ul {
@@ -127,7 +124,7 @@ p {
   .drawer .drawerContentDark, .drawer .drawerContentLight {
     width: 20vw;
     height: 100vh;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 32px 0 rgba(0, 0, 0, 0.4); }
     .drawer .drawerContentDark .drawerHeaderDark, .drawer .drawerContentLight .drawerHeaderDark {
       background-color: #2F343F; }
       .drawer .drawerContentDark .drawerHeaderDark #drawerClose:active, .drawer .drawerContentLight .drawerHeaderDark #drawerClose:active {
@@ -168,17 +165,15 @@ p {
           .drawer .drawerContentDark .drawerNav li a i, .drawer .drawerContentLight .drawerNav li a i {
             transform: translateY(25%); }
 
-.drawerContentAnimateOpen {
-  animation: drawerContentAnimationOpen 0.3s forwards; }
-
-.drawerContentAnimateClose {
-  animation: drawerContentAnimationClose 0.3s forwards; }
+.drawerAnimateClose {
+  animation: drawerAnimationClose 0.3s forwards; }
+  .drawerAnimateClose .drawerContentLight, .drawerAnimateClose .drawerContentDark {
+    animation: drawerContentAnimationClose 0.3s forwards; }
 
 .drawerAnimateOpen {
   animation: drawerAnimationOpen 0.3s forwards; }
-
-.drawerAnimateClose {
-  animation: drawerAnimationClose 0.3s forwards; }
+  .drawerAnimateOpen .drawerContentLight, .drawerAnimateOpen .drawerContentDark {
+    animation: drawerContentAnimationOpen 0.3s forwards; }
 
 @keyframes drawerContentAnimationOpen {
   0% {
@@ -213,6 +208,14 @@ p {
 @media only screen and (max-width: 480px) {
   .drawer .drawerContentDark, .drawer .drawerContentLight {
     width: 80vw; } }
+/*HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 /*WRAPPERS */
 .wrapperL {
   width: 1200px;
@@ -482,13 +485,62 @@ p {
 button::-moz-focus-inner {
   border: 0; }
 
+button {
+  user-select: none;
+  -webkit-user-select: none; }
+
+.buttonActionFloating {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 56px;
+  border: 0;
+  background-color: #5294E2;
+  color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 12; }
+  .buttonActionFloating:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.4); }
+  .buttonActionFloating:active {
+    background-color: #669FE5; }
+
+@media only screen and (max-width: 768px) {
+  .buttonActionFloating:hover {
+    background-color: #5294E2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.4); }
+  .buttonActionFloating:active {
+    background-color: #669FE5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.4); }
+
+  .buttonFlat:hover {
+    background-color: transparent; }
+  .buttonFlat:active {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+  .buttonRaised:hover {
+    background-color: #5294E2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+  .buttonRaised:active {
+    background-color: #669FE5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+
+  .buttonAction:hover {
+    background-color: #5294E2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+  .buttonAction:active {
+    background-color: #669FE5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2); } }
+/* FLAT BUTTON */
 .buttonFlat {
+  border-radius: 2px;
   cursor: pointer;
   border: 0;
-  border-radius: 0;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-family: "Roboto", sans-serif;
-  padding: 0.5em;
+  padding: 0.5em 0.7em;
   margin: 0.2em 0.2em;
   color: #5294E2;
   background-color: transparent; }
@@ -497,22 +549,24 @@ button::-moz-focus-inner {
   .buttonFlat:active {
     background-color: rgba(0, 0, 0, 0.1); }
 
+/* RAISED BUTTON */
 .buttonRaised {
+  border-radius: 2px;
   cursor: pointer;
   border: 0;
-  border-radius: 0;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-family: "Roboto", sans-serif;
-  padding: 0.5em;
+  padding: 0.5em 0.7em;
   margin: 0.2em 0.2em;
   color: white;
   background-color: #5294E2;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
   .buttonRaised:hover {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
   .buttonRaised:active {
     background-color: #669FE5; }
 
+/* ACTION BUTTON */
 .buttonAction {
   cursor: pointer;
   width: 56px;
@@ -521,9 +575,9 @@ button::-moz-focus-inner {
   border: 0;
   background-color: #5294E2;
   color: white;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
   .buttonAction:hover {
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
   .buttonAction:active {
     background-color: #669FE5; }
   .buttonAction i {
@@ -669,6 +723,136 @@ button::-moz-focus-inner {
 @media only screen and (max-width: 768px) {
   .buttonAction:active {
     transform: scale(1.025); } }
+/* PADDING STYLES */
+/* 6PX */
+.padding6 {
+  padding: 6px; }
+
+.paddingTop6 {
+  padding-top: 6px; }
+
+.paddingRight6 {
+  padding-right: 6px; }
+
+.paddingBottom6 {
+  padding-bottom: 6px; }
+
+.paddingLeft6 {
+  padding-left: 6px; }
+
+/* 12PX */
+.padding12 {
+  padding: 12px; }
+
+.paddingTop12 {
+  padding-top: 12px; }
+
+.paddingRight12 {
+  padding-right: 12px; }
+
+.paddingBottom12 {
+  padding-bottom: 12px; }
+
+.paddingLeft12 {
+  padding-left: 12px; }
+
+/* 24PX */
+.padding24 {
+  padding: 24px; }
+
+.paddingTop24 {
+  padding-top: 24px; }
+
+.paddingRight24 {
+  padding-right: 24px; }
+
+.paddingBottom24 {
+  padding-bottom: 24px; }
+
+.paddingLeft24 {
+  padding-left: 24px; }
+
+/* 48PX */
+.padding48 {
+  padding: 48px; }
+
+.paddingTop48 {
+  padding-top: 48px; }
+
+.paddingRight48 {
+  padding-right: 48px; }
+
+.paddingBottom48 {
+  padding-bottom: 48px; }
+
+.paddingLeft48 {
+  padding-left: 48px; }
+
+/* MARGIN STYLES */
+/* 6PX */
+.margin6 {
+  margin: 6px; }
+
+.marginTop6 {
+  margin-top: 6px; }
+
+.marginRight6 {
+  margin-right: 6px; }
+
+.marginBottom6 {
+  margin-bottom: 6px; }
+
+.marginLeft6 {
+  margin-left: 6px; }
+
+/* 12PX */
+.margin12 {
+  margin: 12px; }
+
+.marginTop12 {
+  margin-top: 12px; }
+
+.marginRight12 {
+  margin-right: 12px; }
+
+.marginBottom12 {
+  margin-bottom: 12px; }
+
+.marginLeft12 {
+  margin-left: 12px; }
+
+/* 24PX */
+.margin24 {
+  margin: 24px; }
+
+.marginTop24 {
+  margin-top: 24px; }
+
+.marginRight24 {
+  margin-right: 24px; }
+
+.marginBottom24 {
+  margin-bottom: 24px; }
+
+.marginLeft24 {
+  margin-left: 24px; }
+
+/* 48PX */
+.margin48 {
+  margin: 48px; }
+
+.marginTop48 {
+  margin-top: 48px; }
+
+.marginRight48 {
+  margin-right: 48px; }
+
+.marginBottom48 {
+  margin-bottom: 48px; }
+
+.marginLeft48 {
+  margin-left: 48px; }
+
 * {
   box-sizing: border-box; }
 
