@@ -47,6 +47,10 @@
     opacity: 1;
     transform: translateY(0%); } }
 /*MISC THINGS */
+body {
+  width: 100vw;
+  overflow-x: hidden; }
+
 #home {
   display: block;
   padding: 10vh 0 0 0;
