@@ -124,7 +124,8 @@ p {
   .drawer .drawerContentDark, .drawer .drawerContentLight {
     width: 20vw;
     height: 100vh;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 32px 0 rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 32px 0 rgba(0, 0, 0, 0.4);
+    transition: 300ms ease-in; }
     .drawer .drawerContentDark .drawerHeaderDark, .drawer .drawerContentLight .drawerHeaderDark {
       background-color: #2F343F; }
       .drawer .drawerContentDark .drawerHeaderDark #drawerClose:active, .drawer .drawerContentLight .drawerHeaderDark #drawerClose:active {
@@ -724,6 +725,98 @@ button {
     transform: scale(1.025);
     background-color: #669FE5;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2); } }
+/* FLOATING ACTION BUTTON MENU */
+.fabMenuContainer {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 12; }
+  .fabMenuContainer .fabMenuButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    border-radius: 56px;
+    border: 0;
+    background-color: #5294E2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.4); }
+    .fabMenuContainer .fabMenuButton:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.4); }
+    .fabMenuContainer .fabMenuButton:active {
+      background-color: #669FE5;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.4); }
+    .fabMenuContainer .fabMenuButton i {
+      color: white; }
+  .fabMenuContainer .fabMenuButtonActive {
+    background-color: #669FE5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.4); }
+    .fabMenuContainer .fabMenuButtonActive i {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg); }
+  .fabMenuContainer .fabMenuList {
+    position: absolute;
+    bottom: 56px;
+    right: 0;
+    list-style: none;
+    width: 56px;
+    height: auto;
+    display: none;
+    margin: 0;
+    padding: 0; }
+    .fabMenuContainer .fabMenuList li {
+      padding: 12px; }
+      .fabMenuContainer .fabMenuList li .fabMenuListButton {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        border: none;
+        background-color: #fefefe;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.4); }
+        .fabMenuContainer .fabMenuList li .fabMenuListButton i {
+          color: #5294E2;
+          transform: translateX(-3px); }
+  .fabMenuContainer .fabMenuListActive {
+    display: block;
+    animation: fabMenuListAnimateIn 0.3s forwards; }
+    .fabMenuContainer .fabMenuListActive li {
+      animation: fabMenuListItemAnimateIn 0.15s forwards; }
+  .fabMenuContainer .fabMenuListInactive {
+    display: block;
+    animation: fabMenuListAnimateOut 0.15s forwards; }
+    .fabMenuContainer .fabMenuListInactive li {
+      animation: fabMenuListItemAnimateOut 0.15s forwards; }
+
+@keyframes fabMenuListAnimateIn {
+  0% {
+    opacity: 0;
+    transform: translateY(14px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes fabMenuListItemAnimateIn {
+  0% {
+    transform: scale(0); }
+  80% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
+@keyframes fabMenuListAnimateOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0); }
+  100% {
+    opacity: 0;
+    transform: translateY(14px);
+    display: none; } }
+@keyframes fabMenuListItemAnimateOut {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
 /* PADDING STYLES */
 /* 6PX */
 .padding6 {
