@@ -7,6 +7,8 @@ body {
 
 * {
   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
   -webkit-tap-highlight-color: transparent;
   outline: none; }
 
@@ -403,7 +405,9 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: modalAnimateOpen 0.3s forwards; }
+  animation: modalAnimateOpen 0.3s forwards;
+  -webkit-animation: modalAnimateOpen 0.3s forwards;
+  -moz-animation: modalAnimateOpen 0.3s forwards; }
   .modalActive .modalContentLight {
     background-color: white;
     color: #2F343F; }
@@ -412,6 +416,8 @@ p {
     color: white; }
   .modalActive .modalContentLight, .modalActive .modalContentDark {
     animation: modalContentAnimateOpen 0.3s forwards;
+    -webkit-animation: modalContentAnimateOpen 0.3s forwards;
+    -moz-animation: modalContentAnimateOpen 0.3s forwards;
     width: 480px;
     height: 480px;
     display: block;
@@ -798,14 +804,22 @@ button {
           transform: translateX(-3px); }
   .fabMenuContainer .fabMenuListActive {
     display: block;
-    animation: fabMenuListAnimateIn 0.3s forwards; }
+    animation: fabMenuListAnimateIn 0.3s forwards;
+    -webkit-animation: fabMenuListAnimateIn 0.3s forwards;
+    -moz-animation: fabMenuListAnimateIn 0.3s forwards; }
     .fabMenuContainer .fabMenuListActive li {
-      animation: fabMenuListItemAnimateIn 0.15s forwards; }
+      animation: fabMenuListItemAnimateIn 0.15s forwards;
+      -webkit-animation: fabMenuListItemAnimateIn 0.15s forwards;
+      -moz-animation: fabMenuListItemAnimateIn 0.15s forwards; }
   .fabMenuContainer .fabMenuListInactive {
     display: block;
-    animation: fabMenuListAnimateOut 0.15s forwards; }
+    animation: fabMenuListAnimateOut 0.15s forwards;
+    -webkit-animation: fabMenuListAnimateOut 0.15s forwards;
+    -moz-animation: fabMenuListAnimateOut 0.15s forwards; }
     .fabMenuContainer .fabMenuListInactive li {
-      animation: fabMenuListItemAnimateOut 0.15s forwards; }
+      animation: fabMenuListItemAnimateOut 0.15s forwards;
+      -webkit-animation: fabMenuListItemAnimateOut 0.15s forwards;
+      -moz-animation: fabMenuListItemAnimateOut 0.15s forwards; }
 
 @keyframes fabMenuListAnimateIn {
   0% {
