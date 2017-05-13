@@ -617,11 +617,11 @@ button {
 
 @keyframes dropdownSmallAnimate {
   0% {
-    transform: translateY(-20%) scale(0.9);
+    transform: translateY(-20%) scale(0.8);
     opacity: 0;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
   100% {
-    transform: translateY(-10%) translateX(-5%) scale(1);
+    transform: translateY(0%) scale(1);
     opacity: 1;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2); } }
 .dropdownLargeDark .buttonDropdownLarge {
