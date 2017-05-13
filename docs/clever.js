@@ -1,6 +1,7 @@
 $(document).ready(function() {
   // DRAWER ANIMATION
-  $("#drawerButton").click(function() {
+  $("#drawerButton").click(function(e) {
+    e.stopPropagation()
     $("#mobileDrawer").removeClass("drawerAnimateClose").addClass("drawerAnimateOpen");
   });
   $("#drawerClose").click(function() {
@@ -32,7 +33,8 @@ $(document).ready(function() {
     $(modalTargetClose).removeClass("modalActive");
   });
   // FLOATING ACTION BUTTON MENU
-  $(".fabMenuContainer .fabMenuButton").click(function() {
+  $(".fabMenuContainer .fabMenuButton").click(function(e) {
+    e.stopPropagation()
     if ($(".fabMenuContainer .fabMenuButton").hasClass("fabMenuButtonActive")) {
         $(".fabMenuContainer .fabMenuButton").removeClass("fabMenuButtonActive");
         $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListActive").addClass("fabMenuListInactive");
@@ -40,5 +42,5 @@ $(document).ready(function() {
       $(".fabMenuContainer .fabMenuButton").addClass("fabMenuButtonActive");
       $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListInactive").addClass("fabMenuListActive");
     }
-  })
+  });
 });
