@@ -160,6 +160,7 @@ body {
     align-items: center;
     background-size: cover; }
     #home div h1 {
+      font-family: "Space Mono", monospace;
       text-align: center;
       font-size: 3.5em;
       padding: 0;
