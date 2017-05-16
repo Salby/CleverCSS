@@ -34,7 +34,6 @@ $(document).ready(function() {
   });
   // FLOATING ACTION BUTTON MENU
   $(".fabMenuContainer .fabMenuButton").click(function(e) {
-    e.stopPropagation()
     if ($(".fabMenuContainer .fabMenuButton").hasClass("fabMenuButtonActive")) {
         $(".fabMenuContainer .fabMenuButton").removeClass("fabMenuButtonActive");
         $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListActive").addClass("fabMenuListInactive");
@@ -42,5 +41,6 @@ $(document).ready(function() {
       $(".fabMenuContainer .fabMenuButton").addClass("fabMenuButtonActive");
       $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListInactive").addClass("fabMenuListActive");
     }
+    e.stopPropagation()
   });
 });

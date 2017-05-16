@@ -51,7 +51,8 @@
 /*MISC THINGS */
 body {
   width: 100vw;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  box-sizing: border-box; }
 
 #home {
   display: block;
