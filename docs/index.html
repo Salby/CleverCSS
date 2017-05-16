@@ -51,15 +51,23 @@
       </div>
     </div>
 
-      <header id="home">
-        <section style="margin: auto; text-align: center">
+      <section id="home">
+        <div style="margin: auto; text-align: center">
           <h1>Clever<span class="headerDecorator">CSS</span></h1>
           <h2>A front-end framework for humans</h2>
-        </section>
-      </header>
+        </div>
+      </section>
 
-      <div class="wrapperM" style="margin-bottom: 10vh">
-        <div class="articleCardLight" id="getStarted" style="animation: fadeIn 1s">
+      <div class="wrapperM" id="animation" style="animation: fadeIn 1s">
+        <div class="animateCanvas">
+          <div class="header"></div>
+          <div class="accent"></div>
+          <div class="card"></div>
+        </div>
+      </div>
+
+      <div class="wrapperM">
+        <div class="articleCardLight" id="getStarted" style="animation: fadeIn 1s; margin-bottom: 10vh">
           <div class="headerLight">
             <h2>Get started</h2>
             <p>Version 0.7.5</p>
@@ -88,15 +96,6 @@
             <a href="https://github.com/SanderSalamander/CleverCSS/" target="_blank"><button class="buttonFlat">Follow on Github</button></a>
           </div>
         </div>
-      </div>
-
-      <div class="fabMenuContainer">
-        <button type="button" class="fabMenuButton"><i class="material-icons">add</i></button>
-        <ul class="fabMenuList">
-          <li><div class="fabMenuListTag">Edit note</div><button class="fabMenuListButton"><i class="material-icons">edit</i></button></li>
-          <li><div class="fabMenuListTag">Delete note</div><button class="fabMenuListButton"><i class="material-icons">delete</i></button></li>
-          <li><div class="fabMenuListTag">Read note</div><button class="fabMenuListButton"><i class="material-icons">short_text</i></button></li>
-        </ul>
       </div>
 
       <section class="wrapperL" id="componentsWrapper">
