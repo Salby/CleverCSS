@@ -172,6 +172,9 @@ body {
 #animation {
   height: 40vh; }
 
+@media only screen and (max-width: 480px) {
+  #home {
+    padding: 10vh 0 0 0; } }
 a {
   text-decoration: none; }
 
