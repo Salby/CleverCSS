@@ -5,8 +5,15 @@
 
 .showComp
   display: block
+  animation: showCompAnimate 0.3s forwards
 .hideComp
   display: none
+
+@keyframes showCompAnimate
+  0%
+    filter: brightness(5)
+  100%
+    filter: brightness(1)
 
 .wrapperL
   opacity: 1
