@@ -53,18 +53,19 @@
 
       <section id="home">
         <div style="margin: auto; text-align: center">
-          <h1>Clever<span class="headerDecorator">CSS</span></h1>
+          <h1 id="title">Clever<span class="headerDecorator">CSS</span></h1>
           <h2>A front-end framework for humans</h2>
           <p>0.7.6</p>
         </div>
       </section>
 
-      <div class="wrapperM" id="animation" style="animation: fadeIn 1s">
+      <div class="wrapperM" id="animation" style="animation: fadeIn 1s; position: relative">
         <div class="animateCanvas">
           <div class="header"></div>
           <div class="accent"></div>
-          <div class="card"></div>
+          <div class="card" id="buttonScroll"></div>
         </div>
+        <button data-scroll-target="#buttonScroll"><i class="material-icons">expand_more</i></button>
       </div>
 
       <div class="wrapperM">

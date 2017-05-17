@@ -1,4 +1,7 @@
 /*COMPONENTS SELECTION */
+.shadowNone {
+  box-shadow: none; }
+
 .showComp {
   display: block; }
 
@@ -36,6 +39,24 @@
   .elementListPin {
     width: 23.75%;
     left: 0.5em; } }
+#animation button {
+  position: absolute;
+  bottom: 12px;
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
+  #animation button:hover {
+    background-color: rgba(0, 0, 0, 0.05); }
+  #animation button:active {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+@media only screen and (max-width: 768px) {
+  #animation button:hover {
+    background-color: transparent; } }
 .animateCanvas {
   width: 250px;
   height: 200px;
