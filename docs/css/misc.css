@@ -243,6 +243,7 @@ a {
     display: none; }
 
   #mobileDrop {
+    z-index: 3;
     display: block;
     float: right;
     background-color: transparent; }
@@ -259,18 +260,25 @@ a {
   background-color: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   min-height: 214px;
-  border-radius: 2px; }
+  border-radius: 2px;
+  position: relative; }
+  .elementDisplay header {
+    z-index: 3;
+    width: 100%;
+    height: 56px;
+    position: absolute; }
   .elementDisplay article {
     padding: 0;
     margin: 0;
     box-shadow: none; }
     .elementDisplay article header {
-      background-color: white;
-      color: #2f343f;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: relative; }
       .elementDisplay article header h3 {
         font-weight: 400;
-        color: #2f343f; }
+        color: #2f343f;
+        z-index: 2;
+        float: left; }
     .elementDisplay article h4 {
       font-weight: 500;
       color: #212121;
