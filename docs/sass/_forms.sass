@@ -1,57 +1,368 @@
-/*FORMS
-.formTight
-  background-color: white
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2)
-  padding-bottom: 44px
-  font-family: 'Open Sans', sans-serif
-  .formHeader
-    h1,h2,h3,h4,h5,h6
-      background-color: $primary
-      color: white
-      padding: 12px 0 6px 12px
-  .inputText
-    width: 94%
-    margin: 6px 0 6px 12px
-    padding: 12px 12px 6px 12px
-    border: 0
-    border-bottom: 2px solid $divider
-    &:focus
-      border-bottom: 2px solid $accent
-  .inputSubmit
-    cursor: pointer
-    float: right
-    font-size: 1.1em
-    padding: 0.3em
-    margin: 0.3em
-    border: 0
-    color: $accent
-    background-color: rgba(0,0,0,0)
-    &:hover
+/* FORMS
+.formBasic
+  width: 480px
+  margin: auto
+  padding: 12px
+  .formGroup
+    .inputInvalid
       background-color: rgba(0,0,0,0.05)
-.formLoose
-  background-color: rgba(0,0,0,0)
-  padding-bottom: 44px
-  font-family: 'Open Sans', sans-serif
-  .formHeader
-    h1,h2,h3,h4,h5,h6
-      color: $primary
-      padding: 12px 0 6px 12px
-  .inputText
-    width: 94%
-    margin: 6px 0 6px 12px
-    padding: 12px 12px 12px 12px
-    border: 0
-    background-color: white
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2)
-  .inputSubmit
-    cursor: pointer
-    float: right
-    font-size: 1.1em
-    padding: 0.3em
-    margin: 0.3em
-    border: 0
-    color: white
+    .inputValid
+      background-color: none
+  .buttonInput
     background-color: $accent
+    color: white
+    padding: 0 12px
+    border: 0
+    cursor: pointer
+    position: absolute
+    bottom: 12px
+    right: 12px
+    font-size: 18px
+    border-radius: 2px
+    height: 50px
+    margin-top: 3px
+    margin-bottom: 0px
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2)
+    text-align: center
+    vertical-align: middle
     &:hover
+      transition: all 0.1s
       box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2)
+      margin-top: 0px
+      margin-bottom: 3px
+    &:active
+      background-color: $accentLight
+    i
+      transform: translateY(25%)
+@media only screen and (max-width: 480px)
+  .formBasic
+    width: 100%
+    position: relative
+    .buttonInput
+      position: fixed
+      bottom: 112px
+      right: 28px
+      width: 56px
+      height: 56px
+      border-radius: 56px
+      -webkit-user-select: none
+      .buttonText
+        display: none
+      i
+        transform: translateY(12.5%)
+      &:hover
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2)
+        margin-top: 3px
+        margin-bottom: 0px
+      &:active
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2)
+        margin-top: 0px
+        margin-bottom: 3px
+//     input[type='date']
+//       float: none
+//     input[type='time']
+//       float: none
+//     button[type='button']
+// @media only screen and (max-width: 320px)
+
+input, select, textarea
+  font-family: 'Roboto', sans-serif
+  box-sizing: border-box
+
+body
+  *
+    box-sizing: border-box
+  &::after, &::before
+    box-sizing: border-box
+
+input
+  &::after, &::before
+    box-sizing: border-box
+
+select
+  &::after, &::before
+    box-sizing: border-box
+
+textarea
+  &::after, &::before
+    box-sizing: border-box
+
+body
+  *
+    &::after, &::before
+      box-sizing: border-box
+
+h1
+  font-size: 2rem
+  text-align: center
+  margin: 0 0 2em
+
+.container
+  position: relative
+  max-width: 40rem
+  margin: 5rem auto
+  background: #fff
+  width: 100%
+  padding: 3rem 5rem 0
+  border-radius: 1px
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2)
+    transform: scale(0.98)
+    transition: transform 0.28s ease-in-out
+    z-index: -1
+  &:hover::before
+    transform: scale(1)
+
+fieldset
+  margin: 0 0 3rem
+  padding: 0
+  border: none
+
+.formRadio, .formGroup
+  position: relative
+  margin-top: 2.25rem
+  margin-bottom: 2.25rem
+
+.formInline >
+  .formGroup, .btn
+    display: inline-block
+    margin-bottom: 0
+
+.formHelp
+  margin-top: 0.125rem
+  margin-left: 0.125rem
+  color: #b3b3b3
+  font-size: 0.8rem
+
+.checkbox .formHelp, .formRadio .formHelp, .formGroup .formHelp
+  position: absolute
+  width: 100%
+
+.checkbox .formHelp
+  position: relative
+  margin-bottom: 1rem
+
+.formRadio .formHelp
+  padding-top: 0.25rem
+  margin-top: -1rem
+
+.formGroup
+  input
+    height: 1.9rem
+  textarea
+    resize: none
+  select
+    width: 100%
+    font-size: 1rem
+    height: 1.6rem
+    padding: 0.125rem 0.125rem 0.0625rem
+    background: none
+    border: none
+    line-height: 1.6
+    box-shadow: none
+  .controlLabel
+    position: absolute
+    top: 0.25rem
+    pointer-events: none
+    padding-left: 0.125rem
+    z-index: 1
+    color: #b3b3b3
+    font-size: 1rem
+    font-weight: normal
+    transition: all 0.28s ease
+  .bar
+    position: relative
+    border-bottom: 0.0625rem solid #999
+    display: block
+    &::before
+      content: ''
+      height: 0.125rem
+      width: 0
+      left: 50%
+      bottom: -0.0625rem
+      position: absolute
+      background: $accent
+      transition: left 0.28s ease, width 0.28s ease
+      z-index: 2
+  input, textarea
+    display: block
+    background: none
+    padding: 0.125rem 0.125rem 0.0625rem
+    font-size: 1rem
+    border-width: 0
+    border-color: transparent
+    line-height: 1.9
+    width: 100%
+    color: transparent
+    transition: all 0.28s ease
+    box-shadow: none
+  input[type="file"]
+    line-height: 1
+    ~ .bar
+      display: none
+  select
+    color: #333
+  input
+    &:focus, &:valid, &.form-file, &.has-value
+      color: #333
+  textarea
+    &:focus, &:valid, &.form-file, &.has-value
+      color: #333
+  select ~ .controlLabel
+    font-size: 0.8rem
+    color: gray
+    top: -1rem
+    left: 0
+  input
+    &:focus ~ .controlLabel, &:valid ~ .controlLabel, &.form-file ~ .controlLabel, &.has-value ~ .controlLabel
+      font-size: 0.8rem
+      color: gray
+      top: -1rem
+      left: 0
+  textarea
+    &:focus ~ .controlLabel, &:valid ~ .controlLabel, &.form-file ~ .controlLabel, &.has-value ~ .controlLabel
+      font-size: 0.8rem
+      color: gray
+      top: -1rem
+      left: 0
+  select:focus, input:focus, textarea:focus
+    outline: none
+  select:focus ~ .controlLabel, input:focus ~ .controlLabel, textarea:focus ~ .controlLabel
+    color: $accent
+  select:focus ~ .bar::before, input:focus ~ .bar::before, textarea:focus ~ .bar::before
+    width: 100%
+    left: 0
+
+.checkbox label, .formRadio label
+  position: relative
+  cursor: pointer
+  padding-left: 2rem
+  text-align: left
+  color: #333
+  display: block
+
+.checkbox input, .formRadio input
+  width: auto
+  opacity: 0.00000001
+  position: absolute
+  left: 0
+
+.radio
+  margin-bottom: 1rem
+  .helper
+    position: absolute
+    top: -0.25rem
+    left: -0.25rem
+    cursor: pointer
+    display: block
+    font-size: 1rem
+    user-select: none
+    color: #999
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      margin: 0.25rem
+      width: 1rem
+      height: 1rem
+      transition: transform 0.28s ease
+      border-radius: 50%
+      border: 0.125rem solid currentColor
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      margin: 0.25rem
+      width: 1rem
+      height: 1rem
+      transition: transform 0.28s ease
+      border-radius: 50%
+      border: 0.125rem solid currentColor
+      transform: scale(0)
+      background-color: $accent
+      border-color: $accent
+  label:hover .helper
+    color: $accent
+  input:checked ~ .helper
+    &::after
+      transform: scale(0.5)
+    &::before
+      color: $accent
+
+.checkbox
+  margin-top: 3rem
+  margin-bottom: 1rem
+  .helper
+    color: #999
+    position: absolute
+    top: 0
+    left: 0
+    width: 1rem
+    height: 1rem
+    z-index: 0
+    border: 0.125rem solid currentColor
+    border-radius: 0.0625rem
+    transition: border-color 0.28s ease
+    &::before, &::after
+      position: absolute
+      height: 0
+      width: 0.2rem
+      background-color: $accent
+      display: block
+      transform-origin: left top
+      border-radius: 0.25rem
+      content: ''
+      transition: opacity 0.28s ease, height 0s linear 0.28s
+      opacity: 0
+    &::before
+      top: 0.65rem
+      left: 0.38rem
+      transform: rotate(-135deg)
+      box-shadow: 0 0 0 0.0625rem #fff
+    &::after
+      top: 0.3rem
+      left: 0
+      transform: rotate(-45deg)
+  label:hover .helper
+    color: $accent
+  input:checked ~ .helper
+    color: $accent
+    &::after, &::before
+      opacity: 1
+      transition: height 0.28s ease
+    &::after
+      height: 0.5rem
+    &::before
+      height: 1.2rem
+      transition-delay: 0.28s
+
+.radio + .radio, .checkbox + .checkbox
+  margin-top: 1rem
+
+.hasError
+  .legend.legend
+    color: #cc575d
+  &.formGroup
+    .controlLabel.controlLabel, .formHelp, .helper
+      color: #cc575d
+  &.checkbox
+    .formHelp, .helper
+      color: #cc575d
+  &.radio
+    .formHelp, .helper
+      color: #cc575d
+  &.formRadio
+    .formHelp, .helper
+      color: #cc575d
+  .bar::before
+    background: #cc575d
+    left: 0
+    width: 100%

@@ -433,53 +433,84 @@
                   <header>
                     <h3>Forms</h3>
                   </header>
-                  <div class="row">
-                    <div class="col-s-6">
-                      <form class="formLoose">
-                        <div class="formHeader">
-                          <h4>.formLoose</h4>
-                        </div>
-                        <input type="text" class="inputText" placeholder="First name"><br>
-                        <input type="text" class="inputText" placeholder="Last name"><br>
-                        <button type="button" class="inputSubmit">Submit</button>
-                      </form>
+                  <form class="formBasic">
+                    <div class="formGroup">
+                      <input type="text" name="textField" id="textField" required>
+                      <label class="controlLabel" for="textField">Textfield</label><i class="bar"></i>
                     </div>
-                    <div class="col-s-6">
-                      <form class="formTight">
-                        <div class="formHeader">
-                          <h4>.formTight</h4>
-                        </div>
-                        <input type="text" class="inputText" placeholder="First name"><br>
-                        <input type="text" class="inputText" placeholder="Last name"><br>
-                        <button type="button" class="inputSubmit">Submit</button>
-                      </form>
+                    <div class="formGroup">
+                      <select id="select">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                      </select>
+                      <label class="controlLabel" for="select">Selection</label><i class="bar"></i>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-s-6">
-                      <div class="code">
-                        &lt;form class="formLoose"&gt;<br>
-                        &nbsp;&nbsp;&lt;div class="formHeader"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;form header&lt;/h4&gt;<br>
-                        &nbsp;&nbsp;&lt;/div&gt;<br>
-                        &nbsp;&nbsp;&lt;input type="text" class="inputText" placeholder="First name"&gt;<br>
-                        &nbsp;&nbsp;&lt;input type="text" class="inputText" placeholder="Last name"&gt;<br>
-                        &nbsp;&nbsp;&lt;button type="submit" class="inputSubmit"&gt;Submit&lt;/button&gt;<br>
-                        &lt;/form&gt;<br>
+                    <div class="formRadio">
+                      <div class="radio">
+                        <label>
+                          <input checked type="radio" name="radio" value="radio1"><i class="helper"></i>Radio button
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="radio" value="radio1"><i class="helper"></i>Radio button
+                        </label>
                       </div>
                     </div>
-                    <div class="col-s-6">
-                      <div class="code">
-                        &lt;form class="formTight"&gt;<br>
-                        &nbsp;&nbsp;&lt;div class="formHeader"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;form header&lt;/h4&gt;<br>
-                        &nbsp;&nbsp;&lt;/div&gt;<br>
-                        &nbsp;&nbsp;&lt;input type="text" class="inputText" placeholder="First name"&gt;<br>
-                        &nbsp;&nbsp;&lt;input type="text" class="inputText" placeholder="Last name"&gt;<br>
-                        &nbsp;&nbsp;&lt;button type="submit" class="inputSubmit"&gt;Submit&lt;/button&gt;<br>
-                        &lt;/form&gt;<br>
-                      </div>
+                    <div class="checkbox">
+                      <label>
+                        <input checked type="checkbox" name="checkbox" value="check1"><i class="helper"></i>Checkbox
+                      </label>
                     </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="checkbox" value="check2"><i class="helper"></i>Checkbox
+                      </label>
+                    </div>
+                  </form>
+                  <div class="code">
+                    &lt;form class="formBasic"&gt;<br>
+                    &nbsp;&nbsp;&lt;!--TEXTFIELD--&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="formGroup"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="text" required&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="controlLabel" for="text"&gt;Textfield&lt;/label&gt;&lt;i class="bar"&gt;&lt;/i&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&lt;!--SELECTION--&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="formGroup"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;select id="select"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="1"&gt;Option 1&lt;/option&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="2"&gt;Option 2&lt;/option&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="controlLabel" for="select"&gt;Selection&lt;/label&gt;&lt;i class="bar"&gt;&lt;/i&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&lt;!--RADIO BUTTONS--&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="formRadio"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--RADIO BUTTON CHECKED--&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="radio"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input checked type="radio"&gt;&lt;i class="helper"&gt;Radio button<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--RADIO BUTTON UNCHECKED--&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="radio"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio"&gt;&lt;i class="helper"&gt;Radio button<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&lt;!--CHECKBOX CHECKED--&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="checkbox"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input checked type="checkbox" name="checkbox"&gt;&lt;i class="helper"&gt;&lt;/i&gt;Checkbox<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&lt;!--CHECKBOX UNCHECKED--&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="checkbox"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" name="checkbox"&gt;&lt;i class="helper"&gt;&lt;/i&gt;Checkbox<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &lt;/form&gt;<br>
                   </div>
                 </article>
               </section>
