@@ -287,7 +287,8 @@ p {
       float: right; }
       .articleCardLight .headerLight .dropdownSmallDark .dropdownContent, .articleCardLight .headerLight .dropdownSmallLight .dropdownContent, .articleCardLight .headerDark .dropdownSmallDark .dropdownContent, .articleCardLight .headerDark .dropdownSmallLight .dropdownContent, .articleCardDark .headerLight .dropdownSmallDark .dropdownContent, .articleCardDark .headerLight .dropdownSmallLight .dropdownContent, .articleCardDark .headerDark .dropdownSmallDark .dropdownContent, .articleCardDark .headerDark .dropdownSmallLight .dropdownContent {
         right: 0;
-        left: auto; }
+        left: auto;
+        transform-origin: right; }
   .articleCardLight .footerDark, .articleCardDark .footerDark {
     background-color: #2F343F; }
     .articleCardLight .footerDark .buttonFlat:hover, .articleCardDark .footerDark .buttonFlat:hover {
@@ -297,7 +298,7 @@ p {
   .articleCardLight .footerLight, .articleCardDark .footerLight {
     background-color: white; }
   .articleCardLight .footerLight, .articleCardLight .footerDark, .articleCardDark .footerLight, .articleCardDark .footerDark {
-    padding: 6px 6px 6px 6px;
+    padding: 14px;
     border-radius: 0 0 2px 2px;
     min-height: 56px;
     position: relative; }
@@ -308,7 +309,7 @@ p {
       width: 480px; }
     .articleCardLight .footerLight .buttonFlat, .articleCardLight .footerLight .buttonRaised, .articleCardLight .footerDark .buttonFlat, .articleCardLight .footerDark .buttonRaised, .articleCardDark .footerLight .buttonFlat, .articleCardDark .footerLight .buttonRaised, .articleCardDark .footerDark .buttonFlat, .articleCardDark .footerDark .buttonRaised {
       float: right;
-      height: 44px;
+      height: 28px;
       padding: 0 6px;
       margin: 0 0 0 6px;
       top: 0; }
@@ -709,7 +710,8 @@ fieldset {
     height: 480px;
     display: block;
     position: relative;
-    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 2px; }
     .modalActive .modalContentLight .modalHeaderLight, .modalActive .modalContentDark .modalHeaderLight {
       background-color: white; }
       .modalActive .modalContentLight .modalHeaderLight h1, .modalActive .modalContentLight .modalHeaderLight h2, .modalActive .modalContentLight .modalHeaderLight h3, .modalActive .modalContentLight .modalHeaderLight h4, .modalActive .modalContentLight .modalHeaderLight h5, .modalActive .modalContentLight .modalHeaderLight h6, .modalActive .modalContentDark .modalHeaderLight h1, .modalActive .modalContentDark .modalHeaderLight h2, .modalActive .modalContentDark .modalHeaderLight h3, .modalActive .modalContentDark .modalHeaderLight h4, .modalActive .modalContentDark .modalHeaderLight h5, .modalActive .modalContentDark .modalHeaderLight h6 {
@@ -720,7 +722,8 @@ fieldset {
         color: white; }
     .modalActive .modalContentLight .modalHeaderLight, .modalActive .modalContentLight .modalHeaderDark, .modalActive .modalContentDark .modalHeaderLight, .modalActive .modalContentDark .modalHeaderDark {
       position: relative;
-      min-height: 56px; }
+      min-height: 56px;
+      border-radius: 2px 2px 0 0; }
       .modalActive .modalContentLight .modalHeaderLight h1, .modalActive .modalContentLight .modalHeaderLight h2, .modalActive .modalContentLight .modalHeaderLight h3, .modalActive .modalContentLight .modalHeaderLight h4, .modalActive .modalContentLight .modalHeaderLight h5, .modalActive .modalContentLight .modalHeaderLight h6, .modalActive .modalContentLight .modalHeaderDark h1, .modalActive .modalContentLight .modalHeaderDark h2, .modalActive .modalContentLight .modalHeaderDark h3, .modalActive .modalContentLight .modalHeaderDark h4, .modalActive .modalContentLight .modalHeaderDark h5, .modalActive .modalContentLight .modalHeaderDark h6, .modalActive .modalContentDark .modalHeaderLight h1, .modalActive .modalContentDark .modalHeaderLight h2, .modalActive .modalContentDark .modalHeaderLight h3, .modalActive .modalContentDark .modalHeaderLight h4, .modalActive .modalContentDark .modalHeaderLight h5, .modalActive .modalContentDark .modalHeaderLight h6, .modalActive .modalContentDark .modalHeaderDark h1, .modalActive .modalContentDark .modalHeaderDark h2, .modalActive .modalContentDark .modalHeaderDark h3, .modalActive .modalContentDark .modalHeaderDark h4, .modalActive .modalContentDark .modalHeaderDark h5, .modalActive .modalContentDark .modalHeaderDark h6 {
         margin: 0;
         padding: 12px 0 6px 12px; }
@@ -751,10 +754,11 @@ fieldset {
       left: 0;
       width: 100%;
       min-height: 56px;
-      padding: 6px; }
+      padding: 14px;
+      border-radius: 0 0 2px 2px; }
       .modalActive .modalContentLight .modalFooterLight .buttonFlat, .modalActive .modalContentLight .modalFooterLight .buttonRaised, .modalActive .modalContentLight .modalFooterDark .buttonFlat, .modalActive .modalContentLight .modalFooterDark .buttonRaised, .modalActive .modalContentDark .modalFooterLight .buttonFlat, .modalActive .modalContentDark .modalFooterLight .buttonRaised, .modalActive .modalContentDark .modalFooterDark .buttonFlat, .modalActive .modalContentDark .modalFooterDark .buttonRaised {
         float: right;
-        height: 44px;
+        height: 28px;
         padding: 0 6px;
         margin: 0 0 0 6px; }
 
