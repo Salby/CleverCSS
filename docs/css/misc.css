@@ -17,28 +17,30 @@
   -moz-animation: fadeIn 1.5s;
   opacity: 1; }
 
+.elementList li {
+  cursor: pointer;
+  padding: 0.5em;
+  border-left: 5px solid #2f343f;
+  color: #444444;
+  width: 284px; }
+  .elementList li:hover {
+    background-color: rgba(0, 0, 0, 0.05); }
+  .elementList li:active {
+    background-color: rgba(0, 0, 0, 0.1); }
+.elementList .articleActive {
+  border-left: 10px solid #5294e2;
+  color: #5294e2; }
+
 .elementListPin {
   position: fixed;
-  top: 80px;
-  /*left: 18.75% */
-  width: 15%;
-  left: 18.75vw; }
+  top: 68px; }
 
 #componentsWrapper .row .col-m-3 {
   position: relative; }
 
-@media only screen and (max-width: 1650px) {
-  .elementListPin {
-    width: 20%;
-    left: 8.5vw; } }
-@media only screen and (max-width: 1366px) {
-  .elementListPin {
-    width: 21%;
-    left: 6.5vw; } }
 @media only screen and (max-width: 1200px) {
-  .elementListPin {
-    width: 23.75%;
-    left: 0.5em; } }
+  .elementList li {
+    width: 100%; } }
 #animation button {
   position: absolute;
   bottom: 12px;
@@ -148,7 +150,7 @@
 /*ANIMATE */
 @keyframes selectionActive {
   100% {
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.1);
     background-color: #5a9ded; } }
 @keyframes fadeIn {
   0% {
@@ -236,45 +238,15 @@ a {
   #mobileDrop {
     display: block;
     float: right;
-    background-color: transparent;
-    color: white; }
+    background-color: transparent; }
     #mobileDrop:active {
       background-color: rgba(255, 255, 255, 0.1); }
     #mobileDrop i {
-      color: white; }
+      color: #b0b9c6; }
 
   #mobileDropdownContent {
     right: 0;
     left: auto; } }
-.elementList li {
-  cursor: pointer;
-  background-color: #5294e2;
-  color: #ffffff;
-  margin: 0.6em 0em;
-  font-size: 18px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 2px; }
-  .elementList li:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: #5a9ded; }
-  .elementList li a {
-    padding-right: 100%;
-    white-space: nowrap; }
-    .elementList li a button {
-      cursor: pointer;
-      background-color: transparent;
-      color: #ffffff;
-      padding: 0;
-      font-size: 16px;
-      border: 0;
-      font-weight: 500;
-      width: 100%;
-      text-align: left;
-      padding: 0.6em; }
-      .elementList li a button:focus {
-        animation: selectionActive 0.5s forwards; }
-
 .elementDisplay {
   background-color: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
@@ -285,10 +257,12 @@ a {
     margin: 0;
     box-shadow: none; }
     .elementDisplay article header {
-      background-color: #2f343f;
-      color: #ffffff; }
+      background-color: white;
+      color: #2f343f;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
       .elementDisplay article header h3 {
-        font-weight: 400; }
+        font-weight: 400;
+        color: #2f343f; }
     .elementDisplay article h4 {
       font-weight: 500;
       color: #212121;

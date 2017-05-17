@@ -5,7 +5,7 @@
 /*ANIMATE
 @keyframes selectionActive
   100%
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2)
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.1), 0 8px 16px 0 rgba(0,0,0,0.1)
     background-color: #5a9ded
 
 @keyframes fadeIn
@@ -97,47 +97,13 @@ a
     display: block
     float: right
     background-color: rgba(0,0,0,0)
-    color: white
     &:active
       background-color: rgba(255,255,255,0.1)
     i
-      color: white
+      color: #b0b9c6
   #mobileDropdownContent
     right: 0
     left: auto
-
-.elementList li
-  cursor: pointer
-  background-color: #5294e2
-  color: #ffffff
-  margin: 0.6em 0em
-  font-size: 18px
-  position: relative
-  overflow: hidden
-  border-radius: 2px
-
-  &:hover
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
-    background-color: #5a9ded
-
-  a
-    padding-right: 100%
-    white-space: nowrap
-
-    button
-      cursor: pointer
-      background-color: transparent
-      color: #ffffff
-      padding: 0
-      font-size: 16px
-      border: 0
-      font-weight: 500
-      width: 100%
-      text-align: left
-      padding: 0.6em
-
-      &:focus
-        animation: selectionActive 0.5s forwards
 
 .elementDisplay
   background-color: #ffffff
@@ -151,11 +117,13 @@ a
     box-shadow: none
 
     header
-      background-color: #2f343f
-      color: #ffffff
+      background-color: white
+      color: #2f343f
+      border-bottom: 1px solid rgba(0,0,0,0.1)
 
       h3
         font-weight: 400
+        color: #2f343f
 
     h4
       font-weight: 500

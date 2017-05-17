@@ -17,27 +17,39 @@
   -moz-animation: fadeIn 1.5s
   opacity: 1
 
+.elementList
+  li
+    cursor: pointer
+    padding: 0.5em
+    border-left: 5px solid #2f343f
+    color: #444444
+    width: 284px
+    &:hover
+      background-color: rgba(0,0,0,0.05)
+    &:active
+      background-color: rgba(0,0,0,0.1)
+  .articleActive
+    border-left: 10px solid #5294e2
+    color: #5294e2
+
 .elementListPin
   position: fixed
-  top: 80px
-  /*left: 18.75%
-  width: 15%
-  left: 18.75vw
+  top: 68px
 
 #componentsWrapper
   .row
     .col-m-3
       position: relative
 
-@media only screen and (max-width: 1650px)
-  .elementListPin
-    width: 20%
-    left: 8.5vw
-@media only screen and (max-width: 1366px)
-  .elementListPin
-    width: 21%
-    left: 6.5vw
+// @media only screen and (max-width: 1650px)
+//   .elementListPin
+//     width: 284px
+//     left: 8.5vw
+// @media only screen and (max-width: 1366px)
+//   .elementListPin
+//     width: 284px
+//     left: 6.5vw
 @media only screen and (max-width: 1200px)
-  .elementListPin
-    width: 23.75%
-    left: 0.5em
+  .elementList
+    li
+      width: 100%

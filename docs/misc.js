@@ -8,6 +8,8 @@ $(document).ready(function() {
   });
   // COMPONENTS SELECTION
   $(".selectArticle").click(function() {
+    $(this).siblings().removeClass("articleActive");
+    $(this).addClass("articleActive");
     var target = $(this).data("target");
     $(target).siblings("article").removeClass("showComp").addClass("hideComp");
     $(target).removeClass("hideComp").addClass("showComp");
