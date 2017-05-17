@@ -48,7 +48,7 @@ p {
 .navBarDark, .navBarLight {
   height: 60px;
   width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   z-index: 5;
   position: fixed; }
   .navBarDark ul, .navBarLight ul {
@@ -310,7 +310,7 @@ p {
       float: right;
       height: 44px;
       padding: 0 6px;
-      margin: 0 6px;
+      margin: 0 0 0 6px;
       top: 0; }
 
 @media only screen and (max-width: 768px) {
@@ -606,11 +606,11 @@ button {
     white-space: nowrap;
     background-color: #FEFEFE;
     list-style: none;
-    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2) 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
     .dropdownSmallDark .dropdownContent li, .dropdownSmallLight .dropdownContent li {
       cursor: pointer;
       font-family: "Open Sans", sans-serif;
-      padding: 0.5em;
+      padding: 0.75em;
       color: #212121; }
       .dropdownSmallDark .dropdownContent li:hover, .dropdownSmallLight .dropdownContent li:hover {
         background-color: rgba(0, 0, 0, 0.04); }
@@ -730,7 +730,12 @@ button {
   .buttonAction:active {
     transform: scale(1.025);
     background-color: #669FE5;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2); } }
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+
+  .dropdownSmallLight .dropdownContent li:hover, .dropdownSmallDark .dropdownContent li:hover {
+    background-color: transparent; }
+  .dropdownSmallLight .dropdownContent li:active, .dropdownSmallDark .dropdownContent li:active {
+    background-color: rgba(0, 0, 0, 0.1); } }
 /* FLOATING ACTION BUTTON MENU */
 .fabMenuContainer {
   position: fixed;
@@ -978,6 +983,19 @@ button {
 .marginLeft48 {
   margin-left: 48px; }
 
+/* HIDE STYLES */
+@media only screen and (min-width: 1201px) {
+  .hideXL {
+    display: none; } }
+@media only screen and (max-width: 1200px) {
+  .hideL {
+    display: none; } }
+@media only screen and (max-width: 768px) {
+  .hideM {
+    display: none; } }
+@media only screen and (max-width: 480px) {
+  .hideS {
+    display: none; } }
 * {
   box-sizing: border-box; }
 
