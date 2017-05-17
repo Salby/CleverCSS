@@ -1,4 +1,15 @@
 $(document).ready(function() {
+  $("a[data-scroll-target]").click(function() {
+    var scrollTarget = $(this).data("scroll-target");
+    $("html, body").animate({
+      scrollTop: $(scrollTarget).offset().top
+    }, 1000);
+  });
+  // $(".toComponents").click(function() {
+  //   $("html, body").animate({
+  //     scrollTop: $("#elements").offset().top
+  //   }, 1000);
+  // });
   // COMPONENTS SELECTION
   $(".selectArticle").click(function() {
     var target = $(this).data("target");
