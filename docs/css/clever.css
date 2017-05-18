@@ -711,7 +711,8 @@ fieldset {
     display: block;
     position: relative;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 2px; }
+    border-radius: 2px;
+    overflow: hidden; }
     .modalActive .modalContentLight .modalHeaderLight, .modalActive .modalContentDark .modalHeaderLight {
       background-color: white; }
       .modalActive .modalContentLight .modalHeaderLight h1, .modalActive .modalContentLight .modalHeaderLight h2, .modalActive .modalContentLight .modalHeaderLight h3, .modalActive .modalContentLight .modalHeaderLight h4, .modalActive .modalContentLight .modalHeaderLight h5, .modalActive .modalContentLight .modalHeaderLight h6, .modalActive .modalContentDark .modalHeaderLight h1, .modalActive .modalContentDark .modalHeaderLight h2, .modalActive .modalContentDark .modalHeaderLight h3, .modalActive .modalContentDark .modalHeaderLight h4, .modalActive .modalContentDark .modalHeaderLight h5, .modalActive .modalContentDark .modalHeaderLight h6 {
@@ -781,7 +782,7 @@ fieldset {
     border-radius: 100%; }
   100% {
     transform: scale(1);
-    border-radius: 0; } }
+    border-radius: 2px; } }
 /*BUTTONS */
 button::-moz-focus-inner {
   border: 0; }
