@@ -684,7 +684,7 @@ fieldset {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  display: none; }
+  display: block; }
 
 .modalActive {
   width: 100%;
@@ -716,9 +716,6 @@ fieldset {
     .modalActive .modalContentLight .modalImage, .modalActive .modalContentDark .modalImage {
       width: 100%;
       height: auto; }
-      .modalActive .modalContentLight .modalImage imageResponsive, .modalActive .modalContentDark .modalImage imageResponsive {
-        width: 100%;
-        height: auto; }
     .modalActive .modalContentLight .modalHeaderLight, .modalActive .modalContentDark .modalHeaderLight {
       background-color: white; }
       .modalActive .modalContentLight .modalHeaderLight h1, .modalActive .modalContentLight .modalHeaderLight h2, .modalActive .modalContentLight .modalHeaderLight h3, .modalActive .modalContentLight .modalHeaderLight h4, .modalActive .modalContentLight .modalHeaderLight h5, .modalActive .modalContentLight .modalHeaderLight h6, .modalActive .modalContentDark .modalHeaderLight h1, .modalActive .modalContentDark .modalHeaderLight h2, .modalActive .modalContentDark .modalHeaderLight h3, .modalActive .modalContentDark .modalHeaderLight h4, .modalActive .modalContentDark .modalHeaderLight h5, .modalActive .modalContentDark .modalHeaderLight h6 {
