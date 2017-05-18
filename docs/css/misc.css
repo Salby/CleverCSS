@@ -155,6 +155,8 @@
     height: 90%; }
   100%; }
 .animateCanvasNav {
+  border-radius: 2px;
+  overflow: hidden;
   width: 200px;
   height: 150px;
   margin: 12px;
@@ -201,6 +203,8 @@
   100% {
     opacity: 1; } }
 .animateCanvasDrawer {
+  border-radius: 2px;
+  overflow: hidden;
   width: 100px;
   height: 150px;
   margin: 12px;
