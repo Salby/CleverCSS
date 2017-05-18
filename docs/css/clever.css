@@ -781,11 +781,9 @@ fieldset {
     background-color: rgba(0, 0, 0, 0.4); } }
 @keyframes modalContentAnimateOpen {
   0% {
-    transform: scale(0);
-    border-radius: 100%; }
+    transform: scale(0); }
   100% {
-    transform: scale(1);
-    border-radius: 2px; } }
+    transform: scale(1); } }
 /*BUTTONS */
 button::-moz-focus-inner {
   border: 0; }
