@@ -21,195 +21,386 @@ p {
   color: #212121;
   font-family: "Roboto", sans-serif; }
 
-.navBarDark {
-  background-color: #2F343F; }
-  .navBarDark ul li {
-    color: white; }
-    .navBarDark ul li:hover {
-      border-bottom: 2px solid white; }
-    .navBarDark ul li a {
-      color: white; }
-  .navBarDark ul #drawerButtonItem #drawerButton:active {
-    background-color: rgba(255, 255, 255, 0.1); }
-  .navBarDark ul #drawerButtonItem #drawerButton i {
-    color: white; }
-
-.navBarLight {
-  background-color: white; }
-  .navBarLight ul li {
+/* NAV STYLES */
+nav.navbarLight {
+  background-color: #FFFFFF; }
+  nav.navbarLight .navbarNav li {
     color: #2F343F; }
-    .navBarLight ul li:hover {
+    nav.navbarLight .navbarNav li:hover {
       border-bottom: 2px solid #2F343F; }
-  .navBarLight ul #drawerButtonItem #drawerButton:active {
-    background-color: rgba(0, 0, 0, 0.05); }
-  .navBarLight ul #drawerButtonItem #drawerButton i {
-    color: #2F343F; }
+    nav.navbarLight .navbarNav li:active {
+      background-color: rgba(0, 0, 0, 0.05); }
+    nav.navbarLight .navbarNav li a {
+      color: #2F343F; }
+  nav.navbarLight #drawerOpen {
+    border: 10px solid #FFFFFF; }
+    nav.navbarLight #drawerOpen:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
+    nav.navbarLight #drawerOpen:active {
+      background-color: rgba(0, 0, 0, 0.1); }
+    nav.navbarLight #drawerOpen i {
+      color: #2F343F; }
 
-.navBarDark, .navBarLight {
-  height: 60px;
+nav.navbarDark {
+  background-color: #2F343F; }
+  nav.navbarDark .navbarNav li {
+    color: #FFFFFF; }
+    nav.navbarDark .navbarNav li:hover {
+      border-bottom: 2px solid #FFFFFF; }
+    nav.navbarDark .navbarNav li:active {
+      background-color: rgba(255, 255, 255, 0.05); }
+    nav.navbarDark .navbarNav li a {
+      color: #FFFFFF; }
+  nav.navbarDark #drawerOpen {
+    border: 10px solid #2F343F; }
+    nav.navbarDark #drawerOpen:hover {
+      background-color: rgba(255, 255, 255, 0.05); }
+    nav.navbarDark #drawerOpen:active {
+      background-color: rgba(255, 255, 255, 0.1); }
+    nav.navbarDark #drawerOpen i {
+      color: #FFFFFF; }
+
+nav.navbarTall {
   width: 100%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  z-index: 5;
-  position: fixed; }
-  .navBarDark ul, .navBarLight ul {
+  height: 120px; }
+  nav.navbarTall .navbarNav.navbarLeft, nav.navbarTall .navbarNav.navbarRight {
+    float: none;
+    position: absolute;
+    bottom: 0; }
+  nav.navbarTall .navbarNav.navbarLeft {
+    left: 0; }
+  nav.navbarTall .navbarNav.navbarRight {
+    right: 0; }
+
+nav.navbarShort {
+  width: 100%;
+  height: 60px; }
+
+nav.navbar {
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+  nav.navbar .navbarNav {
     margin: 0;
     padding: 0;
     list-style: none;
-    height: 60px;
-    width: 100%; }
-    .navBarDark ul li, .navBarLight ul li {
-      position: relative;
-      overflow: hidden;
+    position: relative; }
+    nav.navbar .navbarNav li {
+      transition: all 0.2s;
       float: left;
       cursor: pointer;
-      display: block;
-      font-family: "Roboto", sans-serif;
-      font-size: 20px;
+      background-color: transparent;
       padding: 20px;
       height: 60px;
-      transition: all 0.1s;
       border-bottom: 2px solid transparent; }
-      .navBarDark ul li a, .navBarLight ul li a {
+      nav.navbar .navbarNav li a {
+        background-color: transparent;
+        font-size: 20px;
         text-decoration: none; }
-    .navBarDark ul .brandItem, .navBarLight ul .brandItem {
-      display: block;
-      float: left; }
-    .navBarDark ul #drawerButtonItem, .navBarLight ul #drawerButtonItem {
-      display: none;
-      padding: 0;
-      border-bottom: 0;
-      width: 56px;
-      height: 56px; }
-      .navBarDark ul #drawerButtonItem:hover, .navBarLight ul #drawerButtonItem:hover {
-        border-bottom: 0; }
-      .navBarDark ul #drawerButtonItem #drawerButton, .navBarLight ul #drawerButtonItem #drawerButton {
-        width: 56px;
-        height: 56px;
-        border-radius: 56px;
-        border: 0;
-        background-color: transparent; }
-        .navBarDark ul #drawerButtonItem #drawerButton i, .navBarLight ul #drawerButtonItem #drawerButton i {
-          transform: scale(1.2) translateY(5%) translateX(-1%); }
+  nav.navbar .navbarNav.navbarLeft {
+    float: left; }
+  nav.navbar .navbarNav.navbarRight {
+    float: right; }
+  nav.navbar #drawerOpen {
+    cursor: pointer;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: transparent; }
+    nav.navbar #drawerOpen i {
+      position: absolute;
+      top: calc(50% - 12px);
+      left: calc(50% - 12px); }
+  nav.navbar #drawerOpen.drawerOpenLeft {
+    float: left; }
+  nav.navbar #drawerOpen.drawerOpenRight {
+    float: right; }
+  nav.navbar #drawerOpen.mobileOnly {
+    display: none; }
 
 @media only screen and (max-width: 768px) {
-  .navBarDark, .navBarLight {
+  nav.navbarLight .navbarNav:hover {
+    background-color: transparent; }
+  nav.navbarLight .navbarNav:active {
+    background-color: rgba(0, 0, 0, 0.05); }
+  nav.navbarLight #drawerOpen:hover {
+    background-color: transparent; }
+  nav.navbarLight #drawerOpen:active {
+    background-color: rgba(0, 0, 0, 0.05); }
+
+  nav.navbarDark .navbarNav li:hover {
+    background-color: transparent; }
+  nav.navbarDark .navbarNav li:active {
+    background-color: rgba(255, 255, 255, 0.05); }
+  nav.navbarDark #drawerOpen:hover {
+    background-color: transparent; }
+  nav.navbarDark #drawerOpen:active {
+    background-color: rgba(255, 255, 255, 0.05); }
+
+  nav.navbarTall {
+    height: 112px; }
+
+  nav.navbarShort {
     height: 56px; }
-    .navBarDark ul, .navBarLight ul {
-      height: 56px; }
-      .navBarDark ul li, .navBarLight ul li {
-        display: none;
-        height: 56px; }
-      .navBarDark ul .brandItem, .navBarLight ul .brandItem {
-        display: block;
-        float: right;
-        border-bottom: 0; }
-        .navBarDark ul .brandItem:hover, .navBarLight ul .brandItem:hover {
-          border-bottom: 0; }
-      .navBarDark ul #drawerButtonItem, .navBarLight ul #drawerButtonItem {
-        display: block; } }
-/*DRAWER */
+
+  nav.navbar .navbarNav li {
+    height: 56px;
+    padding: 18px;
+    display: none;
+    border-bottom: none; }
+    nav.navbar .navbarNav li:hover {
+      border-bottom: none; }
+    nav.navbar .navbarNav li a {
+      font-size: 18px; }
+  nav.navbar .navbarNav .brandItem {
+    display: block; }
+  nav.navbar .navbarNav.navbarLeft {
+    float: right; }
+  nav.navbar .navbarNav.navbarRight {
+    float: right; }
+  nav.navbar #drawerOpen {
+    width: 56px;
+    height: 56px;
+    border-radius: 56px; }
+  nav.navbar #drawerOpen.mobileOnly {
+    display: block; } }
+/* DRAWER STYLES */
 .drawer {
-  transition: all 0.3s;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  display: block;
   position: fixed;
   top: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  transform: translateX(-100%); }
-  .drawer .drawerContentDark {
-    background-color: #2F343F; }
-  .drawer .drawerContentLight {
-    background-color: white; }
-  .drawer .drawerContentDark, .drawer .drawerContentLight {
-    width: 20vw;
-    height: 100vh;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 32px 0 rgba(0, 0, 0, 0.4);
-    transition: 300ms ease-in; }
-    .drawer .drawerContentDark .drawerHeaderDark, .drawer .drawerContentLight .drawerHeaderDark {
-      background-color: #2F343F; }
-      .drawer .drawerContentDark .drawerHeaderDark #drawerClose:active, .drawer .drawerContentLight .drawerHeaderDark #drawerClose:active {
-        background-color: rgba(255, 255, 255, 0.1); }
-      .drawer .drawerContentDark .drawerHeaderDark #drawerClose i, .drawer .drawerContentLight .drawerHeaderDark #drawerClose i {
-        color: white; }
-    .drawer .drawerContentDark .drawerHeaderLight, .drawer .drawerContentLight .drawerHeaderLight {
-      background-color: white; }
-      .drawer .drawerContentDark .drawerHeaderLight #drawerClose:active, .drawer .drawerContentLight .drawerHeaderLight #drawerClose:active {
-        background-color: rgba(0, 0, 0, 0.05); }
-      .drawer .drawerContentDark .drawerHeaderLight #drawerClose i, .drawer .drawerContentLight .drawerHeaderLight #drawerClose i {
-        color: #2F343F; }
-    .drawer .drawerContentDark .drawerHeaderDark, .drawer .drawerContentDark .drawerHeaderLight, .drawer .drawerContentLight .drawerHeaderDark, .drawer .drawerContentLight .drawerHeaderLight {
-      height: 56px; }
-      .drawer .drawerContentDark .drawerHeaderDark #drawerClose, .drawer .drawerContentDark .drawerHeaderLight #drawerClose, .drawer .drawerContentLight .drawerHeaderDark #drawerClose, .drawer .drawerContentLight .drawerHeaderLight #drawerClose {
-        width: 56px;
-        height: 56px;
-        border-radius: 56px;
-        border: 0;
-        background-color: transparent; }
-        .drawer .drawerContentDark .drawerHeaderDark #drawerClose i, .drawer .drawerContentDark .drawerHeaderLight #drawerClose i, .drawer .drawerContentLight .drawerHeaderDark #drawerClose i, .drawer .drawerContentLight .drawerHeaderLight #drawerClose i {
-          transform: scale(1.2) translateY(10%); }
-    .drawer .drawerContentDark .drawerNav, .drawer .drawerContentLight .drawerNav {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-      .drawer .drawerContentDark .drawerNav li, .drawer .drawerContentLight .drawerNav li {
-        user-select: none;
+  z-index: 15; }
+  .drawer .drawerContent {
+    position: absolute;
+    top: 0;
+    width: 320px;
+    height: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 32px 64px 0 rgba(0, 0, 0, 0.2); }
+    .drawer .drawerContent .drawerHeader {
+      position: relative;
+      width: 100%;
+      height: 60px; }
+      .drawer .drawerContent .drawerHeader #drawerClose {
         cursor: pointer;
-        padding: 12px 12px;
-        color: #757575; }
-        .drawer .drawerContentDark .drawerNav li:hover, .drawer .drawerContentLight .drawerNav li:hover {
+        position: absolute;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        background-color: transparent; }
+        .drawer .drawerContent .drawerHeader #drawerClose i {
+          position: absolute;
+          top: calc(50% - 12px);
+          left: calc(50% - 12px); }
+    .drawer .drawerContent .drawerHeader.drawerLight {
+      background-color: #FFFFFF; }
+      .drawer .drawerContent .drawerHeader.drawerLight #drawerClose {
+        border: 10px solid #FFFFFF; }
+        .drawer .drawerContent .drawerHeader.drawerLight #drawerClose:hover {
           background-color: rgba(0, 0, 0, 0.05); }
-        .drawer .drawerContentDark .drawerNav li a, .drawer .drawerContentLight .drawerNav li a {
-          font-size: 18px;
-          display: block; }
-          .drawer .drawerContentDark .drawerNav li a i, .drawer .drawerContentLight .drawerNav li a i {
-            transform: translateY(25%); }
+        .drawer .drawerContent .drawerHeader.drawerLight #drawerClose:active {
+          background-color: rgba(0, 0, 0, 0.1); }
+        .drawer .drawerContent .drawerHeader.drawerLight #drawerClose i {
+          color: #2F343F; }
+    .drawer .drawerContent .drawerHeader.drawerDark {
+      background-color: #2F343F; }
+      .drawer .drawerContent .drawerHeader.drawerDark #drawerClose {
+        border: 10px solid #2F343F; }
+        .drawer .drawerContent .drawerHeader.drawerDark #drawerClose:hover {
+          background-color: rgba(255, 255, 255, 0.05); }
+        .drawer .drawerContent .drawerHeader.drawerDark #drawerClose:active {
+          background-color: rgba(255, 255, 255, 0.1); }
+        .drawer .drawerContent .drawerHeader.drawerDark #drawerClose i {
+          color: #FFFFFF; }
+    .drawer .drawerContent .drawerNav {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .drawer .drawerContent .drawerNav li {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        height: 60px;
+        background-color: transparent; }
+        .drawer .drawerContent .drawerNav li a {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 60px;
+          font-size: 20px;
+          text-decoration: none; }
+        .drawer .drawerContent .drawerNav li i {
+          position: absolute;
+          top: calc(50% - 12px); }
+    .drawer .drawerContent .drawerNav.drawerNavLeft li a {
+      text-align: left;
+      padding: 19px 20px 20px 56px; }
+    .drawer .drawerContent .drawerNav.drawerNavLeft li i {
+      left: 16px; }
+    .drawer .drawerContent .drawerNav.drawerNavRight li a {
+      text-align: right;
+      padding: 19px 56px 20px 20px; }
+    .drawer .drawerContent .drawerNav.drawerNavRight li i {
+      right: 16px; }
+  .drawer .drawerContent.drawerLight {
+    background-color: #FFFFFF; }
+    .drawer .drawerContent.drawerLight .drawerNav li:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
+    .drawer .drawerContent.drawerLight .drawerNav li:active {
+      background-color: rgba(0, 0, 0, 0.1); }
+    .drawer .drawerContent.drawerLight .drawerNav li a {
+      color: #454545; }
+    .drawer .drawerContent.drawerLight .drawerNav li i {
+      color: #454545; }
+  .drawer .drawerContent.drawerDark {
+    background-color: #2F343F; }
+    .drawer .drawerContent.drawerDark .drawerNav li:hover {
+      background-color: rgba(255, 255, 255, 0.05); }
+    .drawer .drawerContent.drawerDark .drawerNav li:active {
+      background-color: rgba(255, 255, 255, 0.1); }
+    .drawer .drawerContent.drawerDark .drawerNav li a {
+      color: #B0B9C6; }
+    .drawer .drawerContent.drawerDark .drawerNav li i {
+      color: #B0B9C6; }
 
-.drawerAnimateClose {
-  animation: drawerAnimationClose 0.3s forwards; }
-  .drawerAnimateClose .drawerContentLight, .drawerAnimateClose .drawerContentDark {
-    animation: drawerContentAnimationClose 0.3s forwards; }
+.drawer.drawerLeft {
+  left: 0; }
+  .drawer.drawerLeft .drawerContent {
+    left: 0; }
+    .drawer.drawerLeft .drawerContent .drawerHeader #drawerClose {
+      left: 0; }
+      .drawer.drawerLeft .drawerContent .drawerHeader #drawerClose i {
+        transform: none; }
 
-.drawerAnimateOpen {
-  animation: drawerAnimationOpen 0.3s forwards; }
-  .drawerAnimateOpen .drawerContentLight, .drawerAnimateOpen .drawerContentDark {
-    animation: drawerContentAnimationOpen 0.3s forwards; }
+.drawer.drawerLeft.drawerAnimateOpen {
+  animation: drawerAnimateOpenLeft 0.3s forwards; }
+  .drawer.drawerLeft.drawerAnimateOpen .drawerContent {
+    animation: drawerContentAnimateOpenLeft 0.3s forwards; }
 
-@keyframes drawerContentAnimationOpen {
+.drawer.drawerLeft.drawerAnimateClose {
+  animation: drawerAnimateCloseLeft 0.3s forwards; }
+  .drawer.drawerLeft.drawerAnimateClose .drawerContent {
+    animation: drawerContentAnimateCloseLeft 0.3s forwards; }
+
+.drawer.drawerRight {
+  right: 0;
+  transform: translateX(100%); }
+  .drawer.drawerRight .drawerContent {
+    right: 0; }
+    .drawer.drawerRight .drawerContent .drawerHeader #drawerClose {
+      right: 0; }
+      .drawer.drawerRight .drawerContent .drawerHeader #drawerClose i {
+        transform: rotate(180deg); }
+
+.drawer.drawerRight.drawerAnimateOpen {
+  animation: drawerAnimateOpenRight 0.3s forwards; }
+  .drawer.drawerRight.drawerAnimateOpen .drawerContent {
+    animation: drawerContentAnimateOpenRight 0.3s forwards; }
+
+.drawer.drawerRight.drawerAnimateClose {
+  animation: drawerAnimateCloseRight 0.3s forwards; }
+  .drawer.drawerRight.drawerAnimateClose .drawerContent {
+    animation: drawerContentAnimateCloseRight 0.3s forwards; }
+
+@keyframes drawerAnimateOpenLeft {
+  0% {
+    transform: translateX(-100%);
+    background-color: transparent; }
+  1% {
+    transform: translateX(0);
+    background-color: transparent; }
+  100% {
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0.4); } }
+@keyframes drawerContentAnimateOpenLeft {
   0% {
     transform: translateX(-100%); }
   100% {
-    transform: translateX(0%); } }
-@keyframes drawerContentAnimationClose {
+    transform: translateX(0); } }
+@keyframes drawerAnimateCloseLeft {
   0% {
-    transform: translateX(0%); }
-  100% {
-    transform: translateX(-100%); } }
-@keyframes drawerAnimationOpen {
-  0% {
-    transform: translateX(0%);
-    background-color: transparent; }
-  100% {
-    transform: translateX(0%);
-    background-color: rgba(0, 0, 0, 0.4); } }
-@keyframes drawerAnimationClose {
-  0% {
-    transform: translateX(0%);
+    transform: translateX(0);
     background-color: rgba(0, 0, 0, 0.4); }
   99% {
-    transform: translateX(0%);
+    transform: translateX(0);
     background-color: transparent; }
   100% {
     transform: translateX(-100%);
     background-color: transparent; } }
+@keyframes drawerContentAnimateCloseLeft {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-100%); } }
+@keyframes drawerAnimateOpenRight {
+  0% {
+    transform: translateX(100%);
+    background-color: transparent; }
+  1% {
+    transform: translateX(0);
+    background-color: transparent; }
+  100% {
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0.4); } }
+@keyframes drawerContentAnimateOpenRight {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
+@keyframes drawerAnimateCloseRight {
+  0% {
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0.4); }
+  99% {
+    transform: translateX(0);
+    background-color: transparent; }
+  100% {
+    transform: translateX(100%);
+    background-color: transparent; } }
+@keyframes drawerContentAnimateCloseRight {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(100%); } }
 @media only screen and (max-width: 768px) {
-  .drawer .drawerContentDark, .drawer .drawerContentLight {
-    width: 40vw; } }
+  .drawer .drawerContent .drawerHeader {
+    height: 56px; }
+    .drawer .drawerContent .drawerHeader #drawerClose {
+      width: 56px;
+      height: 56px;
+      border-radius: 56px; }
+  .drawer .drawerContent .drawerHeader.drawerLight #drawerClose:hover {
+    background-color: transparent; }
+  .drawer .drawerContent .drawerHeader.drawerLight #drawerClose:active {
+    background-color: rgba(0, 0, 0, 0.05); }
+  .drawer .drawerContent .drawerHeader.drawerDark #drawerClose:hover {
+    background-color: transparent; }
+  .drawer .drawerContent .drawerHeader.drawerDark #drawerClose:active {
+    background-color: rgba(255, 255, 255, 0.05); }
+  .drawer .drawerContent .drawerNav li {
+    height: 56px; }
+    .drawer .drawerContent .drawerNav li a {
+      font-size: 18px; }
+  .drawer .drawerContent .drawerNav.drawerNavLeft li a {
+    padding: 18px 18px 18px 56px; }
+  .drawer .drawerContent .drawerNav.drawerNavRight li a {
+    padding: 18px 56px 18px 18px; }
+  .drawer .drawerContent.drawerLight .drawerNav li:hover {
+    background-color: transparent; }
+  .drawer .drawerContent.drawerLight .drawerNav li:active {
+    background-color: rgba(0, 0, 0, 0.05); }
+  .drawer .drawerContent.drawerDark .drawerNav li:hover {
+    background-color: transparent; }
+  .drawer .drawerContent.drawerDark .drawerNav li:active {
+    background-color: rgba(255, 255, 255, 0.05); } }
 @media only screen and (max-width: 480px) {
-  .drawer .drawerContentDark, .drawer .drawerContentLight {
+  .drawer.drawerContent {
     width: 80vw; } }
 /*HERO */
 .hero {
@@ -1276,19 +1467,6 @@ button {
 .marginLeft48 {
   margin-left: 48px; }
 
-/* HIDE STYLES */
-@media only screen and (min-width: 1201px) {
-  .hideXL {
-    display: none; } }
-@media only screen and (max-width: 1200px) {
-  .hideL {
-    display: none; } }
-@media only screen and (max-width: 768px) {
-  .hideM {
-    display: none; } }
-@media only screen and (max-width: 480px) {
-  .hideS {
-    display: none; } }
 * {
   box-sizing: border-box; }
 
