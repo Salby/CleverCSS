@@ -206,33 +206,55 @@
                   </div>
                   <p>You can use <span class="codeSpace">.navbarRight</span> and <span class="codeSpace">.brandItem</span> just like on the short navigation bar</p>
                   <h4>Drawer</h4>
-                  <p>The drawer is a menu intended for mobile devices and is very simple to set up</p>
+                  <p>The drawer is a menu that hides links until they are revealed by the user</p>
                   <div class="animateCanvasDrawer">
                     <div class="navBar">
                       <div class="navDrawerButton"></div>
                     </div>
                     <div class="navDrawer"></div>
                   </div>
+                  <p>The first thing you'll need to use the drawer is a button that can reveal it. You can put this button in your navigation bar like this:</p>
                   <div class="code">
-                    &lt;nav class="navBar"&gt;<br>
-                    &nbsp;&nbsp;&lt;ul&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li id="drawerButtonItem"&gt;&lt;button id="drawerButton"&gt;...&lt;/button&gt;&lt;/li&gt;<br>
+                    &lt;nav class="navbar navbarDark navbarShort"&gt;<br>
+                    <span class="highlight">&nbsp;&nbsp;&lt;button id="drawerOpen" class="drawerOpenLeft"&gt;&lt;i&gt;...&lt;/i&gt;&lt;/button&gt;</span><br>
+                    &nbsp;&nbsp;&lt;ul class="navbarNav navbarLeft"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&lt;/ul&gt;<br>
                     &lt;/nav&gt;<br>
-                    &lt;div id="mobileDrawer" class="drawer"&gt;<br>
-                    &nbsp;&nbsp;&lt;div class="drawerContent"&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="drawerHeader"&gt;<br>
+                  </div>
+                  <div class="canvasNav">
+                    <div class="navbarShort dark">
+                      <div class="drawerButton"></div>
+                      <div class="navLink"></div>
+                      <div class="navLink"></div>
+                      <div class="navLink"></div>
+                    </div>
+                  </div>
+                  <p>Next you'll need to add the drawer to your markup like this:</p>
+                  <div class="code">
+                    &lt;nav class="navbar navbarDark navbarShort"&gt;<br>
+                    &nbsp;&nbsp;&lt;button id="drawerOpen" class="drawerOpenLeft"&gt;&lt;i&gt;...&lt;/i&gt;&lt;/button&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="navbarNav navbarLeft"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/nav&gt;<br>
+                    <span class="highlight">&lt;!--DRAWER--&gt;<br>
+                    &lt;div id="mobileDrawer" class="drawer drawerLeft"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="drawerContent drawerDark"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="drawerHeader drawerDark"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button id="drawerClose"&gt;...&lt;/button&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="drawerNav"&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="drawerNav drawerNavLeft"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;i&gt;...&lt;/i&gt; &lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
                     &nbsp;&nbsp;&lt;/div&gt;<br>
-                    &lt;/div&gt;<br>
+                    &lt;/div&gt;<br></span>
                   </div>
+                  <p>Bear in mind that you can use <span class="codeSpace">.drawerLight</span> instead of <span class="codeSpace">.drawerDark</span> and so on. You can also replace <span class="codeSpace">left</span> with <span class="codeSpace">right</span> in classes that use horizontal alignment</p>
                 </article>
                 <article id="buttonArticle" class="hideComp">
                   <header>
