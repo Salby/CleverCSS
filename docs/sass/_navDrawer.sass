@@ -72,6 +72,20 @@
         i
           position: absolute
           top: calc(50% - 12px)
+    .drawerNav.drawerNavLeft
+      li
+        a
+          text-align: left
+          padding: 19px 20px 20px 56px
+        i
+          left: 16px
+    .drawerNav.drawerNavRight
+      li
+        a
+          text-align: right
+          padding: 19px 56px 20px 20px
+        i
+          right: 16px
   .drawerContent.drawerLight
     background-color: $white
     .drawerNav
@@ -98,7 +112,7 @@
           color: $primaryLight
 .drawer.drawerLeft
   left: 0
-  transform: translateX(-100%)
+  // transform: translateX(-100%)
   .drawerContent
     left: 0
     .drawerHeader
@@ -106,13 +120,6 @@
         left: 0
         i
           transform: none
-    .drawerNav
-      li
-        a
-          text-align: left
-          padding: 19px 20px 20px 56px
-        i
-          left: 16px
 .drawer.drawerLeft.drawerAnimateOpen
   animation: drawerAnimateOpenLeft 0.3s forwards
   .drawerContent
@@ -131,13 +138,6 @@
         right: 0
         i
           transform: rotate(180deg)
-    .drawerNav
-      li
-        a
-          text-align: right
-          padding: 19px 56px 20px 20px
-        i
-          right: 16px
 .drawer.drawerRight.drawerAnimateOpen
   animation: drawerAnimateOpenRight 0.3s forwards
   .drawerContent
@@ -234,6 +234,14 @@
           height: 56px
           a
             font-size: 18px
+      .drawerNav.drawerNavLeft
+        li
+          a
+            padding: 18px 18px 18px 56px
+      .drawerNav.drawerNavRight
+        li
+          a
+            padding: 18px 56px 18px 18px
     .drawerContent.drawerLight
       .drawerNav
         li
@@ -248,18 +256,6 @@
             background-color: $transparent
           &:active
             background-color: $transparentLight
-  .drawer.drawerLeft
-    .drawerContent
-      .drawerNav
-        li
-          a
-            padding: 18px 18px 18px 56px
-  .drawer.drawerRight
-    .drawerContent
-      .drawerNav
-        li
-          a
-            padding: 18px 56px 18px 18px
 @media only screen and (max-width: 480px)
   .drawer.drawerContent
     width: 80vw

@@ -238,6 +238,16 @@ nav.navbar {
         .drawer .drawerContent .drawerNav li i {
           position: absolute;
           top: calc(50% - 12px); }
+    .drawer .drawerContent .drawerNav.drawerNavLeft li a {
+      text-align: left;
+      padding: 19px 20px 20px 56px; }
+    .drawer .drawerContent .drawerNav.drawerNavLeft li i {
+      left: 16px; }
+    .drawer .drawerContent .drawerNav.drawerNavRight li a {
+      text-align: right;
+      padding: 19px 56px 20px 20px; }
+    .drawer .drawerContent .drawerNav.drawerNavRight li i {
+      right: 16px; }
   .drawer .drawerContent.drawerLight {
     background-color: #FFFFFF; }
     .drawer .drawerContent.drawerLight .drawerNav li:hover {
@@ -260,19 +270,13 @@ nav.navbar {
       color: #B0B9C6; }
 
 .drawer.drawerLeft {
-  left: 0;
-  transform: translateX(-100%); }
+  left: 0; }
   .drawer.drawerLeft .drawerContent {
     left: 0; }
     .drawer.drawerLeft .drawerContent .drawerHeader #drawerClose {
       left: 0; }
       .drawer.drawerLeft .drawerContent .drawerHeader #drawerClose i {
         transform: none; }
-    .drawer.drawerLeft .drawerContent .drawerNav li a {
-      text-align: left;
-      padding: 19px 20px 20px 56px; }
-    .drawer.drawerLeft .drawerContent .drawerNav li i {
-      left: 16px; }
 
 .drawer.drawerLeft.drawerAnimateOpen {
   animation: drawerAnimateOpenLeft 0.3s forwards; }
@@ -293,11 +297,6 @@ nav.navbar {
       right: 0; }
       .drawer.drawerRight .drawerContent .drawerHeader #drawerClose i {
         transform: rotate(180deg); }
-    .drawer.drawerRight .drawerContent .drawerNav li a {
-      text-align: right;
-      padding: 19px 56px 20px 20px; }
-    .drawer.drawerRight .drawerContent .drawerNav li i {
-      right: 16px; }
 
 .drawer.drawerRight.drawerAnimateOpen {
   animation: drawerAnimateOpenRight 0.3s forwards; }
@@ -388,6 +387,10 @@ nav.navbar {
     height: 56px; }
     .drawer .drawerContent .drawerNav li a {
       font-size: 18px; }
+  .drawer .drawerContent .drawerNav.drawerNavLeft li a {
+    padding: 18px 18px 18px 56px; }
+  .drawer .drawerContent .drawerNav.drawerNavRight li a {
+    padding: 18px 56px 18px 18px; }
   .drawer .drawerContent.drawerLight .drawerNav li:hover {
     background-color: transparent; }
   .drawer .drawerContent.drawerLight .drawerNav li:active {
@@ -395,13 +398,7 @@ nav.navbar {
   .drawer .drawerContent.drawerDark .drawerNav li:hover {
     background-color: transparent; }
   .drawer .drawerContent.drawerDark .drawerNav li:active {
-    background-color: rgba(255, 255, 255, 0.05); }
-
-  .drawer.drawerLeft .drawerContent .drawerNav li a {
-    padding: 18px 18px 18px 56px; }
-
-  .drawer.drawerRight .drawerContent .drawerNav li a {
-    padding: 18px 56px 18px 18px; } }
+    background-color: rgba(255, 255, 255, 0.05); } }
 @media only screen and (max-width: 480px) {
   .drawer.drawerContent {
     width: 80vw; } }
