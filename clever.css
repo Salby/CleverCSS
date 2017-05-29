@@ -270,7 +270,8 @@ nav.navbar {
       color: #B0B9C6; }
 
 .drawer.drawerLeft {
-  left: 0; }
+  left: 0;
+  transform: translateX(-100%); }
   .drawer.drawerLeft .drawerContent {
     left: 0; }
     .drawer.drawerLeft .drawerContent .drawerHeader #drawerClose {
