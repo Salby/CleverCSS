@@ -13,6 +13,12 @@ nav.navbarLight
         color: $primary
   #drawerOpen
     border: 10px solid $white
+    &:hover
+      background-color: $transparentDark
+    &:active
+      background-color: $transparentDarker
+    i
+      color: $primary
 nav.navbarDark
   background-color: $primary
   .navbarNav
@@ -35,6 +41,14 @@ nav.navbarDark
 nav.navbarTall
   width: 100%
   height: 120px
+  .navbarNav.navbarLeft,.navbarNav.navbarRight
+    float: none
+    position: absolute
+    bottom: 0
+  .navbarNav.navbarLeft
+    left: 0
+  .navbarNav.navbarRight
+    right: 0
 nav.navbarShort
   width: 100%
   height: 60px
@@ -78,6 +92,63 @@ nav.navbar
     float: left
   #drawerOpen.drawerButtonRight
     float: right
+  #drawerOpen.mobileOnly
+    display: none
+
+@media only screen and (max-width: 1200px)
+@media only screen and (max-width: 768px)
+  nav.navbarLight
+    .navbarNav
+      &:hover
+        background-color: $transparent
+      &:active
+        background-color: $transparentDark
+    #drawerOpen
+      &:hover
+        background-color: $transparent
+      &:active
+        background-color: $transparentDark
+  nav.navbarDark
+    .navbarNav
+      li
+        &:hover
+          background-color: $transparent
+        &:active
+          background-color: $transparentLight
+    #drawerOpen
+      &:hover
+        background-color: $transparent
+      &:active
+        background-color: $transparentLight
+  nav.navbarTall
+    height: 112px
+  nav.navbarShort
+    height: 56px
+  nav.navbar
+    .navbarNav
+      li
+        height: 56px
+        padding: 18px
+        display: none
+        border-bottom: none
+        &:hover
+          border-bottom: none
+        a
+          font-size: 18px
+      .brandItem
+        display: block
+    .navbarNav.navbarLeft
+      float: right
+    .navbarNav.navbarRight
+      float: right
+    #drawerOpen
+      width: 56px
+      height: 56px
+      border-radius: 56px
+    #drawerOpen.mobileOnly
+      display: block
+@media only screen and (max-width: 480px)
+@media only screen and (max-width: 320px)
 
 /*DRAWER
 
