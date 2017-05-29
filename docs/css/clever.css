@@ -165,6 +165,164 @@ nav.navbar {
     border-radius: 56px; }
   nav.navbar #drawerOpen.mobileOnly {
     display: block; } }
+/* DRAWER STYLES */
+.drawer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 15; }
+  .drawer .drawerContent {
+    position: absolute;
+    top: 0;
+    width: 320px;
+    height: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 32px 64px 0 rgba(0, 0, 0, 0.2); }
+    .drawer .drawerContent .drawerHeader {
+      position: relative;
+      width: 100%;
+      height: 60px; }
+      .drawer .drawerContent .drawerHeader #drawerClose {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        background-color: transparent; }
+        .drawer .drawerContent .drawerHeader #drawerClose i {
+          position: absolute;
+          top: calc(50% - 12px);
+          left: calc(50% - 12px); }
+    .drawer .drawerContent .drawerHeader.drawerLight {
+      background-color: #FFFFFF; }
+      .drawer .drawerContent .drawerHeader.drawerLight #drawerClose {
+        border: 10px solid #FFFFFF; }
+        .drawer .drawerContent .drawerHeader.drawerLight #drawerClose:hover {
+          background-color: rgba(0, 0, 0, 0.05); }
+        .drawer .drawerContent .drawerHeader.drawerLight #drawerClose:active {
+          background-color: rgba(0, 0, 0, 0.1); }
+        .drawer .drawerContent .drawerHeader.drawerLight #drawerClose i {
+          color: #2F343F; }
+    .drawer .drawerContent .drawerHeader.drawerDark {
+      background-color: #2F343F; }
+      .drawer .drawerContent .drawerHeader.drawerDark #drawerClose {
+        border: 10px solid #2F343F; }
+        .drawer .drawerContent .drawerHeader.drawerDark #drawerClose:hover {
+          background-color: rgba(255, 255, 255, 0.05); }
+        .drawer .drawerContent .drawerHeader.drawerDark #drawerClose:active {
+          background-color: rgba(255, 255, 255, 0.1); }
+        .drawer .drawerContent .drawerHeader.drawerDark #drawerClose i {
+          color: #FFFFFF; }
+  .drawer .drawerContent.drawerLight {
+    background-color: #FFFFFF; }
+  .drawer .drawerContent.drawerDark {
+    background-color: #2F343F; }
+
+.drawer.drawerLeft {
+  left: 0;
+  transform: translateX(-100%); }
+  .drawer.drawerLeft .drawerContent {
+    left: 0; }
+    .drawer.drawerLeft .drawerContent .drawerHeader #drawerClose {
+      left: 0; }
+      .drawer.drawerLeft .drawerContent .drawerHeader #drawerClose i {
+        transform: none; }
+
+.drawer.drawerLeft.drawerAnimateOpen {
+  animation: drawerAnimateOpenLeft 0.3s forwards; }
+  .drawer.drawerLeft.drawerAnimateOpen .drawerContent {
+    animation: drawerContentAnimateOpenLeft 0.3s forwards; }
+
+.drawer.drawerLeft.drawerAnimateClose {
+  animation: drawerAnimateCloseLeft 0.3s forwards; }
+  .drawer.drawerLeft.drawerAnimateClose .drawerContent {
+    animation: drawerContentAnimateCloseLeft 0.3s forwards; }
+
+.drawer.drawerRight {
+  right: 0;
+  transform: translateX(100%); }
+  .drawer.drawerRight .drawerContent {
+    right: 0; }
+    .drawer.drawerRight .drawerContent .drawerHeader #drawerClose {
+      right: 0; }
+      .drawer.drawerRight .drawerContent .drawerHeader #drawerClose i {
+        transform: rotate(180deg); }
+
+.drawer.drawerRight.drawerAnimateOpen {
+  animation: drawerAnimateOpenRight 0.3s forwards; }
+  .drawer.drawerRight.drawerAnimateOpen .drawerContent {
+    animation: drawerContentAnimateOpenRight 0.3s forwards; }
+
+.drawer.drawerRight.drawerAnimateClose {
+  animation: drawerAnimateCloseRight 0.3s forwards; }
+  .drawer.drawerRight.drawerAnimateClose .drawerContent {
+    animation: drawerContentAnimateCloseRight 0.3s forwards; }
+
+@keyframes drawerAnimateOpenLeft {
+  0% {
+    transform: translateX(-100%);
+    background-color: transparent; }
+  1% {
+    transform: translateX(0);
+    background-color: transparent; }
+  100% {
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0.4); } }
+@keyframes drawerContentAnimateOpenLeft {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0); } }
+@keyframes drawerAnimateCloseLeft {
+  0% {
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0.4); }
+  99% {
+    transform: translateX(0);
+    background-color: transparent; }
+  100% {
+    transform: translateX(-100%);
+    background-color: transparent; } }
+@keyframes drawerContentAnimateCloseLeft {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-100%); } }
+@keyframes drawerAnimateOpenRight {
+  0% {
+    transform: translateX(100%);
+    background-color: transparent; }
+  1% {
+    transform: translateX(0);
+    background-color: transparent; }
+  100% {
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0.4); } }
+@keyframes drawerContentAnimateOpenRight {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
+@keyframes drawerAnimateCloseRight {
+  0% {
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0.4); }
+  99% {
+    transform: translateX(0);
+    background-color: transparent; }
+  100% {
+    transform: translateX(100%);
+    background-color: transparent; } }
+@keyframes drawerContentAnimateCloseRight {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(100%); } }
+@media only screen and (max-width: 480px) {
+  .drawer.drawerContent {
+    width: 80vw; } }
 /*HERO */
 .hero {
   height: 100vh;

@@ -1,0 +1,156 @@
+/* DRAWER STYLES
+
+.drawer
+  position: fixed
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0,0.4)
+  z-index: 15
+  .drawerContent
+    position: absolute
+    top: 0
+    width: 320px
+    height: 100%
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 16px 32px 0 rgba(0,0,0,0.2), 0 32px 64px 0 rgba(0,0,0,0.2)
+    .drawerHeader
+      position: relative
+      width: 100%
+      height: 60px
+      #drawerClose
+        cursor: pointer
+        position: absolute
+        top: 0
+        width: 60px
+        height: 60px
+        border-radius: 60px
+        background-color: $transparent
+        i
+          position: absolute
+          top: calc(50% - 12px)
+          left: calc(50% - 12px)
+    .drawerHeader.drawerLight
+      background-color: $white
+      #drawerClose
+        border: 10px solid $white
+        &:hover
+          background-color: $transparentDark
+        &:active
+          background-color: $transparentDarker
+        i
+          color: $primary
+    .drawerHeader.drawerDark
+      background-color: $primary
+      #drawerClose
+        border: 10px solid $primary
+        &:hover
+          background-color: $transparentLight
+        &:active
+          background-color: $transparentLighter
+        i
+          color: $white
+  .drawerContent.drawerLight
+    background-color: $white
+  .drawerContent.drawerDark
+    background-color: $primary
+.drawer.drawerLeft
+  left: 0
+  transform: translateX(-100%)
+  .drawerContent
+    left: 0
+    .drawerHeader
+      #drawerClose
+        left: 0
+        i
+          transform: none
+.drawer.drawerLeft.drawerAnimateOpen
+  animation: drawerAnimateOpenLeft 0.3s forwards
+  .drawerContent
+    animation: drawerContentAnimateOpenLeft 0.3s forwards
+.drawer.drawerLeft.drawerAnimateClose
+  animation: drawerAnimateCloseLeft 0.3s forwards
+  .drawerContent
+    animation: drawerContentAnimateCloseLeft 0.3s forwards
+.drawer.drawerRight
+  right: 0
+  transform: translateX(100%)
+  .drawerContent
+    right: 0
+    .drawerHeader
+      #drawerClose
+        right: 0
+        i
+          transform: rotate(180deg)
+.drawer.drawerRight.drawerAnimateOpen
+  animation: drawerAnimateOpenRight 0.3s forwards
+  .drawerContent
+    animation: drawerContentAnimateOpenRight 0.3s forwards
+.drawer.drawerRight.drawerAnimateClose
+  animation: drawerAnimateCloseRight 0.3s forwards
+  .drawerContent
+    animation: drawerContentAnimateCloseRight 0.3s forwards
+
+@keyframes drawerAnimateOpenLeft
+  0%
+    transform: translateX(-100%)
+    background-color: $transparent
+  1%
+    transform: translateX(0)
+    background-color: $transparent
+  100%
+    transform: translateX(0)
+    background-color: rgba(0,0,0,0.4)
+@keyframes drawerContentAnimateOpenLeft
+  0%
+    transform: translateX(-100%)
+  100%
+    transform: translateX(0)
+@keyframes drawerAnimateCloseLeft
+  0%
+    transform: translateX(0)
+    background-color: rgba(0,0,0,0.4)
+  99%
+    transform: translateX(0)
+    background-color: $transparent
+  100%
+    transform: translateX(-100%)
+    background-color: $transparent
+@keyframes drawerContentAnimateCloseLeft
+  0%
+    transform: translateX(0)
+  100%
+    transform: translateX(-100%)
+@keyframes drawerAnimateOpenRight
+  0%
+    transform: translateX(100%)
+    background-color: $transparent
+  1%
+    transform: translateX(0)
+    background-color: $transparent
+  100%
+    transform: translateX(0)
+    background-color: rgba(0,0,0,0.4)
+@keyframes drawerContentAnimateOpenRight
+  0%
+    transform: translateX(100%)
+  100%
+    transform: translateX(0)
+@keyframes drawerAnimateCloseRight
+  0%
+    transform: translateX(0)
+    background-color: rgba(0,0,0,0.4)
+  99%
+    transform: translateX(0)
+    background-color: $transparent
+  100%
+    transform: translateX(100%)
+    background-color: $transparent
+@keyframes drawerContentAnimateCloseRight
+  0%
+    transform: translateX(0)
+  100%
+    transform: translateX(100%)
+
+@media only screen and (max-width: 480px)
+  .drawer.drawerContent
+    width: 80vw
