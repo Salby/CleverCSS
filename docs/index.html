@@ -133,26 +133,78 @@
                   <header>
                     <h3>Navigation</h3>
                   </header>
-                  <p>
-                    CleverCSS provides a navigation bar that is both easy to use and versatile
-                  </p>
-                  <h4>Basic navigation bar</h4>
+                  <h4>Short navigation bar</h4>
                   <div class="animateCanvasNav">
                     <div class="navBar">
-                      <div class="navLink navBrand"></div>
+                      <div class="navLink"></div>
                       <div class="navLink"></div>
                       <div class="navLink"></div>
                     </div>
                   </div>
                   <div class="code">
-                    &lt;nav class="navBarDark"&gt;<br>
-                    &nbsp;&nbsp;&lt;ul&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="brandItem"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+                    &lt;nav class="navbar navbarDark navbarShort"&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="navbarNav navbarLeft"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&lt;/ul&gt;<br>
                     &lt;/nav&gt;<br>
                   </div>
+                  <h4>Horizontal alignment</h4>
+                  <p>You can also use the class <span class="codeSpace">.navbarRight</span> to move the links to the right side of the navigation bar</p>
+                  <div class="canvasNav">
+                    <div class="navbarShort dark">
+                      <div class="navLink floatRight"></div>
+                      <div class="navLink floatRight"></div>
+                      <div class="navLink floatRight"></div>
+                    </div>
+                  </div>
+                  <div class="code">
+                    &lt;nav class="navbar navbarDark navbarShort"&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="navbarNav <span class="highlight">navbarRight</span>"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/nav&gt;<br>
+                  </div>
+                  <h4>Brand</h4>
+                  <p>By default, links in the navbar disappear once the screen size gets too small. To keep a link from disappearing use the class <span class="codeSpace">.brandItem</span></p>
+                  <div class="canvasNav">
+                    <div class="navbarShort dark">
+                      <div class="navLink brandItem"></div>
+                      <div class="navLink"></div>
+                      <div class="navLink"></div>
+                    </div>
+                  </div>
+                  <div class="code">
+                    &lt;nav class="navbar navbarDark navbarShort"&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="navbarNav navbarLeft"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="highlight">class="brandItem"</span>&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/nav&gt;<br>
+                  </div>
+                  <h4>Tall navigation bar</h4>
+                  <p>A tall navigation bar is more spatious, but takes up a lot of space on smaller devices</p>
+                  <div class="canvasNav">
+                    <div class="navbarTall dark">
+                      <div class="navLink"></div>
+                      <div class="navLink"></div>
+                      <div class="navLink"></div>
+                    </div>
+                  </div>
+                  <div class="code">
+                    &lt;nav class="navbar navbarDark <span class="highlight">navbarTall</span>"&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="navbarNav navbarLeft"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/nav&gt;<br>
+                  </div>
+                  <p>You can use <span class="codeSpace">.navbarRight</span> and <span class="codeSpace">.brandItem</span> just like on the short navigation bar</p>
                   <h4>Drawer</h4>
                   <p>The drawer is a menu intended for mobile devices and is very simple to set up</p>
                   <div class="animateCanvasDrawer">
@@ -181,17 +233,6 @@
                     &nbsp;&nbsp;&lt;/div&gt;<br>
                     &lt;/div&gt;<br>
                   </div>
-                  <p>Resize this window to see the effect</p>
-                  <h4>Brand</h4>
-                  <p>If you want a navigation link to be shown on every screen, withour collapsing, you can do so with the .brandItem class</p>
-                  <div class="code">
-                    &lt;nav class="navBar"&gt;<br>
-                    &nbsp;&nbsp;&lt;ul&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="brandItem"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;/ul&gt;<br>
-                    &lt;/nav&gt;
-                  </div>
-                  <p>Resize this window to see the effect</p>
                 </article>
                 <article id="buttonArticle" class="hideComp">
                   <header>
