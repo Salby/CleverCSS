@@ -1,93 +1,83 @@
-.navBarDark
-  background-color: $primary
-  ul
-    li
-      color: white
-      &:hover
-        border-bottom: 2px solid white
-      a
-        color: white
-    #drawerButtonItem
-      #drawerButton
-        &:active
-          background-color: rgba(255,255,255,0.1)
-        i
-          color: white
-.navBarLight
-  background-color: white
-  ul
+/* NAV
+
+nav.navbarLight
+  background-color: $white
+  .navbarNav
     li
       color: $primary
       &:hover
         border-bottom: 2px solid $primary
-    #drawerButtonItem
-      #drawerButton
-        &:active
-          background-color: rgba(0,0,0,0.05)
-        i
-          color: $primary
-.navBarDark, .navBarLight
-  height: 60px
+      &:active
+        background-color: $transparentDark
+      a
+        color: $primary
+  #drawerOpen
+    border: 10px solid $white
+nav.navbarDark
+  background-color: $primary
+  .navbarNav
+    li
+      color: $white
+      &:hover
+        border-bottom: 2px solid $white
+      &:active
+        background-color: $transparentLight
+      a
+        color: $white
+  #drawerOpen
+    border: 10px solid $primary
+    &:hover
+      background-color: $transparentLight
+    &:active
+      background-color: $transparentLighter
+    i
+      color: $white
+nav.navbarTall
   width: 100%
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2)
-  z-index: 5
-  position: fixed
-  ul
+  height: 120px
+nav.navbarShort
+  width: 100%
+  height: 60px
+nav.navbar
+  z-index: 10
+  position: relative
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)
+  .navbarNav
     margin: 0
     padding: 0
     list-style: none
-    height: 60px
-    width: 100%
+    position: relative
     li
-      position: relative
-      overflow: hidden
+      transition: all 0.2s
       float: left
       cursor: pointer
-      display: block
-      font-family: 'Roboto', sans-serif
-      font-size: 20px
+      background-color: $transparent
       padding: 20px
       height: 60px
-      transition: all 0.1s
-      border-bottom: 2px solid rgba(0,0,0,0)
+      border-bottom: 2px solid $transparent
       a
+        background-color: $transparent
+        font-size: 20px
         text-decoration: none
-    .brandItem
-      display: block
-      float: left
-    #drawerButtonItem
-      display: none
-      padding: 0
-      border-bottom: 0
-      width: 56px
-      height: 56px
-      &:hover
-        border-bottom: 0
-      #drawerButton
-        width: 56px
-        height: 56px
-        border-radius: 56px
-        border: 0
-        background-color: rgba(0,0,0,0)
-        i
-          transform: scale(1.2) translateY(5%) translateX(-1%)
-
-@media only screen and (max-width: 768px)
-  .navBarDark, .navBarLight
-    height: 56px
-    ul
-      height: 56px
-      li
-        display: none
-        height: 56px
-      .brandItem
-        display: block
-        float: right
-        border-bottom: 0
-        &:hover
-          border-bottom: 0
-      #drawerButtonItem
-        display: block
+  .navbarNav.navbarLeft
+    float: left
+  .navbarNav.navbarRight
+    float: right
+  #drawerOpen
+    cursor: pointer
+    position: relative
+    width: 60px
+    height: 60px
+    border-radius: 60px
+    background-color: $transparent
+    i
+      position: absolute
+      top: calc(50% - 12px)
+      left: calc(50% - 12px)
+  #drawerOpen.drawerButtonLeft
+    float: left
+  #drawerOpen.drawerButtonRight
+    float: right
 
 /*DRAWER
 

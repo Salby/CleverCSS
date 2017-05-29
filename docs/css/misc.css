@@ -275,6 +275,11 @@
     width: 0px; }
   100% {
     width: 0px; } }
+nav.navbar {
+  position: fixed;
+  top: 0;
+  left: 0; }
+
 /*ANIMATE */
 @keyframes selectionActive {
   100% {

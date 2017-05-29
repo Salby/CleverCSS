@@ -21,92 +21,88 @@ p {
   color: #212121;
   font-family: "Roboto", sans-serif; }
 
-.navBarDark {
-  background-color: #2F343F; }
-  .navBarDark ul li {
-    color: white; }
-    .navBarDark ul li:hover {
-      border-bottom: 2px solid white; }
-    .navBarDark ul li a {
-      color: white; }
-  .navBarDark ul #drawerButtonItem #drawerButton:active {
-    background-color: rgba(255, 255, 255, 0.1); }
-  .navBarDark ul #drawerButtonItem #drawerButton i {
-    color: white; }
-
-.navBarLight {
-  background-color: white; }
-  .navBarLight ul li {
+/* NAV */
+nav.navbarLight {
+  background-color: #FFFFFF; }
+  nav.navbarLight .navbarNav li {
     color: #2F343F; }
-    .navBarLight ul li:hover {
+    nav.navbarLight .navbarNav li:hover {
       border-bottom: 2px solid #2F343F; }
-  .navBarLight ul #drawerButtonItem #drawerButton:active {
-    background-color: rgba(0, 0, 0, 0.05); }
-  .navBarLight ul #drawerButtonItem #drawerButton i {
-    color: #2F343F; }
+    nav.navbarLight .navbarNav li:active {
+      background-color: rgba(0, 0, 0, 0.05); }
+    nav.navbarLight .navbarNav li a {
+      color: #2F343F; }
+  nav.navbarLight #drawerOpen {
+    border: 10px solid #FFFFFF; }
 
-.navBarDark, .navBarLight {
-  height: 60px;
+nav.navbarDark {
+  background-color: #2F343F; }
+  nav.navbarDark .navbarNav li {
+    color: #FFFFFF; }
+    nav.navbarDark .navbarNav li:hover {
+      border-bottom: 2px solid #FFFFFF; }
+    nav.navbarDark .navbarNav li:active {
+      background-color: rgba(255, 255, 255, 0.05); }
+    nav.navbarDark .navbarNav li a {
+      color: #FFFFFF; }
+  nav.navbarDark #drawerOpen {
+    border: 10px solid #2F343F; }
+    nav.navbarDark #drawerOpen:hover {
+      background-color: rgba(255, 255, 255, 0.05); }
+    nav.navbarDark #drawerOpen:active {
+      background-color: rgba(255, 255, 255, 0.1); }
+    nav.navbarDark #drawerOpen i {
+      color: #FFFFFF; }
+
+nav.navbarTall {
   width: 100%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  z-index: 5;
-  position: fixed; }
-  .navBarDark ul, .navBarLight ul {
+  height: 120px; }
+
+nav.navbarShort {
+  width: 100%;
+  height: 60px; }
+
+nav.navbar {
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+  nav.navbar .navbarNav {
     margin: 0;
     padding: 0;
     list-style: none;
-    height: 60px;
-    width: 100%; }
-    .navBarDark ul li, .navBarLight ul li {
-      position: relative;
-      overflow: hidden;
+    position: relative; }
+    nav.navbar .navbarNav li {
+      transition: all 0.2s;
       float: left;
       cursor: pointer;
-      display: block;
-      font-family: "Roboto", sans-serif;
-      font-size: 20px;
+      background-color: transparent;
       padding: 20px;
       height: 60px;
-      transition: all 0.1s;
       border-bottom: 2px solid transparent; }
-      .navBarDark ul li a, .navBarLight ul li a {
+      nav.navbar .navbarNav li a {
+        background-color: transparent;
+        font-size: 20px;
         text-decoration: none; }
-    .navBarDark ul .brandItem, .navBarLight ul .brandItem {
-      display: block;
-      float: left; }
-    .navBarDark ul #drawerButtonItem, .navBarLight ul #drawerButtonItem {
-      display: none;
-      padding: 0;
-      border-bottom: 0;
-      width: 56px;
-      height: 56px; }
-      .navBarDark ul #drawerButtonItem:hover, .navBarLight ul #drawerButtonItem:hover {
-        border-bottom: 0; }
-      .navBarDark ul #drawerButtonItem #drawerButton, .navBarLight ul #drawerButtonItem #drawerButton {
-        width: 56px;
-        height: 56px;
-        border-radius: 56px;
-        border: 0;
-        background-color: transparent; }
-        .navBarDark ul #drawerButtonItem #drawerButton i, .navBarLight ul #drawerButtonItem #drawerButton i {
-          transform: scale(1.2) translateY(5%) translateX(-1%); }
+  nav.navbar .navbarNav.navbarLeft {
+    float: left; }
+  nav.navbar .navbarNav.navbarRight {
+    float: right; }
+  nav.navbar #drawerOpen {
+    cursor: pointer;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: transparent; }
+    nav.navbar #drawerOpen i {
+      position: absolute;
+      top: calc(50% - 12px);
+      left: calc(50% - 12px); }
+  nav.navbar #drawerOpen.drawerButtonLeft {
+    float: left; }
+  nav.navbar #drawerOpen.drawerButtonRight {
+    float: right; }
 
-@media only screen and (max-width: 768px) {
-  .navBarDark, .navBarLight {
-    height: 56px; }
-    .navBarDark ul, .navBarLight ul {
-      height: 56px; }
-      .navBarDark ul li, .navBarLight ul li {
-        display: none;
-        height: 56px; }
-      .navBarDark ul .brandItem, .navBarLight ul .brandItem {
-        display: block;
-        float: right;
-        border-bottom: 0; }
-        .navBarDark ul .brandItem:hover, .navBarLight ul .brandItem:hover {
-          border-bottom: 0; }
-      .navBarDark ul #drawerButtonItem, .navBarLight ul #drawerButtonItem {
-        display: block; } }
 /*DRAWER */
 .drawer {
   transition: all 0.3s;
@@ -1276,19 +1272,6 @@ button {
 .marginLeft48 {
   margin-left: 48px; }
 
-/* HIDE STYLES */
-@media only screen and (min-width: 1201px) {
-  .hideXL {
-    display: none; } }
-@media only screen and (max-width: 1200px) {
-  .hideL {
-    display: none; } }
-@media only screen and (max-width: 768px) {
-  .hideM {
-    display: none; } }
-@media only screen and (max-width: 480px) {
-  .hideS {
-    display: none; } }
 * {
   box-sizing: border-box; }
 

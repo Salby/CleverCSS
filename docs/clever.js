@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // DRAWER ANIMATION
-  $("#drawerButton").click(function(e) {
+  $("#drawerOpen").click(function(e) {
     e.stopPropagation()
     $("#mobileDrawer").removeClass("drawerAnimateClose").addClass("drawerAnimateOpen");
   });
