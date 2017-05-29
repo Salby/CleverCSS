@@ -490,7 +490,7 @@ nav.navbar {
   .articleCardLight .footerLight, .articleCardDark .footerLight {
     background-color: white; }
   .articleCardLight .footerLight, .articleCardLight .footerDark, .articleCardDark .footerLight, .articleCardDark .footerDark {
-    padding: 14px;
+    padding: 10px;
     border-radius: 0 0 2px 2px;
     min-height: 56px;
     position: relative; }
@@ -501,7 +501,7 @@ nav.navbar {
       width: 480px; }
     .articleCardLight .footerLight .buttonFlat, .articleCardLight .footerLight .buttonRaised, .articleCardLight .footerDark .buttonFlat, .articleCardLight .footerDark .buttonRaised, .articleCardDark .footerLight .buttonFlat, .articleCardDark .footerLight .buttonRaised, .articleCardDark .footerDark .buttonFlat, .articleCardDark .footerDark .buttonRaised {
       float: right;
-      height: 28px;
+      height: 38px;
       padding: 0 6px;
       margin: 0 0 0 6px;
       top: 0; }
@@ -950,13 +950,15 @@ fieldset {
       left: 0;
       width: 100%;
       min-height: 56px;
-      padding: 14px;
+      padding: 10px;
       border-radius: 0 0 2px 2px; }
       .modalActive .modalContentLight .modalFooterLight .buttonFlat, .modalActive .modalContentLight .modalFooterLight .buttonRaised, .modalActive .modalContentLight .modalFooterDark .buttonFlat, .modalActive .modalContentLight .modalFooterDark .buttonRaised, .modalActive .modalContentDark .modalFooterLight .buttonFlat, .modalActive .modalContentDark .modalFooterLight .buttonRaised, .modalActive .modalContentDark .modalFooterDark .buttonFlat, .modalActive .modalContentDark .modalFooterDark .buttonRaised {
         float: right;
-        height: 28px;
+        height: 38px;
         padding: 0 6px;
-        margin: 0 0 0 6px; }
+        margin: 0 0 0 6px;
+        top: 0;
+        font-size: 1.2em; }
 
 @media only screen and (max-width: 480px) {
   .modalActive .modalContentLight, .modalActive .modalContentDark {
