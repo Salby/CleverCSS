@@ -26,7 +26,7 @@ $(document).ready(function() {
   $(".buttonModalOpen[data-target]").click(function() {
     //alert($(this).data("target"));
     var modalTargetOpen = $(this).data("target");
-    $(modalTargetOpen).show();
+    $(modalTargetOpen).css("display", "flex");
     if ($(modalTargetOpen).hasClass("modalInactive")) {
         $(modalTargetOpen).removeClass("modalInactive").addClass("modalActive");
     } else {
@@ -38,7 +38,7 @@ $(document).ready(function() {
     var modalTargetClose = $(this).data("target");
     $(modalTargetClose).removeClass("modalActive").addClass("modalInactive");
     setTimeout(function() {
-      $(modalTargetClose).hide();
+      $(modalTargetClose).css("display", "none");
     }, 300);
     $("body").css("overflow-y", "visible");
   });
