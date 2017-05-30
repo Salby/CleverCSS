@@ -58,6 +58,7 @@ button
 
 /* ACTION BUTTON
 .buttonAction
+  position: relative
   cursor: pointer
   width: 56px
   height: 56px
@@ -71,7 +72,9 @@ button
   &:active
     background-color: $accentLight
   i
-    transform: scale(1) translateY(5%)
+    position: absolute
+    top: calc(50% - 12px)
+    left: calc(50% - 12px)
 .buttonFloatRight
   float: right
 

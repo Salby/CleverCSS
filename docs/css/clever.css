@@ -923,6 +923,7 @@ div.modal.modalInactive .modalContent, div.modal.modalActive .modalContent {
   border-radius: 2px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 16px 32px 0 rgba(0, 0, 0, 0.1), 0 32px 64px 0 rgba(0, 0, 0, 0.1); }
   div.modal.modalInactive .modalContent .modalHeader, div.modal.modalActive .modalContent .modalHeader {
+    position: relative;
     min-height: 56px; }
     div.modal.modalInactive .modalContent .modalHeader h1, div.modal.modalInactive .modalContent .modalHeader h2, div.modal.modalInactive .modalContent .modalHeader h3, div.modal.modalInactive .modalContent .modalHeader h4, div.modal.modalInactive .modalContent .modalHeader h5, div.modal.modalInactive .modalContent .modalHeader h6, div.modal.modalActive .modalContent .modalHeader h1, div.modal.modalActive .modalContent .modalHeader h2, div.modal.modalActive .modalContent .modalHeader h3, div.modal.modalActive .modalContent .modalHeader h4, div.modal.modalActive .modalContent .modalHeader h5, div.modal.modalActive .modalContent .modalHeader h6 {
       padding: 12px 12px 6px 12px; }
@@ -960,6 +961,7 @@ div.modal.modalInactive .modalContent, div.modal.modalActive .modalContent {
       width: 100%;
       height: auto; }
   div.modal.modalInactive .modalContent .modalFooter, div.modal.modalActive .modalContent .modalFooter {
+    position: relative;
     min-height: 56px;
     padding: 6px 14px; }
     div.modal.modalInactive .modalContent .modalFooter .buttonFlat, div.modal.modalInactive .modalContent .modalFooter .buttonRaised, div.modal.modalActive .modalContent .modalFooter .buttonFlat, div.modal.modalActive .modalContent .modalFooter .buttonRaised {
@@ -967,6 +969,13 @@ div.modal.modalInactive .modalContent, div.modal.modalActive .modalContent {
       height: 28px;
       padding: 0 6px;
       margin: 8px 0 0 6px; }
+    div.modal.modalInactive .modalContent .modalFooter .buttonAction, div.modal.modalActive .modalContent .modalFooter .buttonAction {
+      position: absolute;
+      bottom: -28px;
+      right: 28px;
+      box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1), 0 32px 64px 0 rgba(0, 0, 0, 0.1), 0 64px 128px 0 rgba(0, 0, 0, 0.1); }
+      div.modal.modalInactive .modalContent .modalFooter .buttonAction:hover, div.modal.modalActive .modalContent .modalFooter .buttonAction:hover {
+        box-shadow: 0 32px 64px 0 rgba(0, 0, 0, 0.2), 0 64px 128px 0 rgba(0, 0, 0, 0.2), 0 128px 256px 0 rgba(0, 0, 0, 0.2); }
   div.modal.modalInactive .modalContent .modalFooter.modalLight, div.modal.modalActive .modalContent .modalFooter.modalLight {
     background-color: #FFFFFF; }
   div.modal.modalInactive .modalContent .modalFooter.modalDark, div.modal.modalActive .modalContent .modalFooter.modalDark {
@@ -978,9 +987,13 @@ div.modal.modalInactive .modalContent, div.modal.modalActive .modalContent {
 div.modal.modalInactive .modalContent.modalLight, div.modal.modalActive .modalContent.modalLight {
   background-color: #FFFFFF;
   color: #2F343F; }
+  div.modal.modalInactive .modalContent.modalLight p, div.modal.modalActive .modalContent.modalLight p {
+    color: #2F343F; }
 div.modal.modalInactive .modalContent.modalDark, div.modal.modalActive .modalContent.modalDark {
   background-color: #2F343F;
   color: #FFFFFF; }
+  div.modal.modalInactive .modalContent.modalDark p, div.modal.modalActive .modalContent.modalDark p {
+    color: #FFFFFF; }
 
 @media only screen and (max-width: 768px) {
   div.modal.modalActive .modalContent, div.modal.modalInactive .modalContent {
@@ -1089,6 +1102,7 @@ button {
 
 /* ACTION BUTTON */
 .buttonAction {
+  position: relative;
   cursor: pointer;
   width: 56px;
   height: 56px;
@@ -1102,7 +1116,9 @@ button {
   .buttonAction:active {
     background-color: #669FE5; }
   .buttonAction i {
-    transform: scale(1) translateY(5%); }
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 12px); }
 
 .buttonFloatRight {
   float: right; }

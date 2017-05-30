@@ -32,6 +32,7 @@ $(document).ready(function() {
     } else {
         $(modalTargetOpen).addClass("modalActive")
     }
+    $("body").css("overflow-y", "hidden");
   });
   $(".buttonModalClose[data-target]").click(function() {
     var modalTargetClose = $(this).data("target");
@@ -39,15 +40,16 @@ $(document).ready(function() {
     setTimeout(function() {
       $(modalTargetClose).hide();
     }, 300);
+    $("body").css("overflow-y", "visible");
   });
   // FLOATING ACTION BUTTON MENU
   $(".fabMenuContainer .fabMenuButton").click(function() {
-    if ($(".fabMenuContainer .fabMenuButton").hasClass("fabMenuButtonActive")) {
-        $(".fabMenuContainer .fabMenuButton").removeClass("fabMenuButtonActive");
+    if ($(this).hasClass("fabMenuButtonActive")) {
+        $(this).removeClass("fabMenuButtonActive");
         $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListActive").addClass("fabMenuListInactive");
     } else {
-      $(".fabMenuContainer .fabMenuButton").addClass("fabMenuButtonActive");
-      $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListInactive").addClass("fabMenuListActive");
+        $(this).addClass("fabMenuButtonActive");
+        $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListInactive").addClass("fabMenuListActive");
     }
   });
 });

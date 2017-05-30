@@ -42,6 +42,7 @@ div.modal.modalInactive,div.modal.modalActive
     border-radius: 2px
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1), 0 16px 32px 0 rgba(0,0,0,0.1), 0 32px 64px 0 rgba(0,0,0,0.1)
     .modalHeader
+      position: relative
       min-height: 56px
       h1,h2,h3,h4,h5,h6
         padding: 12px 12px 6px 12px
@@ -79,6 +80,7 @@ div.modal.modalInactive,div.modal.modalActive
         width: 100%
         height: auto
     .modalFooter
+      position: relative
       min-height: 56px
       padding: 6px 14px
       .buttonFlat,.buttonRaised
@@ -86,6 +88,13 @@ div.modal.modalInactive,div.modal.modalActive
         height: 28px
         padding: 0 6px
         margin: 8px 0 0 6px
+      .buttonAction
+        position: absolute
+        bottom: -28px
+        right: 28px
+        box-shadow: 0 16px 32px 0 rgba(0,0,0,0.1), 0 32px 64px 0 rgba(0,0,0,0.1), 0 64px 128px 0 rgba(0,0,0,0.1)
+        &:hover
+          box-shadow: 0 32px 64px 0 rgba(0,0,0,0.2), 0 64px 128px 0 rgba(0,0,0,0.2), 0 128px 256px 0 rgba(0,0,0,0.2)
     .modalFooter.modalLight
       background-color: $white
     .modalFooter.modalDark
@@ -98,9 +107,13 @@ div.modal.modalInactive,div.modal.modalActive
   .modalContent.modalLight
     background-color: $white
     color: $primary
+    p
+      color: $primary
   .modalContent.modalDark
     background-color: $primary
     color: $white
+    p
+      color: $white
 
 @media only screen and (max-width: 768px)
   div.modal.modalActive,div.modal.modalInactive
