@@ -21,6 +21,15 @@ p {
   color: #212121;
   font-family: "Roboto", sans-serif; }
 
+/* TYPOGRAPHY STYLES */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 12px; }
+
+p {
+  margin: 0;
+  padding: 12px; }
+
 /* NAV STYLES */
 nav.navbarLight {
   background-color: #FFFFFF; }
@@ -401,7 +410,7 @@ nav.navbar {
   .drawer .drawerContent.drawerDark .drawerNav li:active {
     background-color: rgba(255, 255, 255, 0.05); } }
 @media only screen and (max-width: 480px) {
-  .drawer.drawerContent {
+  .drawer .drawerContent {
     width: 80vw; } }
 /*HERO */
 .hero {
@@ -870,104 +879,127 @@ fieldset {
   width: 100%; }
 
 /*MODAL STYLES */
-.modal {
-  z-index: 12;
+div.modal {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  display: none; }
+  display: none;
+  z-index: 20; }
 
-.modalActive {
-  width: 100%;
-  height: 100%;
+div.modal.modalActive {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: modalAnimateOpen 0.3s forwards;
   -webkit-animation: modalAnimateOpen 0.3s forwards;
-  -moz-animation: modalAnimateOpen 0.3s forwards; }
-  .modalActive .modalContentLight {
-    background-color: white;
-    color: #2F343F; }
-  .modalActive .modalContentDark {
-    background-color: #2F343F;
-    color: white; }
-  .modalActive .modalContentLight, .modalActive .modalContentDark {
-    animation: modalContentAnimateOpen 0.3s forwards;
+  -moz-animation: modalAnimateOpen 0.3s forwards;
+  animation: modalAnimateOpen 0.3s forwards; }
+  div.modal.modalActive .modalContent {
     -webkit-animation: modalContentAnimateOpen 0.3s forwards;
     -moz-animation: modalContentAnimateOpen 0.3s forwards;
-    width: 480px;
-    height: 480px;
-    display: block;
-    position: relative;
-    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
-    overflow: hidden; }
-    .modalActive .modalContentLight .modalImage, .modalActive .modalContentDark .modalImage {
+    animation: modalContentAnimateOpen 0.3s forwards; }
+
+div.modal.modalInactive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: modalAnimateClose 0.3s forwards;
+  -moz-animation: modalAnimateClose 0.3s forwards;
+  animation: modalAnimateClose 0.3s forwards; }
+  div.modal.modalInactive .modalContent {
+    -webkit-animation: modalContentAnimateClose 0.3s forwards;
+    -moz-animation: modalContentAnimateClose 0.3s forwards;
+    animation: modalContentAnimateClose 0.3s forwards; }
+
+div.modal.modalInactive .modalContent, div.modal.modalActive .modalContent {
+  min-width: 768px;
+  min-height: 768px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 2px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 16px 32px 0 rgba(0, 0, 0, 0.1), 0 32px 64px 0 rgba(0, 0, 0, 0.1); }
+  div.modal.modalInactive .modalContent .modalHeader, div.modal.modalActive .modalContent .modalHeader {
+    min-height: 56px; }
+    div.modal.modalInactive .modalContent .modalHeader h1, div.modal.modalInactive .modalContent .modalHeader h2, div.modal.modalInactive .modalContent .modalHeader h3, div.modal.modalInactive .modalContent .modalHeader h4, div.modal.modalInactive .modalContent .modalHeader h5, div.modal.modalInactive .modalContent .modalHeader h6, div.modal.modalActive .modalContent .modalHeader h1, div.modal.modalActive .modalContent .modalHeader h2, div.modal.modalActive .modalContent .modalHeader h3, div.modal.modalActive .modalContent .modalHeader h4, div.modal.modalActive .modalContent .modalHeader h5, div.modal.modalActive .modalContent .modalHeader h6 {
+      padding: 12px 12px 6px 12px; }
+    div.modal.modalInactive .modalContent .modalHeader h1, div.modal.modalActive .modalContent .modalHeader h1 {
+      font-size: 1.8em; }
+    div.modal.modalInactive .modalContent .modalHeader h2, div.modal.modalActive .modalContent .modalHeader h2 {
+      font-size: 1.7em; }
+    div.modal.modalInactive .modalContent .modalHeader h3, div.modal.modalActive .modalContent .modalHeader h3 {
+      font-size: 1.6em; }
+    div.modal.modalInactive .modalContent .modalHeader h4, div.modal.modalActive .modalContent .modalHeader h4 {
+      font-size: 1.5em; }
+    div.modal.modalInactive .modalContent .modalHeader h5, div.modal.modalActive .modalContent .modalHeader h5 {
+      font-size: 1.4em; }
+    div.modal.modalInactive .modalContent .modalHeader h6, div.modal.modalActive .modalContent .modalHeader h6 {
+      font-size: 1.3em; }
+    div.modal.modalInactive .modalContent .modalHeader p, div.modal.modalActive .modalContent .modalHeader p {
+      font-size: 1.2em;
+      padding: 6px 12px 12px 12px; }
+  div.modal.modalInactive .modalContent .modalHeader.modalLight, div.modal.modalActive .modalContent .modalHeader.modalLight {
+    background-color: #FFFFFF; }
+    div.modal.modalInactive .modalContent .modalHeader.modalLight h1, div.modal.modalInactive .modalContent .modalHeader.modalLight h2, div.modal.modalInactive .modalContent .modalHeader.modalLight h3, div.modal.modalInactive .modalContent .modalHeader.modalLight h4, div.modal.modalInactive .modalContent .modalHeader.modalLight h5, div.modal.modalInactive .modalContent .modalHeader.modalLight h6, div.modal.modalActive .modalContent .modalHeader.modalLight h1, div.modal.modalActive .modalContent .modalHeader.modalLight h2, div.modal.modalActive .modalContent .modalHeader.modalLight h3, div.modal.modalActive .modalContent .modalHeader.modalLight h4, div.modal.modalActive .modalContent .modalHeader.modalLight h5, div.modal.modalActive .modalContent .modalHeader.modalLight h6 {
+      color: #2F343F; }
+    div.modal.modalInactive .modalContent .modalHeader.modalLight p, div.modal.modalActive .modalContent .modalHeader.modalLight p {
+      color: #B0B9C6; }
+  div.modal.modalInactive .modalContent .modalHeader.modalDark, div.modal.modalActive .modalContent .modalHeader.modalDark {
+    background-color: #2F343F; }
+    div.modal.modalInactive .modalContent .modalHeader.modalDark h1, div.modal.modalInactive .modalContent .modalHeader.modalDark h2, div.modal.modalInactive .modalContent .modalHeader.modalDark h3, div.modal.modalInactive .modalContent .modalHeader.modalDark h4, div.modal.modalInactive .modalContent .modalHeader.modalDark h5, div.modal.modalInactive .modalContent .modalHeader.modalDark h6, div.modal.modalActive .modalContent .modalHeader.modalDark h1, div.modal.modalActive .modalContent .modalHeader.modalDark h2, div.modal.modalActive .modalContent .modalHeader.modalDark h3, div.modal.modalActive .modalContent .modalHeader.modalDark h4, div.modal.modalActive .modalContent .modalHeader.modalDark h5, div.modal.modalActive .modalContent .modalHeader.modalDark h6 {
+      color: #FFFFFF; }
+    div.modal.modalInactive .modalContent .modalHeader.modalDark p, div.modal.modalActive .modalContent .modalHeader.modalDark p {
+      color: #B0B9C6; }
+  div.modal.modalInactive .modalContent .modalImage, div.modal.modalActive .modalContent .modalImage {
+    width: 100%;
+    height: auto; }
+    div.modal.modalInactive .modalContent .modalImage img, div.modal.modalActive .modalContent .modalImage img {
       width: 100%;
       height: auto; }
-    .modalActive .modalContentLight .modalHeaderLight, .modalActive .modalContentDark .modalHeaderLight {
-      background-color: white; }
-      .modalActive .modalContentLight .modalHeaderLight h1, .modalActive .modalContentLight .modalHeaderLight h2, .modalActive .modalContentLight .modalHeaderLight h3, .modalActive .modalContentLight .modalHeaderLight h4, .modalActive .modalContentLight .modalHeaderLight h5, .modalActive .modalContentLight .modalHeaderLight h6, .modalActive .modalContentDark .modalHeaderLight h1, .modalActive .modalContentDark .modalHeaderLight h2, .modalActive .modalContentDark .modalHeaderLight h3, .modalActive .modalContentDark .modalHeaderLight h4, .modalActive .modalContentDark .modalHeaderLight h5, .modalActive .modalContentDark .modalHeaderLight h6 {
-        color: #2F343F; }
-    .modalActive .modalContentLight .modalHeaderDark, .modalActive .modalContentDark .modalHeaderDark {
-      background-color: #2F343F; }
-      .modalActive .modalContentLight .modalHeaderDark h1, .modalActive .modalContentLight .modalHeaderDark h2, .modalActive .modalContentLight .modalHeaderDark h3, .modalActive .modalContentLight .modalHeaderDark h4, .modalActive .modalContentLight .modalHeaderDark h5, .modalActive .modalContentLight .modalHeaderDark h6, .modalActive .modalContentDark .modalHeaderDark h1, .modalActive .modalContentDark .modalHeaderDark h2, .modalActive .modalContentDark .modalHeaderDark h3, .modalActive .modalContentDark .modalHeaderDark h4, .modalActive .modalContentDark .modalHeaderDark h5, .modalActive .modalContentDark .modalHeaderDark h6 {
-        color: white; }
-    .modalActive .modalContentLight .modalHeaderLight, .modalActive .modalContentLight .modalHeaderDark, .modalActive .modalContentDark .modalHeaderLight, .modalActive .modalContentDark .modalHeaderDark {
-      position: relative;
-      min-height: 56px;
-      border-radius: 2px 2px 0 0; }
-      .modalActive .modalContentLight .modalHeaderLight h1, .modalActive .modalContentLight .modalHeaderLight h2, .modalActive .modalContentLight .modalHeaderLight h3, .modalActive .modalContentLight .modalHeaderLight h4, .modalActive .modalContentLight .modalHeaderLight h5, .modalActive .modalContentLight .modalHeaderLight h6, .modalActive .modalContentLight .modalHeaderDark h1, .modalActive .modalContentLight .modalHeaderDark h2, .modalActive .modalContentLight .modalHeaderDark h3, .modalActive .modalContentLight .modalHeaderDark h4, .modalActive .modalContentLight .modalHeaderDark h5, .modalActive .modalContentLight .modalHeaderDark h6, .modalActive .modalContentDark .modalHeaderLight h1, .modalActive .modalContentDark .modalHeaderLight h2, .modalActive .modalContentDark .modalHeaderLight h3, .modalActive .modalContentDark .modalHeaderLight h4, .modalActive .modalContentDark .modalHeaderLight h5, .modalActive .modalContentDark .modalHeaderLight h6, .modalActive .modalContentDark .modalHeaderDark h1, .modalActive .modalContentDark .modalHeaderDark h2, .modalActive .modalContentDark .modalHeaderDark h3, .modalActive .modalContentDark .modalHeaderDark h4, .modalActive .modalContentDark .modalHeaderDark h5, .modalActive .modalContentDark .modalHeaderDark h6 {
-        margin: 0;
-        padding: 12px 0 6px 12px; }
-      .modalActive .modalContentLight .modalHeaderLight p, .modalActive .modalContentLight .modalHeaderDark p, .modalActive .modalContentDark .modalHeaderLight p, .modalActive .modalContentDark .modalHeaderDark p {
-        color: #B0B9C6;
-        margin: 0;
-        padding: 6px 0 12px 12px; }
-      .modalActive .modalContentLight .modalHeaderLight .dropdownSmallLight, .modalActive .modalContentLight .modalHeaderLight .dropdownSmallDark, .modalActive .modalContentLight .modalHeaderDark .dropdownSmallLight, .modalActive .modalContentLight .modalHeaderDark .dropdownSmallDark, .modalActive .modalContentDark .modalHeaderLight .dropdownSmallLight, .modalActive .modalContentDark .modalHeaderLight .dropdownSmallDark, .modalActive .modalContentDark .modalHeaderDark .dropdownSmallLight, .modalActive .modalContentDark .modalHeaderDark .dropdownSmallDark {
-        position: absolute;
-        right: 0;
-        top: 0; }
-        .modalActive .modalContentLight .modalHeaderLight .dropdownSmallLight .dropdownContent, .modalActive .modalContentLight .modalHeaderLight .dropdownSmallDark .dropdownContent, .modalActive .modalContentLight .modalHeaderDark .dropdownSmallLight .dropdownContent, .modalActive .modalContentLight .modalHeaderDark .dropdownSmallDark .dropdownContent, .modalActive .modalContentDark .modalHeaderLight .dropdownSmallLight .dropdownContent, .modalActive .modalContentDark .modalHeaderLight .dropdownSmallDark .dropdownContent, .modalActive .modalContentDark .modalHeaderDark .dropdownSmallLight .dropdownContent, .modalActive .modalContentDark .modalHeaderDark .dropdownSmallDark .dropdownContent {
-          right: 0;
-          left: auto; }
-    .modalActive .modalContentLight .modalFooterLight, .modalActive .modalContentDark .modalFooterLight {
-      background-color: white;
-      color: #2F343F; }
-    .modalActive .modalContentLight .modalFooterDark, .modalActive .modalContentDark .modalFooterDark {
-      background-color: #2F343F;
-      color: white; }
-      .modalActive .modalContentLight .modalFooterDark .buttonFlat:hover, .modalActive .modalContentDark .modalFooterDark .buttonFlat:hover {
-        background-color: rgba(255, 255, 255, 0.1); }
-      .modalActive .modalContentLight .modalFooterDark .buttonFlat:active, .modalActive .modalContentDark .modalFooterDark .buttonFlat:active {
-        background-color: rgba(255, 255, 255, 0.2); }
-    .modalActive .modalContentLight .modalFooterLight, .modalActive .modalContentLight .modalFooterDark, .modalActive .modalContentDark .modalFooterLight, .modalActive .modalContentDark .modalFooterDark {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      min-height: 56px;
-      padding: 10px;
-      border-radius: 0 0 2px 2px; }
-      .modalActive .modalContentLight .modalFooterLight .buttonFlat, .modalActive .modalContentLight .modalFooterLight .buttonRaised, .modalActive .modalContentLight .modalFooterDark .buttonFlat, .modalActive .modalContentLight .modalFooterDark .buttonRaised, .modalActive .modalContentDark .modalFooterLight .buttonFlat, .modalActive .modalContentDark .modalFooterLight .buttonRaised, .modalActive .modalContentDark .modalFooterDark .buttonFlat, .modalActive .modalContentDark .modalFooterDark .buttonRaised {
-        float: right;
-        height: 38px;
-        padding: 0 6px;
-        margin: 0 0 0 6px;
-        top: 0;
-        font-size: 1.2em; }
+  div.modal.modalInactive .modalContent .modalFooter, div.modal.modalActive .modalContent .modalFooter {
+    min-height: 56px;
+    padding: 6px 14px; }
+    div.modal.modalInactive .modalContent .modalFooter .buttonFlat, div.modal.modalInactive .modalContent .modalFooter .buttonRaised, div.modal.modalActive .modalContent .modalFooter .buttonFlat, div.modal.modalActive .modalContent .modalFooter .buttonRaised {
+      float: right;
+      height: 28px;
+      padding: 0 6px;
+      margin: 8px 0 0 6px; }
+  div.modal.modalInactive .modalContent .modalFooter.modalLight, div.modal.modalActive .modalContent .modalFooter.modalLight {
+    background-color: #FFFFFF; }
+  div.modal.modalInactive .modalContent .modalFooter.modalDark, div.modal.modalActive .modalContent .modalFooter.modalDark {
+    background-color: #2F343F; }
+    div.modal.modalInactive .modalContent .modalFooter.modalDark .buttonFlat:hover, div.modal.modalActive .modalContent .modalFooter.modalDark .buttonFlat:hover {
+      background-color: rgba(255, 255, 255, 0.05); }
+    div.modal.modalInactive .modalContent .modalFooter.modalDark .buttonFlat:active, div.modal.modalActive .modalContent .modalFooter.modalDark .buttonFlat:active {
+      background-color: rgba(255, 255, 255, 0.1); }
+div.modal.modalInactive .modalContent.modalLight, div.modal.modalActive .modalContent.modalLight {
+  background-color: #FFFFFF;
+  color: #2F343F; }
+div.modal.modalInactive .modalContent.modalDark, div.modal.modalActive .modalContent.modalDark {
+  background-color: #2F343F;
+  color: #FFFFFF; }
 
+@media only screen and (max-width: 768px) {
+  div.modal.modalActive .modalContent, div.modal.modalInactive .modalContent {
+    width: 480px;
+    min-width: 0;
+    min-height: 480px; }
+    div.modal.modalActive .modalContent .modalFooter.modalDark .buttonFlat:hover, div.modal.modalInactive .modalContent .modalFooter.modalDark .buttonFlat:hover {
+      background-color: transparent; }
+    div.modal.modalActive .modalContent .modalFooter.modalDark .buttonFlat:active, div.modal.modalInactive .modalContent .modalFooter.modalDark .buttonFlat:active {
+      background-color: rgba(255, 255, 255, 0.05); } }
 @media only screen and (max-width: 480px) {
-  .modalActive .modalContentLight, .modalActive .modalContentDark {
+  div.modal.modalActive .modalContent, div.modal.modalInactive .modalContent {
     width: 320px;
+    min-width: 0;
     min-height: 320px; } }
 @media only screen and (max-width: 320px) {
-  .modalActive .modalContentLight, .modalActive .modalContentDark {
+  div.modal.modalActive .modalContent, div.modal.modalInactive .modalContent {
     width: 100%;
-    min-height: 50%; } }
+    height: auto; } }
 @keyframes modalAnimateOpen {
   0% {
     background-color: transparent; }
@@ -975,9 +1007,27 @@ fieldset {
     background-color: rgba(0, 0, 0, 0.4); } }
 @keyframes modalContentAnimateOpen {
   0% {
-    transform: scale(0); }
+    transform: translateY(28px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+    opacity: 0; }
   100% {
-    transform: scale(1); } }
+    transform: translateY(0);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 16px 32px 0 rgba(0, 0, 0, 0.1), 0 32px 64px 0 rgba(0, 0, 0, 0.1);
+    opacity: 1; } }
+@keyframes modalAnimateClose {
+  0% {
+    background-color: rgba(0, 0, 0, 0.4); }
+  100% {
+    background-color: transparent; } }
+@keyframes modalContentAnimateClose {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 16px 32px 0 rgba(0, 0, 0, 0.1), 0 32px 64px 0 rgba(0, 0, 0, 0.1);
+    opacity: 1; }
+  100% {
+    transform: translateY(28px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+    opacity: 0; } }
 /*BUTTONS */
 button::-moz-focus-inner {
   border: 0; }

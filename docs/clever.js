@@ -26,14 +26,22 @@ $(document).ready(function() {
   $(".buttonModalOpen[data-target]").click(function() {
     //alert($(this).data("target"));
     var modalTargetOpen = $(this).data("target");
-    $(modalTargetOpen).addClass("modalActive");
+    $(modalTargetOpen).show();
+    if ($(modalTargetOpen).hasClass("modalInactive")) {
+        $(modalTargetOpen).removeClass("modalInactive").addClass("modalActive");
+    } else {
+        $(modalTargetOpen).addClass("modalActive")
+    }
   });
   $(".buttonModalClose[data-target]").click(function() {
     var modalTargetClose = $(this).data("target");
-    $(modalTargetClose).removeClass("modalActive");
+    $(modalTargetClose).removeClass("modalActive").addClass("modalInactive");
+    setTimeout(function() {
+      $(modalTargetClose).hide();
+    }, 300);
   });
   // FLOATING ACTION BUTTON MENU
-  $(".fabMenuContainer .fabMenuButton").click(function(e) {
+  $(".fabMenuContainer .fabMenuButton").click(function() {
     if ($(".fabMenuContainer .fabMenuButton").hasClass("fabMenuButtonActive")) {
         $(".fabMenuContainer .fabMenuButton").removeClass("fabMenuButtonActive");
         $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListActive").addClass("fabMenuListInactive");
@@ -41,6 +49,5 @@ $(document).ready(function() {
       $(".fabMenuContainer .fabMenuButton").addClass("fabMenuButtonActive");
       $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListInactive").addClass("fabMenuListActive");
     }
-    e.stopPropagation()
   });
 });

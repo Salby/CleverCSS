@@ -1,105 +1,130 @@
 /*MODAL STYLES
 
-.modal
-  z-index: 12
+div.modal
   position: fixed
+  top: 0
+  left: 0
   width: 100%
   height: 100%
   background-color: rgba(0,0,0,0.4)
   display: none
-.modalActive
-  width: 100%
-  height: 100%
+  z-index: 20
+div.modal.modalActive
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  animation: modalAnimateOpen 0.3s forwards
   -webkit-animation: modalAnimateOpen 0.3s forwards
   -moz-animation: modalAnimateOpen 0.3s forwards
-  .modalContentLight
-    background-color: white
-    color: $primary
-  .modalContentDark
-    background-color: $primary
-    color: white
-  .modalContentLight, .modalContentDark
-    animation: modalContentAnimateOpen 0.3s forwards
+  animation: modalAnimateOpen 0.3s forwards
+  .modalContent
     -webkit-animation: modalContentAnimateOpen 0.3s forwards
     -moz-animation: modalContentAnimateOpen 0.3s forwards
-    width: 480px
-    height: 480px
-    display: block
-    position: relative
-    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
+    animation: modalContentAnimateOpen 0.3s forwards
+div.modal.modalInactive
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  -webkit-animation: modalAnimateClose 0.3s forwards
+  -moz-animation: modalAnimateClose 0.3s forwards
+  animation: modalAnimateClose 0.3s forwards
+  .modalContent
+    -webkit-animation: modalContentAnimateClose 0.3s forwards
+    -moz-animation: modalContentAnimateClose 0.3s forwards
+    animation: modalContentAnimateClose 0.3s forwards
+div.modal.modalInactive,div.modal.modalActive
+  .modalContent
+    min-width: 768px
+    min-height: 768px
+    max-width: 100%
+    max-height: 100%
     border-radius: 2px
-    overflow: hidden
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1), 0 16px 32px 0 rgba(0,0,0,0.1), 0 32px 64px 0 rgba(0,0,0,0.1)
+    .modalHeader
+      min-height: 56px
+      h1,h2,h3,h4,h5,h6
+        padding: 12px 12px 6px 12px
+      h1
+        font-size: 1.8em
+      h2
+        font-size: 1.7em
+      h3
+        font-size: 1.6em
+      h4
+        font-size: 1.5em
+      h5
+        font-size: 1.4em
+      h6
+        font-size: 1.3em
+      p
+        font-size: 1.2em
+        padding: 6px 12px 12px 12px
+    .modalHeader.modalLight
+      background-color: $white
+      h1,h2,h3,h4,h5,h6
+        color: $primary
+      p
+        color: $primaryLight
+    .modalHeader.modalDark
+      background-color: $primary
+      h1,h2,h3,h4,h5,h6
+        color: $white
+      p
+        color: $primaryLight
     .modalImage
       width: 100%
       height: auto
-    .modalHeaderLight
-      background-color: white
-      h1,h2,h3,h4,h5,h6
-        color: $primary
-    .modalHeaderDark
-      background-color: $primary
-      h1,h2,h3,h4,h5,h6
-        color: white
-    .modalHeaderLight, .modalHeaderDark
-      position: relative
+      img
+        width: 100%
+        height: auto
+    .modalFooter
       min-height: 56px
-      border-radius: 2px 2px 0 0
-      h1,h2,h3,h4,h5,h6
-        margin: 0
-        padding: 12px 0 6px 12px
-      p
-        color: $primaryLight
-        margin: 0
-        padding: 6px 0 12px 12px
-      .dropdownSmallLight,.dropdownSmallDark
-        position: absolute
-        right: 0
-        top: 0
-        .dropdownContent
-          right: 0
-          left: auto
-    .modalFooterLight
-      background-color: white
-      color: $primary
-    .modalFooterDark
-      background-color: $primary
-      color: white
-      .buttonFlat
-        &:hover
-          background-color: rgba(255,255,255,0.1)
-        &:active
-          background-color: rgba(255,255,255,0.2)
-    .modalFooterLight,.modalFooterDark
-      position: absolute
-      bottom: 0
-      left: 0
-      width: 100%
-      min-height: 56px
-      padding: 10px
-      border-radius: 0 0 2px 2px
+      padding: 6px 14px
       .buttonFlat,.buttonRaised
         float: right
-        height: 38px
+        height: 28px
         padding: 0 6px
-        margin: 0 0 0 6px
-        top: 0
-        font-size: 1.2em
+        margin: 8px 0 0 6px
+    .modalFooter.modalLight
+      background-color: $white
+    .modalFooter.modalDark
+      background-color: $primary
+      .buttonFlat
+        &:hover
+          background-color: $transparentLight
+        &:active
+          background-color: $transparentLighter
+  .modalContent.modalLight
+    background-color: $white
+    color: $primary
+  .modalContent.modalDark
+    background-color: $primary
+    color: $white
 
+@media only screen and (max-width: 768px)
+  div.modal.modalActive,div.modal.modalInactive
+    .modalContent
+      width: 480px
+      min-width: 0
+      min-height: 480px
+      .modalFooter.modalDark
+        .buttonFlat
+          &:hover
+            background-color: $transparent
+          &:active
+            background-color: $transparentLight
 @media only screen and (max-width: 480px)
-  .modalActive
-    .modalContentLight,.modalContentDark
+  div.modal.modalActive,div.modal.modalInactive
+    .modalContent
       width: 320px
+      min-width: 0
       min-height: 320px
 @media only screen and (max-width: 320px)
-  .modalActive
-    .modalContentLight,.modalContentDark
+  div.modal.modalActive,div.modal.modalInactive
+    .modalContent
       width: 100%
-      min-height: 50%
+      height: auto
 
 @keyframes modalAnimateOpen
   0%
@@ -108,6 +133,24 @@
     background-color: rgba(0,0,0,0.4)
 @keyframes modalContentAnimateOpen
   0%
-    transform: scale(0)
+    transform: translateY(28px)
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.1), 0 8px 16px 0 rgba(0,0,0,0.1)
+    opacity: 0
   100%
-    transform: scale(1)
+    transform: translateY(0)
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1), 0 16px 32px 0 rgba(0,0,0,0.1), 0 32px 64px 0 rgba(0,0,0,0.1)
+    opacity: 1
+@keyframes modalAnimateClose
+  0%
+    background-color: rgba(0,0,0,0.4)
+  100%
+    background-color: rgba(0,0,0,0)
+@keyframes modalContentAnimateClose
+  0%
+    transform: translateY(0)
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1), 0 16px 32px 0 rgba(0,0,0,0.1), 0 32px 64px 0 rgba(0,0,0,0.1)
+    opacity: 1
+  100%
+    transform: translateY(28px)
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.1), 0 8px 16px 0 rgba(0,0,0,0.1)
+    opacity: 0
