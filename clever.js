@@ -26,21 +26,30 @@ $(document).ready(function() {
   $(".buttonModalOpen[data-target]").click(function() {
     //alert($(this).data("target"));
     var modalTargetOpen = $(this).data("target");
-    $(modalTargetOpen).addClass("modalActive");
+    $(modalTargetOpen).css("display", "flex");
+    if ($(modalTargetOpen).hasClass("modalInactive")) {
+        $(modalTargetOpen).removeClass("modalInactive").addClass("modalActive");
+    } else {
+        $(modalTargetOpen).addClass("modalActive")
+    }
+    $("body").css("overflow-y", "hidden");
   });
   $(".buttonModalClose[data-target]").click(function() {
     var modalTargetClose = $(this).data("target");
-    $(modalTargetClose).removeClass("modalActive");
+    $(modalTargetClose).removeClass("modalActive").addClass("modalInactive");
+    setTimeout(function() {
+      $(modalTargetClose).css("display", "none");
+    }, 300);
+    $("body").css("overflow-y", "visible");
   });
   // FLOATING ACTION BUTTON MENU
-  $(".fabMenuContainer .fabMenuButton").click(function(e) {
-    if ($(".fabMenuContainer .fabMenuButton").hasClass("fabMenuButtonActive")) {
-        $(".fabMenuContainer .fabMenuButton").removeClass("fabMenuButtonActive");
+  $(".fabMenuContainer .fabMenuButton").click(function() {
+    if ($(this).hasClass("fabMenuButtonActive")) {
+        $(this).removeClass("fabMenuButtonActive");
         $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListActive").addClass("fabMenuListInactive");
     } else {
-      $(".fabMenuContainer .fabMenuButton").addClass("fabMenuButtonActive");
-      $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListInactive").addClass("fabMenuListActive");
+        $(this).addClass("fabMenuButtonActive");
+        $(".fabMenuContainer .fabMenuList").removeClass("fabMenuListInactive").addClass("fabMenuListActive");
     }
-    e.stopPropagation()
   });
 });
