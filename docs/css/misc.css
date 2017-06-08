@@ -97,7 +97,8 @@
     position: absolute;
     top: 30%;
     right: 25%;
-    animation: cardAnimate 3s infinite; }
+    animation: cardAnimate 3s infinite;
+    box-shadow: none; }
 
 @keyframes canvasAnimate {
   0% {

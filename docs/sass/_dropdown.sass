@@ -1,0 +1,50 @@
+/* DROPDOWN STYLES
+
+div.dropdown
+  position: relative
+  .button-dropdown
+    position: relative
+    background-color: $transparent
+    transition: $fade-in-out
+  .button-dropdown.dropdown-small
+    width: 56px
+    height: 56px
+    border-radius: 100%
+    border: none
+    i
+      position: absolute
+      top: calc(50% - 12px)
+      left: calc(50% - 12px)
+  .button-dropdown.dropdown-large
+    width: 100%
+    height: 56px
+  .button-dropdown.dropdown-left
+    float: left
+  .button-dropdown.dropdown-right
+    float: right
+  .button-dropdown.dropdown-small.dropdown-light
+    border: 10px solid $white
+    i
+      color: $primaryLight
+    &:active
+      background-color: $transparentDarker
+  .button-dropdown.dropdown-small.dropdown-dark
+    border: 10px solid $primary
+    i
+      color: $primaryLight
+    &:active
+      background-color: $transparentLighter
+
+div.dropdown.dropdown-left
+  float: left
+
+div.dropdown.dropdown-right
+  float: right
+
+@media only screen and (max-width: 480px)
+
+@media only screen and (min-width: 481px)
+
+@media only screen and (min-width: 769px)
+
+@media only screen and (min-width: 1201px)

@@ -1,0 +1,101 @@
+/* ARTICLES & CARDS
+
+.card
+  position: relative
+  box-shadow: $depth-1
+  .card-header
+    min-height: 56px
+    h1
+      font-size: 2em
+    h2
+      font-size: 1.8em
+    h3
+      font-size: 1.6em
+    h4
+      font-size: 1.4em
+    h5
+      font-size: 1.2em
+    h6
+      font-size: 1em
+    h1,h2,h3,h4,h5,h6
+      padding: 12px 0 6px 12px
+    p
+      padding: 6px 0 12px 12px
+      font-size: 1em
+      color: $primaryLight
+  p
+    font-size: 1em
+    padding: 12px
+  .card-footer
+    padding: 0 4px
+    width: 100%
+    min-height: 56px
+
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+    .buttonFlat,.buttonRaised
+      padding: 6px 6px 6px 6px
+  .card-header.card-light
+    background-color: $white
+    h1,h2,h3,h4,h5,h6
+      color: $primary
+  .card-header.card-dark
+    background-color: $primary
+    h1,h2,h3,h4,h5,h6
+      color: $white
+  .card-footer.card-light
+    background-color: $white
+  .card-footer.card-dark
+    background-color: $primary
+    .buttonFlat
+      color: $accentA700
+      &:active
+        background-color: $transparentLighter
+.card.card-light
+  background-color: $white
+  p
+    color: $primary
+.card.card-dark
+  background-color: $primary
+  p
+    color: $white
+
+@media only screen and (max-width: 480px)
+
+@media only screen and (min-width: 481px)
+  .card
+    .card-footer.card-dark
+      .buttonFlat
+        &:hover
+          background-color: $transparentLight
+        &:active
+          background-color: $transparentLighter
+
+@media only screen and (min-width: 769px)
+
+@media only screen and (min-width: 961px)
+
+@media only screen and (min-width: 1201px)
+
+.card.card-hover-1
+  transition: $fade-in-out
+  &:hover
+    box-shadow: $depth-1
+.card.card-hover-2
+  transition: $fade-in-out
+  &:hover
+    box-shadow: $depth-2
+.card.card-hover-3
+  transition: $fade-in-out
+  &:hover
+    box-shadow: $depth-3
+.card.card-hover-4
+  transition: $fade-in-out
+  &:hover
+    box-shadow: $depth-4
+.card.card-hover-5
+  transition: $fade-in-out
+  &:hover
+    box-shadow: $depth-5

@@ -55,13 +55,14 @@ nav.navbar-short
 nav.navbar
   z-index: 10
   position: relative
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)
+  box-shadow: $depth-2
   .navbar-nav
     margin: 0
     padding: 0
     list-style: none
     position: relative
     li
+      transition: $fade-in-out
       transition: all 0.2s
       float: left
       cursor: pointer
