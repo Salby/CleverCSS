@@ -1,5 +1,44 @@
 /* ARTICLES & CARDS
 
+.card.depth-1
+  box-shadow: $depth-1
+  .card-footer
+    .button-action
+      box-shadow: $depth-2
+      &:active
+        box-shadow: $depth-3
+.card.depth-2
+  box-shadow: $depth-2
+  .card-footer
+    .button-action
+      box-shadow: $depth-3
+      &:active
+        box-shadow: $depth-4
+.card.depth-3
+  box-shadow: $depth-3
+  .card-footer
+    .button-action
+      box-shadow: $depth-4
+      &:active
+        box-shadow: $depth-5
+
+@media only screen and (min-width: 481px)
+  .card.depth-1
+    .card-footer
+      .button-action
+        &:hover
+          box-shadow: $depth-3
+  .card.depth-2
+    .card-footer
+      .button-action
+        &:hover
+          box-shadow: $depth-4
+  .card.depth-3
+    .card-footer
+      .button-action
+        &:hover
+          box-shadow: $depth-5
+
 .card
   position: relative
   box-shadow: $depth-1
@@ -27,6 +66,7 @@
     font-size: 1em
     padding: 12px
   .card-footer
+    position: relative
     padding: 0 4px
     width: 100%
     min-height: 56px
@@ -37,6 +77,10 @@
 
     .button-flat,.button-raised
       padding: 6px 6px 6px 6px
+    .button-action
+      position: absolute
+      bottom: -28px
+      right: 28px
   .card-header.card-light
     background-color: $white
     h1,h2,h3,h4,h5,h6
