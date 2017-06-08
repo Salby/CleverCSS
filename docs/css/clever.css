@@ -110,6 +110,7 @@ nav.navbar {
   nav.navbar .navbar-nav.navbar-right {
     float: right; }
   nav.navbar #drawer-open {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     cursor: pointer;
     position: relative;
     width: 60px;
@@ -199,7 +200,8 @@ nav.navbar {
         width: 60px;
         height: 60px;
         border-radius: 60px;
-        background-color: transparent; }
+        background-color: transparent;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
         .drawer .drawer-content .drawer-header #drawer-close i {
           position: absolute;
           top: calc(50% - 12px);
