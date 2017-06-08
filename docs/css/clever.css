@@ -31,57 +31,57 @@ p {
   padding: 12px; }
 
 /* NAV STYLES */
-nav.navbarLight {
+nav.navbar-light {
   background-color: #FFFFFF; }
-  nav.navbarLight .navbarNav li {
+  nav.navbar-light .navbar-nav li {
     color: #2F343F; }
-    nav.navbarLight .navbarNav li:hover {
+    nav.navbar-light .navbar-nav li:hover {
       border-bottom: 2px solid #2F343F; }
-    nav.navbarLight .navbarNav li:active {
+    nav.navbar-light .navbar-nav li:active {
       background-color: rgba(0, 0, 0, 0.05); }
-    nav.navbarLight .navbarNav li a {
+    nav.navbar-light .navbar-nav li a {
       color: #2F343F; }
-  nav.navbarLight #drawerOpen {
+  nav.navbar-light #drawer-open {
     border: 10px solid #FFFFFF; }
-    nav.navbarLight #drawerOpen:hover {
+    nav.navbar-light #drawer-open:hover {
       background-color: rgba(0, 0, 0, 0.05); }
-    nav.navbarLight #drawerOpen:active {
+    nav.navbar-light #drawer-open:active {
       background-color: rgba(0, 0, 0, 0.1); }
-    nav.navbarLight #drawerOpen i {
+    nav.navbar-light #drawer-open i {
       color: #2F343F; }
 
-nav.navbarDark {
+nav.navbar-dark {
   background-color: #2F343F; }
-  nav.navbarDark .navbarNav li {
+  nav.navbar-dark .navbar-nav li {
     color: #FFFFFF; }
-    nav.navbarDark .navbarNav li:hover {
+    nav.navbar-dark .navbar-nav li:hover {
       border-bottom: 2px solid #FFFFFF; }
-    nav.navbarDark .navbarNav li:active {
+    nav.navbar-dark .navbar-nav li:active {
       background-color: rgba(255, 255, 255, 0.05); }
-    nav.navbarDark .navbarNav li a {
+    nav.navbar-dark .navbar-nav li a {
       color: #FFFFFF; }
-  nav.navbarDark #drawerOpen {
+  nav.navbar-dark #drawer-open {
     border: 10px solid #2F343F; }
-    nav.navbarDark #drawerOpen:hover {
+    nav.navbar-dark #drawer-open:hover {
       background-color: rgba(255, 255, 255, 0.05); }
-    nav.navbarDark #drawerOpen:active {
+    nav.navbar-dark #drawer-open:active {
       background-color: rgba(255, 255, 255, 0.1); }
-    nav.navbarDark #drawerOpen i {
+    nav.navbar-dark #drawer-open i {
       color: #FFFFFF; }
 
-nav.navbarTall {
+nav.navbar-tall {
   width: 100%;
   height: 120px; }
-  nav.navbarTall .navbarNav.navbarLeft, nav.navbarTall .navbarNav.navbarRight {
+  nav.navbar-tall .navbar-nav.navbar-left, nav.navbar-tall .navbar-nav.navbar-right {
     float: none;
     position: absolute;
     bottom: 0; }
-  nav.navbarTall .navbarNav.navbarLeft {
+  nav.navbar-tall .navbar-nav.navbar-left {
     left: 0; }
-  nav.navbarTall .navbarNav.navbarRight {
+  nav.navbar-tall .navbar-nav.navbar-right {
     right: 0; }
 
-nav.navbarShort {
+nav.navbar-short {
   width: 100%;
   height: 60px; }
 
@@ -89,12 +89,12 @@ nav.navbar {
   z-index: 10;
   position: relative;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
-  nav.navbar .navbarNav {
+  nav.navbar .navbar-nav {
     margin: 0;
     padding: 0;
     list-style: none;
     position: relative; }
-    nav.navbar .navbarNav li {
+    nav.navbar .navbar-nav li {
       transition: all 0.2s;
       float: left;
       cursor: pointer;
@@ -102,77 +102,77 @@ nav.navbar {
       padding: 20px;
       height: 60px;
       border-bottom: 2px solid transparent; }
-      nav.navbar .navbarNav li a {
+      nav.navbar .navbar-nav li a {
         background-color: transparent;
         font-size: 20px;
         text-decoration: none; }
-  nav.navbar .navbarNav.navbarLeft {
+  nav.navbar .navbar-nav.navbar-left {
     float: left; }
-  nav.navbar .navbarNav.navbarRight {
+  nav.navbar .navbar-nav.navbar-right {
     float: right; }
-  nav.navbar #drawerOpen {
+  nav.navbar #drawer-open {
     cursor: pointer;
     position: relative;
     width: 60px;
     height: 60px;
     border-radius: 60px;
     background-color: transparent; }
-    nav.navbar #drawerOpen i {
+    nav.navbar #drawer-open i {
       position: absolute;
       top: calc(50% - 12px);
       left: calc(50% - 12px); }
-  nav.navbar #drawerOpen.drawerOpenLeft {
+  nav.navbar #drawer-open.drawer-open-left {
     float: left; }
-  nav.navbar #drawerOpen.drawerOpenRight {
+  nav.navbar #drawer-open.drawer-open-right {
     float: right; }
-  nav.navbar #drawerOpen.mobileOnly {
+  nav.navbar #drawer-open.mobile-only {
     display: none; }
 
 @media only screen and (max-width: 768px) {
-  nav.navbarLight .navbarNav:hover {
+  nav.navbarLight .navbar-nav:hover {
     background-color: transparent; }
-  nav.navbarLight .navbarNav:active {
+  nav.navbarLight .navbar-nav:active {
     background-color: rgba(0, 0, 0, 0.05); }
-  nav.navbarLight #drawerOpen:hover {
+  nav.navbarLight #drawer-open:hover {
     background-color: transparent; }
-  nav.navbarLight #drawerOpen:active {
+  nav.navbarLight #drawer-open:active {
     background-color: rgba(0, 0, 0, 0.05); }
 
-  nav.navbarDark .navbarNav li:hover {
+  nav.navbarDark .navbar-nav li:hover {
     background-color: transparent; }
-  nav.navbarDark .navbarNav li:active {
+  nav.navbarDark .navbar-nav li:active {
     background-color: rgba(255, 255, 255, 0.05); }
-  nav.navbarDark #drawerOpen:hover {
+  nav.navbarDark #drawer-open:hover {
     background-color: transparent; }
-  nav.navbarDark #drawerOpen:active {
+  nav.navbarDark #drawer-open:active {
     background-color: rgba(255, 255, 255, 0.05); }
 
-  nav.navbarTall {
+  nav.navbar-tall {
     height: 112px; }
 
-  nav.navbarShort {
+  nav.navbar-short {
     height: 56px; }
 
-  nav.navbar .navbarNav li {
+  nav.navbar .navbar-nav li {
     height: 56px;
     padding: 18px;
     display: none;
     border-bottom: none; }
-    nav.navbar .navbarNav li:hover {
+    nav.navbar .navbar-nav li:hover {
       border-bottom: none; }
-    nav.navbar .navbarNav li a {
+    nav.navbar .navbar-nav li a {
       font-size: 18px; }
-  nav.navbar .navbarNav .brandItem {
+  nav.navbar .navbar-nav .brand-item {
     display: block; }
-  nav.navbar .navbarNav.navbarLeft {
+  nav.navbar .navbar-nav.navbar-left {
     float: right; }
-  nav.navbar .navbarNav.navbarRight {
+  nav.navbar .navbar-nav.navbar-right {
     float: right; }
-  nav.navbar #drawerOpen {
+  nav.navbar #drawer-open {
     width: 56px;
     height: 56px;
     border-radius: 56px; }
-  nav.navbar #drawerOpen.mobileOnly {
+  nav.navbar #drawer-open.mobile-only {
     display: block; } }
 /* DRAWER STYLES */
 .drawer {
@@ -182,17 +182,17 @@ nav.navbar {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 15; }
-  .drawer .drawerContent {
+  .drawer .drawer-content {
     position: absolute;
     top: 0;
     width: 320px;
     height: 100%;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 32px 64px 0 rgba(0, 0, 0, 0.2); }
-    .drawer .drawerContent .drawerHeader {
+    .drawer .drawer-content .drawer-header {
       position: relative;
       width: 100%;
       height: 60px; }
-      .drawer .drawerContent .drawerHeader #drawerClose {
+      .drawer .drawer-content .drawer-header #drawer-close {
         cursor: pointer;
         position: absolute;
         top: 0;
@@ -200,123 +200,123 @@ nav.navbar {
         height: 60px;
         border-radius: 60px;
         background-color: transparent; }
-        .drawer .drawerContent .drawerHeader #drawerClose i {
+        .drawer .drawer-content .drawer-header #drawer-close i {
           position: absolute;
           top: calc(50% - 12px);
           left: calc(50% - 12px); }
-    .drawer .drawerContent .drawerHeader.drawerLight {
+    .drawer .drawer-content .drawer-header.drawer-light {
       background-color: #FFFFFF; }
-      .drawer .drawerContent .drawerHeader.drawerLight #drawerClose {
+      .drawer .drawer-content .drawer-header.drawer-light #drawer-close {
         border: 10px solid #FFFFFF; }
-        .drawer .drawerContent .drawerHeader.drawerLight #drawerClose:hover {
+        .drawer .drawer-content .drawer-header.drawer-light #drawer-close:hover {
           background-color: rgba(0, 0, 0, 0.05); }
-        .drawer .drawerContent .drawerHeader.drawerLight #drawerClose:active {
+        .drawer .drawer-content .drawer-header.drawer-light #drawer-close:active {
           background-color: rgba(0, 0, 0, 0.1); }
-        .drawer .drawerContent .drawerHeader.drawerLight #drawerClose i {
+        .drawer .drawer-content .drawer-header.drawer-light #drawer-close i {
           color: #2F343F; }
-    .drawer .drawerContent .drawerHeader.drawerDark {
+    .drawer .drawer-content .drawer-header.drawer-dark {
       background-color: #2F343F; }
-      .drawer .drawerContent .drawerHeader.drawerDark #drawerClose {
+      .drawer .drawer-content .drawer-header.drawer-dark #drawer-close {
         border: 10px solid #2F343F; }
-        .drawer .drawerContent .drawerHeader.drawerDark #drawerClose:hover {
+        .drawer .drawer-content .drawer-header.drawer-dark #drawer-close:hover {
           background-color: rgba(255, 255, 255, 0.05); }
-        .drawer .drawerContent .drawerHeader.drawerDark #drawerClose:active {
+        .drawer .drawer-content .drawer-header.drawer-dark #drawer-close:active {
           background-color: rgba(255, 255, 255, 0.1); }
-        .drawer .drawerContent .drawerHeader.drawerDark #drawerClose i {
+        .drawer .drawer-content .drawer-header.drawer-dark #drawer-close i {
           color: #FFFFFF; }
-    .drawer .drawerContent .drawerNav {
+    .drawer .drawer-content .drawer-nav {
       position: relative;
       width: 100%;
       margin: 0;
       padding: 0;
       list-style: none; }
-      .drawer .drawerContent .drawerNav li {
+      .drawer .drawer-content .drawer-nav li {
         display: block;
         cursor: pointer;
         position: relative;
         width: 100%;
         height: 60px;
         background-color: transparent; }
-        .drawer .drawerContent .drawerNav li a {
+        .drawer .drawer-content .drawer-nav li a {
           display: block;
           position: relative;
           width: 100%;
           height: 60px;
           font-size: 20px;
           text-decoration: none; }
-        .drawer .drawerContent .drawerNav li i {
+        .drawer .drawer-content .drawer-nav li i {
           position: absolute;
           top: calc(50% - 12px); }
-    .drawer .drawerContent .drawerNav.drawerNavLeft li a {
+    .drawer .drawer-content .drawer-nav.drawer-nav-left li a {
       text-align: left;
       padding: 19px 20px 20px 56px; }
-    .drawer .drawerContent .drawerNav.drawerNavLeft li i {
+    .drawer .drawer-content .drawer-nav.drawer-nav-left li i {
       left: 16px; }
-    .drawer .drawerContent .drawerNav.drawerNavRight li a {
+    .drawer .drawer-content .drawer-nav.drawer-nav-right li a {
       text-align: right;
       padding: 19px 56px 20px 20px; }
-    .drawer .drawerContent .drawerNav.drawerNavRight li i {
+    .drawer .drawer-content .drawer-nav.drawer-nav-right li i {
       right: 16px; }
-  .drawer .drawerContent.drawerLight {
+  .drawer .drawer-content.drawer-light {
     background-color: #FFFFFF; }
-    .drawer .drawerContent.drawerLight .drawerNav li:hover {
+    .drawer .drawer-content.drawer-light .drawer-nav li:hover {
       background-color: rgba(0, 0, 0, 0.05); }
-    .drawer .drawerContent.drawerLight .drawerNav li:active {
+    .drawer .drawer-content.drawer-light .drawer-nav li:active {
       background-color: rgba(0, 0, 0, 0.1); }
-    .drawer .drawerContent.drawerLight .drawerNav li a {
+    .drawer .drawer-content.drawer-light .drawer-nav li a {
       color: #454545; }
-    .drawer .drawerContent.drawerLight .drawerNav li i {
+    .drawer .drawer-content.drawer-light .drawer-nav li i {
       color: #454545; }
-  .drawer .drawerContent.drawerDark {
+  .drawer .drawer-content.drawer-dark {
     background-color: #2F343F; }
-    .drawer .drawerContent.drawerDark .drawerNav li:hover {
+    .drawer .drawer-content.drawer-dark .drawer-nav li:hover {
       background-color: rgba(255, 255, 255, 0.05); }
-    .drawer .drawerContent.drawerDark .drawerNav li:active {
+    .drawer .drawer-content.drawer-dark .drawer-nav li:active {
       background-color: rgba(255, 255, 255, 0.1); }
-    .drawer .drawerContent.drawerDark .drawerNav li a {
+    .drawer .drawer-content.drawer-dark .drawer-nav li a {
       color: #B0B9C6; }
-    .drawer .drawerContent.drawerDark .drawerNav li i {
+    .drawer .drawer-content.drawer-dark .drawer-nav li i {
       color: #B0B9C6; }
 
-.drawer.drawerLeft {
+.drawer.drawer-left {
   left: 0;
   transform: translateX(-100%); }
-  .drawer.drawerLeft .drawerContent {
+  .drawer.drawer-left .drawer-content {
     left: 0; }
-    .drawer.drawerLeft .drawerContent .drawerHeader #drawerClose {
+    .drawer.drawer-left .drawer-content .drawer-header #drawer-close {
       left: 0; }
-      .drawer.drawerLeft .drawerContent .drawerHeader #drawerClose i {
+      .drawer.drawer-left .drawer-content .drawer-header #drawer-close i {
         transform: none; }
 
-.drawer.drawerLeft.drawerAnimateOpen {
+.drawer.drawer-left.drawerAnimateOpen {
   animation: drawerAnimateOpenLeft 0.3s forwards; }
-  .drawer.drawerLeft.drawerAnimateOpen .drawerContent {
-    animation: drawerContentAnimateOpenLeft 0.3s forwards; }
+  .drawer.drawer-left.drawerAnimateOpen .drawer-content {
+    animation: drawer-contentAnimateOpenLeft 0.3s forwards; }
 
-.drawer.drawerLeft.drawerAnimateClose {
+.drawer.drawer-left.drawerAnimateClose {
   animation: drawerAnimateCloseLeft 0.3s forwards; }
-  .drawer.drawerLeft.drawerAnimateClose .drawerContent {
-    animation: drawerContentAnimateCloseLeft 0.3s forwards; }
+  .drawer.drawer-left.drawerAnimateClose .drawer-content {
+    animation: drawer-contentAnimateCloseLeft 0.3s forwards; }
 
-.drawer.drawerRight {
+.drawer.drawer-right {
   right: 0;
   transform: translateX(100%); }
-  .drawer.drawerRight .drawerContent {
+  .drawer.drawer-right .drawer-content {
     right: 0; }
-    .drawer.drawerRight .drawerContent .drawerHeader #drawerClose {
+    .drawer.drawer-right .drawer-content .drawer-header #drawer-close {
       right: 0; }
-      .drawer.drawerRight .drawerContent .drawerHeader #drawerClose i {
+      .drawer.drawer-right .drawer-content .drawer-header #drawer-close i {
         transform: rotate(180deg); }
 
-.drawer.drawerRight.drawerAnimateOpen {
+.drawer.drawer-right.drawerAnimateOpen {
   animation: drawerAnimateOpenRight 0.3s forwards; }
-  .drawer.drawerRight.drawerAnimateOpen .drawerContent {
-    animation: drawerContentAnimateOpenRight 0.3s forwards; }
+  .drawer.drawer-right.drawerAnimateOpen .drawer-content {
+    animation: drawer-contentAnimateOpenRight 0.3s forwards; }
 
-.drawer.drawerRight.drawerAnimateClose {
+.drawer.drawer-right.drawerAnimateClose {
   animation: drawerAnimateCloseRight 0.3s forwards; }
-  .drawer.drawerRight.drawerAnimateClose .drawerContent {
-    animation: drawerContentAnimateCloseRight 0.3s forwards; }
+  .drawer.drawer-right.drawerAnimateClose .drawer-content {
+    animation: drawer-contentAnimateCloseRight 0.3s forwards; }
 
 @keyframes drawerAnimateOpenLeft {
   0% {
@@ -328,7 +328,7 @@ nav.navbar {
   100% {
     transform: translateX(0);
     background-color: rgba(0, 0, 0, 0.4); } }
-@keyframes drawerContentAnimateOpenLeft {
+@keyframes drawer-contentAnimateOpenLeft {
   0% {
     transform: translateX(-100%); }
   100% {
@@ -343,7 +343,7 @@ nav.navbar {
   100% {
     transform: translateX(-100%);
     background-color: transparent; } }
-@keyframes drawerContentAnimateCloseLeft {
+@keyframes drawer-contentAnimateCloseLeft {
   0% {
     transform: translateX(0); }
   100% {
@@ -358,7 +358,7 @@ nav.navbar {
   100% {
     transform: translateX(0);
     background-color: rgba(0, 0, 0, 0.4); } }
-@keyframes drawerContentAnimateOpenRight {
+@keyframes drawer-contentAnimateOpenRight {
   0% {
     transform: translateX(100%); }
   100% {
@@ -373,44 +373,44 @@ nav.navbar {
   100% {
     transform: translateX(100%);
     background-color: transparent; } }
-@keyframes drawerContentAnimateCloseRight {
+@keyframes drawer-contentAnimateCloseRight {
   0% {
     transform: translateX(0); }
   100% {
     transform: translateX(100%); } }
 @media only screen and (max-width: 768px) {
-  .drawer .drawerContent .drawerHeader {
+  .drawer .drawer-content .drawer-header {
     height: 56px; }
-    .drawer .drawerContent .drawerHeader #drawerClose {
+    .drawer .drawer-content .drawer-header #drawer-close {
       width: 56px;
       height: 56px;
       border-radius: 56px; }
-  .drawer .drawerContent .drawerHeader.drawerLight #drawerClose:hover {
+  .drawer .drawer-content .drawer-header.drawer-light #drawer-close:hover {
     background-color: transparent; }
-  .drawer .drawerContent .drawerHeader.drawerLight #drawerClose:active {
+  .drawer .drawer-content .drawer-header.drawer-light #drawer-close:active {
     background-color: rgba(0, 0, 0, 0.05); }
-  .drawer .drawerContent .drawerHeader.drawerDark #drawerClose:hover {
+  .drawer .drawer-content .drawer-header.drawer-dark #drawer-close:hover {
     background-color: transparent; }
-  .drawer .drawerContent .drawerHeader.drawerDark #drawerClose:active {
+  .drawer .drawer-content .drawer-header.drawer-dark #drawer-close:active {
     background-color: rgba(255, 255, 255, 0.05); }
-  .drawer .drawerContent .drawerNav li {
+  .drawer .drawer-content .drawer-nav li {
     height: 56px; }
-    .drawer .drawerContent .drawerNav li a {
+    .drawer .drawer-content .drawer-nav li a {
       font-size: 18px; }
-  .drawer .drawerContent .drawerNav.drawerNavLeft li a {
+  .drawer .drawer-content .drawer-nav.drawer-nav-left li a {
     padding: 18px 18px 18px 56px; }
-  .drawer .drawerContent .drawerNav.drawerNavRight li a {
+  .drawer .drawer-content .drawer-nav.drawer-nav-right li a {
     padding: 18px 56px 18px 18px; }
-  .drawer .drawerContent.drawerLight .drawerNav li:hover {
+  .drawer .drawer-content.drawer-light .drawer-nav li:hover {
     background-color: transparent; }
-  .drawer .drawerContent.drawerLight .drawerNav li:active {
+  .drawer .drawer-content.drawer-light .drawer-nav li:active {
     background-color: rgba(0, 0, 0, 0.05); }
-  .drawer .drawerContent.drawerDark .drawerNav li:hover {
+  .drawer .drawer-content.drawer-dark .drawer-nav li:hover {
     background-color: transparent; }
-  .drawer .drawerContent.drawerDark .drawerNav li:active {
+  .drawer .drawer-content.drawer-dark .drawer-nav li:active {
     background-color: rgba(255, 255, 255, 0.05); } }
 @media only screen and (max-width: 480px) {
-  .drawer .drawerContent {
+  .drawer .drawer-content {
     width: 80vw; } }
 /*HERO */
 .hero {
