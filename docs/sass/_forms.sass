@@ -1,12 +1,12 @@
 /* FORMS
-.formBasic
+.form-basic
   width: 480px
   margin: auto
   padding: 12px
-  .formGroup
-    .inputInvalid
+  .form-group
+    .input-invalid
       background-color: rgba(0,0,0,0.05)
-    .inputValid
+    .input-valid
       background-color: none
   .buttonInput
     background-color: $accent
@@ -35,7 +35,7 @@
     i
       transform: translateY(25%)
 @media only screen and (max-width: 480px)
-  .formBasic
+  .form-basic
     width: 100%
     position: relative
     .buttonInput
@@ -124,13 +124,13 @@ fieldset
   padding: 0
   border: none
 
-.formRadio, .formGroup
+.form-radio, .form-group
   position: relative
   margin-top: 2.25rem
   margin-bottom: 2.25rem
 
 .formInline >
-  .formGroup, .btn
+  .form-group, .btn
     display: inline-block
     margin-bottom: 0
 
@@ -140,7 +140,7 @@ fieldset
   color: #b3b3b3
   font-size: 0.8rem
 
-.checkbox .formHelp, .formRadio .formHelp, .formGroup .formHelp
+.checkbox .formHelp, .form-radio .formHelp, .form-group .formHelp
   position: absolute
   width: 100%
 
@@ -148,11 +148,11 @@ fieldset
   position: relative
   margin-bottom: 1rem
 
-.formRadio .formHelp
+.form-radio .formHelp
   padding-top: 0.25rem
   margin-top: -1rem
 
-.formGroup
+.form-group
   input
     height: 1.9rem
   textarea
@@ -166,7 +166,7 @@ fieldset
     border: none
     line-height: 1.6
     box-shadow: none
-  .controlLabel
+  .control-label
     position: absolute
     top: 0.25rem
     pointer-events: none
@@ -214,32 +214,32 @@ fieldset
   textarea
     &:focus, &:valid, &.form-file, &.has-value
       color: #333
-  select ~ .controlLabel
+  select ~ .control-label
     font-size: 0.8rem
     color: gray
     top: -1rem
     left: 0
   input
-    &:focus ~ .controlLabel, &:valid ~ .controlLabel, &.form-file ~ .controlLabel, &.has-value ~ .controlLabel
+    &:focus ~ .control-label, &:valid ~ .control-label, &.form-file ~ .control-label, &.has-value ~ .control-label
       font-size: 0.8rem
       color: gray
       top: -1rem
       left: 0
   textarea
-    &:focus ~ .controlLabel, &:valid ~ .controlLabel, &.form-file ~ .controlLabel, &.has-value ~ .controlLabel
+    &:focus ~ .control-label, &:valid ~ .control-label, &.form-file ~ .control-label, &.has-value ~ .control-label
       font-size: 0.8rem
       color: gray
       top: -1rem
       left: 0
   select:focus, input:focus, textarea:focus
     outline: none
-  select:focus ~ .controlLabel, input:focus ~ .controlLabel, textarea:focus ~ .controlLabel
+  select:focus ~ .control-label, input:focus ~ .control-label, textarea:focus ~ .control-label
     color: $accent
   select:focus ~ .bar::before, input:focus ~ .bar::before, textarea:focus ~ .bar::before
     width: 100%
     left: 0
 
-.checkbox label, .formRadio label
+.checkbox label, .form-radio label
   position: relative
   cursor: pointer
   padding-left: 2rem
@@ -247,7 +247,7 @@ fieldset
   color: #333
   display: block
 
-.checkbox input, .formRadio input
+.checkbox input, .form-radio input
   width: auto
   opacity: 0.00000001
   position: absolute
@@ -350,8 +350,8 @@ fieldset
 .hasError
   .legend.legend
     color: #cc575d
-  &.formGroup
-    .controlLabel.controlLabel, .formHelp, .helper
+  &.form-group
+    .control-label.control-label, .formHelp, .helper
       color: #cc575d
   &.checkbox
     .formHelp, .helper
@@ -359,7 +359,7 @@ fieldset
   &.radio
     .formHelp, .helper
       color: #cc575d
-  &.formRadio
+  &.form-radio
     .formHelp, .helper
       color: #cc575d
   .bar::before

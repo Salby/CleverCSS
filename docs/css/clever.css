@@ -561,15 +561,15 @@ nav.navbar {
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
 
 /* FORMS */
-.formBasic {
+.form-basic {
   width: 480px;
   margin: auto;
   padding: 12px; }
-  .formBasic .formGroup .inputInvalid {
+  .form-basic .form-group .input-invalid {
     background-color: rgba(0, 0, 0, 0.05); }
-  .formBasic .formGroup .inputValid {
+  .form-basic .form-group .input-valid {
     background-color: none; }
-  .formBasic .buttonInput {
+  .form-basic .buttonInput {
     background-color: #5294E2;
     color: white;
     padding: 0 12px;
@@ -586,21 +586,21 @@ nav.navbar {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     vertical-align: middle; }
-    .formBasic .buttonInput:hover {
+    .form-basic .buttonInput:hover {
       transition: all 0.1s;
       box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
       margin-top: 0px;
       margin-bottom: 3px; }
-    .formBasic .buttonInput:active {
+    .form-basic .buttonInput:active {
       background-color: #669FE5; }
-    .formBasic .buttonInput i {
+    .form-basic .buttonInput i {
       transform: translateY(25%); }
 
 @media only screen and (max-width: 480px) {
-  .formBasic {
+  .form-basic {
     width: 100%;
     position: relative; }
-    .formBasic .buttonInput {
+    .form-basic .buttonInput {
       position: fixed;
       bottom: 112px;
       right: 28px;
@@ -608,15 +608,15 @@ nav.navbar {
       height: 56px;
       border-radius: 56px;
       -webkit-user-select: none; }
-      .formBasic .buttonInput .buttonText {
+      .form-basic .buttonInput .buttonText {
         display: none; }
-      .formBasic .buttonInput i {
+      .form-basic .buttonInput i {
         transform: translateY(12.5%); }
-      .formBasic .buttonInput:hover {
+      .form-basic .buttonInput:hover {
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
         margin-top: 3px;
         margin-bottom: 0px; }
-      .formBasic .buttonInput:active {
+      .form-basic .buttonInput:active {
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
         margin-top: 0px;
         margin-bottom: 3px; } }
@@ -673,12 +673,12 @@ fieldset {
   padding: 0;
   border: none; }
 
-.formRadio, .formGroup {
+.form-radio, .form-group {
   position: relative;
   margin-top: 2.25rem;
   margin-bottom: 2.25rem; }
 
-.formInline > .formGroup, .formInline > .btn {
+.formInline > .form-group, .formInline > .btn {
   display: inline-block;
   margin-bottom: 0; }
 
@@ -688,7 +688,7 @@ fieldset {
   color: #b3b3b3;
   font-size: 0.8rem; }
 
-.checkbox .formHelp, .formRadio .formHelp, .formGroup .formHelp {
+.checkbox .formHelp, .form-radio .formHelp, .form-group .formHelp {
   position: absolute;
   width: 100%; }
 
@@ -696,15 +696,15 @@ fieldset {
   position: relative;
   margin-bottom: 1rem; }
 
-.formRadio .formHelp {
+.form-radio .formHelp {
   padding-top: 0.25rem;
   margin-top: -1rem; }
 
-.formGroup input {
+.form-group input {
   height: 1.9rem; }
-.formGroup textarea {
+.form-group textarea {
   resize: none; }
-.formGroup select {
+.form-group select {
   width: 100%;
   font-size: 1rem;
   height: 1.6rem;
@@ -713,7 +713,7 @@ fieldset {
   border: none;
   line-height: 1.6;
   box-shadow: none; }
-.formGroup .controlLabel {
+.form-group .control-label {
   position: absolute;
   top: 0.25rem;
   pointer-events: none;
@@ -723,11 +723,11 @@ fieldset {
   font-size: 1rem;
   font-weight: normal;
   transition: all 0.28s ease; }
-.formGroup .bar {
+.form-group .bar {
   position: relative;
   border-bottom: 0.0625rem solid #999;
   display: block; }
-  .formGroup .bar::before {
+  .form-group .bar::before {
     content: "";
     height: 0.125rem;
     width: 0;
@@ -737,7 +737,7 @@ fieldset {
     background: #5294E2;
     transition: left 0.28s ease, width 0.28s ease;
     z-index: 2; }
-.formGroup input, .formGroup textarea {
+.form-group input, .form-group textarea {
   display: block;
   background: none;
   padding: 0.125rem 0.125rem 0.0625rem;
@@ -749,40 +749,40 @@ fieldset {
   color: transparent;
   transition: all 0.28s ease;
   box-shadow: none; }
-.formGroup input[type="file"] {
+.form-group input[type="file"] {
   line-height: 1; }
-  .formGroup input[type="file"] ~ .bar {
+  .form-group input[type="file"] ~ .bar {
     display: none; }
-.formGroup select {
+.form-group select {
   color: #333; }
-.formGroup input:focus, .formGroup input:valid, .formGroup input.form-file, .formGroup input.has-value {
+.form-group input:focus, .form-group input:valid, .form-group input.form-file, .form-group input.has-value {
   color: #333; }
-.formGroup textarea:focus, .formGroup textarea:valid, .formGroup textarea.form-file, .formGroup textarea.has-value {
+.form-group textarea:focus, .form-group textarea:valid, .form-group textarea.form-file, .form-group textarea.has-value {
   color: #333; }
-.formGroup select ~ .controlLabel {
+.form-group select ~ .control-label {
   font-size: 0.8rem;
   color: gray;
   top: -1rem;
   left: 0; }
-.formGroup input:focus ~ .controlLabel, .formGroup input:valid ~ .controlLabel, .formGroup input.form-file ~ .controlLabel, .formGroup input.has-value ~ .controlLabel {
+.form-group input:focus ~ .control-label, .form-group input:valid ~ .control-label, .form-group input.form-file ~ .control-label, .form-group input.has-value ~ .control-label {
   font-size: 0.8rem;
   color: gray;
   top: -1rem;
   left: 0; }
-.formGroup textarea:focus ~ .controlLabel, .formGroup textarea:valid ~ .controlLabel, .formGroup textarea.form-file ~ .controlLabel, .formGroup textarea.has-value ~ .controlLabel {
+.form-group textarea:focus ~ .control-label, .form-group textarea:valid ~ .control-label, .form-group textarea.form-file ~ .control-label, .form-group textarea.has-value ~ .control-label {
   font-size: 0.8rem;
   color: gray;
   top: -1rem;
   left: 0; }
-.formGroup select:focus, .formGroup input:focus, .formGroup textarea:focus {
+.form-group select:focus, .form-group input:focus, .form-group textarea:focus {
   outline: none; }
-.formGroup select:focus ~ .controlLabel, .formGroup input:focus ~ .controlLabel, .formGroup textarea:focus ~ .controlLabel {
+.form-group select:focus ~ .control-label, .form-group input:focus ~ .control-label, .form-group textarea:focus ~ .control-label {
   color: #5294E2; }
-.formGroup select:focus ~ .bar::before, .formGroup input:focus ~ .bar::before, .formGroup textarea:focus ~ .bar::before {
+.form-group select:focus ~ .bar::before, .form-group input:focus ~ .bar::before, .form-group textarea:focus ~ .bar::before {
   width: 100%;
   left: 0; }
 
-.checkbox label, .formRadio label {
+.checkbox label, .form-radio label {
   position: relative;
   cursor: pointer;
   padding-left: 2rem;
@@ -790,7 +790,7 @@ fieldset {
   color: #333;
   display: block; }
 
-.checkbox input, .formRadio input {
+.checkbox input, .form-radio input {
   width: auto;
   opacity: 0;
   position: absolute;
@@ -891,13 +891,13 @@ fieldset {
 
 .hasError .legend.legend {
   color: #cc575d; }
-.hasError.formGroup .controlLabel.controlLabel, .hasError.formGroup .formHelp, .hasError.formGroup .helper {
+.hasError.form-group .control-label.control-label, .hasError.form-group .formHelp, .hasError.form-group .helper {
   color: #cc575d; }
 .hasError.checkbox .formHelp, .hasError.checkbox .helper {
   color: #cc575d; }
 .hasError.radio .formHelp, .hasError.radio .helper {
   color: #cc575d; }
-.hasError.formRadio .formHelp, .hasError.formRadio .helper {
+.hasError.form-radio .formHelp, .hasError.form-radio .helper {
   color: #cc575d; }
 .hasError .bar::before {
   background: #cc575d;
