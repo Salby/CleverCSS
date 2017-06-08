@@ -18,6 +18,10 @@ p {
   color: #212121;
   font-family: "Roboto", sans-serif; }
 
+::selection {
+  background-color: #5294e2;
+  color: #ffffff; }
+
 /* TYPOGRAPHY STYLES */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
