@@ -31,7 +31,9 @@ $(document).ready(function() {
     setTimeout(function() {
       $(modalTargetClose).css('display', 'none');
     }, 300);
-    $('body').css('overflow-y', 'visible');
+    setTimeout(function() {
+      $('body').css('overflow-y', 'visible');
+    },300);
   });
   // FLOATING ACTION BUTTON MENU
   $('.fabMenuContainer .fabMenuButton').click(function() {
