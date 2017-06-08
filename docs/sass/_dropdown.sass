@@ -2,7 +2,11 @@
 
 div.dropdown
   position: relative
+  user-select: none
+  -webkit-user-select: none
+
   .button-dropdown
+    cursor: pointer
     position: relative
     background-color: $transparent
     transition: $fade-in-out
@@ -35,6 +39,49 @@ div.dropdown
     &:active
       background-color: $transparentLighter
 
+  .dropdown-content
+    display: none
+    list-style: none
+    margin: 0
+    padding: 0
+
+  .dropdown-content.dropdown-small
+    position: absolute
+    top: 56px
+    left: auto
+    right: auto
+    box-shadow: $depth-4
+    li
+      user-select: none
+      -webkit-user-select: none
+      cursor: pointer
+      white-space: nowrap
+      font-size: 18px
+      padding: 0.8em
+      transition: $fade-in-out
+
+  .dropdown-content.dropdown-small.dropdown-left
+    left: 0
+    right: auto
+
+  .dropdown-content.dropdown-small.dropdown-right
+    left: auto
+    right: 0
+
+  .dropdown-content.dropdown-small.dropdown-light
+    background-color: #FEFEFE
+    li
+      color: $primary
+      &:active
+        background-color: $transparentDarker
+
+  .dropdown-content.dropdown-small.dropdown-dark
+    background-color: $primary
+    li
+      color: $white
+      &:active
+        background-color: $transparentLighter
+
 div.dropdown.dropdown-left
   float: left
 
@@ -44,6 +91,23 @@ div.dropdown.dropdown-right
 @media only screen and (max-width: 480px)
 
 @media only screen and (min-width: 481px)
+  div.dropdown
+    .dropdown-content.dropdown-small
+      li
+        padding: 0.6em
+    .dropdown-content.dropdown-small.dropdown-light
+      li
+        &:hover
+          background-color: $transparentDark
+        &:active
+          background-color: $transparentDarker
+
+    .dropdown-content.dropdown-small.dropdown-dark
+      li
+        &:hover
+          background-color: $transparentLight
+        &:active
+          background-color: $transparentLighter
 
 @media only screen and (min-width: 769px)
 
