@@ -1222,7 +1222,8 @@ div.dropdown {
     top: 56px;
     left: auto;
     right: auto;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 2px; }
     div.dropdown .dropdown-content.dropdown-small li {
       user-select: none;
       -webkit-user-select: none;
@@ -1231,6 +1232,9 @@ div.dropdown {
       font-size: 18px;
       padding: 0.8em;
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+      div.dropdown .dropdown-content.dropdown-small li a {
+        display: block;
+        text-decoration: none; }
   div.dropdown .dropdown-content.dropdown-small.dropdown-left {
     left: 0;
     right: auto; }
