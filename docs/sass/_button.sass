@@ -6,7 +6,7 @@ button
   user-select: none
   -webkit-user-select: none
 
-.buttonActionFloating
+.button-action-floating
   transition: $fade-in-out
   position: fixed
   bottom: 28px
@@ -26,7 +26,7 @@ button
     background-color: $accentLight
 
 /* FLAT BUTTON
-.buttonFlat
+.button-flat
   transition: $fade-in-out
   border-radius: 2px
   cursor: pointer
@@ -42,7 +42,7 @@ button
   &:active
     background-color: rgba(0,0,0,0.1)
 /* RAISED BUTTON
-.buttonRaised
+.button-raised
   transition: $fade-in-out
   border-radius: 2px
   cursor: pointer
@@ -60,7 +60,7 @@ button
     background-color: $accentLight
 
 /* ACTION BUTTON
-.buttonAction
+.button-action
   transition: $fade-in-out
   position: relative
   cursor: pointer
@@ -83,26 +83,26 @@ button
   float: right
 
 @media only screen and (max-width: 768px)
-  .buttonActionFloating
+  .button-action-floating
     &:hover
       background-color: $accent
       box-shadow: $depth-4
     &:active
       background-color: $accentLight
       box-shadow: $depth-5
-  .buttonFlat
+  .button-flat
     &:hover
       background-color: rgba(0,0,0,0)
     &:active
       background-color: rgba(0,0,0,0.1)
-  .buttonRaised
+  .button-raised
     &:hover
       background-color: $accent
       box-shadow: $depth-2
     &:active
       background-color: $accentLight
       box-shadow: $depth-3
-  .buttonAction
+  .button-action
     &:hover
       background-color: $accent
       box-shadow: $depth-3

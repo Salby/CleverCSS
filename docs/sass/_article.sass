@@ -35,21 +35,25 @@
     justify-content: flex-end
     align-items: center
 
-    .buttonFlat,.buttonRaised
+    .button-flat,.button-raised
       padding: 6px 6px 6px 6px
   .card-header.card-light
     background-color: $white
     h1,h2,h3,h4,h5,h6
       color: $primary
+    p
+      color: $primaryLight
   .card-header.card-dark
     background-color: $primary
     h1,h2,h3,h4,h5,h6
       color: $white
+    p
+      color: $primaryLight
   .card-footer.card-light
     background-color: $white
   .card-footer.card-dark
     background-color: $primary
-    .buttonFlat
+    .button-flat
       color: $accentA700
       &:active
         background-color: $transparentLighter
@@ -67,7 +71,7 @@
 @media only screen and (min-width: 481px)
   .card
     .card-footer.card-dark
-      .buttonFlat
+      .button-flat
         &:hover
           background-color: $transparentLight
         &:active

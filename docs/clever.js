@@ -14,20 +14,20 @@ $(document).ready(function() {
     $(this).next().slideToggle('fast');
   });
   // MODAL THINGS
-  $('.buttonModalOpen[data-target]').click(function() {
+  $('.button-modal-open[data-target]').click(function() {
     //alert($(this).data('target'));
     var modalTargetOpen = $(this).data('target');
     $(modalTargetOpen).css('display', 'flex');
-    if ($(modalTargetOpen).hasClass('modalInactive')) {
-        $(modalTargetOpen).removeClass('modalInactive').addClass('modalActive');
+    if ($(modalTargetOpen).hasClass('modal-inactive')) {
+        $(modalTargetOpen).removeClass('modal-inactive').addClass('modal-active');
     } else {
-        $(modalTargetOpen).addClass('modalActive')
+        $(modalTargetOpen).addClass('modal-active')
     }
     $('body').css('overflow-y', 'hidden');
   });
-  $('.buttonModalClose[data-target]').click(function() {
+  $('.button-modal-close[data-target]').click(function() {
     var modalTargetClose = $(this).data('target');
-    $(modalTargetClose).removeClass('modalActive').addClass('modalInactive');
+    $(modalTargetClose).removeClass('modal-active').addClass('modal-inactive');
     setTimeout(function() {
       $(modalTargetClose).css('display', 'none');
     }, 300);
