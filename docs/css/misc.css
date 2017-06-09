@@ -23,20 +23,23 @@
   -moz-animation: fadeIn 1.5s;
   opacity: 1; }
 
-.elementList li {
-  cursor: pointer;
-  padding: 0.5em;
-  border-left: 5px solid #2f343f;
-  color: #444444;
-  width: 284px;
-  border-radius: 0 2px 2px 0; }
-  .elementList li:hover {
-    background-color: rgba(0, 0, 0, 0.05); }
-  .elementList li:active {
-    background-color: rgba(0, 0, 0, 0.1); }
-.elementList .articleActive {
-  border-left: 10px solid #5294e2;
-  color: #5294e2; }
+.elementList {
+  transition: all 0.3s; }
+  .elementList li {
+    transition: all 0.2s;
+    cursor: pointer;
+    padding: 0.5em;
+    border-left: 5px solid #2f343f;
+    color: #444444;
+    width: 284px;
+    border-radius: 0 2px 2px 0; }
+    .elementList li:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
+    .elementList li:active {
+      background-color: rgba(0, 0, 0, 0.1); }
+  .elementList .articleActive {
+    border-left: 10px solid #5294e2;
+    color: #5294e2; }
 
 .elementListPin {
   position: fixed;
@@ -427,7 +430,8 @@ a {
       font-weight: 500;
       color: #212121;
       padding: 56px 0 3px 12px;
-      margin: 0; }
+      margin: 0;
+      display: block; }
 
 .code {
   background-color: rgba(0, 0, 0, 0.05);
@@ -551,6 +555,9 @@ article header {
     padding: 0.5em;
     margin: 0;
     color: white; }
+
+#dropdownArticle .dropdown {
+  transform: translateY(35px); }
 
 /*# sourceMappingURL=misc.css.map */
 

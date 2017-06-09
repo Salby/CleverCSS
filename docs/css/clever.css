@@ -1241,7 +1241,8 @@ button {
 div.dropdown {
   position: relative;
   user-select: none;
-  -webkit-user-select: none; }
+  -webkit-user-select: none;
+  font-family: "Roboto", sans-serif; }
   div.dropdown .button-dropdown {
     cursor: pointer;
     position: relative;
@@ -1282,7 +1283,8 @@ div.dropdown {
     display: none;
     list-style: none;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    z-index: 5; }
   div.dropdown .dropdown-content.dropdown-small {
     position: absolute;
     top: 56px;
@@ -1301,6 +1303,7 @@ div.dropdown {
       padding: 0.8em;
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
       div.dropdown .dropdown-content.dropdown-small li a {
+        color: #454545;
         display: block;
         text-decoration: none; }
   div.dropdown .dropdown-content.dropdown-small.dropdown-left {

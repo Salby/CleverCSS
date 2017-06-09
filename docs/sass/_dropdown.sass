@@ -4,6 +4,7 @@ div.dropdown
   position: relative
   user-select: none
   -webkit-user-select: none
+  font-family: 'Roboto', sans-serif
 
   .button-dropdown
     cursor: pointer
@@ -47,6 +48,7 @@ div.dropdown
     list-style: none
     margin: 0
     padding: 0
+    z-index: 5
 
   .dropdown-content.dropdown-small
     position: absolute
@@ -66,6 +68,7 @@ div.dropdown
       padding: 0.8em
       transition: $fade-in-out
       a
+        color: $textSecondary
         display: block
         text-decoration: none
 
