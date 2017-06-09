@@ -107,6 +107,7 @@
             <section class="col-m-3 elementListWrapper">
               <ul class="elementList">
                 <li class="selectArticle articleActive" data-target="#navBarArticle">Navigation</li>
+                <li class="selectArticle" data-target="#cardsArticle">Cards</li>
                 <li class="selectArticle" data-target="#buttonArticle">Buttons</li>
                 <li class="selectArticle" data-target="#dropdownArticle">Dropdown</li>
                 <li class="selectArticle" data-target="#modalArticle">Modals</li>
@@ -120,7 +121,8 @@
                   <div class="dropdown dropdown-right">
                     <button class="button-dropdown dropdown-small dropdown-right dropdown-light"><i class="material-icons">more_vert</i></button>
                     <ul class="dropdown-content dropdown-small dropdown-right dropdown-light">
-                      <li class="selectArticle" data-target="#navBarArticle"><a>Navigation Bar</a></li>
+                      <li class="selectArticle" data-target="#navBarArticle"><a>Navigation</a></li>
+                      <li class="selectArticle" data-target="#cardsArticle"><a>Cards</a></li>
                       <li class="selectArticle" data-target="#buttonArticle"><a>Buttons</a></li>
                       <li class="selectArticle" data-target="#dropdownArticle"><a>Dropdown</a></li>
                       <li class="selectArticle" data-target="#modalArticle">Modals</li>
@@ -258,6 +260,65 @@
                   </div>
                   <p>Remember that you can use <span class="codeSpace">drawer-light</span> instead of <span class="codeSpace">drawer-dark</span> and so on. You can also replace <span class="codeSpace">left</span> with <span class="codeSpace">right</span> in classes that use horizontal alignment</p>
                 </article>
+                <article id="cardsArticle" class="hideComp">
+                  <header>
+                    <h3>Cards</h3>
+                  </header>
+                  <h4>Light card</h4>
+                  <div class="row wrapper-m">
+                    <div class="col-xs-12">
+                      <div class="card card-light">
+                        <div class="card-header card-light">
+                          <h5>Header</h5>
+                          <p>card card-light</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="code">
+                    &lt;div class="card card-light"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="card-header card-light"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Header&lt;/h5&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                  </div>
+                  <h4>Dark card</h4>
+                  <div class="row wrapper-m">
+                    <div class="col-xs-12">
+                      <div class="card card-dark">
+                        <div class="card-header card-dark">
+                          <h5>Header</h5>
+                          <p>card card-dark</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="code">
+                    &lt;div class="card card-dark"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="card-header card-dark"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Header&lt;/h5&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                  </div>
+                  <h4>Light card with hover effect</h4>
+                  <div class="row wrapper-m">
+                    <div class="col-xs-12">
+                      <div class="card card-light card-hover-4">
+                        <div class="card-header card-light">
+                          <h5>Header</h5>
+                          <p>card card-light card-hover-4</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="code">
+                    &lt;div class="card card-light card-hover-4"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="card-header card-light"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Header&lt;/h5&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                  </div>
+                </article>
                 <article id="buttonArticle" class="hideComp">
                   <header>
                     <h3>Buttons</h3>
@@ -328,7 +389,7 @@
                   <h4>Large dropdown</h4>
                   <div class="code">
                     &lt;div class="dropdown dropdown-right"&gt;<br>
-                    &nbsp;&nbsp;&lt;button class="button-dropdown dropdown-large dropdown-right dropdown-light"&gt;[ICON]&lt;/button&gt;<br>
+                    &nbsp;&nbsp;&lt;button class="button-dropdown dropdown-large dropdown-right dropdown-light"&gt;Dropdown&lt;/button&gt;<br>
                     &nbsp;&nbsp;&lt;ul class="dropdown-content dropdown-large dropdown-right dropdown-light"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Option 1&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Option 2&lt;/a&gt;&lt;/li&gt;<br>
