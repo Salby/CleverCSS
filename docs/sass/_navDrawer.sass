@@ -12,7 +12,7 @@
     position: absolute
     top: 0
     width: 320px
-    height: 100%
+    height: 100vh
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 16px 32px 0 rgba(0,0,0,0.2), 0 32px 64px 0 rgba(0,0,0,0.2)
     .drawer-header
       position: relative
@@ -26,6 +26,7 @@
         height: 60px
         border-radius: 60px
         background-color: $transparent
+        background-clip: padding-box
         transition: $fade-in-out
         i
           position: absolute
@@ -34,7 +35,8 @@
     .drawer-header.drawer-light
       background-color: $white
       #drawer-close
-        border: 10px solid $white
+        border: 10px solid
+        border-color: transparent
         &:hover
           background-color: $transparentDark
         &:active
@@ -44,7 +46,8 @@
     .drawer-header.drawer-dark
       background-color: $primary
       #drawer-close
-        border: 10px solid $primary
+        border: 10px solid
+        border-color: transparent
         &:hover
           background-color: $transparentLight
         &:active
@@ -54,6 +57,8 @@
     .drawer-nav
       position: relative
       width: 100%
+      height: calc(100vh - 56px)
+      overflow-y: scroll
       margin: 0
       padding: 0
       list-style: none

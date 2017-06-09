@@ -12,7 +12,8 @@ nav.navbar-light
       a
         color: $primary
   #drawer-open
-    border: 10px solid $white
+    border: 10px solid
+    border-color: transparent
     &:hover
       background-color: $transparentDark
     &:active
@@ -31,7 +32,8 @@ nav.navbar-dark
       a
         color: $white
   #drawer-open
-    border: 10px solid $primary
+    border: 10px solid
+    border-color: transparent
     &:hover
       background-color: $transparentLight
     &:active
@@ -86,6 +88,7 @@ nav.navbar
     height: 60px
     border-radius: 60px
     background-color: $transparent
+    background-clip: padding-box
     i
       position: absolute
       top: calc(50% - 12px)

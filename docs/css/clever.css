@@ -44,7 +44,8 @@ nav.navbar-light {
     nav.navbar-light .navbar-nav li a {
       color: #2F343F; }
   nav.navbar-light #drawer-open {
-    border: 10px solid #FFFFFF; }
+    border: 10px solid;
+    border-color: transparent; }
     nav.navbar-light #drawer-open:hover {
       background-color: rgba(0, 0, 0, 0.05); }
     nav.navbar-light #drawer-open:active {
@@ -63,7 +64,8 @@ nav.navbar-dark {
     nav.navbar-dark .navbar-nav li a {
       color: #FFFFFF; }
   nav.navbar-dark #drawer-open {
-    border: 10px solid #2F343F; }
+    border: 10px solid;
+    border-color: transparent; }
     nav.navbar-dark #drawer-open:hover {
       background-color: rgba(255, 255, 255, 0.05); }
     nav.navbar-dark #drawer-open:active {
@@ -120,7 +122,8 @@ nav.navbar {
     width: 60px;
     height: 60px;
     border-radius: 60px;
-    background-color: transparent; }
+    background-color: transparent;
+    background-clip: padding-box; }
     nav.navbar #drawer-open i {
       position: absolute;
       top: calc(50% - 12px);
@@ -191,7 +194,7 @@ nav.navbar {
     position: absolute;
     top: 0;
     width: 320px;
-    height: 100%;
+    height: 100vh;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 32px 64px 0 rgba(0, 0, 0, 0.2); }
     .drawer .drawer-content .drawer-header {
       position: relative;
@@ -205,6 +208,7 @@ nav.navbar {
         height: 60px;
         border-radius: 60px;
         background-color: transparent;
+        background-clip: padding-box;
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
         .drawer .drawer-content .drawer-header #drawer-close i {
           position: absolute;
@@ -213,7 +217,8 @@ nav.navbar {
     .drawer .drawer-content .drawer-header.drawer-light {
       background-color: #FFFFFF; }
       .drawer .drawer-content .drawer-header.drawer-light #drawer-close {
-        border: 10px solid #FFFFFF; }
+        border: 10px solid;
+        border-color: transparent; }
         .drawer .drawer-content .drawer-header.drawer-light #drawer-close:hover {
           background-color: rgba(0, 0, 0, 0.05); }
         .drawer .drawer-content .drawer-header.drawer-light #drawer-close:active {
@@ -223,7 +228,8 @@ nav.navbar {
     .drawer .drawer-content .drawer-header.drawer-dark {
       background-color: #2F343F; }
       .drawer .drawer-content .drawer-header.drawer-dark #drawer-close {
-        border: 10px solid #2F343F; }
+        border: 10px solid;
+        border-color: transparent; }
         .drawer .drawer-content .drawer-header.drawer-dark #drawer-close:hover {
           background-color: rgba(255, 255, 255, 0.05); }
         .drawer .drawer-content .drawer-header.drawer-dark #drawer-close:active {
@@ -233,6 +239,8 @@ nav.navbar {
     .drawer .drawer-content .drawer-nav {
       position: relative;
       width: 100%;
+      height: calc(100vh - 56px);
+      overflow-y: scroll;
       margin: 0;
       padding: 0;
       list-style: none; }
@@ -507,6 +515,7 @@ nav.navbar {
   .card.depth-3 .card-footer .button-action:hover {
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); } }
 .card {
+  border-radius: 2px;
   position: relative;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   .card .card-header {
@@ -1242,7 +1251,8 @@ div.dropdown {
     width: 56px;
     height: 56px;
     border-radius: 100%;
-    border: none; }
+    border: none;
+    background-clip: padding-box; }
     div.dropdown .button-dropdown.dropdown-small i {
       position: absolute;
       top: calc(50% - 12px);
@@ -1255,13 +1265,15 @@ div.dropdown {
   div.dropdown .button-dropdown.dropdown-right {
     float: right; }
   div.dropdown .button-dropdown.dropdown-small.dropdown-light {
-    border: 10px solid #FFFFFF; }
+    border: 10px solid;
+    border-color: transparent; }
     div.dropdown .button-dropdown.dropdown-small.dropdown-light i {
       color: #B0B9C6; }
     div.dropdown .button-dropdown.dropdown-small.dropdown-light:active {
       background-color: rgba(0, 0, 0, 0.1); }
   div.dropdown .button-dropdown.dropdown-small.dropdown-dark {
-    border: 10px solid #2F343F; }
+    border: 10px solid;
+    border-color: transparent; }
     div.dropdown .button-dropdown.dropdown-small.dropdown-dark i {
       color: #B0B9C6; }
     div.dropdown .button-dropdown.dropdown-small.dropdown-dark:active {

@@ -15,6 +15,7 @@ div.dropdown
     height: 56px
     border-radius: 100%
     border: none
+    background-clip: padding-box
     i
       position: absolute
       top: calc(50% - 12px)
@@ -27,13 +28,15 @@ div.dropdown
   .button-dropdown.dropdown-right
     float: right
   .button-dropdown.dropdown-small.dropdown-light
-    border: 10px solid $white
+    border: 10px solid
+    border-color: transparent
     i
       color: $primaryLight
     &:active
       background-color: $transparentDarker
   .button-dropdown.dropdown-small.dropdown-dark
-    border: 10px solid $primary
+    border: 10px solid
+    border-color: transparent
     i
       color: $primaryLight
     &:active
