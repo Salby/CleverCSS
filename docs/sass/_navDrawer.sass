@@ -129,13 +129,25 @@
         i
           transform: none
 .drawer.drawer-left.drawerAnimateOpen
+  -webkit-animation: drawerAnimateOpenLeft 0.3s forwards
+  -moz-animation: drawerAnimateOpenLeft 0.3s forwards
   animation: drawerAnimateOpenLeft 0.3s forwards
+  animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
   .drawer-content
+    -webkit-animation: drawer-contentAnimateOpenLeft 0.3s forwards
+    -moz-animation: drawer-contentAnimateOpenLeft 0.3s forwards
     animation: drawer-contentAnimateOpenLeft 0.3s forwards
+    animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
 .drawer.drawer-left.drawerAnimateClose
+  -webkit-animation: drawerAnimateCloseLeft 0.3s forwards
+  -moz-animation: drawerAnimateCloseLeft 0.3s forwards
   animation: drawerAnimateCloseLeft 0.3s forwards
+  animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
   .drawer-content
+    -webkit-animation: drawer-contentAnimateCloseLeft 0.3s forwards
+    -moz-animation: drawer-contentAnimateCloseLeft 0.3s forwards
     animation: drawer-contentAnimateCloseLeft 0.3s forwards
+    animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
 .drawer.drawer-right
   right: 0
   transform: translateX(100%)
@@ -147,13 +159,25 @@
         i
           transform: rotate(180deg)
 .drawer.drawer-right.drawerAnimateOpen
+  -webkit-animation: drawerAnimateOpenRight 0.3s forwards
+  -moz-animation: drawerAnimateOpenRight 0.3s forwards
   animation: drawerAnimateOpenRight 0.3s forwards
+  animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
   .drawer-content
+    -webkit-animation: drawer-contentAnimateOpenRight 0.3s forwards
+    -moz-animation: drawer-contentAnimateOpenRight 0.3s forwards
     animation: drawer-contentAnimateOpenRight 0.3s forwards
+    animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
 .drawer.drawer-right.drawerAnimateClose
+  -webkit-animation: drawerAnimateCloseRight 0.3s forwards
+  -moz-animation: drawerAnimateCloseRight 0.3s forwards
   animation: drawerAnimateCloseRight 0.3s forwards
+  animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
   .drawer-content
+    -webkit-animation: drawer-contentAnimateCloseRight 0.3s forwards
+    -moz-animation: drawer-contentAnimateCloseRight 0.3s forwards
     animation: drawer-contentAnimateCloseRight 0.3s forwards
+    animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
 
 @keyframes drawerAnimateOpenLeft
   0%
