@@ -195,7 +195,7 @@ nav.navbar {
     top: 0;
     width: 320px;
     height: 100vh;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 32px 64px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
     .drawer .drawer-content .drawer-header {
       position: relative;
       width: 100%;
@@ -369,9 +369,11 @@ nav.navbar {
     background-color: rgba(0, 0, 0, 0.4); } }
 @keyframes drawer-contentAnimateOpenLeft {
   0% {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transform: translateX(-100%); }
   100% {
-    transform: translateX(0); } }
+    transform: translateX(0);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); } }
 @keyframes drawerAnimateCloseLeft {
   0% {
     transform: translateX(0);
@@ -384,8 +386,10 @@ nav.navbar {
     background-color: transparent; } }
 @keyframes drawer-contentAnimateCloseLeft {
   0% {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     transform: translateX(0); }
   100% {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transform: translateX(-100%); } }
 @keyframes drawerAnimateOpenRight {
   0% {
@@ -399,8 +403,10 @@ nav.navbar {
     background-color: rgba(0, 0, 0, 0.4); } }
 @keyframes drawer-contentAnimateOpenRight {
   0% {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transform: translateX(100%); }
   100% {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     transform: translateX(0); } }
 @keyframes drawerAnimateCloseRight {
   0% {
@@ -414,8 +420,10 @@ nav.navbar {
     background-color: transparent; } }
 @keyframes drawer-contentAnimateCloseRight {
   0% {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     transform: translateX(0); }
   100% {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transform: translateX(100%); } }
 @media only screen and (max-width: 768px) {
   .drawer .drawer-content .drawer-header {

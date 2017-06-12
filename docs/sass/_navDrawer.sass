@@ -13,7 +13,7 @@
     top: 0
     width: 320px
     height: 100vh
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 16px 32px 0 rgba(0,0,0,0.2), 0 32px 64px 0 rgba(0,0,0,0.2)
+    box-shadow: $depth-5
     .drawer-header
       position: relative
       width: 100%
@@ -191,9 +191,11 @@
     background-color: rgba(0,0,0,0.4)
 @keyframes drawer-contentAnimateOpenLeft
   0%
+    box-shadow: $depth-1
     transform: translateX(-100%)
   100%
     transform: translateX(0)
+    box-shadow: $depth-5
 @keyframes drawerAnimateCloseLeft
   0%
     transform: translateX(0)
@@ -206,8 +208,10 @@
     background-color: $transparent
 @keyframes drawer-contentAnimateCloseLeft
   0%
+    box-shadow: $depth-5
     transform: translateX(0)
   100%
+    box-shadow: $depth-1
     transform: translateX(-100%)
 @keyframes drawerAnimateOpenRight
   0%
@@ -221,8 +225,10 @@
     background-color: rgba(0,0,0,0.4)
 @keyframes drawer-contentAnimateOpenRight
   0%
+    box-shadow: $depth-1
     transform: translateX(100%)
   100%
+    box-shadow: $depth-5
     transform: translateX(0)
 @keyframes drawerAnimateCloseRight
   0%
@@ -236,8 +242,10 @@
     background-color: $transparent
 @keyframes drawer-contentAnimateCloseRight
   0%
+    box-shadow: $depth-5
     transform: translateX(0)
   100%
+    box-shadow: $depth-1
     transform: translateX(100%)
 
 @media only screen and (max-width: 768px)
