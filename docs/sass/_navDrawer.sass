@@ -7,17 +7,18 @@
   height: 100%
   background-color: rgba(0,0,0,0.4)
   z-index: 15
-  .drawerContent
+  transition: $fade-in-out
+  .drawer-content
     position: absolute
     top: 0
     width: 320px
-    height: 100%
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 16px 32px 0 rgba(0,0,0,0.2), 0 32px 64px 0 rgba(0,0,0,0.2)
-    .drawerHeader
+    height: 100vh
+    box-shadow: $depth-5
+    .drawer-header
       position: relative
       width: 100%
       height: 60px
-      #drawerClose
+      #drawer-close
         cursor: pointer
         position: absolute
         top: 0
@@ -25,37 +26,44 @@
         height: 60px
         border-radius: 60px
         background-color: $transparent
+        background-clip: padding-box
+        transition: $fade-in-out
         i
           position: absolute
           top: calc(50% - 12px)
           left: calc(50% - 12px)
-    .drawerHeader.drawerLight
+    .drawer-header.drawer-light
       background-color: $white
-      #drawerClose
-        border: 10px solid $white
+      #drawer-close
+        border: 10px solid
+        border-color: transparent
         &:hover
           background-color: $transparentDark
         &:active
           background-color: $transparentDarker
         i
           color: $primary
-    .drawerHeader.drawerDark
+    .drawer-header.drawer-dark
       background-color: $primary
-      #drawerClose
-        border: 10px solid $primary
+      #drawer-close
+        border: 10px solid
+        border-color: transparent
         &:hover
           background-color: $transparentLight
         &:active
           background-color: $transparentLighter
         i
           color: $white
-    .drawerNav
+    .drawer-nav
       position: relative
       width: 100%
+      height: calc(100vh - 56px)
+      overflow-y: auto
       margin: 0
       padding: 0
       list-style: none
       li
+        transition: $fade-in-out
         display: block
         cursor: pointer
         position: relative
@@ -72,23 +80,23 @@
         i
           position: absolute
           top: calc(50% - 12px)
-    .drawerNav.drawerNavLeft
+    .drawer-nav.drawer-nav-left
       li
         a
           text-align: left
           padding: 19px 20px 20px 56px
         i
           left: 16px
-    .drawerNav.drawerNavRight
+    .drawer-nav.drawer-nav-right
       li
         a
           text-align: right
           padding: 19px 56px 20px 20px
         i
           right: 16px
-  .drawerContent.drawerLight
+  .drawer-content.drawer-light
     background-color: $white
-    .drawerNav
+    .drawer-nav
       li
         &:hover
           background-color: $transparentDark
@@ -98,9 +106,9 @@
           color: $textSecondary
         i
           color: $textSecondary
-  .drawerContent.drawerDark
+  .drawer-content.drawer-dark
     background-color: $primary
-    .drawerNav
+    .drawer-nav
       li
         &:hover
           background-color: $transparentLight
@@ -110,42 +118,66 @@
           color: $primaryLight
         i
           color: $primaryLight
-.drawer.drawerLeft
+.drawer.drawer-left
   left: 0
   transform: translateX(-100%)
-  .drawerContent
+  .drawer-content
     left: 0
-    .drawerHeader
-      #drawerClose
+    .drawer-header
+      #drawer-close
         left: 0
         i
           transform: none
-.drawer.drawerLeft.drawerAnimateOpen
+.drawer.drawer-left.drawerAnimateOpen
+  -webkit-animation: drawerAnimateOpenLeft 0.3s forwards
+  -moz-animation: drawerAnimateOpenLeft 0.3s forwards
   animation: drawerAnimateOpenLeft 0.3s forwards
-  .drawerContent
-    animation: drawerContentAnimateOpenLeft 0.3s forwards
-.drawer.drawerLeft.drawerAnimateClose
+  animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
+  .drawer-content
+    -webkit-animation: drawer-contentAnimateOpenLeft 0.3s forwards
+    -moz-animation: drawer-contentAnimateOpenLeft 0.3s forwards
+    animation: drawer-contentAnimateOpenLeft 0.3s forwards
+    animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
+.drawer.drawer-left.drawerAnimateClose
+  -webkit-animation: drawerAnimateCloseLeft 0.3s forwards
+  -moz-animation: drawerAnimateCloseLeft 0.3s forwards
   animation: drawerAnimateCloseLeft 0.3s forwards
-  .drawerContent
-    animation: drawerContentAnimateCloseLeft 0.3s forwards
-.drawer.drawerRight
+  animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
+  .drawer-content
+    -webkit-animation: drawer-contentAnimateCloseLeft 0.3s forwards
+    -moz-animation: drawer-contentAnimateCloseLeft 0.3s forwards
+    animation: drawer-contentAnimateCloseLeft 0.3s forwards
+    animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
+.drawer.drawer-right
   right: 0
   transform: translateX(100%)
-  .drawerContent
+  .drawer-content
     right: 0
-    .drawerHeader
-      #drawerClose
+    .drawer-header
+      #drawer-close
         right: 0
         i
           transform: rotate(180deg)
-.drawer.drawerRight.drawerAnimateOpen
+.drawer.drawer-right.drawerAnimateOpen
+  -webkit-animation: drawerAnimateOpenRight 0.3s forwards
+  -moz-animation: drawerAnimateOpenRight 0.3s forwards
   animation: drawerAnimateOpenRight 0.3s forwards
-  .drawerContent
-    animation: drawerContentAnimateOpenRight 0.3s forwards
-.drawer.drawerRight.drawerAnimateClose
+  animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
+  .drawer-content
+    -webkit-animation: drawer-contentAnimateOpenRight 0.3s forwards
+    -moz-animation: drawer-contentAnimateOpenRight 0.3s forwards
+    animation: drawer-contentAnimateOpenRight 0.3s forwards
+    animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
+.drawer.drawer-right.drawerAnimateClose
+  -webkit-animation: drawerAnimateCloseRight 0.3s forwards
+  -moz-animation: drawerAnimateCloseRight 0.3s forwards
   animation: drawerAnimateCloseRight 0.3s forwards
-  .drawerContent
-    animation: drawerContentAnimateCloseRight 0.3s forwards
+  animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
+  .drawer-content
+    -webkit-animation: drawer-contentAnimateCloseRight 0.3s forwards
+    -moz-animation: drawer-contentAnimateCloseRight 0.3s forwards
+    animation: drawer-contentAnimateCloseRight 0.3s forwards
+    animation-timing-function: cubic-bezier(0.25,0.8,0.25,1)
 
 @keyframes drawerAnimateOpenLeft
   0%
@@ -157,11 +189,13 @@
   100%
     transform: translateX(0)
     background-color: rgba(0,0,0,0.4)
-@keyframes drawerContentAnimateOpenLeft
+@keyframes drawer-contentAnimateOpenLeft
   0%
+    box-shadow: $depth-1
     transform: translateX(-100%)
   100%
     transform: translateX(0)
+    box-shadow: $depth-5
 @keyframes drawerAnimateCloseLeft
   0%
     transform: translateX(0)
@@ -172,10 +206,12 @@
   100%
     transform: translateX(-100%)
     background-color: $transparent
-@keyframes drawerContentAnimateCloseLeft
+@keyframes drawer-contentAnimateCloseLeft
   0%
+    box-shadow: $depth-5
     transform: translateX(0)
   100%
+    box-shadow: $depth-1
     transform: translateX(-100%)
 @keyframes drawerAnimateOpenRight
   0%
@@ -187,10 +223,12 @@
   100%
     transform: translateX(0)
     background-color: rgba(0,0,0,0.4)
-@keyframes drawerContentAnimateOpenRight
+@keyframes drawer-contentAnimateOpenRight
   0%
+    box-shadow: $depth-1
     transform: translateX(100%)
   100%
+    box-shadow: $depth-5
     transform: translateX(0)
 @keyframes drawerAnimateCloseRight
   0%
@@ -202,60 +240,63 @@
   100%
     transform: translateX(100%)
     background-color: $transparent
-@keyframes drawerContentAnimateCloseRight
+@keyframes drawer-contentAnimateCloseRight
   0%
+    box-shadow: $depth-5
     transform: translateX(0)
   100%
+    box-shadow: $depth-1
     transform: translateX(100%)
 
 @media only screen and (max-width: 768px)
   .drawer
-    .drawerContent
-      .drawerHeader
+    .drawer-content
+      .drawer-header
         height: 56px
-        #drawerClose
+        #drawer-close
           width: 56px
           height: 56px
           border-radius: 56px
-      .drawerHeader.drawerLight
-        #drawerClose
+      .drawer-header.drawer-light
+        #drawer-close
           &:hover
             background-color: $transparent
           &:active
             background-color: $transparentDark
-      .drawerHeader.drawerDark
-        #drawerClose
+      .drawer-header.drawer-dark
+        #drawer-close
           &:hover
             background-color: $transparent
           &:active
             background-color: $transparentLight
-      .drawerNav
+      .drawer-nav
         li
           height: 56px
           a
             font-size: 18px
-      .drawerNav.drawerNavLeft
+      .drawer-nav.drawer-nav-left
         li
           a
             padding: 18px 18px 18px 56px
-      .drawerNav.drawerNavRight
+      .drawer-nav.drawer-nav-right
         li
           a
             padding: 18px 56px 18px 18px
-    .drawerContent.drawerLight
-      .drawerNav
+    .drawer-content.drawer-light
+      .drawer-nav
         li
           &:hover
             background-color: $transparent
           &:active
             background-color: $transparentDark
-    .drawerContent.drawerDark
-      .drawerNav
+    .drawer-content.drawer-dark
+      .drawer-nav
         li
           &:hover
             background-color: $transparent
           &:active
             background-color: $transparentLight
 @media only screen and (max-width: 480px)
-  .drawer.drawerContent
-    width: 80vw
+  .drawer
+    .drawer-content
+      width: 80vw

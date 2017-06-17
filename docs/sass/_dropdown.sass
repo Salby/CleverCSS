@@ -1,0 +1,204 @@
+/* DROPDOWN STYLES
+
+div.dropdown
+  position: relative
+  user-select: none
+  -webkit-user-select: none
+  font-family: 'Roboto', sans-serif
+
+  .button-dropdown
+    cursor: pointer
+    position: relative
+    background-color: $transparent
+    transition: $fade-in-out
+  .button-dropdown.dropdown-small
+    width: 56px
+    height: 56px
+    border-radius: 100%
+    border: none
+    background-clip: padding-box
+    i
+      position: absolute
+      top: calc(50% - 12px)
+      left: calc(50% - 12px)
+  .button-dropdown.dropdown-large
+    width: 100%
+    height: 56px
+    font-size: 18px
+    padding: 1em
+    border: none
+    border-radius: 2px
+  .button-dropdown.dropdown-left
+    float: left
+  .button-dropdown.dropdown-right
+    float: right
+  .button-dropdown.dropdown-small.dropdown-light
+    border: 10px solid
+    border-color: transparent
+    i
+      color: $primaryLight
+    &:active
+      background-color: $transparentDarker
+  .button-dropdown.dropdown-small.dropdown-dark
+    border: 10px solid
+    border-color: transparent
+    i
+      color: $primaryLight
+    &:active
+      background-color: $transparentLighter
+
+  .dropdown-content
+    display: none
+    list-style: none
+    margin: 0
+    padding: 0
+    z-index: 5
+    li
+      cursor: pointer
+
+  .dropdown-content.dropdown-small
+    position: absolute
+    top: 56px
+    left: auto
+    right: auto
+    border-radius: 2px
+    max-height: 300px
+    overflow-y: auto
+    box-shadow: $depth-4
+    li
+      user-select: none
+      -webkit-user-select: none
+      cursor: pointer
+      white-space: nowrap
+      font-size: 18px
+      padding: 0.8em
+      transition: $fade-in-out
+      a
+        color: $textSecondary
+        display: block
+        text-decoration: none
+
+  .dropdown-content.dropdown-small.dropdown-left
+    left: 0
+    right: auto
+
+  .dropdown-content.dropdown-small.dropdown-right
+    left: auto
+    right: 0
+
+  .dropdown-content.dropdown-small.dropdown-light
+    background-color: #FEFEFE
+    li
+      color: $primary
+      &:active
+        background-color: $transparentDarker
+
+  .dropdown-content.dropdown-small.dropdown-dark
+    background-color: $primary
+    li
+      color: $white
+      &:active
+        background-color: $transparentLighter
+
+  .button-dropdown.dropdown-large.dropdown-light
+    color: $textSecondary
+    &:active
+      background-color: $transparentDarker
+  .button-dropdown.dropdown-large.dropdown-dark
+    color: $primaryLight
+    &:active
+      background-color: $transparentLighter
+
+  .dropdown-content.dropdown-large
+    position: absolute
+    top: 56px
+    left: 0
+    width: 100%
+    border-radius: 0 0 2px 2px
+    box-shadow: $depth-3
+    li
+      transition: $fade-in-out
+      padding: 1em
+
+  .dropdown-content.dropdown-large.dropdown-light
+    background-color: $white
+    li
+      color: $textSecondary
+      a
+        color: $textSecondary
+      &:active
+        background-color: $transparentDarker
+  .dropdown-content.dropdown-large.dropdown-dark
+    background-color: $primary
+    li
+      color: $primaryLight
+      a
+        color: $primaryLight
+      &:active
+        background-color: $transparentLighter
+
+div.dropdown.dropdown-left
+  float: left
+
+div.dropdown.dropdown-right
+  float: right
+
+@media only screen and (max-width: 480px)
+
+@media only screen and (min-width: 481px)
+  div.dropdown
+    .dropdown-content.dropdown-small
+      li
+        padding: 0.6em
+
+    .button-dropdown.dropdown-small.dropdown-light
+      &:hover
+        background-color: $transparentDark
+      &:active
+        background-color: $transparentDarker
+    .button-dropdown.dropdown-small.dropdown-dark
+      &:active
+        background-color: $transparentLight
+      &:hover
+        background-color: $transparentLighter
+
+    .dropdown-content.dropdown-small.dropdown-light
+      li
+        &:hover
+          background-color: $transparentDark
+        &:active
+          background-color: $transparentDarker
+
+    .dropdown-content.dropdown-small.dropdown-dark
+      li
+        &:hover
+          background-color: $transparentLight
+        &:active
+          background-color: $transparentLighter
+
+    .button-dropdown.dropdown-large.dropdown-light
+      &:hover
+        background-color: $transparentDark
+      &:active
+        background-color: $transparentDarker
+    .button-dropdown.dropdown-large.dropdown-dark
+      &:hover
+        background-color: $transparentLight
+      &:active
+        background-color: $transparentLighter
+    .dropdown-content.dropdown-large.dropdown-light
+      li
+        &:hover
+          background-color: $transparentDark
+        &:active
+          background-color: $transparentDarker
+    .dropdown-content.dropdown-large.dropdown-dark
+      li
+        &:hover
+          background-color: $transparentLight
+        &:active
+          background-color: $transparentLighter
+
+@media only screen and (min-width: 769px)
+
+@media only screen and (min-width: 1201px)

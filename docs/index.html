@@ -20,32 +20,32 @@
   <body>
 
     <div class="modal" id="modal1">
-      <div class="modalContentLight">
-        <div class="modalHeaderLight">
+      <div class="modal-content modal-light">
+        <div class="modal-header modal-light">
           <h2>Header</h2>
           <p>Comment</p>
         </div>
-        <img class="modalImage" src="https://s-media-cache-ak0.pinimg.com/originals/0d/81/38/0d8138c3b2f748bb6d0b0f65546be622.png">
-        <div class="modalFooterLight">
-          <button class="buttonFlat buttonModalClose" data-target="#modal1">Close Modal</button>
+        <img class="modal-image" src="https://s-media-cache-ak0.pinimg.com/originals/0d/81/38/0d8138c3b2f748bb6d0b0f65546be622.png">
+        <div class="modal-footer modal-light">
+          <button class="button-flat button-modal-close" data-target="#modal1">Close Modal</button>
         </div>
       </div>
     </div>
 
-    <nav class="navbar navbarDark navbarShort">
-      <button id="drawerOpen" class="drawerOpenLeft mobileOnly"><i class="material-icons">menu</i></button>
-      <ul class="navbarNav navbarLeft">
-        <li class="brandItem"><a data-scroll-target="#home">CleverCSS</a></li>
+    <nav class="navbar navbar-dark navbar-short">
+      <button id="drawer-open" class="drawer-open-left mobile-only"><i class="material-icons">menu</i></button>
+      <ul class="navbar-nav navbar-left">
+        <li class="brand-item"><a data-scroll-target="#home">CleverCSS</a></li>
         <li><a data-scroll-target="#elements">Components</a></li>
         <li><a data-scroll-target="#dependencies">Dependencies</a></li>
       </ul>
     </nav>
-    <div id="mobileDrawer" class="drawer drawerLeft">
-      <div class="drawerContent drawerDark">
-        <div class="drawerHeader drawerDark">
-          <button id="drawerClose"><i class="material-icons">arrow_back</i></button>
+    <div id="mobile-drawer" class="drawer drawer-left">
+      <div class="drawer-content drawer-light">
+        <div class="drawer-header drawer-dark">
+          <button id="drawer-close"><i class="material-icons">arrow_back</i></button>
         </div>
-        <ul class="drawerNav drawerNavLeft">
+        <ul class="drawer-nav drawer-nav-left">
           <li><i class="material-icons">home</i> <a data-scroll-target="#home">Home</a></li>
           <li><i class="material-icons">view_quilt</i> <a data-scroll-target="#elements">Components</a></li>
           <li><i class="material-icons">format_list_bulleted</i> <a data-scroll-target="#dependencies">Dependencies</a></li>
@@ -57,11 +57,11 @@
         <div style="margin: auto; text-align: center">
           <h1 id="title">Clever<span class="headerDecorator">CSS</span></h1>
           <h2>A front-end framework for humans</h2>
-          <p>0.8.6</p>
+          <p>0.9.1-C</p>
         </div>
       </section>
 
-      <div class="wrapperM" id="animation" style="animation: fadeIn 1s; position: relative">
+      <div class="wrapper-m" id="animation" style="animation: fadeIn 1s; position: relative">
         <div class="animateCanvas">
           <div class="header"></div>
           <div class="accent"></div>
@@ -70,11 +70,11 @@
         <button data-scroll-target="#buttonScroll"><i class="material-icons">expand_more</i></button>
       </div>
 
-      <div class="wrapperM">
-        <div class="articleCardLight" id="getStarted" style="animation: fadeIn 1s; margin-bottom: 10vh">
-          <div class="headerLight">
+      <div class="wrapper-m">
+        <div class="card card-light depth-1" id="getStarted" style="animation: fadeIn 1s; margin-bottom: 10vh">
+          <div class="card-header card-light">
             <h2>Get started</h2>
-            <p>Version 0.8.6</p>
+            <p>Version 0.9.1-C</p>
           </div>
           <div class="code">
             &lt;!DOCTYPE html&gt;<br>
@@ -84,7 +84,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;my website&lt;/title&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--CLEVERCSS STYLESHEET--&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="https://cdn.rawgit.com/SanderSalamander/CleverCSS/be8ffcea/clever.css"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="https://cdn.rawgit.com/SanderSalamander/CleverCSS/2577c395/clever.css"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--MATERIAL ICONS--&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;<br>
             &nbsp;&nbsp;&lt;/head&gt;<br>
@@ -92,21 +92,22 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--JQUERY--&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"&gt;&lt;/script&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--CLEVERCSS SCRIPT--&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;script src="https://cdn.rawgit.com/SanderSalamander/CleverCSS/e52b5de3/clever.js"&gt;&lt;/script&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;script src="https://cdn.rawgit.com/SanderSalamander/CleverCSS/a4c0c19b/clever.js"&gt;&lt;/script&gt;<br>
             &nbsp;&nbsp;&lt;/body&gt;<br>
             &lt;/html&gt;<br>
           </div>
-          <div class="footerLight" id="elements">
-            <a href="https://github.com/SanderSalamander/CleverCSS/" target="_blank"><button class="buttonFlat">Follow on Github</button></a>
+          <div class="card-footer card-light" id="elements">
+            <a href="https://github.com/SanderSalamander/CleverCSS/" target="_blank"><button class="button-flat">Follow on Github</button></a>
           </div>
         </div>
       </div>
 
-      <section class="wrapperL" id="componentsWrapper">
+      <section class="wrapper-l" id="componentsWrapper">
           <div class="row">
             <section class="col-m-3 elementListWrapper">
               <ul class="elementList">
                 <li class="selectArticle articleActive" data-target="#navBarArticle">Navigation</li>
+                <li class="selectArticle" data-target="#cardsArticle">Cards</li>
                 <li class="selectArticle" data-target="#buttonArticle">Buttons</li>
                 <li class="selectArticle" data-target="#dropdownArticle">Dropdown</li>
                 <li class="selectArticle" data-target="#modalArticle">Modals</li>
@@ -117,10 +118,11 @@
             <section class="col-m-9">
               <section class="elementDisplay">
                 <header>
-                  <div class="dropdownSmallLight" style="float: right">
-                    <button class="buttonDropdownSmall" id="mobileDrop"><i class="material-icons">more_vert</i></button>
-                    <ul class="dropdownContent" id="mobileDropdownContent">
-                      <li class="selectArticle" data-target="#navBarArticle"><a>Navigation Bar</a></li>
+                  <div class="dropdown dropdown-right">
+                    <button class="button-dropdown dropdown-small dropdown-right dropdown-light"><i class="material-icons">more_vert</i></button>
+                    <ul class="dropdown-content dropdown-small dropdown-right dropdown-light">
+                      <li class="selectArticle" data-target="#navBarArticle"><a>Navigation</a></li>
+                      <li class="selectArticle" data-target="#cardsArticle"><a>Cards</a></li>
                       <li class="selectArticle" data-target="#buttonArticle"><a>Buttons</a></li>
                       <li class="selectArticle" data-target="#dropdownArticle"><a>Dropdown</a></li>
                       <li class="selectArticle" data-target="#modalArticle">Modals</li>
@@ -142,8 +144,8 @@
                     </div>
                   </div>
                   <div class="code">
-                    &lt;nav class="navbar navbarDark navbarShort"&gt;<br>
-                    &nbsp;&nbsp;&lt;ul class="navbarNav navbarLeft"&gt;<br>
+                    &lt;nav class="navbar navbar-dark navbar-short"&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="navbar-nav navbar-left"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
@@ -151,7 +153,7 @@
                     &lt;/nav&gt;<br>
                   </div>
                   <h4>Horizontal alignment</h4>
-                  <p>You can also use the class <span class="codeSpace">navbarRight</span> to move the links to the right side of the navigation bar</p>
+                  <p>You can also use the class <span class="codeSpace">navbar-right</span> to move the links to the right side of the navigation bar</p>
                   <div class="canvasNav">
                     <div class="navbarShort dark">
                       <div class="navLink floatRight"></div>
@@ -160,8 +162,8 @@
                     </div>
                   </div>
                   <div class="code">
-                    &lt;nav class="navbar navbarDark navbarShort"&gt;<br>
-                    &nbsp;&nbsp;&lt;ul class="navbarNav <span class="highlight">navbarRight</span>"&gt;<br>
+                    &lt;nav class="navbar navbar-dark navbar-short"&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="navbar-nav <span class="highlight">navbar-right</span>"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
@@ -169,7 +171,7 @@
                     &lt;/nav&gt;<br>
                   </div>
                   <h4>Brand</h4>
-                  <p>By default, links in the navbar disappear once the screen size gets too small. To keep a link from disappearing use the class <span class="codeSpace">brandItem</span></p>
+                  <p>By default, links in the navbar disappear once the screen size gets too small. To keep a link from disappearing use the class <span class="codeSpace">brand-item</span></p>
                   <div class="canvasNav">
                     <div class="navbarShort dark">
                       <div class="navLink brandItem"></div>
@@ -178,9 +180,9 @@
                     </div>
                   </div>
                   <div class="code">
-                    &lt;nav class="navbar navbarDark navbarShort"&gt;<br>
-                    &nbsp;&nbsp;&lt;ul class="navbarNav navbarLeft"&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="highlight">class="brandItem"</span>&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                    &lt;nav class="navbar navbar-dark navbar-short"&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="navbar-nav navbar-left"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="highlight">class="brand-item"</span>&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&lt;/ul&gt;<br>
@@ -196,15 +198,15 @@
                     </div>
                   </div>
                   <div class="code">
-                    &lt;nav class="navbar navbarDark <span class="highlight">navbarTall</span>"&gt;<br>
-                    &nbsp;&nbsp;&lt;ul class="navbarNav navbarLeft"&gt;<br>
+                    &lt;nav class="navbar navbar-dark navbar-tall <span class="highlight">navbar-tall</span>"&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="navbar-nav navbar-left"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&lt;/ul&gt;<br>
                     &lt;/nav&gt;<br>
                   </div>
-                  <p>You can use <span class="codeSpace">navbarRight</span> and <span class="codeSpace">brandItem</span> just like on the short navigation bar</p>
+                  <p>You can use <span class="codeSpace">navbar-right</span> and <span class="codeSpace">brand-item</span> just like on the short navigation bar</p>
                   <h4>Drawer</h4>
                   <p>The drawer is a menu that hides links until they are revealed by the user</p>
                   <div class="animateCanvasDrawer">
@@ -215,17 +217,17 @@
                   </div>
                   <p>The first thing you'll need to use the drawer is a button that can reveal it. You can put this button in your navigation bar like this:</p>
                   <div class="code">
-                    &lt;nav class="navbar navbarDark navbarShort"&gt;<br>
-                    <span class="highlight">&nbsp;&nbsp;&lt;button id="drawerOpen" class="drawerOpenLeft"&gt;&lt;i&gt;...&lt;/i&gt;&lt;/button&gt;</span><br>
-                    &nbsp;&nbsp;&lt;ul class="navbarNav navbarLeft"&gt;<br>
+                    &lt;nav class="navbar navbar-dark navbar-short"&gt;<br>
+                    <span class="highlight">&nbsp;&nbsp;&lt;button id="drawer-open" class="drawer-open-left"&gt;&lt;i&gt;...&lt;/i&gt;&lt;/button&gt;</span><br>
+                    &nbsp;&nbsp;&lt;ul class="navbar-nav navbar-left"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&lt;/ul&gt;<br>
                     &lt;/nav&gt;<br>
                   </div>
-                  <p>You can add the class <span class="codeSpace">mobileOnly</span> to <span class="codeSpace">#drawerOpen</span> if you only want it to be visible on touch screens</p>
-                  <p>You can use <span class="codeSpace">drawerOpenRight</span> on <span class="codeSpace">#drawerOpen</span> if you want to move it to the right side of your navigation bar</p>
+                  <p>You can add the class <span class="codeSpace">mobile-only</span> to <span class="codeSpace">#drawer-open</span> if you only want it to be visible on touch screens</p>
+                  <p>You can use <span class="codeSpace">drawer-open-right</span> on <span class="codeSpace">#drawer-open</span> if you want to move it to the right side of your navigation bar</p>
                   <div class="canvasNav">
                     <div class="navbarShort dark">
                       <div class="drawerButton"></div>
@@ -236,27 +238,120 @@
                   </div>
                   <p>Next you'll need to add the drawer to your markup like this:</p>
                   <div class="code">
-                    &lt;nav class="navbar navbarDark navbarShort"&gt;<br>
-                    &nbsp;&nbsp;&lt;button id="drawerOpen" class="drawerOpenLeft"&gt;&lt;i&gt;...&lt;/i&gt;&lt;/button&gt;<br>
-                    &nbsp;&nbsp;&lt;ul class="navbarNav navbarLeft"&gt;<br>
+                    &lt;nav class="navbar navbar-dark navbar-short"&gt;<br>
+                    &nbsp;&nbsp;&lt;button id="drawer-open" class="drawer-open-left"&gt;&lt;i&gt;...&lt;/i&gt;&lt;/button&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="navbar-nav navbar-left"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&lt;/ul&gt;<br>
                     &lt;/nav&gt;<br>
                     <span class="highlight">&lt;!--DRAWER--&gt;<br>
-                    &lt;div id="mobileDrawer" class="drawer drawerLeft"&gt;<br>
-                    &nbsp;&nbsp;&lt;div class="drawerContent drawerDark"&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="drawerHeader drawerDark"&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button id="drawerClose"&gt;...&lt;/button&gt;<br>
+                    &lt;div id="mobile-drawer" class="drawer drawer-left"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="drawer-content drawer-dark"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="drawer-header drawer-dark"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button id="drawer-close"&gt;...&lt;/button&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="drawerNav drawerNavLeft"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="drawer-nav drawer-nav-left"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;i&gt;...&lt;/i&gt; &lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
                     &nbsp;&nbsp;&lt;/div&gt;<br>
                     &lt;/div&gt;<br></span>
                   </div>
-                  <p>Remember that you can use <span class="codeSpace">drawerLight</span> instead of <span class="codeSpace">drawerDark</span> and so on. You can also replace <span class="codeSpace">left</span> with <span class="codeSpace">right</span> in classes that use horizontal alignment</p>
+                  <p>Remember that you can use <span class="codeSpace">drawer-light</span> instead of <span class="codeSpace">drawer-dark</span> and so on. You can also replace <span class="codeSpace">left</span> with <span class="codeSpace">right</span> in classes that use horizontal alignment</p>
+                </article>
+                <article id="cardsArticle" class="hideComp">
+                  <header>
+                    <h3>Cards</h3>
+                  </header>
+                  <h4>Light card</h4>
+                  <div class="row wrapper-m">
+                    <div class="col-xs-12">
+                      <div class="card card-light">
+                        <div class="card-header card-light">
+                          <h5>Header</h5>
+                          <p>card card-light</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="code">
+                    &lt;div class="card <span class="highlight">card-light</span>"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="card-header card-light"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Header&lt;/h5&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                  </div>
+                  <h4>Dark card</h4>
+                  <div class="row wrapper-m">
+                    <div class="col-xs-12">
+                      <div class="card card-dark">
+                        <div class="card-header card-dark">
+                          <h5>Header</h5>
+                          <p>card card-dark</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="code">
+                    &lt;div class="card <span class="highlight">card-dark</span>"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="card-header card-dark"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Header&lt;/h5&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                  </div>
+                  <h4>Light card with hover effect</h4>
+                  <div class="row wrapper-m">
+                    <div class="col-xs-12">
+                      <div class="card card-light card-hover-4">
+                        <div class="card-header card-light">
+                          <h5>Header</h5>
+                          <p>card card-light card-hover-4</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="code">
+                    &lt;div class="card card-light <span class="highlight">card-hover-4</span>"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="card-header card-light"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Header&lt;/h5&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                  </div>
+                  <h4>Light cards with custom depth</h4>
+                  <div class="row wrapper-m">
+                    <div class="col-s-4">
+                      <div class="card card-light depth-1">
+                        <div class="card-header card-light">
+                          <h5>Header</h5>
+                          <p>card card-light depth-1</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-s-4">
+                      <div class="card card-light depth-2">
+                        <div class="card-header card-light">
+                          <h5>Header</h5>
+                          <p>card card-light depth-2</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-s-4">
+                      <div class="card card-light depth-3">
+                        <div class="card-header card-light">
+                          <h5>Header</h5>
+                          <p>card card-light depth-3</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="code">
+                    &lt;div class="card card-light <span class="highlight">depth-3</span>"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="card-header card-light"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&gt;Header&lt;/h5&gt;<br>
+                    &nbsp;&nbsp;&lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                  </div>
                 </article>
                 <article id="buttonArticle" class="hideComp">
                   <header>
@@ -267,134 +362,76 @@
                     A button that sits flat on it's parent. Good for dialogs and small actions, like cancelling an action.
                   </p>
                   <div class="code">
-                    &lt;button class="buttonFlat"&gt;button&lt;/button&gt;
+                    &lt;button class="button-flat"&gt;button&lt;/button&gt;
                   </div>
                   <div class="demoArea">
-                    <button class="buttonFlat">button</button>
+                    <button class="button-flat">button</button>
                   </div>
                   <h4>Raised Button</h4>
                   <p>
                     A button that is raised from it's parent. Good if you have a few options that need to be more visible than the flat button.
                   </p>
                   <div class="code">
-                    &lt;button class="buttonRaised"&gt;button&lt;/button&gt;
+                    &lt;button class="button-raised"&gt;button&lt;/button&gt;
                   </div>
                   <div class="demoArea">
-                    <button class="buttonRaised">button</button>
+                    <button class="button-raised">button</button>
                   </div>
                   <h4>Action Button</h4>
                   <p>
                     This button is also raised from it's parent. It's good for highlighting important actions. It's a good idea not to use this button too often, as it would start to seem insignificant compared to the other buttons. The action button needs an icon that represents the action.
                   </p>
                   <div class="code">
-                    &lt;button class="buttonAction"&gt;...&lt;/button&gt;
+                    &lt;button class="button-action"&gt;...&lt;/button&gt;
                   </div>
                   <div class="demoArea">
-                    <button class="buttonAction"><i class="material-icons">add</i></button>
+                    <button class="button-action"><i class="material-icons">add</i></button>
                   </div>
                 </article>
                 <article id="dropdownArticle" class="hideComp">
                   <header>
                     <h3>Dropdown</h3>
                   </header>
-                  <h4>Dropdowns</h4>
-                  <p>There are two types of dropdowns in CleverCSS, both come in dark and light variants.</p>
-                  <div class="row">
-                    <div class="col-m-6">
-                      <div class="articleCardLight">
-                        <div class="headerLight">
-                          <div class="dropdownSmallLight">
-                            <button class="buttonDropdownSmall"><i class="material-icons">more_vert</i></button>
-                            <ul class="dropdownContent">
-                              <li>Option 1</li>
-                              <li>Option 2</li>
-                              <li>Option 3</li>
-                            </ul>
-                          </div>
-                          <h3>.dropdownSmallLight</h3>
-                        </div>
-                      </div>
-                      <div class="code">
-                        &lt;div class="dropdownSmallLight"&gt;<br>
-                        &nbsp;&nbsp;&lt;button class="buttonDropdownSmall"&gt;...&lt;/button&gt;<br>
-                        &nbsp;&nbsp;&lt;ul class="dropdownContent"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 1&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 2&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 3&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&lt;/ul&gt;<br>
-                        &lt;/div&gt;<br>
-                      </div>
-                      <div class="articleCardDark">
-                        <div class="headerDark">
-                          <div class="dropdownSmallDark">
-                            <button class="buttonDropdownSmall"><i class="material-icons">more_vert</i></button>
-                            <ul class="dropdownContent">
-                              <li>Option 1</li>
-                              <li>Option 2</li>
-                              <li>Option 3</li>
-                            </ul>
-                          </div>
-                          <h3>.dropdownSmallDark</h3>
-                        </div>
-                      </div>
-                      <div class="code">
-                        &lt;div class="dropdownSmallDark"&gt;<br>
-                        &nbsp;&nbsp;&lt;button class="buttonDropdownSmall"&gt;...&lt;/button&gt;<br>
-                        &nbsp;&nbsp;&lt;ul class="dropdownContent"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 1&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 2&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 3&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&lt;/ul&gt;<br>
-                        &lt;/div&gt;<br>
-                      </div>
-                    </div>
-                    <div class="col-m-6">
-                      <div class="articleCardLight">
-                        <div class="headerLight">
-                          <div class="dropdownLargeLight">
-                            <button class="buttonDropdownLarge">.dropdownLargeLight</button>
-                            <ul class="dropdownContent">
-                              <li>Option 1</li>
-                              <li>Option 2</li>
-                              <li>Option 3</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="code">
-                        &lt;div class="dropdownLargeLight"&gt;<br>
-                        &nbsp;&nbsp;&lt;button class="buttonDropdownLarge"&gt;...&lt;/button&gt;<br>
-                        &nbsp;&nbsp;&lt;ul class="dropdownContent"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 1&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 2&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 3&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&lt;/ul&gt;<br>
-                        &lt;/div&gt;<br>
-                      </div>
-                      <div class="articleCardDark">
-                        <div class="headerDark">
-                          <div class="dropdownLargeDark">
-                            <button class="buttonDropdownLarge">.dropdownLargeDark</button>
-                            <ul class="dropdownContent">
-                              <li>Option 1</li>
-                              <li>Option 2</li>
-                              <li>Option 3</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="code">
-                        &lt;div class="dropdownLargeDark"&gt;<br>
-                        &nbsp;&nbsp;&lt;button class="buttonDropdownLarge"&gt;...&lt;/button&gt;<br>
-                        &nbsp;&nbsp;&lt;ul class="dropdownContent"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 1&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 2&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Option 3&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&lt;/ul&gt;<br>
-                        &lt;/div&gt;<br>
-                      </div>
-                    </div>
+                  <div class="dropdown dropdown-right">
+                    <button class="button-dropdown dropdown-small dropdown-right dropdown-light"><i class="material-icons">more_vert</i></button>
+                    <ul class="dropdown-content dropdown-small dropdown-right dropdown-light">
+                      <li><a>Option 1</a></li>
+                      <li><a>Option 2</a></li>
+                      <li><a>Option 3</a></li>
+                    </ul>
                   </div>
+                  <h4>Small dropdown</h4>
+                  <div class="code">
+                    &lt;div class="dropdown dropdown-right"&gt;<br>
+                    &nbsp;&nbsp;&lt;button class="button-dropdown dropdown-small dropdown-right dropdown-light"&gt;[ICON]&lt;/button&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="dropdown-content dropdown-small dropdown-right dropdown-light"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Option 1&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Option 2&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Option 3&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/div&gt;<br>
+                  </div>
+
+                  <div class="dropdown dropdown-right">
+                    <button class="button-dropdown dropdown-large dropdown-right dropdown-light">Dropdown</button>
+                    <ul class="dropdown-content dropdown-large dropdown-light">
+                      <li><a>Option 1</a></li>
+                      <li><a>Option 2</a></li>
+                      <li><a>Option 3</a></li>
+                    </ul>
+                  </div>
+                  <h4>Large dropdown</h4>
+                  <div class="code">
+                    &lt;div class="dropdown dropdown-right"&gt;<br>
+                    &nbsp;&nbsp;&lt;button class="button-dropdown dropdown-large dropdown-right dropdown-light"&gt;Dropdown&lt;/button&gt;<br>
+                    &nbsp;&nbsp;&lt;ul class="dropdown-content dropdown-large dropdown-right dropdown-light"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Option 1&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Option 2&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Option 3&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/div&gt;<br>
+                  </div>
+                  <p>Remember that you can always change <span class="codeSpace">right</span> to <span class="codeSpace">left</span> and <span class="codeSpace">light</span> to <span class="codeSpace">dark</span> in the classes that use alignment or color</p>
                 </article>
                 <article id="modalArticle" class="hideComp">
                   <header>
@@ -405,9 +442,9 @@
                   <h4>The modal button</h4>
                   <p>The first thing you'll need is a button that can activate the modal</p>
                   <div class="code">
-                    &lt;button class="buttonFlat buttonModalOpen" data-target="#modal1"&gt;Open Modal&lt;/button&gt;<br>
+                    &lt;button class="button-flat buttonModalOpen" data-target="#modal1"&gt;Open Modal&lt;/button&gt;<br>
                   </div>
-                  <button class="buttonRaised buttonModalOpen" data-target="#modal1">Open Modal</button>
+                  <button class="button-raised button-modal-open" data-target="#modal1">Open Modal</button>
                   <p>The data-target attribute is used to point to the modal that you want to open</p>
                   <h4>The modal window</h4>
                   <p>The modal itself needs an id attribute. This is how you are able to target different modals with different buttons</p>
@@ -419,7 +456,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Comment&lt;/p&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modalFooterLight"&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="buttonFlat buttonModalClose" data-target="#modal1"&gt;Close Modal&lt;/button&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button-flat buttonModalClose" data-target="#modal1"&gt;Close Modal&lt;/button&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                     &nbsp;&nbsp;&lt;/div&gt;<br>
                     &lt;/div&gt;<br>
@@ -513,19 +550,19 @@
                   <header>
                     <h3>Forms</h3>
                   </header>
-                  <form class="formBasic">
-                    <div class="formGroup">
+                  <form class="form-basic">
+                    <div class="form-group">
                       <input type="text" name="textField" id="textField" required>
-                      <label class="controlLabel" for="textField">Textfield</label><i class="bar"></i>
+                      <label class="control-label" for="textField">Textfield</label><i class="bar"></i>
                     </div>
-                    <div class="formGroup">
+                    <div class="form-group">
                       <select id="select">
                         <option value="1">Option 1</option>
                         <option value="2">Option 2</option>
                       </select>
-                      <label class="controlLabel" for="select">Selection</label><i class="bar"></i>
+                      <label class="control-label" for="select">Selection</label><i class="bar"></i>
                     </div>
-                    <div class="formRadio">
+                    <div class="form-radio">
                       <div class="radio">
                         <label>
                           <input checked type="radio" name="radio" value="radio1"><i class="helper"></i>Radio button
@@ -547,28 +584,28 @@
                         <input type="checkbox" name="checkbox" value="check2"><i class="helper"></i>Checkbox
                       </label>
                     </div>
-                    <div class="formGroup">
+                    <div class="form-group">
                       <textarea required name="textArea" rows="4" cols="40"></textarea>
-                      <label for="textArea" class="controlLabel">Textarea</label><i class="bar"></i>
+                      <label for="textArea" class="control-label">Textarea</label><i class="bar"></i>
                     </div>
                   </form>
                   <div class="code">
-                    &lt;form class="formBasic"&gt;<br>
+                    &lt;form class="form-basic"&gt;<br>
                     &nbsp;&nbsp;&lt;!--TEXTFIELD--&gt;<br>
-                    &nbsp;&nbsp;&lt;div class="formGroup"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="form-group"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="text" required&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="controlLabel" for="text"&gt;Textfield&lt;/label&gt;&lt;i class="bar"&gt;&lt;/i&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="control-label" for="text"&gt;Textfield&lt;/label&gt;&lt;i class="bar"&gt;&lt;/i&gt;<br>
                     &nbsp;&nbsp;&lt;/div&gt;<br>
                     &nbsp;&nbsp;&lt;!--SELECTION--&gt;<br>
-                    &nbsp;&nbsp;&lt;div class="formGroup"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="form-group"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;select id="select"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="1"&gt;Option 1&lt;/option&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="2"&gt;Option 2&lt;/option&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="controlLabel" for="select"&gt;Selection&lt;/label&gt;&lt;i class="bar"&gt;&lt;/i&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="control-label" for="select"&gt;Selection&lt;/label&gt;&lt;i class="bar"&gt;&lt;/i&gt;<br>
                     &nbsp;&nbsp;&lt;/div&gt;<br>
                     &nbsp;&nbsp;&lt;!--RADIO BUTTONS--&gt;<br>
-                    &nbsp;&nbsp;&lt;div class="formRadio"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="form-radio"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--RADIO BUTTON CHECKED--&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="radio"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
@@ -595,9 +632,9 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
                     &nbsp;&nbsp;&lt;/div&gt;<br>
                     &nbsp;&nbsp;&lt;!--TEXTAREA--&gt;<br>
-                    &nbsp;&nbsp;&lt;div class="formGroup"&gt;<br>
+                    &nbsp;&nbsp;&lt;div class="form-group"&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea name="textArea" rows="4" cols="40"&gt;&lt;/textarea&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="controlLabel" for="textArea"&gt;Textarea&lt;/label&gt;&lt;i class="bar"&gt;&lt;/i&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="control-label" for="textArea"&gt;Textarea&lt;/label&gt;&lt;i class="bar"&gt;&lt;/i&gt;<br>
                     &nbsp;&nbsp;&lt;/div&gt;<br>
                     &lt;/form&gt;<br>
                   </div>
@@ -607,8 +644,8 @@
           </div>
         <div class="row">
           <section class="col-s-6">
-            <div class="articleCardLight" id="iconArticle">
-              <div class="headerLight">
+            <div class="card card-light" id="iconArticle">
+              <div class="card-header card-light">
                 <h2>Icons</h2>
               </div>
               <p>You can use any icon pack you like with CleverCSS, although Google's material icons and Font Awesome are recommended</p>
@@ -616,21 +653,21 @@
                 <section class="col-s-6">
                   <a href="https://github.com/google/material-design-icons" target="_blank">
                     <span class="fa fa-google"></span>
-                    <button class="buttonFlat">Material Icons</button>
+                    <button class="button-flat">Material Icons</button>
                   </a>
                 </section>
                 <section class="col-s-6" id="dependencies">
                   <a href="http://fontawesome.io" target="_blank">
                     <span class="fa fa-font-awesome"></span>
-                    <button class="buttonFlat">Font Awesome</button>
+                    <button class="button-flat">Font Awesome</button>
                   </a>
                 </section>
               </div>
             </div>
           </section>
           <section class="col-s-6">
-            <div class="articleCardLight" id="dependArticle">
-              <div class="headerLight">
+            <div class="card card-light" id="dependArticle">
+              <div class="card-header card-light">
                 <h2>Dependencies</h2>
               </div>
               <p>
@@ -638,7 +675,7 @@
                 Jquery can be installed from the <a href="http://jquery.com" target="_blank">official JQuery website</a>
               </p>
               <p>
-                You can also use a link from Google APIS to place in your &lt;head&gt;<br>
+                You can also use a link from Google APIS.<br>
                 <div class="code">&lt;script src=&#039;https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js&#039;&gt;&lt;/script&gt;
                 </div>
               </p>

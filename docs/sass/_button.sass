@@ -6,7 +6,8 @@ button
   user-select: none
   -webkit-user-select: none
 
-.buttonActionFloating
+.button-action-floating
+  transition: $fade-in-out
   position: fixed
   bottom: 28px
   right: 28px
@@ -25,7 +26,8 @@ button
     background-color: $accentLight
 
 /* FLAT BUTTON
-.buttonFlat
+.button-flat
+  transition: $fade-in-out
   border-radius: 2px
   cursor: pointer
   border: 0
@@ -40,7 +42,8 @@ button
   &:active
     background-color: rgba(0,0,0,0.1)
 /* RAISED BUTTON
-.buttonRaised
+.button-raised
+  transition: $fade-in-out
   border-radius: 2px
   cursor: pointer
   border: 0
@@ -50,14 +53,16 @@ button
   margin: 0.2em 0.2em
   color: white
   background-color: $accent
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2)
+  box-shadow: $depth-2
   &:hover
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 8px 16px 0 rgba(0,0,0,0.2)
+    box-shadow: $depth-3
   &:active
     background-color: $accentLight
 
 /* ACTION BUTTON
-.buttonAction
+.button-action
+  transition: $fade-in-out
+  position: relative
   cursor: pointer
   width: 56px
   height: 56px
@@ -65,186 +70,43 @@ button
   border: 0
   background-color: $accent
   color: white
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2)
+  box-shadow: $depth-3
   &:hover
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 8px 16px 0 rgba(0,0,0,0.2)
+    box-shadow: $depth-4
   &:active
     background-color: $accentLight
   i
-    transform: scale(1) translateY(5%)
+    position: absolute
+    top: calc(50% - 12px)
+    left: calc(50% - 12px)
 .buttonFloatRight
   float: right
 
-/*DROPDOWN
-.dropdownSmallDark
-  .buttonDropdownSmall
-    &:active
-      background-color: rgba(255,255,255,0.1)
-    i
-      color: white
-.dropdownSmallLight
-  .buttonDropdownSmall
-    &:active
-      background-color: rgba(0,0,0,0.05)
-    i
-      color: $primaryLight
-.dropdownSmallDark, .dropdownSmallLight
-  position: relative
-  display: block
-  .buttonDropdownSmall
-    cursor: pointer
-    width: 56px
-    height: 56px
-    border: 0
-    border-radius: 56px
-    background-color: rgba(0,0,0,0)
-    i
-      transform: scale(1.2) translateY(10%)
-  .dropdownContent
-    position: absolute
-    z-index: 3
-    padding: 0
-    margin: 0
-    display: none
-    top: 56px
-    left: 0
-    width: 160px
-    height: auto
-    white-space: nowrap
-    background-color: #FEFEFE
-    list-style: none
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2) 0 8px 16px 0 rgba(0,0,0,0.2)
-    li
-      cursor: pointer
-      font-family: 'Open Sans', sans-serif
-      padding: 0.75em
-      color: $textPrimary
-      &:hover
-        background-color: rgba(0,0,0,0.04)
-      &:active
-        background-color: rgba(0,0,0,0.1)
-
-  .dropdownSmallContentShow
-    display: block
-    transform-origin: top
-    animation: dropdownSmallAnimate 0.3s forwards
-@keyframes dropdownSmallAnimate
-  0%
-    transform: translateY(-20%) scale(0.8)
-    opacity: 0
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2)
-  100%
-    transform: translateY(0%) scale(1)
-    opacity: 1
-    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
-
-.dropdownLargeDark
-  .buttonDropdownLarge
-    color: $accent
-  .dropdownContent
-    background-color: $primary
-    li
-      color: white
-      &:hover
-        background-color: rgba(255,255,255,0.1)
-      &:active
-        background-color: rgba(255,255,255,0.2)
-.dropdownLargeLight
-  .buttonDropdownLarge
-    color: $accent
-  .dropdownContent
-    background-color: white
-    li
-      &:hover
-        background-color: rgba(0,0,0,0.04)
-      &:active
-        background-color: rgba(0,0,0,0.1)
-.dropdownLargeDark, .dropdownLargeLight
-  position: relative
-  display: block
-  .buttonDropdownLarge
-    cursor: pointer
-    background-color: rgba(0,0,0,0)
-    width: 100%
-    height: 56px
-    border: 0
-    font-size: 18px
-  .dropdownContent
-    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
-    padding: 0
-    margin: 0
-    list-style: none
-    width: 100%
-    position: absolute
-    z-index: 3
-    top: 56px
-    left: 0
-    display: none
-    li
-      cursor: pointer
-      font-size: 18px
-      padding: 8px
-      text-align: center
-      cursor: pointer
-  .dropdownLargeContentShow
-    display: block
-    transform-origin: top
-    animation: dropdownLargeShow 0.3s forwards
-  .dropdownLargeContentHide
-    display: block
-    transform-origin: top
-    animation: dropdownLargeHide 0.3s forwards
-@keyframes dropdownLargeShow
-  0%
-    opacity: 0
-    transform: rotateX(90deg)
-    box-shadow: 0 0 0 0 rgba(0,0,0,0.2)
-  100%
-    opacity: 1
-    transform: rotateX(0deg)
-    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
-@keyframes dropdownLargeHide
-  0%
-    opacity: 1
-    transform: rotateX(0deg)
-    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.2)
-  100%
-    opacity: 0
-    transform: rotateX(90deg)
-    box-shadow: 0 0 0 0 rgba(0,0,0,0.2)
-
 @media only screen and (max-width: 768px)
-  .buttonActionFloating
+  .button-action-floating
     &:hover
       background-color: $accent
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 6px 12px 0 rgba(0,0,0,0.4)
+      box-shadow: $depth-4
     &:active
       background-color: $accentLight
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 12px 24px 0 rgba(0,0,0,0.4)
-  .buttonFlat
+      box-shadow: $depth-5
+  .button-flat
     &:hover
       background-color: rgba(0,0,0,0)
     &:active
       background-color: rgba(0,0,0,0.1)
-  .buttonRaised
+  .button-raised
     &:hover
       background-color: $accent
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2)
+      box-shadow: $depth-2
     &:active
       background-color: $accentLight
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 8px 16px 0 rgba(0,0,0,0.2)
-  .buttonAction
+      box-shadow: $depth-3
+  .button-action
     &:hover
       background-color: $accent
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2)
+      box-shadow: $depth-3
     &:active
       transform: scale(1.025)
       background-color: $accentLight
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 8px 16px 0 rgba(0,0,0,0.2)
-  .dropdownSmallLight,.dropdownSmallDark
-    .dropdownContent
-      li
-        &:hover
-          background-color: rgba(0,0,0,0)
-        &:active
-          background-color: rgba(0,0,0,0.1)
+      box-shadow: $depth-4

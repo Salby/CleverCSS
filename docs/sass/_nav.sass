@@ -1,8 +1,8 @@
 /* NAV STYLES
 
-nav.navbarLight
+nav.navbar-light
   background-color: $white
-  .navbarNav
+  .navbar-nav
     li
       color: $primary
       &:hover
@@ -11,17 +11,18 @@ nav.navbarLight
         background-color: $transparentDark
       a
         color: $primary
-  #drawerOpen
-    border: 10px solid $white
+  #drawer-open
+    border: 10px solid
+    border-color: transparent
     &:hover
       background-color: $transparentDark
     &:active
       background-color: $transparentDarker
     i
       color: $primary
-nav.navbarDark
+nav.navbar-dark
   background-color: $primary
-  .navbarNav
+  .navbar-nav
     li
       color: $white
       &:hover
@@ -30,38 +31,40 @@ nav.navbarDark
         background-color: $transparentLight
       a
         color: $white
-  #drawerOpen
-    border: 10px solid $primary
+  #drawer-open
+    border: 10px solid
+    border-color: transparent
     &:hover
       background-color: $transparentLight
     &:active
       background-color: $transparentLighter
     i
       color: $white
-nav.navbarTall
+nav.navbar-tall
   width: 100%
   height: 120px
-  .navbarNav.navbarLeft,.navbarNav.navbarRight
+  .navbar-nav.navbar-left,.navbar-nav.navbar-right
     float: none
     position: absolute
     bottom: 0
-  .navbarNav.navbarLeft
+  .navbar-nav.navbar-left
     left: 0
-  .navbarNav.navbarRight
+  .navbar-nav.navbar-right
     right: 0
-nav.navbarShort
+nav.navbar-short
   width: 100%
   height: 60px
 nav.navbar
   z-index: 10
   position: relative
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)
-  .navbarNav
+  box-shadow: $depth-2
+  .navbar-nav
     margin: 0
     padding: 0
     list-style: none
     position: relative
     li
+      transition: $fade-in-out
       transition: all 0.2s
       float: left
       cursor: pointer
@@ -73,59 +76,61 @@ nav.navbar
         background-color: $transparent
         font-size: 20px
         text-decoration: none
-  .navbarNav.navbarLeft
+  .navbar-nav.navbar-left
     float: left
-  .navbarNav.navbarRight
+  .navbar-nav.navbar-right
     float: right
-  #drawerOpen
+  #drawer-open
+    transition: $fade-in-out
     cursor: pointer
     position: relative
     width: 60px
     height: 60px
     border-radius: 60px
     background-color: $transparent
+    background-clip: padding-box
     i
       position: absolute
       top: calc(50% - 12px)
       left: calc(50% - 12px)
-  #drawerOpen.drawerOpenLeft
+  #drawer-open.drawer-open-left
     float: left
-  #drawerOpen.drawerOpenRight
+  #drawer-open.drawer-open-right
     float: right
-  #drawerOpen.mobileOnly
+  #drawer-open.mobile-only
     display: none
 
 @media only screen and (max-width: 1200px)
 @media only screen and (max-width: 768px)
   nav.navbarLight
-    .navbarNav
+    .navbar-nav
       &:hover
         background-color: $transparent
       &:active
         background-color: $transparentDark
-    #drawerOpen
+    #drawer-open
       &:hover
         background-color: $transparent
       &:active
         background-color: $transparentDark
   nav.navbarDark
-    .navbarNav
+    .navbar-nav
       li
         &:hover
           background-color: $transparent
         &:active
           background-color: $transparentLight
-    #drawerOpen
+    #drawer-open
       &:hover
         background-color: $transparent
       &:active
         background-color: $transparentLight
-  nav.navbarTall
+  nav.navbar-tall
     height: 112px
-  nav.navbarShort
+  nav.navbar-short
     height: 56px
   nav.navbar
-    .navbarNav
+    .navbar-nav
       li
         height: 56px
         padding: 18px
@@ -135,17 +140,17 @@ nav.navbar
           border-bottom: none
         a
           font-size: 18px
-      .brandItem
+      .brand-item
         display: block
-    .navbarNav.navbarLeft
+    .navbar-nav.navbar-left
       float: right
-    .navbarNav.navbarRight
+    .navbar-nav.navbar-right
       float: right
-    #drawerOpen
+    #drawer-open
       width: 56px
       height: 56px
       border-radius: 56px
-    #drawerOpen.mobileOnly
+    #drawer-open.mobile-only
       display: block
 @media only screen and (max-width: 480px)
 @media only screen and (max-width: 320px)
