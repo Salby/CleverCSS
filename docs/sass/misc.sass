@@ -26,59 +26,101 @@ nav.navbar
 
 /*MISC THINGS
 
+#getStarted
+  padding-top: 20vh
+
 body
   width: 100vw
   overflow-x: hidden
   box-sizing: border-box
 #home
-  display: block
-  padding: 20vh 0 0 0
-  width: 100vw
-  height: 60vh
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  animation: fadeIn 1s
-  div
-    width: 100vw
-    height: 40vh
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    background-size: cover
-    h1
-      font-family: 'Space Mono', monospace
-      text-align: center
-      font-size: 3.5em
-      padding: 0
-      margin: 0
-      color: #2f343f
-    h2
-      color: #2f343f
-      font-weight: 500
-      font-size: 1.5em
-    p
-      color: #b0b9c6
-      font-weight: 500
-      font-size: 1.2em
-      margin: 0
-      font-family: 'Space Mono', monospace
-#animation
-  height: 40vh
   position: relative
-@media only screen and (max-width: 480px)
+  width: 100vw
+  height: 100vh
+  background-color: #212121
+  article
+    position: absolute
+    top: calc(50% - 15vh)
+    left: calc(50% - 40vw)
+    width: 80vw
+    height: 30vh
+    h1
+      color: #ffffff
+      text-align: left
+      font-family: 'Space Mono'
+    h2
+      color: #ffffff
+      text-align: left
+    p
+      color: #b0b0b0
+      text-align: left
+      font-family: 'Space Mono'
+    .blok1,.blok2,.blok3,.blok4
+      position: absolute
+      background-color: #5294e2
+      opacity: 0.5
+    .blok1
+      top: 0
+      right: 0
+      width: 30vh
+      height: 30vh
+    .blok2
+      top: 0
+      right: 15vh
+      width: 15vh
+      height: 30vh
+    .blok3
+      background-color: #4c86cb
+      opacity: 1
+      top: 15vh
+      right: 15vh
+      width: 15vh
+      height: 15vh
+      animation: blok3-animate 1s forwards
+    .blok4
+      top: 0
+      right: 0
+      width: 15vh
+      height: 15vh
+      border-radius: 100%
+      transform: scale(0.9)
+      animation: blok4-animate 1s forwards
+@media only screen and (max-width: 768px)
   #home
-    padding: 20vh 0 10vh 0
-    height: 50vh
-    div
+    article
+      top: 0
+      left: 0
+      width: 100vw
+      height: 100vh
       h1
-        font-size: 3em
-      h2
-        font-size: 1.2em
-  #animation
-    height: 50vh
+        padding-top: 120px
+      .blok1
+        top: auto
+        bottom: 0
+      .blok2
+        top: auto
+        bottom: 0
+      .blok3
+        top: auto
+        bottom: 15vh
+      .blok4
+        top: auto
+        bottom: 0
+
+@keyframes blok3-animate
+  0%
+    transform: scale(1)
+  100%
+    transform: scale(1.1)
+@keyframes blok4-animate
+  0%
+    transform: scale(0.9)
+  100%
+    transform: scale(0.8)
+
+.navbar-no-shadow
+  box-shadow: none !important
+
 
 a
   text-decoration: none
