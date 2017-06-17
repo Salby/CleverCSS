@@ -295,9 +295,9 @@ nav.navbar {
     .drawer .drawer-content.drawer-dark .drawer-nav li:active {
       background-color: rgba(255, 255, 255, 0.1); }
     .drawer .drawer-content.drawer-dark .drawer-nav li a {
-      color: #B0B9C6; }
+      color: #B0B0B0; }
     .drawer .drawer-content.drawer-dark .drawer-nav li i {
-      color: #B0B9C6; }
+      color: #B0B0B0; }
 
 .drawer.drawer-left {
   left: 0;
@@ -579,7 +579,7 @@ nav.navbar {
     .card .card-header p {
       padding: 6px 0 12px 12px;
       font-size: 1em;
-      color: #B0B9C6; }
+      color: #B0B0B0; }
   .card p {
     font-size: 1em;
     padding: 12px; }
@@ -603,13 +603,13 @@ nav.navbar {
     .card .card-header.card-light h1, .card .card-header.card-light h2, .card .card-header.card-light h3, .card .card-header.card-light h4, .card .card-header.card-light h5, .card .card-header.card-light h6 {
       color: #424242; }
     .card .card-header.card-light p {
-      color: #B0B9C6; }
+      color: #B0B0B0; }
   .card .card-header.card-dark {
     background-color: #424242; }
     .card .card-header.card-dark h1, .card .card-header.card-dark h2, .card .card-header.card-dark h3, .card .card-header.card-dark h4, .card .card-header.card-dark h5, .card .card-header.card-dark h6 {
       color: #FFFFFF; }
     .card .card-header.card-dark p {
-      color: #B0B9C6; }
+      color: #B0B0B0; }
   .card .card-footer.card-light {
     background-color: #FFFFFF; }
   .card .card-footer.card-dark {
@@ -1073,13 +1073,13 @@ div.modal.modal-inactive .modal-content, div.modal.modal-active .modal-content {
     div.modal.modal-inactive .modal-content .modal-header.modal-light h1, div.modal.modal-inactive .modal-content .modal-header.modal-light h2, div.modal.modal-inactive .modal-content .modal-header.modal-light h3, div.modal.modal-inactive .modal-content .modal-header.modal-light h4, div.modal.modal-inactive .modal-content .modal-header.modal-light h5, div.modal.modal-inactive .modal-content .modal-header.modal-light h6, div.modal.modal-active .modal-content .modal-header.modal-light h1, div.modal.modal-active .modal-content .modal-header.modal-light h2, div.modal.modal-active .modal-content .modal-header.modal-light h3, div.modal.modal-active .modal-content .modal-header.modal-light h4, div.modal.modal-active .modal-content .modal-header.modal-light h5, div.modal.modal-active .modal-content .modal-header.modal-light h6 {
       color: #424242; }
     div.modal.modal-inactive .modal-content .modal-header.modal-light p, div.modal.modal-active .modal-content .modal-header.modal-light p {
-      color: #B0B9C6; }
+      color: #B0B0B0; }
   div.modal.modal-inactive .modal-content .modal-header.modal-dark, div.modal.modal-active .modal-content .modal-header.modal-dark {
     background-color: #212121; }
     div.modal.modal-inactive .modal-content .modal-header.modal-dark h1, div.modal.modal-inactive .modal-content .modal-header.modal-dark h2, div.modal.modal-inactive .modal-content .modal-header.modal-dark h3, div.modal.modal-inactive .modal-content .modal-header.modal-dark h4, div.modal.modal-inactive .modal-content .modal-header.modal-dark h5, div.modal.modal-inactive .modal-content .modal-header.modal-dark h6, div.modal.modal-active .modal-content .modal-header.modal-dark h1, div.modal.modal-active .modal-content .modal-header.modal-dark h2, div.modal.modal-active .modal-content .modal-header.modal-dark h3, div.modal.modal-active .modal-content .modal-header.modal-dark h4, div.modal.modal-active .modal-content .modal-header.modal-dark h5, div.modal.modal-active .modal-content .modal-header.modal-dark h6 {
       color: #FFFFFF; }
     div.modal.modal-inactive .modal-content .modal-header.modal-dark p, div.modal.modal-active .modal-content .modal-header.modal-dark p {
-      color: #B0B9C6; }
+      color: #B0B0B0; }
   div.modal.modal-inactive .modal-content .modal-image, div.modal.modal-active .modal-content .modal-image {
     width: 100%;
     height: auto; }
