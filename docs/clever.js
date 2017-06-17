@@ -9,8 +9,7 @@ $(document).ready(function() {
   });
   // DROPDOWN ANIMATION
   $('.button-dropdown').click(function() {
-    var dropdownWidth = $(this).next().width();
-    var dropdownHeight = $(this).next().height();
+    $(this).toggleClass('dropdown-active');
     $(this).next().slideToggle('fast');
   });
   // MODAL THINGS
