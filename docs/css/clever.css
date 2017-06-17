@@ -548,13 +548,13 @@ nav.navbar {
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); } }
 .card {
   border-radius: 2px;
-  overflow: hidden;
   position: relative;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   .card .card-header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    border-radius: 2px 2px 0 0;
     min-height: 56px; }
     .card .card-header h1 {
       font-size: 2em; }
@@ -578,6 +578,7 @@ nav.navbar {
     font-size: 1em;
     padding: 12px; }
   .card .card-footer {
+    border-radius: 0 0 2px 2px;
     position: relative;
     padding: 0 4px;
     width: 100%;
@@ -1299,9 +1300,23 @@ div.dropdown {
     width: 100%;
     height: 56px;
     font-size: 18px;
-    padding: 1em;
+    padding: 1em 1.5em 1em 1em;
     border: none;
-    border-radius: 2px; }
+    border-radius: 2px;
+    text-align: center; }
+    div.dropdown .button-dropdown.dropdown-large::after {
+      content: "expand_more";
+      font-family: "Material Icons";
+      font-weight: 400;
+      font-style: normal;
+      position: absolute;
+      top: calc(50% - 9px);
+      right: 9px; }
+  div.dropdown .button-dropdown.dropdown-large.dropdown-active {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 2px 2px 0 0; }
+    div.dropdown .button-dropdown.dropdown-large.dropdown-active::after {
+      transform: rotate(180deg); }
   div.dropdown .button-dropdown.dropdown-left {
     float: left; }
   div.dropdown .button-dropdown.dropdown-right {
@@ -1369,10 +1384,14 @@ div.dropdown {
         background-color: rgba(255, 255, 255, 0.1); }
   div.dropdown .button-dropdown.dropdown-large.dropdown-light {
     color: #454545; }
+    div.dropdown .button-dropdown.dropdown-large.dropdown-light::after {
+      color: #2F343F; }
     div.dropdown .button-dropdown.dropdown-large.dropdown-light:active {
       background-color: rgba(0, 0, 0, 0.1); }
   div.dropdown .button-dropdown.dropdown-large.dropdown-dark {
     color: #B0B9C6; }
+    div.dropdown .button-dropdown.dropdown-large.dropdown-dark::after {
+      color: #B0B9C6; }
     div.dropdown .button-dropdown.dropdown-large.dropdown-dark:active {
       background-color: rgba(255, 255, 255, 0.1); }
   div.dropdown .dropdown-content.dropdown-large {
@@ -1410,7 +1429,7 @@ div.dropdown.dropdown-right {
 
 @media only screen and (min-width: 481px) {
   div.dropdown .dropdown-content.dropdown-small li {
-    padding: 0.6em; }
+    padding: 1em; }
   div.dropdown .button-dropdown.dropdown-small.dropdown-light:hover {
     background-color: rgba(0, 0, 0, 0.05); }
   div.dropdown .button-dropdown.dropdown-small.dropdown-light:active {
