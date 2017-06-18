@@ -3,9 +3,11 @@ $(document).ready(function() {
   $('#drawer-open').click(function(e) {
     e.stopPropagation()
     $('#mobile-drawer').removeClass('drawerAnimateClose').addClass('drawerAnimateOpen');
+    $('body').css('overflow-y', 'hidden');
   });
   $('#drawer-close').click(function() {
     $('#mobile-drawer').removeClass('drawerAnimateOpen').addClass('drawerAnimateClose');
+    $('body').css('overflow-y', 'auto');
   });
   // DROPDOWN ANIMATION
   $('.button-dropdown').click(function() {
