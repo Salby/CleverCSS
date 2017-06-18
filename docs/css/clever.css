@@ -110,13 +110,14 @@ nav.navbar {
       float: left;
       cursor: pointer;
       background-color: transparent;
-      padding: 20px;
       height: 60px;
       border-bottom: 2px solid transparent; }
       nav.navbar .navbar-nav li a {
         background-color: transparent;
         font-size: 20px;
-        text-decoration: none; }
+        padding: 20px;
+        text-decoration: none;
+        display: block; }
   nav.navbar .navbar-nav.navbar-left {
     float: left; }
   nav.navbar .navbar-nav.navbar-right {
@@ -168,13 +169,13 @@ nav.navbar {
 
   nav.navbar .navbar-nav li {
     height: 56px;
-    padding: 18px;
     display: none;
     border-bottom: none; }
     nav.navbar .navbar-nav li:hover {
       border-bottom: none; }
     nav.navbar .navbar-nav li a {
-      font-size: 18px; }
+      font-size: 18px;
+      padding: 18px; }
   nav.navbar .navbar-nav .brand-item {
     display: block; }
   nav.navbar .navbar-nav.navbar-left {

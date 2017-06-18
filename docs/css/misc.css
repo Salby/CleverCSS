@@ -326,6 +326,9 @@ nav.navbar {
     opacity: 1;
     transform: translateY(0%); } }
 /*MISC THINGS */
+.navbar-dark .navbar-nav li:hover {
+  border-bottom: 3px solid #5294e2 !important; }
+
 #getStarted {
   padding-top: 5vh; }
 
