@@ -132,11 +132,15 @@ nav.navbar {
     height: 60px;
     border-radius: 60px;
     background-color: transparent;
-    background-clip: padding-box; }
+    background-clip: padding-box;
+    user-select: none;
+    -webkit-user-select: none; }
     nav.navbar #drawer-open i {
       position: absolute;
       top: calc(50% - 12px);
-      left: calc(50% - 12px); }
+      left: calc(50% - 12px);
+      user-select: none;
+      -webkit-user-select: none; }
   nav.navbar #drawer-open.drawer-open-left {
     float: left; }
   nav.navbar #drawer-open.drawer-open-right {
