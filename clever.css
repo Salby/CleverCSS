@@ -110,13 +110,14 @@ nav.navbar {
       float: left;
       cursor: pointer;
       background-color: transparent;
-      padding: 20px;
       height: 60px;
       border-bottom: 2px solid transparent; }
       nav.navbar .navbar-nav li a {
         background-color: transparent;
         font-size: 20px;
-        text-decoration: none; }
+        padding: 20px;
+        text-decoration: none;
+        display: block; }
   nav.navbar .navbar-nav.navbar-left {
     float: left; }
   nav.navbar .navbar-nav.navbar-right {
@@ -168,13 +169,13 @@ nav.navbar {
 
   nav.navbar .navbar-nav li {
     height: 56px;
-    padding: 18px;
     display: none;
     border-bottom: none; }
     nav.navbar .navbar-nav li:hover {
       border-bottom: none; }
     nav.navbar .navbar-nav li a {
-      font-size: 18px; }
+      font-size: 18px;
+      padding: 18px; }
   nav.navbar .navbar-nav .brand-item {
     display: block; }
   nav.navbar .navbar-nav.navbar-left {
@@ -629,36 +630,61 @@ nav.navbar {
   .card.card-dark p {
     color: #FFFFFF; }
 
+.card.card-hover-1 {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .card.card-hover-1:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.card.card-hover-2 {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .card.card-hover-2:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.card.card-hover-3 {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .card.card-hover-3:active {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+.card.card-hover-4 {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .card.card-hover-4:active {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.card.card-hover-5 {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .card.card-hover-5:active {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+
 @media only screen and (min-width: 481px) {
   .card .card-footer.card-dark .button-flat:hover {
     background-color: rgba(255, 255, 255, 0.05); }
   .card .card-footer.card-dark .button-flat:active {
     background-color: rgba(255, 255, 255, 0.1); } }
-.card.card-hover-1 {
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  .card.card-hover-1:hover {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+@media only screen and (min-width: 769px) {
+  .card.card-hover-1 {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    .card.card-hover-1:hover {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
-.card.card-hover-2 {
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  .card.card-hover-2:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  .card.card-hover-2 {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    .card.card-hover-2:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
-.card.card-hover-3 {
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  .card.card-hover-3:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  .card.card-hover-3 {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    .card.card-hover-3:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
-.card.card-hover-4 {
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  .card.card-hover-4:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  .card.card-hover-4 {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    .card.card-hover-4:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
-.card.card-hover-5 {
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  .card.card-hover-5:hover {
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
-
+  .card.card-hover-5 {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    .card.card-hover-5:hover {
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); } }
 /* FORMS */
 .form-basic {
   width: 480px;
