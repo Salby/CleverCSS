@@ -117,6 +117,27 @@
   p
     color: $white
 
+.card.card-hover-1
+  transition: $fade-in-out
+  &:active
+    box-shadow: $depth-1
+.card.card-hover-2
+  transition: $fade-in-out
+  &:active
+    box-shadow: $depth-2
+.card.card-hover-3
+  transition: $fade-in-out
+  &:active
+    box-shadow: $depth-3
+.card.card-hover-4
+  transition: $fade-in-out
+  &:active
+    box-shadow: $depth-4
+.card.card-hover-5
+  transition: $fade-in-out
+  &:active
+    box-shadow: $depth-5
+
 @media only screen and (max-width: 480px)
 
 @media only screen and (min-width: 481px)
@@ -129,28 +150,28 @@
           background-color: $transparentLighter
 
 @media only screen and (min-width: 769px)
+  .card.card-hover-1
+    transition: $fade-in-out
+    &:hover
+      box-shadow: $depth-1
+  .card.card-hover-2
+    transition: $fade-in-out
+    &:hover
+      box-shadow: $depth-2
+  .card.card-hover-3
+    transition: $fade-in-out
+    &:hover
+      box-shadow: $depth-3
+  .card.card-hover-4
+    transition: $fade-in-out
+    &:hover
+      box-shadow: $depth-4
+  .card.card-hover-5
+    transition: $fade-in-out
+    &:hover
+      box-shadow: $depth-5
+
 
 @media only screen and (min-width: 961px)
 
 @media only screen and (min-width: 1201px)
-
-.card.card-hover-1
-  transition: $fade-in-out
-  &:hover
-    box-shadow: $depth-1
-.card.card-hover-2
-  transition: $fade-in-out
-  &:hover
-    box-shadow: $depth-2
-.card.card-hover-3
-  transition: $fade-in-out
-  &:hover
-    box-shadow: $depth-3
-.card.card-hover-4
-  transition: $fade-in-out
-  &:hover
-    box-shadow: $depth-4
-.card.card-hover-5
-  transition: $fade-in-out
-  &:hover
-    box-shadow: $depth-5
