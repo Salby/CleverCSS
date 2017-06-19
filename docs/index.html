@@ -113,7 +113,7 @@
             <section class="col-m-9">
               <section class="elementDisplay">
                 <header>
-                  <div class="dropdown dropdown-right">
+                  <!-- <div class="dropdown dropdown-right">
                     <button class="button-dropdown dropdown-small dropdown-right dropdown-light"><i class="material-icons">more_vert</i></button>
                     <ul class="dropdown-content dropdown-small dropdown-right dropdown-light">
                       <li class="selectArticle" data-target="#navBarArticle"><a>Navigation</a></li>
@@ -124,6 +124,16 @@
                       <li class="selectArticle" data-target="#gridArticle"><a>Responsive Grid</a></li>
                       <li class="selectArticle" data-target="#formsArticle"><a>Forms</a></li>
                     </ul>
+                  </div> -->
+                  <div class="article-selector">
+                    <button class="selectArticle article-button article-active" data-target="#navBarArticle">Navigation</button>
+                    <button class="selectArticle article-button" data-target="#cardsArticle">Cards</button>
+                    <button class="selectArticle article-button" data-target="#buttonArticle">Buttons</button>
+                    <button class="selectArticle article-button" data-target="#dropdownArticle">Dropdown</button>
+                    <button class="selectArticle article-button" data-target="#modalArticle">Modals</button>
+                    <button class="selectArticle article-button" data-target="#gridArticle">Responsive grid</button>
+                    <button class="selectArticle article-button" data-target="#formsArticle">Forms</button>
+                    <div class="article-indicator"></div>
                   </div>
                 </header>
                 <article id="navBarArticle" class="showComp">
@@ -685,5 +695,6 @@
       <script src="clever.js"></script>
       <script src="misc.js"></script>
       <script src="scroll.js"></script>
+      <script src="indicator.js"></script>
   </body>
 </html>

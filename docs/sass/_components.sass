@@ -51,15 +51,41 @@
     .col-m-3
       position: relative
 
-// @media only screen and (max-width: 1650px)
-//   .elementListPin
-//     width: 284px
-//     left: 8.5vw
-// @media only screen and (max-width: 1366px)
-//   .elementListPin
-//     width: 284px
-//     left: 6.5vw
 @media only screen and (max-width: 1200px)
   .elementList
     li
       width: 100%
+
+.article-selector
+  height: 56px
+  width: 100%
+  overflow-x: auto
+  overflow-y: hidden
+
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  position: relative
+  .article-button
+    background-color: rgba(0,0,0,0)
+    border: none
+    text-align: center
+    font-size: 18px
+    padding: 18px
+    width: 100%
+    white-space: nowrap
+    transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+    color: #5294e2
+    &:active
+      background-color: rgba(0,0,0,0.1)
+  .article-active
+    font-weight: 600
+    transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
+  .article-indicator
+    position: absolute
+    bottom: 0
+    width: auto
+    height: 3px
+    background-color: #5294e2
+    transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1)
